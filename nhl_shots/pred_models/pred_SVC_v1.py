@@ -15,7 +15,8 @@ from sklearn.model_selection import cross_val_predict
 def pred_SVC(file_name, pred):
     pred_this_over = "shots_this_game_O" + str(pred)
     pred_this_under = "shots_this_game_U" + str(pred)
-    res = {"file": file_name}
+    #res = {"file": file_name}
+    res = {}
     for i in range(2):
         if(i == 1):
             pred_this = pred_this_over
@@ -49,24 +50,24 @@ def pred_SVC(file_name, pred):
 
         # cross validation
         f_scores_test = cross_val_score(clf_SVC, X_test, Y_test, scoring="f1", cv=5)
-        f_test_error = f_scores_test.mean()
-        f_test_std = f_scores_test.std()
+        f_test_error = round(f_scores_test.mean(),3)
+        f_test_std = round(f_scores_test.std(), 3)
         
         scores_test = cross_val_score(clf_SVC, X_test, Y_test, cv=5)
-        test_error = scores_test.mean()
-        test_std = scores_test.std()
+        test_error = round(scores_test.mean(), 3)
+        test_std = round(scores_test.std(), 3)
 
         # Predict for our game
         Y_pred = clf_SVC.predict_proba(X_pred_info)
-
+        Y_pred_odds = round(1/Y_pred[0][1], 2)
         #Fit using CV
         #fit = cross_val_predict(clf_SVC, X_train, Y_train, cv=5)
         
 
         if(pred_this == pred_this_over):
-            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred)}
+            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
         else:
-            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred)}
+            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
     return res
 ###############################################
 """

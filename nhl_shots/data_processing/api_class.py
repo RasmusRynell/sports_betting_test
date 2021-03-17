@@ -23,9 +23,11 @@ class api:
 
         if req not in self.cached_information or force_send:
             response_json = requests.get(self.base + str(req)).json()
+            self.non_cached += 1
             if ("message" not in response_json):
                 self.cached_information[req] = response_json
-            self.non_cached += 1
+            else:
+                return response_json
         else:
             self.cached_reqs += 1
         return self.cached_information[req]

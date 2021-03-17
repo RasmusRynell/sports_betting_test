@@ -74,15 +74,15 @@ def pred_XGB(file_name, pred):
 
         # Predict for our game
         Y_pred = clf.predict_proba(X_pred_info)
-
+        Y_pred_odds = round(1/Y_pred[0][1], 2)
         #Fit using CV
-        #fit = cross_val_predict(clf, X_train, Y_train, cv=5)
+        #fit = cross_val_predict(clf_SVC, X_train, Y_train, cv=5)
         
 
         if(pred_this == pred_this_over):
-            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":Y_pred}
+            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
         else:
-            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":Y_pred}
+            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
     return res
 ###############################################
 """

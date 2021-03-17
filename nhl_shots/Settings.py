@@ -28,7 +28,7 @@ Debug = {   "ram usage": True,
 
 
 def print_json(j):
-    print(json.dumps(j, indent=4, sort_keys=True))
+    print(json.dumps(j, indent=4, sort_keys=False))
 
 
 # Go here get player najme: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021

@@ -13,9 +13,9 @@ from sklearn.model_selection import cross_val_predict
 
 ###############################################
 def pred_SVC(file_name, pred):
-    pred_this_over = "shots_this_game_O" + pred
-    pred_this_under = "shots_this_game_U" + pred
-    res = {}
+    pred_this_over = "shots_this_game_O" + str(pred)
+    pred_this_under = "shots_this_game_U" + str(pred)
+    res = {"file": file_name}
     for i in range(2):
         if(i == 1):
             pred_this = pred_this_over
@@ -64,9 +64,9 @@ def pred_SVC(file_name, pred):
         
 
         if(pred_this == pred_this_over):
-            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":Y_pred}
+            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred)}
         else:
-            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":Y_pred}
+            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred)}
     return res
 ###############################################
 """

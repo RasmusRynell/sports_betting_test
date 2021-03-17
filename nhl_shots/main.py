@@ -1,6 +1,8 @@
 import data_processing.create_csv as create_csv
 import user_io.bet365 as bet365_data
 import Settings
+import pred_models.pred_SVC_v1 as svc
+
 
 # Get data from bet365
 games = bet365_data.get_from_clipboard()
@@ -26,10 +28,19 @@ for game in games:
 
 files = create_csv.create_csv(bets, False)
 
-#Debug
 print(files)
-
+print(files[0][0])
+print(files[0][1][0])
+total = []
 
 # Call predictor to predict all csv files
+for file in files:
+    total.append(svc.pred_SVC(file[0], file[1][0]))
 
-# Save all predictions into one csv (or excel) file
+#total = [svc.pred_SVC("./temp/pp_alexander_ovechkin.csv", 2.5)]
+print(total)
+for pred in total:
+     Settings.print_json(pred)
+
+
+# # Save all predictions into one csv (or excel) file

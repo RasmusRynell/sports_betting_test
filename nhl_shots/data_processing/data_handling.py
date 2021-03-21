@@ -7,6 +7,9 @@ import csv
 import requests, json, sys
 import datetime
 from tqdm import tqdm
+from datetime import datetime as dt
+from datetime import timedelta
+import pytz
 
 
 
@@ -138,14 +141,67 @@ def generate_and_save_data(player_id, team_id, opp_team_id, home_away, path):
         #print("Total number of fields: " + str(most))
 
 
+def get_game_pk(new_timezone_timestamp, data, tries = 3):
+    schedule = Settings.api.send_request("/schedule?date={}".format(str(new_timezone_timestamp.date())))
 
-def save_data_player(bet, path=""):
+    for d in schedule["dates"]:
+        if d["date"] == str(new_timezone_timestamp.date()):
+            for game in d["games"]:
+                if (Settings.teams_translate[data[4].lower()] == str(game["teams"]["away"]["team"]["name"]).lower()\
+                    and Settings.teams_translate[data[5].lower()] == str(game["teams"]["home"]["team"]["name"]).lower()) or\
+                    (Settings.teams_translate[data[5].lower()] == str(game["teams"]["away"]["team"]["name"]).lower()\
+                    and Settings.teams_translate[data[4].lower()] == str(game["teams"]["home"]["team"]["name"]).lower()):
+
+                    print("Home: " + str(game["teams"]["home"]["team"]["name"]).lower())
+                    print("Away: " + str(game["teams"]["away"]["team"]["name"]).lower())
+                    print(game["gamePk"])
+                    return game["gamePk"]
+    
+    if tries == 0:
+        print("Should be: " + str(data[4]) + " and " + str(data[5]))
+        print(new_timezone_timestamp)
+        print(schedule)
+        raise("Could not find a game this date...")
+    else:
+        new_timezone_timestamp = new_timezone_timestamp - timedelta(days=1)
+        return get_game_pk(new_timezone_timestamp, data, tries - 1)
+
+def get_current_game(data):
+    date = str(data[-1][4:])
+    print(date)
+    (date_day, date_month, date_time) = date.split(" ")
+
+    if date_month == "maj":
+        date_month = "may"
+    elif date_month == "okt":
+        date_month = "oct"
+    
+    date = str(date_day) + " "
+    date += str(date_month) + " "
+    date += str(date_time) + ":"
+    date += str(Settings.current_season)
+
+    date = dt.strptime(date, "%d %b %H:%M:%Y")
+
+    # create both timezone objects
+    old_timezone = pytz.timezone("Europe/Stockholm")
+    new_timezone = pytz.timezone("Europe/London")
+    new_timezone_timestamp = old_timezone.localize(date).astimezone(new_timezone)
+    new_timezone_timestamp = new_timezone_timestamp + timedelta(days=1)
+
+    return get_game_pk(new_timezone_timestamp, data)
+
+
+
+def save_data_player(bet, current_game_data, path=""):
     (name, player_team_name, opp_team_name, home_away) = bet
     if not path:
         path = "pp_" + str(name) + ".csv"
     path = path.lower().replace(' ', '_')
     path = "./temp/"+ path
 
+    current_game = get_current_game(current_game_data)
+    '''
     generate_and_save_data(players.get_id(name), 
                             teams.get_id(player_team_name), 
                             teams.get_id(opp_team_name),
@@ -154,6 +210,7 @@ def save_data_player(bet, path=""):
 
     if Settings.Debug["print_api_cache"]:
         api.print_cache()
+    '''
     return path
 
 

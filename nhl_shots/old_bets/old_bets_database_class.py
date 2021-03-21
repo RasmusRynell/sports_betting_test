@@ -68,17 +68,33 @@ class old_bets_database:
             print("Something went wrong when saving database...")
 
 
-    def add_bet(self, date, player_name, team_one, team_two, site, over, under, over_under = ""):
+    def add_bet(self, date, player_name, home_team_name, away_team_name, site, over, under, over_under = ""):
         player_id = self.data_handling.get_player_id(player_name)
-        ply_team_id = self.data_handling.get_team_id(team_one)
-        opp_team_id = self.data_handling.get_team_id(team_two)
+        home_team_id = self.data_handling.get_team_id(home_team_name)
+        away_team_id = self.data_handling.get_team_id(away_team_name)
         
-
-        (game_id, home_team_id, away_team_id) = self.data_handling.get_game_from_date(player_id, date, ply_team_id, opp_team_id)
+        try:
+            game_id = self.data_handling.get_game_from_date(player_id, date, home_team_id, away_team_id)
+            if len(game_id) > 1:
+                while True:
+                    print(game_id)
+                    number_to_save = input("would you like to store (1) or (2) or (3), answer with that number: ")
+                    number_to_save = (int)(number_to_save)-1
+                    if 0 <= number_to_save <= len(game_id):
+                        try:
+                            print("Number to save: " + str(number_to_save))
+                            print(game_id)
+                            game_id = game_id[number_to_save][0]
+                        except:
+                            print("thats not in the list...")
+                    if type(game_id) == int:
+                        break
+            else:
+                game_id = game_id[0][0]
+        except:
+            print("Date: " + date)
+            raise("Could not find game on this date...")
         print(game_id)
-
-        home_team = team_one if home_team_id == ply_team_id else team_two
-        away_team = team_two if home_team_id == opp_team_id else team_one
 
         game_found = False
         for game in self.old_bets["bets"]:
@@ -90,7 +106,7 @@ class old_bets_database:
                     if str(p["id"]) == str(player_id):
                         player_found = True
                         if site in p["bets"]:
-                            print("We already have this in the database... PLAYER = \"{}\", TEAMS = (\"{}\", \"{}\")". format(player_name, team_one, team_two))
+                            print("We already have this in the database... PLAYER = \"{}\", TEAMS = (\"{}\", \"{}\")". format(player_name, home_team_name, away_team_name))
                             print("[ALREADY IN THE DATABSE]")
                             Settings.print_json(p["bets"][site])
                             print("\n[YOU'RE NEW ADDITION]")
@@ -105,6 +121,7 @@ class old_bets_database:
                                             over_under = p["known_over_under"]
                                             p["bets"][site] = {"over": over, "under": under, "over_under": over_under}
                                     break
+                            return True
                         else:
                             if not over_under:
                                 over_under = p["known_over_under"]
@@ -112,23 +129,19 @@ class old_bets_database:
                             return True
 
                 if not player_found:
-                    game["players"].append(self.create_player(player_name, team_one, team_two, over_under))
+                    game["players"].append(self.create_player(player_name, home_team_name, away_team_name, over_under))
                     if not over_under:
                         over_under = input("Could not find existing over_under for player {}, what should it be? (EXAMPLE: 2.5): ".format(player_name))
                     game["players"][-1]["bets"][site] = {"over": over, "under": under, "over_under": over_under}
                     return True
 
         if not game_found:
-            self.old_bets["bets"].append(self.create_game(date, game_id, home_team, away_team, home_team_id, away_team_id))
-            self.old_bets["bets"][-1]["players"].append(self.create_player(player_name, team_one, team_two, over_under))
+            self.old_bets["bets"].append(self.create_game(date, game_id, home_team_name, away_team_name, home_team_id, away_team_id))
+            self.old_bets["bets"][-1]["players"].append(self.create_player(player_name, home_team_name, away_team_name, over_under))
             if not over_under:
                 over_under = input("Could not find existing over_under for player {}, what should it be? (EXAMPLE: 2.5): ".format(player_name))
             self.old_bets["bets"][-1]["players"][-1]["bets"][site] = {"over": over, "under": under, "over_under": over_under}
-        else:
-            print("Date: " + date)
-            print("Teams: " + team_one + " VS " + team_two)
-            raise("Could not find game on this date...")
-        return True
+            return True
 
     def remove_bet(self, data):
         pass

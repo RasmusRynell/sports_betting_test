@@ -10,7 +10,7 @@ from tqdm import tqdm
 # Get data from bet365
 games = bet_io.get_from_file("./data/old_bets/2021-03-20")
 #Settings.print_json(games)
-
+#[date, player, home_name, away_name, site, O, U, U/O-threshold(on finns)]
 Settings.bets_database.add_bet("2021-03-25", "William Karlsson", "VGS Golden Knights", "LA Kings", "bet365", "1.62", "2.20", "1.5")
 
 Settings.api.save_api_cache()

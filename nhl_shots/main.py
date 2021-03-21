@@ -1,100 +1,108 @@
-import data_processing.create_csv as create_csv
-import user_io.bet365 as bet365_data
+import data_processing.create_csv as csv
+import user_io.bet_io as bet_io
 import Settings
 import pred_models.pred_SVC_v1 as svc
 import pred_models.pred_XGBoost_v1 as xgb
+from tqdm import tqdm
+
 
 
 # Get data from bet365
-games = bet365_data.get_from_clipboard()
+games = bet_io.get_from_file("./data/old_bets/2021-03-20")
+#Settings.print_json(games)
 
-# Add home or away team
-for game in games:
-    home = input("Is \"{}\" the home team (TRUE, True, T or t for True...) = ".format(games[game]["team_one"]))
-    if (home == "TRUE") or (home == "True") or (home == "T") or (home == "t"):
-        games[game]["home_team"] = games[game]["team_one"]
-        games[game]["away_team"] = games[game]["team_two"]
-    else:
-        games[game]["home_team"] = games[game]["team_two"]
-        games[game]["away_team"] = games[game]["team_one"]
-print(games)
+Settings.bets_database.add_bet("2021-03-25", "William Karlsson", "VGS Golden Knights", "LA Kings", "bet365", "1.62", "2.20", "1.5")
+
+Settings.api.save_api_cache()
+Settings.bets_database.save_to_json_file()
+
+'''
+games = bet365_io.get_from_clipboard()
 
 
-# Generate all csv files and save them
-bets = []
-for game in games:
-    for player_name, values in games[game]["bet365-stat"].items():
-        date = games[game]["Date-time"]
-        player_team = values["team"]
-        opp_team =  games[game]["home_team"] if games[game]["home_team"] != values["team"] else games[game]["away_team"]
-        home_or_away = "Home" if games[game]["home_team"] == values["team"] else "Away"
-        bet = [player_name, values["team"], opp_team, home_or_away]
-        bet = [string.lower() for string in bet]        
-        bets.append([bet, [values["over-under"], values["over"], values["under"], player_name, player_team, opp_team, home_or_away, date]])
+for game_key in tqdm(games):
+    for player_key in tqdm(games[game_key]["bet365-stat"]):
+        games[game_key]["bet365-stat"][player_key]["name"] = player_key
+        games[game_key]["bet365-stat"][player_key]["date"] = games[game_key]["Date-time"]
+        games[game_key]["bet365-stat"][player_key]["ply_team_name"] = games[game_key]["bet365-stat"][player_key]["team"]
+        games[game_key]["bet365-stat"][player_key]["opp_team_name"] = games[game_key]["team_one"] if\
+        games[game_key]["bet365-stat"][player_key]["team"] == games[game_key]["team_two"] else games[game_key]["team_two"]
 
-files = create_csv.create_csv(bets, False)
+        # Generate one file with all players, (add to existing one)
+        games[game_key]["bet365-stat"][player_key]["file-path"] = csv.create_csv(games[game_key]["bet365-stat"][player_key], "", "./temp2/pp_all.csv")
 
-print(files)
-print(files[0][0])
-print(files[0][1][0])
+        # Generate one file for each player, (do not add to existing one!)
+        #games[game_key]["bet365-stat"][player_key]["file-path"] = csv.create_csv(games[game_key]["bet365-stat"][player_key])
+Settings.print_json(games)
+
+
+print("Saving_cache")
+Settings.api.save_api_cache()
+
 total = []
 
 # Call predictor to predict all csv files
-for file in files:
-    game = {}
-    player = {}
-    game_info = {}
-    predictions = {}
-    bet365 = {}
-    SVC =  {}
-    XGB = {}
+for bet_game_id in tqdm(games):
+    for player_id in tqdm(games[bet_game_id]["bet365-stat"]):
+        file = games[bet_game_id]["bet365-stat"][player_id]["file-path"]
+        if file:
+            over_under = games[bet_game_id]["bet365-stat"][player_id]["over-under"]
+            game = {}
+            basic_data = {}
+            predictions = {}
+            bet365 = {}
+            SVC =  {}
+            XGB = {}
 
-    #Pred models
-    pred_SVC = svc.pred_SVC(file[0], file[1][0])
-    pred_xgb = xgb.pred_XGB(file[0], file[1][0])
+            print(file)
 
-    #Saving data
+            #Pred models
+            pred_SVC = svc.pred_SVC(file, over_under)
+            pred_xgb = xgb.pred_XGB(file, over_under)
 
-    #Player
-    player["name"] = file[1][3]
-    player["over-under"] = file[1][0]
-    #Game
-    game_info["player_team"] = file[1][4]
-    game_info["opp_team"] = file[1][5]
-    game_info["home_or_away"] = file[1][6]
-    game_info["date"] = file[1][7]
-    #Bet365
-    bet365["bet365_odds_over"] = file[1][1]
-    bet365["bet365_odds_under"] = file[1][2]
-    #SVC
-    SVC["pred_over"] = pred_SVC["pred_over"]["prediction"]
-    SVC["pred_under"] = pred_SVC["pred_under"]["prediction"]
-    SVC["pred_over_acc"] = pred_SVC["pred_over"]["acc"]
-    SVC["pred_under_acc"] = pred_SVC["pred_under"]["acc"]
-    SVC["pred_odds_over"] = pred_SVC["pred_over"]["prediction_odds"]
-    SVC["pred_odds_under"] = pred_SVC["pred_under"]["prediction_odds"]
-    #XGBoost
-    XGB["pred_over"] = pred_SVC["pred_over"]["prediction"]
-    XGB["pred_under"] = pred_SVC["pred_under"]["prediction"]
-    XGB["pred_over_acc"] = pred_SVC["pred_over"]["acc"]
-    XGB["pred_under_acc"] = pred_SVC["pred_under"]["acc"]
-    XGB["pred_odds_over"] = pred_SVC["pred_over"]["prediction_odds"]
-    XGB["pred_odds_under"] = pred_SVC["pred_under"]["prediction_odds"]
+            #Saving data
 
-    game["player"] = player
-    game["game"] = game
-    predictions["bet365"] = bet365
-    predictions["SVC"] = SVC
-    predictions["XGBoost"] = XGB
-    predictions["predictions"] = predictions
+            #Player
+            basic_data["player_name"] = games[bet_game_id]["bet365-stat"][player_id]["name"]
+            basic_data["over-under"] = over_under
 
-    total.append(game)
+            #Game
+            basic_data["player_team"] = games[bet_game_id]["bet365-stat"][player_id]["ply_team_name"]
+            basic_data["opp_team"] = games[bet_game_id]["bet365-stat"][player_id]["opp_team_name"]
+            #basic_data["home_or_away"] = games[bet_game_id]["bet365-stat"][player_id]["ply_team_name"]
+            basic_data["date"] = games[bet_game_id]["bet365-stat"][player_id]["date"]
 
-#total = [svc.pred_SVC("./temp/pp_alexander_ovechkin.csv", 2.5)]
-print(total)
+            #Bet365
+            bet365["bet365_odds_over"] = games[bet_game_id]["bet365-stat"][player_id]["over"]
+            bet365["bet365_odds_under"] = games[bet_game_id]["bet365-stat"][player_id]["under"]
 
-for pred in total:
-    Settings.print_json(pred["predictions"][])
+            #SVC
+            SVC["pred_over"] = pred_SVC["pred_over"]["prediction"]
+            SVC["pred_under"] = pred_SVC["pred_under"]["prediction"]
+            SVC["pred_over_acc"] = pred_SVC["pred_over"]["acc"]
+            SVC["pred_under_acc"] = pred_SVC["pred_under"]["acc"]
+            SVC["pred_odds_over"] = pred_SVC["pred_over"]["prediction_odds"]
+            SVC["pred_odds_under"] = pred_SVC["pred_under"]["prediction_odds"]
+
+            #XGBoost
+            XGB["pred_over"] = pred_xgb["pred_over"]["prediction"]
+            XGB["pred_under"] = pred_xgb["pred_under"]["prediction"]
+            XGB["pred_over_acc"] = pred_xgb["pred_over"]["acc"]
+            XGB["pred_under_acc"] = pred_xgb["pred_under"]["acc"]
+            XGB["pred_odds_over"] = pred_xgb["pred_over"]["prediction_odds"]
+            XGB["pred_odds_under"] = pred_xgb["pred_under"]["prediction_odds"]
+
+            game["basic_data"] = basic_data
+            predictions["bet365"] = bet365
+            predictions["SVC"] = SVC
+            predictions["XGBoost"] = XGB
+            game["predictions"] = predictions
+
+            total.append(game)
+
 
 
 # # Save all predictions into one csv (or excel) file
+for stat in total:
+    excel_io.save_data(stat)
+    '''

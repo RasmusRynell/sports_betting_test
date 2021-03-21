@@ -41,13 +41,18 @@ def pred_SVC(file_name, pred):
         X_all[X_all.columns] = scaler.fit_transform(X_all[X_all.columns])
         
         #This is the information about the game we want to predict.
-        X_pred_info = X_all.head(1)
-        Y_pred_info = Y_all.head(1)
-        X_all = X_all.iloc[1:]
-        Y_all = Y_all.iloc[1:]
+        #X_pred_info = X_all.head(1)
+        #Y_pred_info = Y_all.head(1)
+        #X_all = X_all.iloc[1:]
+        #Y_all = Y_all.iloc[1:]
 
         lda = LinearDiscriminantAnalysis(n_components=1)
         X_lda = lda.fit_transform(X_all, Y_all)
+
+        X_pred_info = X_lda[0]
+        Y_pred_info = Y_all.head(1)
+        X_lda = X_lda[1:]
+        Y_all = Y_all.iloc[1:]
 
         X_train, X_test, Y_train, Y_test = train_test_split(X_lda, Y_all, test_size=50, random_state=2, stratify=Y_all)
 
@@ -63,18 +68,18 @@ def pred_SVC(file_name, pred):
         scores_test = cross_val_score(clf_SVC, X_test, Y_test, cv=5)
         test_error = round(scores_test.mean(), 3)
         test_std = round(scores_test.std(), 3)
-        print(4)
+
         # Predict for our game
-        #Y_pred = clf_SVC.predict_proba(X_pred_info)
-        #Y_pred_odds = round(1/Y_pred[0][1], 2)
+        Y_pred = clf_SVC.predict_proba([X_pred_info])
+        Y_pred_odds = round(1/Y_pred[0][1], 2)
         #Fit using CV
         #fit = cross_val_predict(clf_SVC, X_train, Y_train, cv=5)
         
 
         if(pred_this == pred_this_over):
-            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std }#, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
+            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std , "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
         else:
-            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std }#, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
+            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
     return res
 ###############################################
 

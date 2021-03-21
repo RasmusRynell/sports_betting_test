@@ -28,12 +28,30 @@ def print_json(j):
     print(json.dumps(j, indent=4, sort_keys=True))
 
 
+banned_players = []
+old_banned_players = ["sebastian aho", "sebastian (1997) aho"]
+
+
 # Go here get player name: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
 player_nicknames = {}
 old_player_nicknames = {
                         "alexander ovechkin": "ALEX OVECHKIN",
                         "sebastian antero aho": "Sebastian Aho",
-                        "Nicholas Suzuki": "Nick Suzuki"
+                        "Nicholas Suzuki": "Nick Suzuki",
+                        "artemy panarin": "Artemi Panarin",
+                        "n. hoglander":"Nils Hoglander",
+                        "d. gurianov": "Denis Gurianov",
+                        "j. hughes":"Jack Hughes",
+                        "R. Johansen": "Ryan Johansen",
+                        "M. Ekholm":"Mattias Ekholm",
+                        "P. Hornqvist":"Patric Hornqvist",
+                        "K. Kaprizov":"Kirill Kaprizov",
+                        "K. Fiala":"kevin Fiala",
+                        "A. Killorn":"alex Killorn",
+                        "joel eriksson-ek": "joel eriksson ek",
+                        "mitch marner": "Mitchell Marner",
+                        "bowie horvat": "Bo Horvat",
+                        "p. k. subban": "p.k. subban"
                         }
 
 teams_translate = {}
@@ -67,7 +85,9 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
                        "DAL Stars": "Dallas Stars",
                        "COL Avalanche": "Colorado Avalanche",
                        "CLB Blue Jackets": "Columbus Blue Jackets",
-                       "TOR Maple Leafs": "Toronto Maple Leafs"
+                       "TOR Maple Leafs": "Toronto Maple Leafs",
+                       "St Louis Blues":"St. Louis Blues",
+                       "Montreal Canadiens": "Montréal Canadiens"
                        }
 
 
@@ -79,7 +99,8 @@ old_name_translate = {"p. k. subban": "p.k. subban",
 
 
 
-
+for v in old_banned_players:
+    banned_players.append(v.lower())
 
 for k, v in old_teams_translate.items():
     teams_translate[k.lower()] = v.lower()

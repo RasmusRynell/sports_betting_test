@@ -1,5 +1,5 @@
 import data_processing.create_csv as csv
-import user_io.bet_io as bet_io
+import old_bets.bet_io as bet_io
 import Settings
 import pred_models.pred_SVC_v1 as svc
 import pred_models.pred_XGBoost_v1 as xgb
@@ -8,10 +8,10 @@ from tqdm import tqdm
 
 
 # Get data from bet365
-games = bet_io.get_from_file("./data/old_bets/2021-03-20")
-#Settings.print_json(games)
+games = bet_io.get_from_file("2021-03-20")
 
-Settings.bets_database.add_bet("2021-03-20", "William Karlsson", "LA Kings", "VGS Golden Knights", "bet365", "1.62", "2.20", "1.5")
+for game in games:
+    Settings.bets_database.add_bet(game[0], game[1], game[2], game[3], game[4], game[5], game[6], game[7])
 
 Settings.api.save_api_cache()
 Settings.bets_database.save_to_json_file()

@@ -316,7 +316,6 @@ class games:
             print("away_team_id: " + str(away_team_id))
             raise("WRONG!!")
         
-        print([res_ans, res_ans_down, res_ans_up])
         return [x for x in [res_ans, res_ans_down, res_ans_up] if x != ""]
 
 

@@ -273,28 +273,51 @@ class games:
         return data
 
 
-    def get_game_from_date(self, player_id, date, ply_team_id, opp_team_id, back_one=False):
-        res = self.api.send_request("/schedule?date={}".format(date))
+    def get_game_from_date(self, player_id, date, home_team_id, away_team_id):
+        date = dt.fromisoformat(date)
+        new_date_down = (date) - timedelta(days=1)
+        new_date_up = (date) + timedelta(days=1)
 
+        res = self.api.send_request("/schedule?date={}".format(str(date.date())))
+        res_down = self.api.send_request("/schedule?date={}".format(str(new_date_down.date())))
+        res_up = self.api.send_request("/schedule?date={}".format(str(new_date_up.date())))
+
+        res_ans = ""
         for game in res["dates"][0]["games"]:
-            if (str(game["teams"]["home"]["team"]["id"]) == str(ply_team_id) and \
-                str(game["teams"]["away"]["team"]["id"]) == str(opp_team_id)):
-                return (game["gamePk"], str(ply_team_id), str(opp_team_id))
-                
-            if (str(game["teams"]["home"]["team"]["id"]) == str(opp_team_id) and \
-            str(game["teams"]["away"]["team"]["id"]) == str(ply_team_id)):
-                return (game["gamePk"], str(opp_team_id),str(ply_team_id))
+            if (str(game["teams"]["home"]["team"]["id"]) == str(home_team_id) and \
+                str(game["teams"]["away"]["team"]["id"]) == str(away_team_id)):
+                if str(game["gameDate"][:10]) == str(date.date()) or\
+                    str(game["gameDate"][:10]) == str(new_date_down.date()) or\
+                    str(game["gameDate"][:10]) == str(new_date_up.date()):
+                        res_ans = (game["gamePk"], game["gameDate"][:10])
 
-        if not back_one:
-            new_date = dt.fromisoformat(date) - timedelta(days=1)
-            return self.get_game_from_date(player_id, str(new_date.date()), ply_team_id, opp_team_id, True)
-            
-        print("Player: " + str(player_id))
-        print("Date: " + str(date))
-        print("Ply team id: " + str(ply_team_id))
-        print("Opp team_id: " + str(opp_team_id))
-        print("WE MIGHT NEED TO GO BACK 1 MORE DAY!!")
-        raise("WRONG!!")
+        res_ans_down = ""
+        for game in res_down["dates"][0]["games"]:
+            if (str(game["teams"]["home"]["team"]["id"]) == str(home_team_id) and \
+                str(game["teams"]["away"]["team"]["id"]) == str(away_team_id)):
+                if str(game["gameDate"][:10]) == str(date.date()) or\
+                    str(game["gameDate"][:10]) == str(new_date_down.date()) or\
+                    str(game["gameDate"][:10]) == str(new_date_up.date()):
+                        res_ans_down = (game["gamePk"], game["gameDate"][:10])
+
+        res_ans_up = ""
+        for game in res_up["dates"][0]["games"]:
+            if (str(game["teams"]["home"]["team"]["id"]) == str(home_team_id) and \
+                str(game["teams"]["away"]["team"]["id"]) == str(away_team_id)):
+                if str(game["gameDate"][:10]) == str(date.date()) or\
+                    str(game["gameDate"][:10]) == str(new_date_down.date()) or\
+                    str(game["gameDate"][:10]) == str(new_date_up.date()):
+                        res_ans_up = (game["gamePk"], game["gameDate"][:10])
+
+        if not res_ans and not res_ans_down and not res_ans_up:
+            print("Player: " + str(player_id))
+            print("Date: " + str(date.date()))
+            print("home_team_id: " + str(home_team_id))
+            print("away_team_id: " + str(away_team_id))
+            raise("WRONG!!")
+        
+        print([res_ans, res_ans_down, res_ans_up])
+        return [x for x in [res_ans, res_ans_down, res_ans_up] if x != ""]
 
 
     def get_stats_for_player(self, bet):

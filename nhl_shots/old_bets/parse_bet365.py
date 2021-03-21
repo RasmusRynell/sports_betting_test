@@ -10,7 +10,7 @@ def read_file(file):
     with open(file, "r", encoding='utf-8') as reader:
         lines = reader.readlines()   
     
-    matches= {}
+    matches = {}
     current_key = ""
     for line in lines:
         line = line.replace("\n","")
@@ -25,6 +25,8 @@ def read_file(file):
     for match in matches:
         home_team = match.split(" @ ")[0]
         away_team = match.split(" @ ")[1]
+        matches[match]["home_team"] = home_team
+        matches[match]["away_team"] = away_team
         for i in range(1, len(matches[match]),2):
             if(matches[match][i] == "Över"):
                 next_index = i+1

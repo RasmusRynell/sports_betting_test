@@ -24,7 +24,7 @@ def read_file(file):
     for match in matches:
         games_player[match] = []
         for i in range(1, len(matches[match]),2):
-            if(matches[match][i] == "Över"):
+            if(unidecode(matches[match][i].lower()) == "over"):
                 break
             else:
                 games_player[match].append(matches[match][i])
@@ -35,14 +35,12 @@ def read_file(file):
         games_over_data[match] = []
         for i in range(1, len(matches[match])):
             if(start_saving):
-                if(matches[match][i] == "Under"):
+                if(matches[match][i].lower() == "under"):
                     break
                 else:
                     games_over_data[match].append(matches[match][i])
             else:
-                start_saving = matches[match][i] == "Över"
-    
-    under_data = []
+                start_saving = unidecode(matches[match][i].lower()) == "over"
     games_under_data = {}
     for match in matches:
         game = []
@@ -56,7 +54,6 @@ def read_file(file):
                     games_under_data[match].append(matches[match][i])
             else:
                 start_saving = matches[match][i] == "Under"
-    
     res = []
     for match in games_player:       
         home_team = match.split(" @ ")[0]
@@ -67,10 +64,9 @@ def read_file(file):
             player_odds_O = games_over_data[match][2*i+1]
             player_odds_U = games_under_data[match][2*i+1]
             player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
-            #print(player_info)
             res.append(player_info)
 
     return res
 
 
-#read_file("../data/old_bets/2021-03-20.bet365")
+read_file("../data/old_bets/2021-03-18.bet365")

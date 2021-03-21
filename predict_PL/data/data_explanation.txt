@@ -1,0 +1,11 @@
+
+### Y Feature
+FTR: The feature to predict, either 'H' or 'NH'. 'H' if the home team won else 'NH'.
+
+### X Feature
+HTGS: How many goals the home team have scored so far this season 
+HTGC: How many goals the home team have concieded so far this season
+ATGS: How many goals the away team have scored so far this season 
+ATGC: How many goals the away team have concieded so far this season
+
+

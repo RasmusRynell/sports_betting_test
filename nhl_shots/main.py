@@ -60,6 +60,7 @@ for game in tqdm(all_games):
             basic_data["date"] = game["date"]
             full["basic_data"] = basic_data
 
+
             #Bets
             predictions = {}
             #Bet365

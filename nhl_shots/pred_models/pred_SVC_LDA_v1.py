@@ -30,7 +30,7 @@ def pred_SVC(file_name, pred):
 
         data = pd.read_csv(file_name)
 
-        drop_this = ["shots_this_game_total", "shots_this_game_O1.5", "shots_this_game_U1.5", "shots_this_game_O2.5", "shots_this_game_U2.5", "shots_this_game_O3.5", "shots_this_game_U3.5",]
+        drop_this = ["shots_this_game_total", "shots_this_game_O1.5", "shots_this_game_U1.5", "shots_this_game_O2.5", "shots_this_game_U2.5", "shots_this_game_O3.5", "shots_this_game_U3.5","game_id","game_date","primary_position"]
         drop_this = [x for x in drop_this if x != pred_this]
         data.drop(drop_this,1, inplace=True)
 

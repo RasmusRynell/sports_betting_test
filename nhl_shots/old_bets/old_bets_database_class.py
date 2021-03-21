@@ -80,6 +80,7 @@ class old_bets_database:
             game_id = self.data_handling.get_game_from_date(player_id, date, home_team_id, away_team_id)
             if len(game_id) > 1:
                 while True:
+                    print(game_id)
                     print("\"{}\" : \"{}\" VS \"{}\" SENT IN DATE: {}".format(player_name, home_team_name, away_team_name, date))
                     number_to_save = input("would you like to store (1) or (2) or (3), answer with that number: ")
                     try:
@@ -173,6 +174,9 @@ class old_bets_database:
         elif self.data_handling.is_player_in_team(player_name, team_two):
             player_team_name = team_two
         else:
+            print("player_name: " + str(player_name))
+            print("team_one: " + str(team_one))
+            print("team_two: " + str(team_two))
             raise("FEL player cannot be found in any team!")
 
         ply_team_id = self.data_handling.get_team_id(player_team_name)
@@ -186,3 +190,7 @@ class old_bets_database:
             "bets": {},                             #(STRUCT)
             "known_stats": {}                       #(STRUCT)
         }
+
+
+    def get_all_games(self):
+        return self.old_bets["bets"].copy()

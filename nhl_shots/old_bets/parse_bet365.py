@@ -70,5 +70,7 @@ def read_file(file):
             #print(player_info)
             res.append(player_info)
 
+    return res
+
 
 #read_file("../data/old_bets/2021-03-20.bet365")

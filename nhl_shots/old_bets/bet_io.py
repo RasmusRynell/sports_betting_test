@@ -8,11 +8,8 @@ import Settings
 def get_from_file(date):
     full_list = []
 
-    #try:
-        #full_list.extend(bet365.read_file("./data/old_bets/{}.bet365".format(date)))
-    #except:
-        #pass
-
+    full_list.extend(bet365.read_file("./data/old_bets/{}.bet365".format(date)))
+    
     try:
         full_list.extend(betsson.read_file("./data/old_bets/{}.betsson".format(date)))
     except:

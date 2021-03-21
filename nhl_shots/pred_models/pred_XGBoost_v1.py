@@ -26,7 +26,7 @@ def pred_XGB(file_name, pred):
 
         data = pd.read_csv(file_name)
 
-        drop_this = ["shots_this_game_total", "shots_this_game_O1.5", "shots_this_game_U1.5", "shots_this_game_O2.5", "shots_this_game_U2.5", "shots_this_game_O3.5", "shots_this_game_U3.5",]
+        drop_this = ["shots_this_game_total", "shots_this_game_O1.5", "shots_this_game_U1.5", "shots_this_game_O2.5", "shots_this_game_U2.5", "shots_this_game_O3.5", "shots_this_game_U3.5","game_id","game_date","primary_position",]
         drop_this = [x for x in drop_this if x != pred_this]
         data.drop(drop_this,1, inplace=True)
 
@@ -80,9 +80,9 @@ def pred_XGB(file_name, pred):
         
 
         if(pred_this == pred_this_over):
-            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
+            res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred[0][1]), "prediction_odds":str(Y_pred_odds)}
         else:
-            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
+            res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred[0][1]), "prediction_odds":str(Y_pred_odds)}
     return res
 ###############################################
 """

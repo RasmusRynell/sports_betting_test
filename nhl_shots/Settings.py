@@ -1,14 +1,11 @@
-from data_processing.api_class import api
+from old_bets.old_bets_database_class import old_bets_database as bd
 import json
-
-api = api("https://statsapi.web.nhl.com/api/v1", True, True)
-
-
+from data_processing.api_class import api
 
 current_season = 2021
-num_of_seasons_to_go_back = 10 #3
-num_of_seasons_to_go_back_for_data = 1 #3
-num_of_games_back_to_track = 10 #5
+num_of_seasons_to_go_back = 10 #10
+num_of_seasons_to_go_back_for_data = 1 #1
+num_of_games_back_to_track = 10 #10
 global_csv = False
 
 all_seasons = [str(j)+str(i) for i, j in
@@ -28,14 +25,15 @@ Debug = {   "ram usage": True,
 
 
 def print_json(j):
-    print(json.dumps(j, indent=4, sort_keys=False))
+    print(json.dumps(j, indent=4, sort_keys=True))
 
 
-# Go here get player najme: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
+# Go here get player name: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
 player_nicknames = {}
 old_player_nicknames = {
                         "alexander ovechkin": "ALEX OVECHKIN",
-                        "sebastian antero aho": "Sebastian Aho"
+                        "sebastian antero aho": "Sebastian Aho",
+                        "Nicholas Suzuki": "Nick Suzuki"
                         }
 
 teams_translate = {}
@@ -67,9 +65,17 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
                        "CAR Hurricanes": "Carolina Hurricanes",
                        "det red wings": "Detroit Red Wings",
                        "DAL Stars": "Dallas Stars",
-                       "COL Avalanche": "Colorado Avalanche"
+                       "COL Avalanche": "Colorado Avalanche",
+                       "CLB Blue Jackets": "Columbus Blue Jackets",
+                       "TOR Maple Leafs": "Toronto Maple Leafs"
                        }
 
+
+name_translate = {}
+old_name_translate = {"p. k. subban": "p.k. subban",
+                        "Patric Hörnqvist": "patric hornqvist",
+                        "patric hÒÂrnqvist": "patric hornqvist",
+                        "patric h�rnqvist": "patric hornqvist"}
 
 
 
@@ -78,8 +84,17 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
 for k, v in old_teams_translate.items():
     teams_translate[k.lower()] = v.lower()
 
-
-
-
 for k, v in old_player_nicknames.items():
     player_nicknames[k.lower()] = v.lower()
+
+for k, v in old_name_translate.items():
+    name_translate[k.lower()] = v.lower()
+
+
+
+import data_processing.new_data_handling as data_handling
+
+
+api = api("https://statsapi.web.nhl.com/api/v1", True, True)
+data_handling = data_handling.games()
+bets_database = bd(api, data_handling, "./old_bets/old_bets_database.json")

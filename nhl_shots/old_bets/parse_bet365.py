@@ -20,52 +20,55 @@ def read_file(file):
         elif len(line) > 2:
             matches[current_key].append(line)
 
-    player_names = []
-    next_index = 0
+    games_player = {}
     for match in matches:
-        home_team = match.split(" @ ")[0]
-        away_team = match.split(" @ ")[1]
+        games_player[match] = []
         for i in range(1, len(matches[match]),2):
             if(matches[match][i] == "Över"):
-                next_index = i+1
                 break
             else:
-                player_names.append(matches[match][i])
-
-    over_data = []
+                games_player[match].append(matches[match][i])
+    games_over_data = {}
     for match in matches:
         game = []
         start_saving = False
+        games_over_data[match] = []
         for i in range(1, len(matches[match])):
             if(start_saving):
                 if(matches[match][i] == "Under"):
                     break
                 else:
-                    over_data.append(matches[match][i])
+                    games_over_data[match].append(matches[match][i])
             else:
                 start_saving = matches[match][i] == "Över"
-
+    
     under_data = []
+    games_under_data = {}
     for match in matches:
         game = []
         start_saving = False
+        games_under_data[match] = []
         for i in range(1, len(matches[match])):
             if(start_saving):
                 if(matches[match][i].find(" @ ") > 0):
                     break
                 else:
-                    under_data.append(matches[match][i])
+                    games_under_data[match].append(matches[match][i])
             else:
                 start_saving = matches[match][i] == "Under"
+    
     res = []
-    for player_index in range(len(player_names)):
-        player_name = unidecode(player_names[player_index].lower())
-        player_target = over_data[2*player_index]
-        player_odds_O = over_data[2*player_index+1]
-        player_odds_U = under_data[2*player_index+1]
-        player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
-        res.append(player_info)
-    return res
+    for match in games_player:       
+        home_team = match.split(" @ ")[0]
+        away_team = match.split(" @ ")[1]
+        for i in range(0, len(games_player[match])):
+            player_name = unidecode(games_player[match][i].lower())
+            player_target = games_over_data[match][2*i]
+            player_odds_O = games_over_data[match][2*i+1]
+            player_odds_U = games_under_data[match][2*i+1]
+            player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
+            #print(player_info)
+            res.append(player_info)
 
 
 #read_file("../data/old_bets/2021-03-20.bet365")

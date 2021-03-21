@@ -69,6 +69,9 @@ class old_bets_database:
 
 
     def add_bet(self, date, player_name, home_team_name, away_team_name, site, over, under, over_under = ""):
+        if player_name.lower() in Settings.banned_players:
+            print("This player is banned... {}".format(player_name))
+            return
         player_id = self.data_handling.get_player_id(player_name)
         home_team_id = self.data_handling.get_team_id(home_team_name)
         away_team_id = self.data_handling.get_team_id(away_team_name)
@@ -77,16 +80,18 @@ class old_bets_database:
             game_id = self.data_handling.get_game_from_date(player_id, date, home_team_id, away_team_id)
             if len(game_id) > 1:
                 while True:
-                    print(game_id)
+                    print("\"{}\" : \"{}\" VS \"{}\" SENT IN DATE: {}".format(player_name, home_team_name, away_team_name, date))
                     number_to_save = input("would you like to store (1) or (2) or (3), answer with that number: ")
-                    number_to_save = (int)(number_to_save)-1
-                    if 0 <= number_to_save <= len(game_id):
-                        try:
-                            print("Number to save: " + str(number_to_save))
-                            print(game_id)
-                            game_id = game_id[number_to_save][0]
-                        except:
-                            print("thats not in the list...")
+                    try:
+                        number_to_save = (int)(number_to_save)-1
+                        if 0 <= number_to_save <= len(game_id):
+                            try:
+                                print("Number to save: " + str(number_to_save))
+                                game_id = game_id[number_to_save][0]
+                            except:
+                                print("thats not in the list...")
+                    except:
+                        print("You need to write a number...")
                     if type(game_id) == int:
                         break
             else:
@@ -94,13 +99,11 @@ class old_bets_database:
         except:
             print("Date: " + date)
             raise("Could not find game on this date...")
-        print(game_id)
 
         game_found = False
         for game in self.old_bets["bets"]:
             if str(game["game_id"]) == str(game_id):
                 game_found = True
-                print("Found the game!")
                 player_found = False
                 for p in game["players"]:
                     if str(p["id"]) == str(player_id):

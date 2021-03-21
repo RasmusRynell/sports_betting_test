@@ -22,8 +22,8 @@ def read_file(file):
     res = []
 
     for match in matches:
-        home_team = match.split(" - ")[0]
-        away_team = match.split(" - ")[1]
+        home_team = unidecode(match.split(" - ")[0])
+        away_team = unidecode(match.split(" - ")[1])
         for i in range(0, len(matches[match]), 4):
             info = matches[match][i:(i+4)]
             if(len(info) > 1):

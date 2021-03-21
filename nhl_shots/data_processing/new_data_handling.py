@@ -70,7 +70,7 @@ class games:
     def get_player_id(self, name):
         if (name.lower() in self.player_ids):
             if len(self.player_ids[name.lower()]) > 1:
-                raise Exception("ERROR: The team \"{}\" has more than one id, the player has been transfered mid season! \n ".format(name) + str(self.player_ids[name.lower()]))
+                raise Exception("ERROR: The player \"{}\" has more than one id, the player has been transfered mid season! \n ".format(name) + str(self.player_ids[name.lower()]))
             return self.player_ids[name.lower()][0]
         else:
             if(name.lower() in Settings.player_nicknames):

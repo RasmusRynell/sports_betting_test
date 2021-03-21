@@ -29,7 +29,7 @@ def print_json(j):
 
 
 banned_players = []
-old_banned_players = ["sebastian aho", "sebastian (1997) aho"]
+old_banned_players = ["sebastian aho", "sebastian (1997) aho", "sebastian antero aho"]
 
 
 # Go here get player name: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
@@ -51,7 +51,13 @@ old_player_nicknames = {
                         "joel eriksson-ek": "joel eriksson ek",
                         "mitch marner": "Mitchell Marner",
                         "bowie horvat": "Bo Horvat",
-                        "p. k. subban": "p.k. subban"
+                        "p. k. subban": "p.k. subban",
+                        "j. bratt": "jesper bratt",
+                        "n. gusev":"Nikita Gusev",
+                        "e. tolvanen": "Eeli Tolvanen",
+                        "f. forsberg": "Filip Forsberg",
+                        "t. j. oshie": "T.J. Oshie"
+                        
                         }
 
 teams_translate = {}

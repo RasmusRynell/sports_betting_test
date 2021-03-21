@@ -8,19 +8,26 @@ from tqdm import tqdm
 
 
 # Get data from bet365
-# games = bet_io.get_from_file("2021-03-21")
-# games.extend(bet_io.get_from_file("2021-03-20"))
-# games.extend(bet_io.get_from_file("2021-03-19"))
-# games.extend(bet_io.get_from_file("2021-03-18"))
-# games.extend(bet_io.get_from_file("2021-03-17"))
-# games.extend(bet_io.get_from_file("2021-03-16"))
+games = bet_io.get_from_file("2021-03-21")
+print(len(games))
+games.extend(bet_io.get_from_file("2021-03-20"))
+print(len(games))
+games.extend(bet_io.get_from_file("2021-03-19"))
+print(len(games))
+games.extend(bet_io.get_from_file("2021-03-18"))
+print(len(games))
+games.extend(bet_io.get_from_file("2021-03-17"))
+print(len(games))
+games.extend(bet_io.get_from_file("2021-03-16"))
+print(len(games))
 
-#for game in games:
-#    Settings.bets_database.add_bet(game[0], game[1], game[2], game[3], game[4], game[5], game[6], game[7])
+for game in games:
+    Settings.bets_database.add_bet(game[0], game[1], game[2], game[3], game[4], game[5], game[6], game[7])
 
-#Settings.api.save_api_cache()
-#Settings.bets_database.save_to_json_file()
+Settings.api.save_api_cache()
+Settings.bets_database.save_to_json_file()
 
+'''
 all_games = Settings.bets_database.get_all_games()
 
 for game in tqdm(all_games):
@@ -63,48 +70,12 @@ for game in tqdm(all_games):
 
             #Bets
             predictions = {}
-            #Bet365
-            if "bet365" in player["bets"]:
-                bet365 = {}
-                bet365["odds_over"] = player["bets"]["bet365"]["over"]
-                bet365["odds_under"] = player["bets"]["bet365"]["under"]
-                bet365["over_under"] = player["bets"]["bet365"]["over_under"]
-                predictions["bet365"] = bet365
-
-            #Betsson
-            if "betsson" in player["bets"]:
-                betsson = {}
-                betsson["odds_over"] = player["bets"]["betsson"]["over"]
-                betsson["odds_under"] = player["bets"]["betsson"]["under"]
-                betsson["over_under"] = player["bets"]["betsson"]["over_under"]
-                predictions["betsson"] = betsson
-            
-            #betway
-            if "betway" in player["bets"]:
-                betway = {}
-                betway["odds_over"] = player["bets"]["betway"]["over"]
-                betway["odds_under"] = player["bets"]["betway"]["under"]
-                betway["over_under"] = player["bets"]["betway"]["over_under"]
-                predictions["betway"] = betway
-
-            #unibet
-            if "unibet" in player["bets"]:
-                unibet = {}
-                unibet["odds_over"] = player["bets"]["unibet"]["over"]
-                unibet["odds_under"] = player["bets"]["unibet"]["under"]
-                unibet["over_under"] = player["bets"]["unibet"]["over_under"]
-                predictions["unibet"] = unibet
-
-            #wh
-            if "wh" in player["bets"]:
-                wh = {}
-                wh["odds_over"] = player["bets"]["wh"]["over"]
-                wh["odds_under"] = player["bets"]["wh"]["under"]
-                wh["over_under"] = player["bets"]["wh"]["over_under"]
-                predictions["wh"] = wh
-
-
-
+            for k, v in player["bets"].items():
+                pred = {}
+                pred["odds_over"] = player["bets"][k]["over"]
+                pred["odds_under"] = player["bets"][k]["under"]
+                pred["over_under"] = player["bets"][k]["over_under"]
+                predictions[str(k)] = pred
             full["predictions"] = predictions
 
 
@@ -131,7 +102,7 @@ for game in tqdm(all_games):
 
             total.append(full)
 
-
+'''
 '''
 # # Save all predictions into one csv (or excel) file
 for stat in total:

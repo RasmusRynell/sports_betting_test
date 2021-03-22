@@ -14,6 +14,7 @@ from sklearn.metrics import f1_score
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import cross_val_predict
 
+
 ###############################################
 def pred_SVC(file_name, pred):
     pred_this_over = "shots_this_game_O" + str(pred)
@@ -29,7 +30,7 @@ def pred_SVC(file_name, pred):
             pos_label = 0
 
         data = pd.read_csv(file_name)
-
+        print(data["shots_this_game_total"].head(30))
         drop_this = ["shots_this_game_total", "shots_this_game_O1.5", "shots_this_game_U1.5", "shots_this_game_O2.5", "shots_this_game_U2.5", "shots_this_game_O3.5", "shots_this_game_U3.5","game_id","game_date","primary_position"]
         drop_this = [x for x in drop_this if x != pred_this]
         data.drop(drop_this,1, inplace=True)
@@ -41,19 +42,12 @@ def pred_SVC(file_name, pred):
         X_all[X_all.columns] = scaler.fit_transform(X_all[X_all.columns])
         
         #This is the information about the game we want to predict.
-        #X_pred_info = X_all.head(1)
-        #Y_pred_info = Y_all.head(1)
-        #X_all = X_all.iloc[1:]
-        #Y_all = Y_all.iloc[1:]
-
         lda = LinearDiscriminantAnalysis(n_components=1)
         X_lda = lda.fit_transform(X_all, Y_all)
-
-        X_pred_info = X_lda[0]
-        Y_pred_info = Y_all.head(1)
-        X_lda = X_lda[1:]
-        Y_all = Y_all.iloc[1:]
-
+        X_pred_info = X_lda[0:30]
+        Y_pred_info = Y_all.head(30)
+        X_lda = X_lda[30:]
+        Y_all = Y_all.iloc[30:]
         X_train, X_test, Y_train, Y_test = train_test_split(X_lda, Y_all, test_size=50, random_state=2, stratify=Y_all)
 
 
@@ -70,11 +64,12 @@ def pred_SVC(file_name, pred):
         test_std = round(scores_test.std(), 3)
 
         # Predict for our game
-        Y_pred = clf_SVC.predict_proba([X_pred_info])
+        Y_pred = clf_SVC.predict_proba(X_pred_info)
         Y_pred_odds = round(1/Y_pred[0][1], 2)
         #Fit using CV
         #fit = cross_val_predict(clf_SVC, X_train, Y_train, cv=5)
         
+        #print(Y_pred_info)
 
         if(pred_this == pred_this_over):
             res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std , "prediction":str(Y_pred), "prediction_odds":str(Y_pred_odds)}
@@ -87,6 +82,6 @@ file_name = sys.argv[1]
 pred = sys.argv[2]
 
 res = pred_SVC(file_name, pred)
-print(res)
+print(str(res).replace("'", '"'))
 
 

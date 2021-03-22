@@ -11,6 +11,7 @@ global_csv = False
 
 
 
+
 all_seasons = [str(j)+str(i) for i, j in
             zip(reversed(range(1917, current_season + 1)),
                 reversed(range(1917, current_season)))]

@@ -37,10 +37,10 @@ def pred_SVC(file_name, pred):
         scaler = MinMaxScaler()
         X_all[X_all.columns] = scaler.fit_transform(X_all[X_all.columns])
         #This is the information about the game we want to predict.
-        X_pred_info = X_all.head(1)
-        Y_pred_info = Y_all.head(1)
-        X_all = X_all.iloc[1:]
-        Y_all = Y_all.iloc[1:]
+        X_pred_info = X_all.head(30)
+        Y_pred_info = Y_all.head(30)
+        X_all = X_all.iloc[30:]
+        Y_all = Y_all.iloc[30:]
 
         X_train, X_test, Y_train, Y_test = train_test_split(X_all, Y_all, test_size=50, random_state=2, stratify=Y_all)
 
@@ -62,7 +62,7 @@ def pred_SVC(file_name, pred):
         Y_pred_odds = round(1/Y_pred[0][1], 2)
         #Fit using CV
         #fit = cross_val_predict(clf_SVC, X_train, Y_train, cv=5)
-        
+        print(Y_pred)
 
         if(pred_this == pred_this_over):
             res["pred_over"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred[0][1]), "prediction_odds":str(Y_pred_odds)}
@@ -70,10 +70,9 @@ def pred_SVC(file_name, pred):
             res["pred_under"] = {"F1_acc":f_test_error, "F1_std":f_test_std, "acc":test_error, "std":test_std, "prediction":str(Y_pred[0][1]), "prediction_odds":str(Y_pred_odds)}
     return res
 ###############################################
-"""
+
 file_name = sys.argv[1]
 pred = sys.argv[2]
 
 res = pred_SVC(file_name, pred)
 print(res)
-"""

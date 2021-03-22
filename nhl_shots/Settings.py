@@ -2,11 +2,14 @@ from old_bets.old_bets_database_class import old_bets_database as bd
 import json
 from data_processing.api_class import api
 
+
 current_season = 2021
 num_of_seasons_to_go_back = 10 #10
 num_of_seasons_to_go_back_for_data = 1 #1
 num_of_games_back_to_track = 10 #10
 global_csv = False
+
+
 
 all_seasons = [str(j)+str(i) for i, j in
             zip(reversed(range(1917, current_season + 1)),

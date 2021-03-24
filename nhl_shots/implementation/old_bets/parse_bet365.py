@@ -56,8 +56,8 @@ def read_file(file):
                 start_saving = matches[match][i] == "Under"
     res = []
     for match in games_player:       
-        home_team = match.split(" @ ")[0]
-        away_team = match.split(" @ ")[1]
+        home_team = match.split(" @ ")[1]
+        away_team = match.split(" @ ")[0]
         for i in range(0, len(games_player[match])):
             player_name = unidecode(games_player[match][i].lower())
             player_target = games_over_data[match][2*i]

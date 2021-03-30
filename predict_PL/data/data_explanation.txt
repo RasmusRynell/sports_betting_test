@@ -1,11 +1,37 @@
+### Y Features
+    - Number of corners this game, total and per team.
+    - Number of yellow cards, total and per team.
+    - Number of free kicks, total and per team.
+    - Game result, W, D or L (For home team).
+    - Number of goals
 
-### Y Feature
-FTR: The feature to predict, either 'H' or 'NH'. 'H' if the home team won else 'NH'.
-
-### X Feature
+### X Features
 HTGS: How many goals the home team have scored so far this season 
 HTGC: How many goals the home team have concieded so far this season
 ATGS: How many goals the away team have scored so far this season 
 ATGC: How many goals the away team have concieded so far this season
 
 
+
+### Should contain this data
+    - Stats last X games, (shots, shots on target, corners, ...)
+    - Points last X games. 3pts for win 1pt for draw 0pts for lost
+    - Total points this season
+    - average yellow cards last X games
+    - average num corners last X games
+    - average num free kicks for team
+    - average num free kicks against team
+    - xG last X games
+    - xGA last X games
+    - xG this season
+    - xGA this season
+    - Pinnacle odds????
+
+
+
+### Calculation of xG: 
+    - num shots * 0.1
+    - num shots on goal * 0.5
+    - num corners * 0.01
+    - num free kicks * 0.01
+    (add all up)

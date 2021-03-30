@@ -1,0 +1,566 @@
+
+import numpy as np
+import pandas as pd
+from datetime import datetime as dt
+import itertools
+
+
+def num_goals_scored(data, team, stop_index):
+    goal_counter = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+        if(row["HomeTeam"] == team):
+            goal_counter += row["FTHG"]
+        if(row["AwayTeam"] == team):
+            goal_counter += row["FTAG"]
+
+    return goal_counter   
+
+def num_goals_concieded(data, team, stop_index):
+    goal_counter = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+        if(row["HomeTeam"] == team):
+            goal_counter += row["FTAG"]
+        if(row["AwayTeam"] == team):
+            goal_counter += row["FTHG"]
+
+    return goal_counter   
+
+def get_stats_last_games(data, team, num_games_back, stop_index):
+    team_stats = []
+    tmp = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    team_stats.append(tmp)
+    team_stats.append(tmp)
+    team_stats.append(tmp)
+    team_stats.append(tmp)
+    team_stats.append(tmp)
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if row["HomeTeam"] == team or row["AwayTeam"] == team:
+            tmp = [row["FTHG"], row["FTAG"], row["HS"], row["AS"], row["HST"], row["AST"], row["HF"], row["AF"], \
+                row["HC"], row["AC"], row["HY"], row["AY"], row["HR"], row["AR"]]
+            team_stats.append(tmp)
+        """
+        if(row["HomeTeam"] == team):
+            tmp = [row["HS"], row["HST"], row["HC"], row["AF"], row["HY"]]
+            team_stats.append(tmp)
+        elif(row["AwayTeam"] == team):
+            tmp = [row["AS"], row["AST"], row["AC"], row["HF"], row["AY"]]
+            team_stats.append(tmp)
+        """
+
+    return team_stats[-num_games_back]
+
+def get_points_last_games(data, team, num_games_back, stop_index):
+    points_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            if row["FTR"] == "H":
+                points_last_games.append(3)
+            elif row["FTR"] == "D":
+                points_last_games.append(1)
+            else:
+                points_last_games.append(0)
+        if(row["AwayTeam"] == team):
+            if row["FTR"] == "A":
+                points_last_games.append(3)
+            elif row["FTR"] == "D":
+                points_last_games.append(1)
+            else:
+                points_last_games.append(0)
+
+    return sum(points_last_games[-num_games_back:])
+
+def get_points_this_season(data, team, stop_index):
+    points_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            if row["FTR"] == "H":
+                points_this_season += 3
+            elif row["FTR"] == "D":
+                points_this_season += 1
+            else:
+                points_this_season += 0
+        if(row["AwayTeam"] == team):
+            if row["FTR"] == "A":
+                points_this_season += 3
+            elif row["FTR"] == "D":
+                points_this_season += 1
+            else:
+                points_this_season += 0
+    return points_this_season
+
+def get_yellow_cards_last_games(data, team, num_games_back, stop_index):
+    yellow_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            yellow_last_games.append(row["HY"])
+        if(row["AwayTeam"] == team):
+            yellow_last_games.append(row["AY"])
+    return sum(yellow_last_games[-num_games_back:])
+
+def get_yellow_cards_this_season(data, team, stop_index):
+    yellow_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            yellow_this_season += row["HY"]
+        if(row["AwayTeam"] == team):
+            yellow_this_season += row["AY"]
+    return yellow_this_season
+
+def get_corners_last_games(data, team, num_games_back, stop_index):
+    corners_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            corners_last_games.append(row["HC"])
+        if(row["AwayTeam"] == team):
+            corners_last_games.append(row["AC"])
+    return sum(corners_last_games[-num_games_back:])
+
+def get_corners_this_season(data, team, stop_index):
+    corners_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            corners_this_season += row["HY"]
+        if(row["AwayTeam"] == team):
+            corners_this_season += row["AY"]
+    return corners_this_season
+
+def get_free_kicks_for_last_games(data, team, num_games_back, stop_index):
+    free_kicks_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            free_kicks_last_games.append(row["AF"])
+        if(row["AwayTeam"] == team):
+            free_kicks_last_games.append(row["HF"])
+    return sum(free_kicks_last_games[-num_games_back:])
+
+def get_free_kicks_for_this_season(data, team, stop_index):
+    free_kicks_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            free_kicks_this_season += row["AF"]
+        if(row["AwayTeam"] == team):
+            free_kicks_this_season += row["HF"]
+    return free_kicks_this_season
+
+def get_free_kicks_against_last_games(data, team, num_games_back, stop_index):
+    free_kicks_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            free_kicks_last_games.append(row["HF"])
+        if(row["AwayTeam"] == team):
+            free_kicks_last_games.append(row["AF"])
+    return sum(free_kicks_last_games[-num_games_back:])
+
+def get_free_kicks_against_this_season(data, team, stop_index):
+    free_kicks_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            free_kicks_this_season += row["HF"]
+        if(row["AwayTeam"] == team):
+            free_kicks_this_season += row["AF"]
+    return free_kicks_this_season
+
+def calc_xG(num_shots, num_shots_on_goal, num_corners, num_free_kicks):
+    return (num_shots*0.1 + num_shots_on_goal*0.5 + num_corners*0.01 + num_free_kicks*0.01)
+
+def get_xG_last_games(data, team, num_games_back, stop_index):
+    xG_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            xG_last_games.append(calc_xG(row["HS"], row["HST"], row["HC"], row["AF"]))
+        if(row["AwayTeam"] == team):
+            xG_last_games.append(calc_xG(row["AS"], row["AST"], row["AC"], row["HF"]))
+    return sum(xG_last_games[-num_games_back:])
+
+def get_xG_this_season(data, team, stop_index):
+    xG_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            xG_this_season += calc_xG(row["HS"], row["HST"], row["HC"], row["AF"])
+        if(row["AwayTeam"] == team):
+            xG_this_season += calc_xG(row["AS"], row["AST"], row["AC"], row["HF"])
+    return xG_this_season
+
+def get_xGA_last_games(data, team, num_games_back, stop_index):
+    xGA_last_games = []
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            xGA_last_games.append(calc_xG(row["AS"], row["AST"], row["AC"], row["HF"]))
+        if(row["AwayTeam"] == team):
+            xGA_last_games.append(calc_xG(row["HS"], row["HST"], row["HC"], row["AF"]))
+    return sum(xGA_last_games[-num_games_back:])
+
+def get_xGA_this_season(data, team, stop_index):
+    xGA_this_season = 0
+    for index, row in data.iterrows():
+        if index == stop_index:
+            break
+
+        if(row["HomeTeam"] == team):
+            xGA_this_season += calc_xG(row["AS"], row["AST"], row["AC"], row["HF"])
+        if(row["AwayTeam"] == team):
+            xGA_this_season += calc_xG(row["HS"], row["HST"], row["HC"], row["AF"])
+    return xGA_this_season
+
+########################################################################
+data = pd.read_csv("./data/premier_league_data/2019-2020.csv")
+
+
+home_team_goals = []
+home_team_concieded = []
+away_team_goals = []
+away_team_concieded = []
+
+home_stats_last_games_1 = []
+home_stats_last_games_2 = []
+home_stats_last_games_3 = []
+home_stats_last_games_4 = []
+home_stats_last_games_5 = []
+
+home_points_last_games = []
+home_points_this_season = []
+
+home_yellow_cards_last_games = []
+home_yellow_cards_this_season = []
+home_num_corners_last_games = []
+home_num_corners_this_season = []
+home_num_free_kicks_for_last_games = []
+home_num_free_kicks_for_this_season = []
+home_num_free_kicks_against_last_games = []
+home_num_free_kicks_against_this_season = []
+
+home_xG_last_games = []
+home_xGA_last_games = []
+home_xG_this_season = []
+home_xGA_this_season = []
+
+away_stats_last_games_1 = []
+away_stats_last_games_2 = []
+away_stats_last_games_3 = []
+away_stats_last_games_4 = []
+away_stats_last_games_5 = []
+
+away_points_last_games = []
+away_points_this_season = []
+
+away_yellow_cards_last_games = []
+away_yellow_cards_this_season = []
+away_num_corners_last_games = []
+away_num_corners_this_season = []
+away_num_free_kicks_for_last_games = []
+away_num_free_kicks_for_this_season = []
+away_num_free_kicks_against_last_games = []
+away_num_free_kicks_against_this_season = []
+
+away_xG_last_games = []
+away_xGA_last_games = []
+away_xG_this_season = []
+away_xGA_this_season = []
+
+test = 0
+
+for index, row in data.iterrows():  
+    test += 1
+    if test == 100:
+        break
+    #Just for the home team  
+    home_team_goals.append(num_goals_scored(data, row["HomeTeam"], index))
+    home_team_concieded.append(num_goals_concieded(data, row["HomeTeam"], index))
+
+    home_stats_last_games_1.append(get_stats_last_games(data, row["HomeTeam"], 1, index))
+    home_stats_last_games_2.append(get_stats_last_games(data, row["HomeTeam"], 2, index))
+    home_stats_last_games_3.append(get_stats_last_games(data, row["HomeTeam"], 3, index))
+    home_stats_last_games_4.append(get_stats_last_games(data, row["HomeTeam"], 4, index))
+    home_stats_last_games_5.append(get_stats_last_games(data, row["HomeTeam"], 5, index))
+
+    home_points_last_games.append(get_points_last_games(data, row["HomeTeam"], 5, index))
+    home_points_this_season.append(get_points_this_season(data, row["HomeTeam"], index))
+
+    home_yellow_cards_last_games.append(get_yellow_cards_last_games(data, row["HomeTeam"], 5, index))
+    home_yellow_cards_this_season.append(get_yellow_cards_this_season(data, row["HomeTeam"], index))
+
+    home_num_corners_last_games.append(get_corners_last_games(data, row["HomeTeam"], 5, index))
+    home_num_corners_this_season.append(get_corners_this_season(data, row["HomeTeam"], index))
+
+    home_num_free_kicks_for_last_games.append(get_free_kicks_for_last_games(data, row["HomeTeam"], 5, index))
+    home_num_free_kicks_for_this_season.append(get_free_kicks_for_this_season(data, row["HomeTeam"], index))
+    home_num_free_kicks_against_last_games.append(get_free_kicks_against_last_games(data, row["HomeTeam"], 5, index))
+    home_num_free_kicks_against_this_season.append(get_free_kicks_against_this_season(data, row["HomeTeam"], index))
+
+    home_xG_last_games.append(get_xG_last_games(data, row["HomeTeam"], 5, index))
+    home_xGA_last_games.append(get_xGA_last_games(data, row["HomeTeam"], 5, index))
+    home_xG_this_season.append(get_xG_this_season(data, row["HomeTeam"], index))
+    home_xGA_this_season.append(get_xGA_this_season(data, row["HomeTeam"], index))
+
+    #Just for the away team  
+    away_team_goals.append(num_goals_scored(data, row["AwayTeam"], index))
+    away_team_concieded.append(num_goals_concieded(data, row["AwayTeam"], index))
+
+    away_stats_last_games_1.append(get_stats_last_games(data, row["AwayTeam"], 1, index))
+    away_stats_last_games_2.append(get_stats_last_games(data, row["AwayTeam"], 2, index))
+    away_stats_last_games_3.append(get_stats_last_games(data, row["AwayTeam"], 3, index))
+    away_stats_last_games_4.append(get_stats_last_games(data, row["AwayTeam"], 4, index))
+    away_stats_last_games_5.append(get_stats_last_games(data, row["AwayTeam"], 5, index))
+
+    away_points_last_games.append(get_points_last_games(data, row["AwayTeam"], 5, index))
+    away_points_this_season.append(get_points_this_season(data, row["AwayTeam"], index))
+
+    away_yellow_cards_last_games.append(get_yellow_cards_last_games(data, row["AwayTeam"], 5, index))
+    away_yellow_cards_this_season.append(get_yellow_cards_this_season(data, row["AwayTeam"], index))
+
+    away_num_corners_last_games.append(get_corners_last_games(data, row["AwayTeam"], 5, index))
+    away_num_corners_this_season.append(get_corners_this_season(data, row["AwayTeam"], index))
+
+    away_num_free_kicks_for_last_games.append(get_free_kicks_for_last_games(data, row["AwayTeam"], 5, index))
+    away_num_free_kicks_for_this_season.append(get_free_kicks_for_this_season(data, row["AwayTeam"], index))
+    away_num_free_kicks_against_last_games.append(get_free_kicks_against_last_games(data, row["AwayTeam"], 5, index))
+    away_num_free_kicks_against_this_season.append(get_free_kicks_against_this_season(data, row["AwayTeam"], index))
+
+    away_xG_last_games.append(get_xG_last_games(data, row["AwayTeam"], 5, index))
+    away_xGA_last_games.append(get_xGA_last_games(data, row["AwayTeam"], 5, index))
+    away_xG_this_season.append(get_xG_this_season(data, row["AwayTeam"], index))
+    away_xGA_this_season.append(get_xGA_this_season(data, row["AwayTeam"], index))
+
+
+#Just for the home team
+cols = ["home goals", "home concieded", "home points last games", "home points this season", "home yellow cards last games", "home yellow cards this season", \
+    "home num corners last games", "home num corners this season", "home num free kicks for last games", "home num free kicks for this season", \
+    "home num free kicks against last games", "home num free kicks against this season", "home xG last games", "home xG this season", "home xGA last games", "home xGA this season", \
+            
+    "away goals", "away concieded", "away points last games", "away points this season", "away yellow cards last games", "away yellow cards this season", \
+    "away num corners last games", "away num corners this season", "away num free kicks for last games", "away num free kicks for this season", \
+    "away num free kicks against last games", "away num free kicks against this season", "away xG last games", "away xG this season", "away xGA last games", "away xGA this season"]
+
+tmp = list(zip(
+        home_team_goals, \
+        home_team_concieded, \
+        home_points_last_games, \
+        home_points_this_season, \
+        home_yellow_cards_last_games, \
+        home_yellow_cards_this_season, \
+        home_num_corners_last_games, \
+        home_num_corners_this_season, \
+        home_num_free_kicks_for_last_games, \
+        home_num_free_kicks_for_this_season, \
+        home_num_free_kicks_against_last_games, \
+        home_num_free_kicks_against_this_season, \
+        home_xG_last_games, \
+        home_xGA_last_games, \
+        home_xG_this_season, \
+        home_xGA_this_season, \
+        away_team_goals, \
+        away_team_concieded, \
+        away_points_last_games, \
+        away_points_this_season, \
+        away_yellow_cards_last_games, \
+        away_yellow_cards_this_season, \
+        away_num_corners_last_games, \
+        away_num_corners_this_season, \
+        away_num_free_kicks_for_last_games, \
+        away_num_free_kicks_for_this_season, \
+        away_num_free_kicks_against_last_games, \
+        away_num_free_kicks_against_this_season, \
+        away_xG_last_games, \
+        away_xGA_last_games, \
+        away_xG_this_season, \
+        away_xGA_this_season))
+
+"""
+home_stats_last_games_1[0], \
+home_stats_last_games_1[1], \
+home_stats_last_games_1[2], \
+home_stats_last_games_1[3], \
+home_stats_last_games_1[4], \
+home_stats_last_games_1[5], \
+home_stats_last_games_1[6], \
+home_stats_last_games_1[7], \
+home_stats_last_games_1[8], \
+home_stats_last_games_1[9], \
+home_stats_last_games_1[10], \
+home_stats_last_games_1[11], \
+home_stats_last_games_1[12], \
+home_stats_last_games_1[13], \
+home_stats_last_games_2[0], \
+home_stats_last_games_2[1], \
+home_stats_last_games_2[2], \
+home_stats_last_games_2[3], \
+home_stats_last_games_2[4], \
+home_stats_last_games_2[5], \
+home_stats_last_games_2[6], \
+home_stats_last_games_2[7], \
+home_stats_last_games_2[8], \
+home_stats_last_games_2[9], \
+home_stats_last_games_2[10], \
+home_stats_last_games_2[11], \
+home_stats_last_games_2[12], \
+home_stats_last_games_2[13], \
+home_stats_last_games_3[0], \
+home_stats_last_games_3[1], \
+home_stats_last_games_3[2], \
+home_stats_last_games_3[3], \
+home_stats_last_games_3[4], \
+home_stats_last_games_3[5], \
+home_stats_last_games_3[6], \
+home_stats_last_games_3[7], \
+home_stats_last_games_3[8], \
+home_stats_last_games_3[9], \
+home_stats_last_games_3[10], \
+home_stats_last_games_3[11], \
+home_stats_last_games_3[12], \
+home_stats_last_games_3[13], \
+home_stats_last_games_4[0], \
+home_stats_last_games_4[1], \
+home_stats_last_games_4[2], \
+home_stats_last_games_4[3], \
+home_stats_last_games_4[4], \
+home_stats_last_games_4[5], \
+home_stats_last_games_4[6], \
+home_stats_last_games_4[7], \
+home_stats_last_games_4[8], \
+home_stats_last_games_4[9], \
+home_stats_last_games_4[10], \
+home_stats_last_games_4[11], \
+home_stats_last_games_4[12], \
+home_stats_last_games_4[13], \
+home_stats_last_games_5[0], \
+home_stats_last_games_5[1], \
+home_stats_last_games_5[2], \
+home_stats_last_games_5[3], \
+home_stats_last_games_5[4], \
+home_stats_last_games_5[5], \
+home_stats_last_games_5[6], \
+home_stats_last_games_5[7], \
+home_stats_last_games_5[8], \
+home_stats_last_games_5[9], \
+home_stats_last_games_5[10], \
+home_stats_last_games_5[11], \
+home_stats_last_games_5[12], \
+home_stats_last_games_5[13], \
+"""
+
+"""
+away_stats_last_games_1[0], \
+away_stats_last_games_1[1], \
+away_stats_last_games_1[2], \
+away_stats_last_games_1[3], \
+away_stats_last_games_1[4], \
+away_stats_last_games_1[5], \
+away_stats_last_games_1[6], \
+away_stats_last_games_1[7], \
+away_stats_last_games_1[8], \
+away_stats_last_games_1[9], \
+away_stats_last_games_1[10], \
+away_stats_last_games_1[11], \
+away_stats_last_games_1[12], \
+away_stats_last_games_1[13], \
+away_stats_last_games_2[0], \
+away_stats_last_games_2[1], \
+away_stats_last_games_2[2], \
+away_stats_last_games_2[3], \
+away_stats_last_games_2[4], \
+away_stats_last_games_2[5], \
+away_stats_last_games_2[6], \
+away_stats_last_games_2[7], \
+away_stats_last_games_2[8], \
+away_stats_last_games_2[9], \
+away_stats_last_games_2[10], \
+away_stats_last_games_2[11], \
+away_stats_last_games_2[12], \
+away_stats_last_games_2[13], \
+away_stats_last_games_3[0], \
+away_stats_last_games_3[1], \
+away_stats_last_games_3[2], \
+away_stats_last_games_3[3], \
+away_stats_last_games_3[4], \
+away_stats_last_games_3[5], \
+away_stats_last_games_3[6], \
+away_stats_last_games_3[7], \
+away_stats_last_games_3[8], \
+away_stats_last_games_3[9], \
+away_stats_last_games_3[10], \
+away_stats_last_games_3[11], \
+away_stats_last_games_3[12], \
+away_stats_last_games_3[13], \
+away_stats_last_games_4[0], \
+away_stats_last_games_4[1], \
+away_stats_last_games_4[2], \
+away_stats_last_games_4[3], \
+away_stats_last_games_4[4], \
+away_stats_last_games_4[5], \
+away_stats_last_games_4[6], \
+away_stats_last_games_4[7], \
+away_stats_last_games_4[8], \
+away_stats_last_games_4[9], \
+away_stats_last_games_4[10], \
+away_stats_last_games_4[11], \
+away_stats_last_games_4[12], \
+away_stats_last_games_4[13], \
+away_stats_last_games_5[0], \
+away_stats_last_games_5[1], \
+away_stats_last_games_5[2], \
+away_stats_last_games_5[3], \
+away_stats_last_games_5[4], \
+away_stats_last_games_5[5], \
+away_stats_last_games_5[6], \
+away_stats_last_games_5[7], \
+away_stats_last_games_5[8], \
+away_stats_last_games_5[9], \
+away_stats_last_games_5[10], \
+away_stats_last_games_5[11], \
+away_stats_last_games_5[12], \
+away_stats_last_games_5[13], \
+"""
+
+df = pd.DataFrame(tmp)#, columns=cols)
+
+df.to_csv("./final_dataset.csv")
+
+print("[DONE]")
+#print(home_stats_last_games[-5:][-1:])
+

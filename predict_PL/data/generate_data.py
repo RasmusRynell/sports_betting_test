@@ -348,6 +348,6 @@ df["num free kicks"] = y_free_kicks
 df["num goals"] = y_goals
 df["result"] = y_result
 
-df.to_csv("./final_dataset.csv")
+df.to_csv("./data/final_dataset.csv")
 
 print("[DONE]")

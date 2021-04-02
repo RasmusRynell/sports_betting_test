@@ -12,31 +12,46 @@ def read_file(file):
         lines = reader.readlines()
     matches= {}
     current_key = ""
-    for line in lines:
-        line = line.replace("\n","")
-        if(line.find(" - ") > 0):
-            current_key = line
-            matches[current_key] = []
-        else:
-            matches[current_key].append(line)
-    res = []
 
+    tmp = []
+    for line in lines:
+        if len(line) > 1:
+            line = line.replace("\n","")
+            tmp.append(line)
+    find = "–"
+    res = []
+    for i in range(len(tmp)):
+        if tmp[i] == find:
+            res.append(i)
+
+    res.append(len(tmp)+1)
+    for i in range(len(res)-1):
+        game = tmp[res[i]-1:res[i+1]-1]
+        key = str(game[0]) + " - " + str(game[2])
+        matches[key] = game[3:]
+
+    res = []
     for match in matches:
         home_team = unidecode(match.split(" - ")[0])
         away_team = unidecode(match.split(" - ")[1])
         for i in range(0, len(matches[match]), 4):
             info = matches[match][i:(i+4)]
-            if(len(info) > 1):
-                player_name = info[0].split(", ")[0].split(" ")
-                player_name_first = player_name[0].lower()
-                player_name_last = player_name[1].lower()
-                player_name = unidecode(player_name_first+" "+player_name_last)
-                player_target = info[0].split(" ")[-1]
-                player_odds_O = info[1]
-                player_odds_U = info[3]
-                player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
-                res.append(player_info)
+            player_name = ""
+            name = info[0].split(" ")[:-2]
+            for i in range(len(name)):
+                if i == range(len(name)):
+                    player_name += name[i]
+                else:
+                    player_name += name[i] + " "
+            
+            player_name = unidecode(player_name)
+
+            player_target = info[0].split(" ")[-1]
+            player_odds_O = info[1]
+            player_odds_U = info[3]
+            player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
+            res.append(player_info)    
     return res
 
-#read_file("../data/old_bets/2021-03-20.betsson")
-   
+#res = read_file("../../saved_bets/2021-03-30.betsson")
+#print(res)

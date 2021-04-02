@@ -1,13 +1,38 @@
-from old_bets.old_bets_database_class import old_bets_database as bd
 import json
-from data_processing.api_class import api
+import dateutil.parser
+from datetime import datetime as dt
+from datetime import timedelta
+from datetime import timezone
+import pytz
+
+
+def print_json(j):
+    print(json.dumps(j, indent=4, sort_keys=True))
+
+
+def string_to_standard_datetime(s):
+    return dt.fromisoformat(str(dateutil.parser.parse(s))).astimezone(timezone.utc)
+
+
+def date_to_season(date):
+    half_date = dt(int(date.year), 7, 20).replace(tzinfo=pytz.UTC)
+
+    season = int(date.year)
+    if date < half_date:
+        season = int(date.year) - 1
+
+    return season
+
+
+
+
+
 
 
 current_season = 2021
 num_of_seasons_to_go_back = 10 #10
 num_of_seasons_to_go_back_for_data = 1 #1
-num_of_games_back_to_track = 10 #10
-global_csv = False
+num_of_games_back_to_track = 5 #10
 
 
 
@@ -18,22 +43,10 @@ all_seasons = [str(j)+str(i) for i, j in
 
 
 
-#   ram usage: Show ram usage when creating CSV
-#   print_api_cache: Print whole api cache
-
-#
-Debug = {   "ram usage": True,
-            "print_api_cache": False}
-
-
-
-
-def print_json(j):
-    print(json.dumps(j, indent=4, sort_keys=True))
 
 
 banned_players = []
-old_banned_players = ["sebastian aho", "sebastian (1997) aho", "sebastian antero aho"]
+old_banned_players = ["sebastian aho", "sebastian (1997) aho", "sebastian antero aho", "Sebastian Aho"]
 
 
 # Go here get player name: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
@@ -60,8 +73,20 @@ old_player_nicknames = {
                         "n. gusev":"Nikita Gusev",
                         "e. tolvanen": "Eeli Tolvanen",
                         "f. forsberg": "Filip Forsberg",
-                        "t. j. oshie": "T.J. Oshie"
-                        
+                        "t. j. oshie": "T.J. Oshie",
+                        "m. wood": "Miles Wood",
+                        "M. Dumba": "Matt Dumba",
+                        "james van":"James van Riemsdyk",
+                        "joel eriksson": "Joel Eriksson Ek",
+                        "E. Haula": "Erik Haula",
+                        "N. Schmaltz": "Nick Schmaltz",
+                        "tim stuetzle": "Tim Stützle",
+                        "T. Stutzle": "Tim Stützle",
+                        "tim stutzle": "Tim Stützle",
+                        "evgeny dadonov": "Evgenii Dadonov",
+                        "V. Tarasenko": "Vladimir Tarasenko",
+                        "K. Labanc": "Kevin Labanc",
+                        "P. Dubois": "Pierre-Luc Dubois"
                         }
 
 teams_translate = {}
@@ -97,7 +122,8 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
                        "CLB Blue Jackets": "Columbus Blue Jackets",
                        "TOR Maple Leafs": "Toronto Maple Leafs",
                        "St Louis Blues":"St. Louis Blues",
-                       "Montreal Canadiens": "Montréal Canadiens"
+                       "Montreal Canadiens": "Montréal Canadiens",
+                       "St.Louis Blues":"St. Louis Blues"
                        }
 
 
@@ -123,9 +149,8 @@ for k, v in old_name_translate.items():
 
 
 
-import data_processing.new_data_handling as data_handling
-
-
+from implementations.api.handler import api
 api = api("https://statsapi.web.nhl.com/api/v1", True, True)
-data_handling = data_handling.games()
-bets_database = bd(api, data_handling, "./old_bets/old_bets_database.json")
+
+from implementations.database.handler import database
+db = database(api, "./data/db_games.json", "./data/db_old_odds.json", "./data/db_team_ids.json", "./data/db_player_ids.json")

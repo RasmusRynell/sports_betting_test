@@ -83,10 +83,13 @@ old_player_nicknames = {
                         "tim stuetzle": "Tim Stützle",
                         "T. Stutzle": "Tim Stützle",
                         "tim stutzle": "Tim Stützle",
+                        "T. Stuetzle": "Tim Stützle",
                         "evgeny dadonov": "Evgenii Dadonov",
                         "V. Tarasenko": "Vladimir Tarasenko",
                         "K. Labanc": "Kevin Labanc",
-                        "P. Dubois": "Pierre-Luc Dubois"
+                        "P. Dubois": "Pierre-Luc Dubois",
+                        "nicholas paul" : "nick paul",
+                        "C. Verhaeghe": "carter verhaeghe"
                         }
 
 teams_translate = {}
@@ -116,14 +119,17 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
                        "NJ Devils": "New Jersey Devils",
                        "NY Islanders": "New York Islanders",
                        "CAR Hurricanes": "Carolina Hurricanes",
+                       "Carolina Hurrican":"carolina hurricanes",
                        "det red wings": "Detroit Red Wings",
                        "DAL Stars": "Dallas Stars",
                        "COL Avalanche": "Colorado Avalanche",
                        "CLB Blue Jackets": "Columbus Blue Jackets",
+                       "CBJ Blue Jackets": "Columbus Blue Jackets",
                        "TOR Maple Leafs": "Toronto Maple Leafs",
                        "St Louis Blues":"St. Louis Blues",
                        "Montreal Canadiens": "Montréal Canadiens",
-                       "St.Louis Blues":"St. Louis Blues"
+                       "St.Louis Blues":"St. Louis Blues",
+                       "Columbus Blue": "Columbus Blue Jackets"
                        }
 
 

@@ -29,7 +29,7 @@ def generateTrainingDataFromDates(startDate_date, endDate_date=None):
 
 
 def create_csv(bet, path = "", path_for_one_file = ""):
-    # try:
+    try:
         name = bet["player_name"]
         player_id = bet["player_id"]
         date = bet["date"]
@@ -65,9 +65,9 @@ def create_csv(bet, path = "", path_for_one_file = ""):
                 writer.writerow(game.values())
 
 
-    # except Exception as e:
-    #     print("Cannot create CSV file for " + str(name))
-    #     print(e)
-    #     return ""
+    except Exception as e:
+        print("Cannot create CSV file for " + str(name))
+        print(e)
+        return ""
 
     # return path

@@ -30,6 +30,9 @@ class api:
                 return response_json
         else:
             self.cached_reqs += 1
+
+        if self.total_reqs % 10 == 0:
+            print("sent: " + str(self.total_reqs) + " requests")
         return self.cached_information[req]
 
     def print_cache(self):

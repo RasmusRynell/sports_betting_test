@@ -156,7 +156,18 @@ for k, v in old_name_translate.items():
 
 
 from implementations.api.handler import api
-api = api("https://statsapi.web.nhl.com/api/v1", True, True)
+api = None
 
 from implementations.database.handler import database
-db = database(api, "./data/db_games.json", "./data/db_old_odds.json", "./data/db_team_ids.json", "./data/db_player_ids.json")
+db = None
+
+
+init_done = False
+
+def init():
+    if not init_done:
+        db = database(api, "./data/db_games.json", "./data/db_old_odds.json", "./data/db_team_ids.json", "./data/db_player_ids.json")
+        api = api("https://statsapi.web.nhl.com/api/v1", True, True)
+        init_done = True
+    else:
+        Print("Don't init twice...")

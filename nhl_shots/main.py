@@ -8,6 +8,9 @@ import argh
 
 
 def playerDatabase(populate=False, update=False, test=False):
+    if not Settings.init_done:
+        Settings.init()
+    
     have_to_save = False
     if populate:
         nhl_handler.populate_db()
@@ -25,6 +28,9 @@ def playerDatabase(populate=False, update=False, test=False):
 
 
 def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", p=False):
+    if not Settings.init_done:
+        Settings.init()
+    
     have_to_save = False
     if allBets:
         if startDate == "":
@@ -57,6 +63,10 @@ def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", p=False):
 
 
 def generateTrainingData(allBets=False, startDate="", endDate="", spesDate=""):
+    if not Settings.init_done:
+        Settings.init()
+
+
     if allBets:
         if startDate == "":
             startDate = "2020-12-12"
@@ -70,6 +80,8 @@ def generateTrainingData(allBets=False, startDate="", endDate="", spesDate=""):
     elif spesDate != "":
         currDate_date = Settings.string_to_standard_datetime(spesDate+"T00:00:00Z")
         print("{} files generated".format(csv_handler.generateTrainingDataFromDates(currDate_date)))
+
+
 
 
 if __name__ == "__main__":

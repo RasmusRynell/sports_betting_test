@@ -4,16 +4,17 @@ from datetime import datetime as dt
 from datetime import timedelta
 from datetime import timezone
 import pytz
+from functools import lru_cache
 
 
 def print_json(j):
     print(json.dumps(j, indent=4, sort_keys=True))
 
-
+@lru_cache(maxsize = 10000)
 def string_to_standard_datetime(s):
     return dt.fromisoformat(str(dateutil.parser.parse(s))).astimezone(timezone.utc)
 
-
+@lru_cache(maxsize = 1000)
 def date_to_season(date):
     half_date = dt(int(date.year), 7, 20).replace(tzinfo=pytz.UTC)
 
@@ -46,7 +47,8 @@ all_seasons = [str(j)+str(i) for i, j in
 
 
 banned_players = []
-old_banned_players = ["sebastian aho", "sebastian (1997) aho", "sebastian antero aho", "Sebastian Aho"]
+old_banned_players = [
+    "sebastian aho", "sebastian (1997) aho", "sebastian antero aho", "Sebastian Aho", "nikita gusev", "n. gusev", "shayne gostisbehere"]
 
 
 # Go here get player name: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
@@ -71,6 +73,7 @@ old_player_nicknames = {
                         "p. k. subban": "p.k. subban",
                         "j. bratt": "jesper bratt",
                         "n. gusev":"Nikita Gusev",
+                        "N. Gusev":"Nikita Gusev",
                         "e. tolvanen": "Eeli Tolvanen",
                         "f. forsberg": "Filip Forsberg",
                         "t. j. oshie": "T.J. Oshie",
@@ -89,7 +92,9 @@ old_player_nicknames = {
                         "K. Labanc": "Kevin Labanc",
                         "P. Dubois": "Pierre-Luc Dubois",
                         "nicholas paul" : "nick paul",
-                        "C. Verhaeghe": "carter verhaeghe"
+                        "C. Verhaeghe": "carter verhaeghe",
+                        "K. Shattenkirk": "Kevin Shattenkirk",
+                        "Maxime Comtois": "max Comtois"
                         }
 
 teams_translate = {}
@@ -155,19 +160,16 @@ for k, v in old_name_translate.items():
 
 
 
-from implementations.api.handler import api
+from implementations.api.handler import api as api_class
 api = None
 
-from implementations.database.handler import database
+from implementations.database.handler import database as database_class
 db = None
 
-
-init_done = False
-
-def init():
-    if not init_done:
-        db = database(api, "./data/db_games.json", "./data/db_old_odds.json", "./data/db_team_ids.json", "./data/db_player_ids.json")
-        api = api("https://statsapi.web.nhl.com/api/v1", True, True)
-        init_done = True
-    else:
-        Print("Don't init twice...")
+def init(api_b=True, db_b=True):
+    global api
+    global db
+    if api_b and api==None:
+        api = api_class("https://statsapi.web.nhl.com/api/v1", True, True)
+    if db_b and db==None:
+        db = database_class(api, "./data/db_games.json", "./data/db_old_odds.json", "./data/db_team_ids.json", "./data/db_player_ids.json")

@@ -2,24 +2,39 @@ import Settings
 import implementations.data_handlers.nhl_handler as nhl_handler
 import traceback
 import sys
+from functools import lru_cache
 
 
+def fill_games_player(player_id):
+    for season_index, season in Settings.db.games["seasons"].items():
+        for p_not_p in ("played", "not_played"):
+            for gamePk in season[p_not_p]:
+                s = str(gamePk)[0:4]
+                game = Settings.db.games["games_information"][gamePk]
+                if (int(player_id) in game["data"]["teams"]["home"]["skaters"] or \
+                    int(player_id) in game["data"]["teams"]["away"]["skaters"]) and \
+                    (int(player_id) not in game["data"]["teams"]["home"]["scratches"] and
+                     int(player_id) not in game["data"]["teams"]["away"]["scratches"]):
+                    if str(s) not in Settings.db.games["player_games"][str(player_id)]:
+                        Settings.db.games["player_games"][str(player_id)][str(s)] = []
+                    Settings.db.games["player_games"][str(player_id)][str(s)].append(game["gamePk"])
 
-def generate_training_data(gamePk, player_id, team_id, opp_team_id):
+
+def generate_training_data(player_id):
     done = []
-    for season in Settings.db.games.values():
-        for p_o_np in ("played", "not_played"):
-            for game in season[p_o_np]:
-                if nhl_handler.player_in_game(player_id, game["gamePk"]):
-                    p_team_id = game["teams"]["home"]
-                    o_team_id = game["teams"]["away"]
-                    if not nhl_handler.player_in_team(player_id, o_team_id) and\
-                        not nhl_handler.player_in_team(player_id, p_team_id):
-                        continue
-                    if nhl_handler.player_in_team(player_id, o_team_id):
-                        p_team_id = game["teams"]["away"]
-                        o_team_id = game["teams"]["home"]
-                    done.append(generate_data(game["gamePk"], player_id, p_team_id, o_team_id))
+    if str(player_id) not in Settings.db.games["player_games"]:
+        Settings.db.games["player_games"][str(player_id)] = {}
+        fill_games_player(player_id)
+
+    for season in Settings.db.games["player_games"][str(player_id)].values():
+        for gamePk in season:
+            game = Settings.db.games["games_information"][str(gamePk)]
+            p_team_id = game["teams"]["home"]
+            o_team_id = game["teams"]["away"]
+            if nhl_handler.player_in_team(player_id, o_team_id, str(gamePk)):
+                p_team_id = game["teams"]["away"]
+                o_team_id = game["teams"]["home"]
+            done.append(generate_data(str(gamePk), player_id, p_team_id, o_team_id))
     return (list(done[0].keys()), done)
 
 
@@ -28,10 +43,8 @@ def generate_data(game_id, player_id, player_team_id, opp_team_id):
     old = list(all_data.keys())
     old_len = len(all_data)
 
-    all_games = nhl_handler.get_games_up_to_date(nhl_handler.get_date_from_gameid(game_id))
-
-    all_data.update(generate_player_data(all_games, game_id, player_id, player_team_id, opp_team_id))
-    all_data.update(generate_team_data(all_games, game_id, player_team_id, opp_team_id))
+    all_data.update(generate_player_data(game_id, player_id, player_team_id, opp_team_id))
+    all_data.update(generate_team_data(game_id, player_team_id, opp_team_id, player_id))
     all_data.update(generate_general_data_this_game(game_id, player_id, player_team_id, opp_team_id))
 
     if old_len != len(all_data):
@@ -44,47 +57,48 @@ def generate_data(game_id, player_id, player_team_id, opp_team_id):
 
 
 def generate_general_data_this_game(game_id, player_id, player_team_id, opp_team_id):
-    for played_not_played in ("played", "not_played"):
-        for game in Settings.db.games[str(game_id)[:4]][played_not_played]:
-            if game["gamePk"] == game_id:
-                return {
-                        "gamePk": game_id,
-                        "date": game["date"],
-                        "game_type": int(game["game_type_num"]),
-                        "isHome": int(player_team_id == game["teams"]["home"]),
-                        "opp": int(opp_team_id),
-                        "shots_this_game_O3.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 3.5),
-                        "shots_this_game_O2.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 2.5),
-                        "shots_this_game_O1.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 1.5),
-                        "shots_this_game_U1.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 1.5),
-                        "shots_this_game_U2.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 2.5),
-                        "shots_this_game_U3.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 3.5),
-                        "shots_this_game_total": int(game["data"]["players"][str(player_id)]["shots"])
-                        }
-    raise("FEL!")
+    game = Settings.db.games["games_information"][game_id]
+    return {
+            "gamePk": game_id,
+            "date": game["date"],
+            "game_type": int(game["game_type_num"]),
+            "isHome": int(player_team_id == game["teams"]["home"]),
+            "opp": int(opp_team_id),
+            "shots_this_game_O4.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 4.5),
+            "shots_this_game_O3.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 3.5),
+            "shots_this_game_O2.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 2.5),
+            "shots_this_game_O1.5": int (int(game["data"]["players"][str(player_id)]["shots"]) > 1.5),
+            "shots_this_game_U1.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 1.5),
+            "shots_this_game_U2.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 2.5),
+            "shots_this_game_U3.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 3.5),
+            "shots_this_game_U4.5": int (int(game["data"]["players"][str(player_id)]["shots"]) < 4.5),
+            "shots_this_game_total": int (game["data"]["players"][str(player_id)]["shots"])
+        }
 
 
-
-
-def generate_player_data(all_games, game_id, player_id, player_team_id, opp_team_id):
+def generate_player_data(game_id, player_id, player_team_id, opp_team_id):
     all_stats = {}
+
+    up_to_date = Settings.string_to_standard_datetime(Settings.db.games["games_information"][str(game_id)]["date"])
+    season = str(game_id)[0:4]
 
     games_player_is_in = []
     last_home_game_same_teams = []
     last_away_game_same_teams = []
-    for game in all_games:
-        for player_index in game["data"]["players"]:
-            if str(player_index) == str(player_id):
-                games_player_is_in.append(game)
-                if str(game["teams"]["home"]) == str(player_team_id)\
-                    and str(game["teams"]["away"]) == str(opp_team_id):
-                    last_home_game_same_teams.append(game)
+    for gamePk in Settings.db.games["player_games"][str(player_id)][season]:
+        game_information = Settings.db.games["games_information"][str(gamePk)]
+        this_game_date = Settings.string_to_standard_datetime(game_information["date"])
+        if this_game_date < up_to_date:
+            games_player_is_in.append(game_information)
+            if str(game_information["teams"]["home"]) == str(player_team_id)\
+                and str(game_information["teams"]["away"]) == str(opp_team_id):
+                last_home_game_same_teams.append(game_information)
 
-                if str(game["teams"]["home"]) == str(opp_team_id)\
-                    and str(game["teams"]["away"]) == str(player_team_id):
-                    last_away_game_same_teams.append(game)
-
-
+            if str(game_information["teams"]["home"]) == str(opp_team_id)\
+                and str(game_information["teams"]["away"]) == str(player_team_id):
+                last_away_game_same_teams.append(game_information)
+        else:
+            break
     for i in range(Settings.num_of_games_back_to_track):
         if len(games_player_is_in) > i:
             all_stats.update(get_relevant_player_data(games_player_is_in[(-1)-i], player_id, player_team_id, "player-stat-{}-games-back-{}".format("TEMP",i+1)))
@@ -99,8 +113,6 @@ def generate_player_data(all_games, game_id, player_id, player_team_id, opp_team
                                                         player_id, player_team_id, "player-stat-{}-last-{}-game".format("TEMP", "avr")))
 
     return all_stats
-
-
 
 
 
@@ -158,10 +170,12 @@ def get_relevant_player_data(game, player_id, player_team_id, key):
 
 
 
-def generate_team_data(all_games, game_id, player_team_id, opp_team_id):
+def generate_team_data(game_id, player_team_id, opp_team_id, player_id):
     all_stats = {}
 
-    all_games = add_stat_in_games(all_games)
+    up_to_date = Settings.string_to_standard_datetime(Settings.db.games["games_information"][str(game_id)]["date"])
+    season = str(game_id)[0:4]
+
     for team in ("player_team", "opp_team"):
         t = opp_team_id
         t_inv = player_team_id
@@ -172,39 +186,47 @@ def generate_team_data(all_games, game_id, player_team_id, opp_team_id):
         games_team_in = []
         last_home_game_same_teams = []
         last_away_game_same_teams = []
-        for game in all_games:
-            if str(game["teams"]["home"]) == str(t) or\
-                str(game["teams"]["away"]) == str(t):
-                    games_team_in.append(game)
-                    if str(game["teams"]["home"]) == str(t)\
-                        and str(game["teams"]["away"]) == str(t_inv):
-                        last_home_game_same_teams.append(game)
 
-                    if str(game["teams"]["home"]) == str(t_inv)\
-                        and str(game["teams"]["away"]) == str(t):
-                        last_away_game_same_teams.append(game)
+        for gamePk in Settings.db.games["team_games"][str(t)][season]:
+            game_information = Settings.db.games["games_information"][str(gamePk)]
+            this_game_date = Settings.string_to_standard_datetime(game_information["date"])
+            if this_game_date < up_to_date:
+                games_team_in.append(game_information)
+                if str(game_information["teams"]["home"]) == str(t)\
+                    and str(game_information["teams"]["away"]) == str(t_inv):
+                    last_home_game_same_teams.append(game_information)
+
+                if str(game_information["teams"]["home"]) == str(t_inv)\
+                    and str(game_information["teams"]["away"]) == str(t):
+                    last_away_game_same_teams.append(game_information)
+
+
+
+        games_team_in = add_stat_in_games(games_team_in)
+        last_home_game_same_teams = add_stat_in_games(last_home_game_same_teams)
+        last_away_game_same_teams = add_stat_in_games(last_away_game_same_teams)
 
         for i in range(Settings.num_of_games_back_to_track):
             if len(games_team_in) > i:
-                all_stats.update(get_relevant_team_data(games_team_in[(-1)-i], t, "{}-stat-{}-games-back-{}".format(team, "TEMP",i+1)))
+                all_stats.update(get_relevant_team_data(games_team_in[(-1)-i], t,player_id, "{}-stat-{}-games-back-{}".format(team, "TEMP",i+1)))
 
         if len(last_home_game_same_teams) > 0:
-            all_stats.update(get_relevant_team_data(last_home_game_same_teams[-1], t, "{}-stat-{}-last-{}-game".format(team, "TEMP", "home")))
+            all_stats.update(get_relevant_team_data(last_home_game_same_teams[-1], t,player_id, "{}-stat-{}-last-{}-game".format(team, "TEMP", "home")))
         if len(last_away_game_same_teams) > 0:
-            all_stats.update(get_relevant_team_data(last_away_game_same_teams[-1], t, "{}-stat-{}-last-{}-game".format(team, "TEMP", "away")))
+            all_stats.update(get_relevant_team_data(last_away_game_same_teams[-1], t,player_id, "{}-stat-{}-last-{}-game".format(team, "TEMP", "away")))
 
 
         all_stats.update(get_relevant_team_data_average(last_home_game_same_teams+last_away_game_same_teams,\
-                                                            t, "{}-stat-{}-last-{}-game".format(team, "TEMP", "avr")))
+                                                            t, player_id, "{}-stat-{}-last-{}-game".format(team, "TEMP", "avr")))
 
     return all_stats
 
 
-def get_relevant_team_data_average(games, team_id, key):
+def get_relevant_team_data_average(games, team_id, player_id, key):
     total_done = 0
     total = {}
     for game in games:
-        game_stats = get_relevant_team_data(game, team_id, key)
+        game_stats = get_relevant_team_data(game, team_id, player_id, key)
         if total == {}:
             total = game_stats
         else:
@@ -215,11 +237,14 @@ def get_relevant_team_data_average(games, team_id, key):
     return total
 
 
-def get_relevant_team_data(game, team_id, key):
+def get_relevant_team_data(game, team_id, player_id, key):
     for team_index in ("home", "away"):
         if game["data"]["teams"][str(team_index)] != {}:
             if str(game["data"]["teams"][str(team_index)]["id"]) == str(team_id):
+                playerPlayed = int(player_id) in game["data"]["teams"][str(team_index)]["skaters"] and int(
+                    player_id) not in game["data"]["teams"][str(team_index)]["scratches"]
                 return {
+                    key.replace("TEMP", "playerPlayed"): int(playerPlayed),
                     key.replace("TEMP", "wins"): game["data"]["teams"][team_index]["wins"],
                     key.replace("TEMP", "losses"): game["data"]["teams"][team_index]["losses"],
                     key.replace("TEMP", "ot"): game["data"]["teams"][team_index]["ot"],
@@ -254,6 +279,7 @@ def get_relevant_team_data(game, team_id, key):
 
 
 def add_stat_in_games(all_games):
+    test = False
     for i in range(len(all_games)):
         for team_index in all_games[i]["data"]["teams"]:
             other_team_index = list(all_games[i]["data"]["teams"].keys())[0] if \
@@ -263,8 +289,11 @@ def add_stat_in_games(all_games):
                 all_games[i]["data"]["teams"][team_index]["goalsAgainstPerGame"] = all_games[i]["data"]["teams"][other_team_index]["goals"]
                 all_games[i]["data"]["teams"][team_index]["shotsPerGame"] = all_games[i]["data"]["teams"][team_index]["shots"]
                 all_games[i]["data"]["teams"][team_index]["shotsAgainstPerGame"] = all_games[i]["data"]["teams"][other_team_index]["shots"]
+                test = True
             else:
                 if "goals" in all_games[i]["data"]["teams"][team_index]:
+                    if not test:
+                        raise(":D FUCK YOU")
                     all_games[i]["data"]["teams"][team_index]["GoalsPerGame"] = (all_games[i-1]["data"]["teams"][team_index]["GoalsPerGame"]*i + all_games[i]["data"]["teams"][team_index]["goals"]) / (i + 1)
                     all_games[i]["data"]["teams"][team_index]["goalsAgainstPerGame"] = (all_games[i-1]["data"]["teams"][team_index]["goalsAgainstPerGame"]*i + all_games[i]["data"]["teams"][other_team_index]["goals"]) / (i + 1)
                     all_games[i]["data"]["teams"][team_index]["shotsPerGame"] = (all_games[i-1]["data"]["teams"][team_index]["shotsPerGame"]*i + all_games[i]["data"]["teams"][team_index]["shots"]) / (i + 1)
@@ -281,12 +310,14 @@ def generate_deafult():
         "game_type": None,
         "isHome": None,
         "opp": None,
+        "shots_this_game_O4.5": None,
         "shots_this_game_O3.5": None,
         "shots_this_game_O2.5": None,
         "shots_this_game_O1.5": None,
         "shots_this_game_U1.5": None,
         "shots_this_game_U2.5": None,
         "shots_this_game_U3.5": None,
+        "shots_this_game_U4.5": None,
         "shots_this_game_total": None,
     }
 
@@ -323,7 +354,7 @@ def generate_deafult():
 
     for team in ("player_team", "opp_team"):
         for i in range(1, Settings.num_of_games_back_to_track + 1):
-            default_data["{}-stat-{}-games-back-{}".format(team, "player_played", i)] = None
+            default_data["{}-stat-{}-games-back-{}".format(team, "playerPlayed", i)] = None
             default_data["{}-stat-{}-games-back-{}".format(team, "wins", i)] = None
             default_data["{}-stat-{}-games-back-{}".format(team, "losses", i)] = None
             default_data["{}-stat-{}-games-back-{}".format(team, "ot", i)] = None
@@ -377,7 +408,7 @@ def generate_deafult():
         default_data["player-stat-{}-last-{}-game".format("gameType", taa)] = None
 
         for team in ("player_team", "opp_team"):
-            default_data["{}-stat-{}-last-{}-game".format(team, "player_played", taa)] = None
+            default_data["{}-stat-{}-last-{}-game".format(team, "playerPlayed", taa)] = None
             default_data["{}-stat-{}-last-{}-game".format(team, "wins", taa)] = None
             default_data["{}-stat-{}-last-{}-game".format(team, "losses", taa)] = None
             default_data["{}-stat-{}-last-{}-game".format(team, "ot", taa)] = None

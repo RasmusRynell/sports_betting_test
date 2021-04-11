@@ -94,7 +94,10 @@ old_player_nicknames = {
                         "nicholas paul" : "nick paul",
                         "C. Verhaeghe": "carter verhaeghe",
                         "K. Shattenkirk": "Kevin Shattenkirk",
-                        "Maxime Comtois": "max Comtois"
+                        "Maxime Comtois": "max Comtois",
+                        "J. Morrissey": "Josh Morrissey",
+                        "M. Sergachev": "Mikhail Sergachev",
+                        "P. Zacha": "Pavel Zacha"
                         }
 
 teams_translate = {}

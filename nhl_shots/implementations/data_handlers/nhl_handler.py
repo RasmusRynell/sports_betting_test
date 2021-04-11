@@ -102,9 +102,21 @@ def update_db():
                     # Update list of games played and not played
                     if str(g["status"]) == "7" or str(g["status"]) == "6":
                         games["played"].append(str(g["gamePk"]))
+
+                        if str(g["teams"]["home"]) not in Settings.db.games["team_games"]:
+                            Settings.db.games["team_games"][str(g["teams"]["home"])] = {}
+                        if str(season_index) not in Settings.db.games["team_games"][str(g["teams"]["home"])]:
+                            Settings.db.games["team_games"][str(game["teams"]["home"])][str(season_index)] = []
+                        Settings.db.games["team_games"][str(g["teams"]["home"])][str(season_index)].append(g["gamePk"])
+
+                        if str(g["teams"]["away"]) not in Settings.db.games["team_games"]:
+                            Settings.db.games["team_games"][str(g["teams"]["away"])] = {}
+                        if str(season_index) not in Settings.db.games["team_games"][str(g["teams"]["away"])]:
+                            Settings.db.games["team_games"][str(g["teams"]["away"])][str(season_index)] = []
+                        Settings.db.games["team_games"][str(g["teams"]["away"])][str(season_index)].append(g["gamePk"])
+
                     else:
                         new_not_played.append(str(g["gamePk"]))
-
 
 
         print("Updated {} games in season {}.".format(len(games["not_played"]) - len(new_not_played), season_index))
@@ -112,6 +124,12 @@ def update_db():
         games["not_played"] = new_not_played
         games["played"] = sorted(games["played"], key=lambda gamePk: Settings.string_to_standard_datetime(\
             Settings.db.games["games_information"][str(gamePk)]["date"]))
+
+
+    for team in Settings.db.games["team_games"]:
+        for season in Settings.db.games["team_games"][team]:
+            Settings.db.games["team_games"][team][season] = sorted(Settings.db.games["team_games"][team][season], key=lambda gamePk: Settings.string_to_standard_datetime(
+                Settings.db.games["games_information"][str(gamePk)]["date"]))
 
 
 

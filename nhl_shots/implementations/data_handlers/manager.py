@@ -7,22 +7,25 @@ from tqdm import tqdm
 def analyzePredictionsFromDates(startDate_date=None, endDate_date=None):
     players_analyze_for = getPlayersFromDates(startDate_date, endDate_date)
 
-    predictions = ["SVC_V1.0", "LDA_SVC_V1.0", "DEC_TREE_V1.0", "XGBOOST_V1.0"]
+    predictions = ["SVC_V1.0", "LDA_SVC_V1.0", "DEC_TREE_V1.0"]#, "XGBOOST_V1.0"]
     return prediction_handler.analyze(predictions, players_analyze_for)
 
 
 def generatePredictionsFromDates(startDate_date=None, endDate_date=None):
     players_to_generate_for = getPlayersFromDates(startDate_date, endDate_date)
 
-    predictions = ["SVC_V1.0", "LDA_SVC_V1.0", "DEC_TREE_V1.0", "XGBOOST_V1.0"]
+    predictions = ["SVC_V1.0", "LDA_SVC_V1.0", "DEC_TREE_V1.0"]#, "XGBOOST_V1.0"]
     tot = 0
-    for playerId, playerValues in tqdm(players_to_generate_for.items()):
-        for gamePk in playerValues["games"]:
+    for playerId, playerValues in tqdm(players_to_generate_for.items(), desc="player"):
+        for gamePk in tqdm(playerValues["games"], desc="games"):
             for pred in predictions:
-                if "predictions" not in Settings.db.old_bets[str(playerId)]:
-                    Settings.db.old_bets[str(playerId)]["predictions"] = {}
-                #Settings.db.old_bets[str(playerId)]["predictions"][pred] = 
-                print(prediction_handler.predict(pred, str(playerId), gamePk))
+                if "predictions" not in Settings.db.old_bets[str(playerId)]["games"][str(gamePk)]:
+                    Settings.db.old_bets[str(playerId)]["games"][str(gamePk)]["predictions"] = {}
+                if pred not in Settings.db.old_bets[str(playerId)]["games"][str(gamePk)]["predictions"] or\
+                        Settings.db.old_bets[str(playerId)]["games"][str(gamePk)]["predictions"][pred] == {}:
+                    Settings.db.old_bets[str(playerId)]["games"][str(gamePk)]["predictions"][pred] = prediction_handler.predict(pred, str(playerId), gamePk)
+                #else:
+                    #print("No need to do this one, its already been calculated")
                 tot += 1
     return tot
 
@@ -37,7 +40,6 @@ def generateTrainingDataFromDates(startDate_date=None, endDate_date=None):
                                                                                    "player_name": playerValues["player_name"]}, "", "./data/td/pp_all.csv")
         tot += 1
 
-    Settings.print_json(Settings.db.old_bets)
     return tot
 
 

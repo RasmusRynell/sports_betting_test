@@ -26,7 +26,7 @@ def playerDatabase(populate=False, update=False, printdb=False):
         Settings.api.save()
 
 
-def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", printdb=False):
+def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", printdb=False, override=False):
     Settings.init(False, True)
     
     have_to_save = False
@@ -41,7 +41,7 @@ def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", printdb=F
 
         tot = 0
         while (currDate_date != endDate_date):
-            tot += old_bets_handler.read_new_bets(str(currDate_date.date()))
+            tot += old_bets_handler.read_new_bets(str(currDate_date.date()), override)
             currDate_date += timedelta(days=1)
 
         print(str(tot) + " bets added")
@@ -49,7 +49,7 @@ def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", printdb=F
         have_to_save = True
 
     elif spesDate != "":
-        print(str(old_bets_handler.read_new_bets(spesDate)) + " bets added")
+        print(str(old_bets_handler.read_new_bets(spesDate, override)) + " bets added")
         have_to_save = True
 
     if printdb:
@@ -61,14 +61,17 @@ def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", printdb=F
 
 def generateTrainingData(allBets=False, startDate="", endDate="", spesDate=""):
     call_func_for_dates(allBets, startDate, endDate, spesDate, manager.generateTrainingDataFromDates)
+    Settings.db.save()
 
 
 def predict(allBets=False, startDate="", endDate="", spesDate=""):
     call_func_for_dates(allBets, startDate, endDate, spesDate, manager.generatePredictionsFromDates)
+    Settings.db.save()
 
 
 def validatePredictions(allBets=False, startDate="", endDate="", spesDate=""):
     call_func_for_dates(allBets, startDate, endDate, spesDate, manager.analyzePredictionsFromDates)
+    Settings.db.save()
 
 
 
@@ -77,7 +80,7 @@ def call_func_for_dates(allBets, startDate, endDate, spesDate, func):
     Settings.init(False, True)
     if allBets:
         if startDate == "" and endDate == "":
-            print("{} files generated".format(func()))
+            print("{} generated".format(func()))
         else:
             if startDate == "":
                 startDate = "2020-12-12"
@@ -86,16 +89,16 @@ def call_func_for_dates(allBets, startDate, endDate, spesDate, func):
             startDate_date = Settings.string_to_standard_datetime(startDate+"T00:00:00Z")
             endDate_date = Settings.string_to_standard_datetime(endDate+"T00:00:00Z")
 
-            print("{} files generated".format(func(startDate_date, endDate_date)))
+            print("{} generated".format(func(startDate_date, endDate_date)))
 
     elif spesDate != "":
         currDate_date = Settings.string_to_standard_datetime(spesDate+"T00:00:00Z")
-        print("{} files generated".format(func(currDate_date)))
+        print("{} generated".format(func(currDate_date)))
 
 
 
 
 if __name__ == "__main__":
     parser=argh.ArghParser()
-    parser.add_commands([playerDatabase, betsDatabase, generateTrainingData, predict])
+    parser.add_commands([playerDatabase, betsDatabase, generateTrainingData, predict, validatePredictions])
     parser.dispatch()

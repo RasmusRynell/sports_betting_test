@@ -10,13 +10,13 @@ import Settings
 from tqdm import tqdm
 
 
-def read_new_bets(date_string):
+def read_new_bets(date_string, override):
     total = 0
     bets = get_from_file(date_string)
     if len(bets) > 0:
         for bet in tqdm(bets, desc="Adding bets for {}".format(date_string)):
             bet.insert(0, match_bet_with_pk(bet))
-            if add_bet_to_db(bet):
+            if add_bet_to_db(bet, override):
                 total += 1
     return total
 
@@ -42,17 +42,18 @@ def get_from_file(date):
 def match_bet_with_pk(bet):
     date = Settings.string_to_standard_datetime(str(bet[0]) + "T00:00:00Z")
     season = Settings.date_to_season(date)
-    for gamePk in Settings.db.games["seasons"][str(season)]["played"]:
-        game = Settings.db.games["games_information"][str(gamePk)]
-        game_date = Settings.string_to_standard_datetime(game["date"]) - timedelta(hours=12)
-        if str(game_date.date()) == str(bet[0]):
-            if nhl_handler.get_team_id(str(bet[2])) == game["teams"]["home"] and \
-                nhl_handler.get_team_id(str(bet[3])) == game["teams"]["away"]:
-                return game["gamePk"]
+    for p_no_p in ("played", "not_played"):
+        for gamePk in Settings.db.games["seasons"][str(season)][p_no_p]:
+            game = Settings.db.games["games_information"][str(gamePk)]
+            game_date = Settings.string_to_standard_datetime(game["date"]) - timedelta(hours=12)
+            if str(game_date.date()) == str(bet[0]):
+                if nhl_handler.get_team_id(str(bet[2])) == game["teams"]["home"] and \
+                    nhl_handler.get_team_id(str(bet[3])) == game["teams"]["away"]:
+                    return game["gamePk"]
     print("Could not find a gamePk for: " + str(bet))
 
 
-def add_bet_to_db(bet):
+def add_bet_to_db(bet, override):
     gamePk = bet[0]
     date = bet[1]
     player_name = bet[2]
@@ -101,7 +102,8 @@ def add_bet_to_db(bet):
                     "over": over,
                     "under": under,
                     "over_under": over_under
-                }}
+                }},
+                "predictions": {}
             }}
         }
     else:

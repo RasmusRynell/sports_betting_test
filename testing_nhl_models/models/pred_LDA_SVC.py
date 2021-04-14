@@ -33,7 +33,8 @@ def pred(file_name, pred, gamePk):
         data.drop(drop_this,1, inplace=True)
 
         pred_this_game = data.loc[data["gamePk"] == gamePk]
-        data = data[data.gamePk != gamePk]
+        game_index = data.loc[data["gamePk"] == gamePk].index[0]
+        data = data.iloc[:game_index]
 
         X_all = data.drop([pred_this],1)
         Y_all = data[pred_this]
@@ -41,10 +42,6 @@ def pred(file_name, pred, gamePk):
         scaler = MinMaxScaler()
         X_all[X_all.columns] = scaler.fit_transform(X_all[X_all.columns]) 
 
-        """      
-        lda = LinearDiscriminantAnalysis(n_components=1)
-        X_all = lda.fit_transform(X_all, Y_all)
-        """
         lda = LinearDiscriminantAnalysis(n_components=1)
         lda = lda.fit(X_all, Y_all)
         X_lda = lda.transform(X_all)

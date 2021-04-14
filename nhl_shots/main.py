@@ -1,5 +1,5 @@
 import Settings
-import implementations.data_handlers.csv_handler as csv_handler
+import implementations.data_handlers.manager as manager
 import implementations.data_handlers.nhl_handler as nhl_handler
 import implementations.data_handlers.player_handler as player_handler
 import implementations.data_handlers.old_bets_handler as old_bets_handler
@@ -7,9 +7,8 @@ from datetime import timedelta
 import argh
 
 
-def playerDatabase(populate=False, update=False, test=False):
-    if not Settings.init_done:
-        Settings.init()
+def playerDatabase(populate=False, update=False, printdb=False):
+    Settings.init(True, True)
     
     have_to_save = False
     if populate:
@@ -19,17 +18,16 @@ def playerDatabase(populate=False, update=False, test=False):
         nhl_handler.update_db()
         have_to_save = True
 
-    if test:
-        Settings.print_json(player_handler.generate_data(2019020001, 8479318, 10, 9))
+    if printdb:
+        Settings.print_json(Settings.db.games["team_games"])
 
     if have_to_save:
         Settings.db.save()
         Settings.api.save()
 
 
-def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", p=False):
-    if not Settings.init_done:
-        Settings.init()
+def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", printdb=False, override=False):
+    Settings.init(False, True)
     
     have_to_save = False
     if allBets:
@@ -43,7 +41,7 @@ def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", p=False):
 
         tot = 0
         while (currDate_date != endDate_date):
-            tot += old_bets_handler.read_new_bets(str(currDate_date.date()))
+            tot += old_bets_handler.read_new_bets(str(currDate_date.date()), override)
             currDate_date += timedelta(days=1)
 
         print(str(tot) + " bets added")
@@ -51,40 +49,56 @@ def betsDatabase(allBets=False, startDate="", endDate="", spesDate="", p=False):
         have_to_save = True
 
     elif spesDate != "":
-        print(str(old_bets_handler.read_new_bets(spesDate)) + " bets added")
+        print(str(old_bets_handler.read_new_bets(spesDate, override)) + " bets added")
         have_to_save = True
 
-    if p:
-        print("Bets: " + str(len(Settings.db.old_bets)))
+    if printdb:
+        Settings.print_json(Settings.db.old_bets)
 
     if have_to_save:
         Settings.db.save()
-        Settings.api.save()
 
 
 def generateTrainingData(allBets=False, startDate="", endDate="", spesDate=""):
-    if not Settings.init_done:
-        Settings.init()
+    call_func_for_dates(allBets, startDate, endDate, spesDate, manager.generateTrainingDataFromDates)
+    Settings.db.save()
 
 
+def predict(allBets=False, startDate="", endDate="", spesDate=""):
+    call_func_for_dates(allBets, startDate, endDate, spesDate, manager.generatePredictionsFromDates)
+    Settings.db.save()
+
+
+def validatePredictions(allBets=False, startDate="", endDate="", spesDate=""):
+    call_func_for_dates(allBets, startDate, endDate, spesDate, manager.analyzePredictionsFromDates)
+    Settings.db.save()
+
+
+
+
+def call_func_for_dates(allBets, startDate, endDate, spesDate, func):
+    Settings.init(False, True)
     if allBets:
-        if startDate == "":
-            startDate = "2020-12-12"
-        if endDate == "":
-            endDate = "2025-12-12"
-        startDate_date = Settings.string_to_standard_datetime(startDate+"T00:00:00Z")
-        endDate_date = Settings.string_to_standard_datetime(endDate+"T00:00:00Z")
+        if startDate == "" and endDate == "":
+            print("{} generated".format(func()))
+        else:
+            if startDate == "":
+                startDate = "2020-12-12"
+            if endDate == "":
+                endDate = "2025-12-12"
+            startDate_date = Settings.string_to_standard_datetime(startDate+"T00:00:00Z")
+            endDate_date = Settings.string_to_standard_datetime(endDate+"T00:00:00Z")
 
-        print("{} files generated".format(csv_handler.generateTrainingDataFromDates(startDate_date, endDate_date)))
+            print("{} generated".format(func(startDate_date, endDate_date)))
 
     elif spesDate != "":
         currDate_date = Settings.string_to_standard_datetime(spesDate+"T00:00:00Z")
-        print("{} files generated".format(csv_handler.generateTrainingDataFromDates(currDate_date)))
+        print("{} generated".format(func(currDate_date)))
 
 
 
 
 if __name__ == "__main__":
     parser=argh.ArghParser()
-    parser.add_commands([playerDatabase, betsDatabase, generateTrainingData])
+    parser.add_commands([playerDatabase, betsDatabase, generateTrainingData, predict, validatePredictions])
     parser.dispatch()

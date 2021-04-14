@@ -1,6 +1,6 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": "/usr/bin/python3",
+    "python.pythonPath": "C:\\Users\\rynel\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "cSpell.ignoreWords": [
         "gameid"
     ]

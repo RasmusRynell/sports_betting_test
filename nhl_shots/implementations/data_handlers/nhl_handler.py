@@ -13,19 +13,37 @@ def populate_db():
     for season_index in all_games:
         all_games[season_index] = sorted(all_games[season_index], key=lambda date: Settings.string_to_standard_datetime(date["date"]))
 
+    done = {}
+    done["seasons"] = {}
+    done["games_information"] = {}
+    done["player_games"] = {}
+    done["team_games"] = {}
     for season, stats in all_games.items():
         start = Settings.string_to_standard_datetime("1950-01-01T00:00:00Z")
-        played_games = []
-        not_played_games = []
+        played_games_ids = []
+        not_played_games_ids = []
         for game in stats:
             if game["status"] == "7" or game["status"] == "6":
-                played_games.append(game)
+                played_games_ids.append(str(game["gamePk"]))
             else:
-                not_played_games.append(game)
-        all_games[season] = {"played": played_games, "not_played": not_played_games}
+                not_played_games_ids.append(str(game["gamePk"]))
+            done["games_information"][str(game["gamePk"])] = game
 
-    Settings.db.games = all_games
+            if str(game["teams"]["home"]) not in done["team_games"]:
+                done["team_games"][str(game["teams"]["home"])] = {}
+            if str(season) not in done["team_games"][str(game["teams"]["home"])]:
+                done["team_games"][str(game["teams"]["home"])][str(season)] = []
+            done["team_games"][str(game["teams"]["home"])][str(season)].append(game["gamePk"])
 
+            if str(game["teams"]["away"]) not in done["team_games"]:
+                done["team_games"][str(game["teams"]["away"])] = {}
+            if str(season) not in done["team_games"][str(game["teams"]["away"])]:
+                done["team_games"][str(game["teams"]["away"])][str(season)] = []
+            done["team_games"][str(game["teams"]["away"])][str(season)].append(game["gamePk"])
+        done["seasons"][str(season)] = {"played": played_games_ids, "not_played": not_played_games_ids}
+
+
+    Settings.db.games = done
     Settings.db.team_ids = get_team_ids()
     Settings.db.player_ids = get_all_player_ids("20202021")
 
@@ -58,36 +76,60 @@ def get_all_player_ids(season):
 
 
 
-def player_in_team(player_id, team_id):
-    res = Settings.api.send_request("/teams/{}?expand=team.roster".format(team_id))
-    if "roster" not in res["teams"][0]:
-        return False
-    for player in res["teams"][0]["roster"]["roster"]:
-        if str(player["person"]["id"]) == str(player_id):
-            return True
-    return False
+def player_in_team(player_id, team_id, gamePk):
+    if str(Settings.db.games["games_information"][gamePk]["teams"]["home"]) == str(team_id):
+        return int(player_id) in Settings.db.games["games_information"][gamePk]["data"]["teams"]["home"]["skaters"] or\
+            str(player_id) in Settings.db.games["games_information"][gamePk]["data"]["teams"]["home"]["skaters"]
+    elif str(Settings.db.games["games_information"][gamePk]["teams"]["away"]) == str(team_id):
+        return int(player_id) in Settings.db.games["games_information"][gamePk]["data"]["teams"]["away"]["skaters"] or\
+            str(player_id) in Settings.db.games["games_information"][gamePk]["data"]["teams"]["away"]["skaters"]
+    raise("???")
 
 
 
 def update_db():
-    for season_index in Settings.db.games:
-        stats = Settings.db.games[season_index]
-        print("after_played_games" + str(len(stats["played"])))
-        print("before_not_played_games" + str(len(stats["not_played"])))
+    print("This is probably not working... will have to fix, problem is with \"team_games\"")
+    Settings.db.games["player_games"] = {}
+    for season_index in Settings.db.games["seasons"]:
+        games = Settings.db.games["seasons"][season_index]
         new_not_played = []
-        for game in tqdm(stats["not_played"]):
-            games_this_date = fetch_date_data(Settings.string_to_standard_datetime(game["nhl_database_date"][:10]+"T00:00:00Z"), True)
+        for game_pk in tqdm(games["not_played"], desc="Updating non-played games"):
+            date = Settings.db.games["games_information"][game_pk]["nhl_database_date"]
+            games_this_date = fetch_date_data(Settings.string_to_standard_datetime(date[:10]+"T00:00:00Z"), True)
             for g in games_this_date:
-                if str(game["gamePk"]) == str(g["gamePk"]):
+                if str(game_pk) == str(g["gamePk"]):
+
+                    # Update list of games played and not played
                     if str(g["status"]) == "7" or str(g["status"]) == "6":
-                        stats["played"].append(g)
+                        games["played"].append(str(g["gamePk"]))
+
+                        if str(g["teams"]["home"]) not in Settings.db.games["team_games"]:
+                            Settings.db.games["team_games"][str(g["teams"]["home"])] = {}
+                        if str(season_index) not in Settings.db.games["team_games"][str(g["teams"]["home"])]:
+                            Settings.db.games["team_games"][str(game["teams"]["home"])][str(season_index)] = []
+                        Settings.db.games["team_games"][str(g["teams"]["home"])][str(season_index)].append(g["gamePk"])
+
+                        if str(g["teams"]["away"]) not in Settings.db.games["team_games"]:
+                            Settings.db.games["team_games"][str(g["teams"]["away"])] = {}
+                        if str(season_index) not in Settings.db.games["team_games"][str(g["teams"]["away"])]:
+                            Settings.db.games["team_games"][str(g["teams"]["away"])][str(season_index)] = []
+                        Settings.db.games["team_games"][str(g["teams"]["away"])][str(season_index)].append(g["gamePk"])
+
                     else:
-                        new_not_played.append(g)
-        stats["not_played"] = new_not_played
-        stats["played"] = sorted(stats["played"], key=lambda date: Settings.string_to_standard_datetime(date["date"]))
-        print("after_played_games" + str(len(stats["played"])))
-        print("before_not_played_games" + str(len(stats["not_played"])))
-        print("\n")
+                        new_not_played.append(str(g["gamePk"]))
+
+
+        print("Updated {} games in season {}.".format(len(games["not_played"]) - len(new_not_played), season_index))
+
+        games["not_played"] = new_not_played
+        games["played"] = sorted(games["played"], key=lambda gamePk: Settings.string_to_standard_datetime(\
+            Settings.db.games["games_information"][str(gamePk)]["date"]))
+
+
+    for team in Settings.db.games["team_games"]:
+        for season in Settings.db.games["team_games"][team]:
+            Settings.db.games["team_games"][team][season] = sorted(Settings.db.games["team_games"][team][season], key=lambda gamePk: Settings.string_to_standard_datetime(
+                Settings.db.games["games_information"][str(gamePk)]["date"]))
 
 
 
@@ -125,20 +167,17 @@ def get_stats_from_game(game, game_stats, date):
             "game_type" : game["gameType"],
             "game_type_num" : str(game["gamePk"])[4:6],
             "teams" : {"home": game["teams"]["home"]["team"]["id"], "away": game["teams"]["away"]["team"]["id"]},
-            "data" : {"players": get_all_player_info(game_stats),
+            "data" : {"players": get_all_player_info(game["gamePk"], game_stats),
                                     "teams": {"home": get_all_team_info(game, game_stats, "home"), "away": get_all_team_info(game, game_stats, "away")}}}
 
 
-def get_all_player_info(game_stats):
+def get_all_player_info(gamepk, game_stats):
     done = {}
-    
     for home_or_away in ("home", "away"):
         for player_id in game_stats["teams"][home_or_away]["players"]:
             try:
                 done[player_id[2:]] = {
                     "id": player_id[2:],
-                    "team": game_stats["teams"][home_or_away]["players"][player_id]["person"]["currentTeam"]["id"],
-                    "current_age": game_stats["teams"][home_or_away]["players"][player_id]["person"]["currentAge"],
                     "active": game_stats["teams"][home_or_away]["players"][player_id]["person"]["active"],
                     "rookie": game_stats["teams"][home_or_away]["players"][player_id]["person"]["rookie"],
                     "shootsCatches": game_stats["teams"][home_or_away]["players"][player_id]["person"]["shootsCatches"],
@@ -167,9 +206,18 @@ def get_all_player_info(game_stats):
                     "powerPlayTimeOnIce" : convert_string_to_sec(game_stats["teams"][home_or_away]["players"][player_id]["stats"]["skaterStats"]["powerPlayTimeOnIce"]),
                     "shortHandedTimeOnIce" : convert_string_to_sec(game_stats["teams"][home_or_away]["players"][player_id]["stats"]["skaterStats"]["shortHandedTimeOnIce"])
                 }
+                if "currentTeam" in game_stats["teams"][home_or_away]["players"][player_id]["person"]:
+                    done[player_id[2:]]["team"] = game_stats["teams"][home_or_away]["players"][player_id]["person"]["currentTeam"]["id"]
+                else:
+                    done[player_id[2:]]["team"] = None
+
+                if "current_age" in game_stats["teams"][home_or_away]["players"][player_id]["person"]:
+                    done[player_id[2:]]["current_age"] = game_stats["teams"][home_or_away]["players"][player_id]["person"]["currentAge"]
+                else:
+                    done[player_id[2:]]["current_age"] = None
+
             except Exception as e:
                 pass
-
     return done
 
 
@@ -179,7 +227,8 @@ def get_all_team_info(game, game_stats, home_or_away):
         "wins": game["teams"][home_or_away]["leagueRecord"]["wins"],
         "losses": game["teams"][home_or_away]["leagueRecord"]["losses"],
         "score": game["teams"][home_or_away]["score"],
-        "skaters": game_stats["teams"][home_or_away]["skaters"]
+        "skaters": game_stats["teams"][home_or_away]["skaters"],
+        "scratches": game_stats["teams"][home_or_away]["scratches"]
     }
 
     if "teamStats" in game_stats["teams"][home_or_away]:
@@ -201,20 +250,6 @@ def get_all_team_info(game, game_stats, home_or_away):
         basic["ot"] = 0
 
     return basic
-
-
-def get_games_up_to_date(date):
-    if type(date) is str:
-        date = Settings.string_to_standard_datetime(date)
-
-
-    season = Settings.date_to_season(date)
-
-    done = []
-    for game in Settings.db.games[str(season)]["played"]:
-        if Settings.string_to_standard_datetime(game["date"]) < date:
-            done.append(game)
-    return done
 
 
 '''
@@ -247,20 +282,13 @@ def get_player_id(name):
         raise Exception("ERROR: Cannot convert player \"{}\" to an id, it's not in the database!".format(name))
 
 
-def player_in_game(player_id, game_id):
-    for keys in ("played", "not_played"):
-        for game in Settings.db.games[str(game_id)[:4]][keys]:
-            if str(game["gamePk"]) == str(game_id):
-                if str(player_id) in game["data"]["players"]:
-                    return True
-    return False
+def player_in_game(player_id, gamePk):
+    return str(player_id) in Settings.db.games["games_information"][str(gamePk)]["data"]["players"] or\
+        int(player_id) in Settings.db.games["games_information"][str(gamePk)]["data"]["players"]
 
 
-def get_date_from_gameid(gameid):
-    for game in Settings.db.games[str(gameid)[:4]]["played"]:
-        if str(game["gamePk"]) == str(gameid):
-            return game["date"]
-    return None
+def get_date_from_gamePk(gamePk):
+    return Settings.db.games["games_information"][str(gamePk)]["data"]["date"]
 
 def convert_string_to_sec(time_in_string):
     t = time_in_string.split(":")

@@ -48,10 +48,13 @@ def read_file(file):
                     player_name += name[i] + " "
             
             player_name = unidecode(player_name)
-
-            player_target = info[0].split(" ")[-1]
-            player_odds_O = info[1]
-            player_odds_U = info[3]
-            player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
-            res.append(player_info)    
+            try:
+                player_target = info[0].split(" ")[-1]
+                player_odds_O = info[1]
+                player_odds_U = info[3]
+                player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
+                res.append(player_info)
+            except:
+                print(player_name)
+                raise("wrong")
     return res

@@ -1,6 +1,6 @@
 import requests
 import json
-
+import msgpack
 
 class api:
     '''
@@ -30,9 +30,6 @@ class api:
                 return response_json
         else:
             self.cached_reqs += 1
-
-        if self.total_reqs % 10 == 0:
-            print("sent: " + str(self.total_reqs) + " requests")
         return self.cached_information[req]
 
     def print_cache(self):
@@ -46,14 +43,12 @@ class api:
 
     def save(self):
         if self.save_cache:
-            inf = json.dumps(self.cached_information)
-            f = open("./data/saved_cache.json", "w")
-            f.write(inf)
-            f.close()
+            with open("./data/saved_cache.json", "wb") as f:
+                f.write(msgpack.packb(self.cached_information))
 
     def read_saved_api_cache(self):
         try:
-            with open('./data/saved_cache.json') as json_file:
-                self.cached_information = json.load(json_file)
+            with open('./data/saved_cache.json', "rb") as f:
+                self.cached_information = msgpack.unpackb(f.read())
         except Exception as e:
             print("Could not find file saved_cache.json")

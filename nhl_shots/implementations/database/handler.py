@@ -1,4 +1,5 @@
 import json
+import msgpack
 
 class database:
     def __init__(self, api, games_file, old_bets_file, team_ids_file, player_ids_file):
@@ -13,34 +14,34 @@ class database:
 
     def save(self):
         try:
-            with open(self.games_file_path, "w") as f:
-                f.write(json.dumps(self.games))
+            with open(self.games_file_path, "wb") as f:
+                f.write(msgpack.packb(self.games))
         except Exception as e:
-            print("Something went wrong when saving database...")
+            print("Something went wrong when saving games database...")
 
         try:
-            with open(self.old_bets_file_path, "w") as f:
-                f.write(json.dumps(self.old_bets))
+            with open(self.old_bets_file_path, "wb") as f:
+                f.write(msgpack.packb(self.old_bets))
         except Exception as e:
-            print("Something went wrong when saving database...")
+            print("Something went wrong when saving the old bets database...")
 
         try:
-            with open(self.team_ids_file_path, "w") as f:
-                f.write(json.dumps(self.team_ids))
+            with open(self.team_ids_file_path, "wb") as f:
+                f.write(msgpack.packb(self.team_ids))
         except Exception as e:
-            print("Something went wrong when saving database...")
+            print("Something went wrong when saving the team ids database...")
 
         try:
-            with open(self.player_ids_file_path, "w") as f:
-                f.write(json.dumps(self.player_ids))
+            with open(self.player_ids_file_path, "wb") as f:
+                f.write(msgpack.packb(self.player_ids))
         except Exception as e:
-            print("Something went wrong when saving database...")
+            print("Something went wrong when saving the player ids database...")
 
 
     def load(self, path):
         try:
-            with open(path) as json_file:
-                return json.load(json_file)
+            with open(path, "rb") as f:
+                return msgpack.unpackb(f.read())
         except Exception as e:
             print("Could not find file {}, starting over with an empty one.".format(path))
             return {}

@@ -97,7 +97,9 @@ old_player_nicknames = {
                         "Maxime Comtois": "max Comtois",
                         "J. Morrissey": "Josh Morrissey",
                         "M. Sergachev": "Mikhail Sergachev",
-                        "P. Zacha": "Pavel Zacha"
+                        "P. Zacha": "Pavel Zacha",
+                        "Mattias Janmark" : "Mattias Janmark-Nylen",
+                        "Y. Gourde" : "Yanni Gourde"
                         }
 
 teams_translate = {}
@@ -129,6 +131,7 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
                        "CAR Hurricanes": "Carolina Hurricanes",
                        "Carolina Hurrican":"carolina hurricanes",
                        "det red wings": "Detroit Red Wings",
+                       'Detroit Red Wings"': "Detroit Red Wings",
                        "DAL Stars": "Dallas Stars",
                        "COL Avalanche": "Colorado Avalanche",
                        "CLB Blue Jackets": "Columbus Blue Jackets",

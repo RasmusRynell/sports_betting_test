@@ -29,4 +29,4 @@ def eval_bets(file):
     calc_ROI.calc_bets_correct(data, "DEC_TREE_V1.0", 0)
 
 
-eval_bets("./data/test.txt")
+eval_bets("./data/pred_bets.txt")

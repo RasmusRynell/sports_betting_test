@@ -283,8 +283,12 @@ def get_player_id(name):
 
 
 def player_in_game(player_id, gamePk):
-    return str(player_id) in Settings.db.games["games_information"][str(gamePk)]["data"]["players"] or\
-        int(player_id) in Settings.db.games["games_information"][str(gamePk)]["data"]["players"]
+    try:
+        return str(player_id) in Settings.db.games["games_information"][str(gamePk)]["data"]["players"] or\
+            int(player_id) in Settings.db.games["games_information"][str(gamePk)]["data"]["players"]
+    except:
+        print(player_id)
+        print(gamePk)
 
 
 def get_date_from_gamePk(gamePk):

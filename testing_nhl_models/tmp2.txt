@@ -1,0 +1,662 @@
+LDA SVC using threshold 0 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1084.31
+Our pot starting this day: 1084.31
+Our pot ending this day: 1336.19
+Our pot starting this day: 1336.19
+Our pot ending this day: 884.92
+Our pot starting this day: 884.92
+Our pot ending this day: 857.87
+Our pot starting this day: 857.87
+Our pot ending this day: 1064.41
+Our pot starting this day: 1064.41
+Our pot ending this day: 1190.29
+Our pot starting this day: 1190.29
+Our pot ending this day: 1440.3
+Our pot starting this day: 1440.3
+Our pot ending this day: 1679.42
+Our pot starting this day: 1679.42
+Our pot ending this day: 1604.28
+Our pot starting this day: 1604.28
+Our pot ending this day: 1593.59
+Our pot starting this day: 1593.59
+Our pot ending this day: 2051.6
+Our pot starting this day: 2051.6
+Our pot ending this day: 1229.9
+Our pot starting this day: 1229.9
+Our pot ending this day: 1839.02
+Our pot starting this day: 1839.02
+Our pot ending this day: 1370.24
+Our pot starting this day: 1370.24
+Our pot ending this day: 1845.44
+Our pot starting this day: 1845.44
+Our pot ending this day: 2340.2
+Our pot starting this day: 2340.2
+Our pot ending this day: 2066.42
+Our pot starting this day: 2066.42
+Our pot ending this day: 2027.89
+Our pot starting this day: 2027.89
+Our pot ending this day: 2172.63
+Our pot starting this day: 2172.63
+Our pot ending this day: 2657.19
+Our pot starting this day: 2657.19
+Our pot ending this day: 2738.99
+Our pot starting this day: 2738.99
+Our pot ending this day: 2367.6
+Our pot starting this day: 2367.6
+Our pot ending this day: 2133.0
+Our pot starting this day: 2133.0
+Our pot ending this day: 2314.47
+Our pot starting this day: 2314.47
+Our pot ending this day: 2854.08
+Our pot starting this day: 2854.08
+Our pot ending this day: 3303.83
+Our pot starting this day: 3303.83
+Our pot ending this day: 3954.84
+Our pot starting this day: 3954.84
+Our pot ending this day: 3061.08
+Simulated ROI: 3.06108
+28
+Unit bet ROI: 1.0213499480789197
+Betted on 1926 players out of 2306 total player bets
+
+LDA SVC using threshold 0.1 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1103.3
+Our pot starting this day: 1103.3
+Our pot ending this day: 1386.09
+Our pot starting this day: 1386.09
+Our pot ending this day: 924.23
+Our pot starting this day: 924.23
+Our pot ending this day: 913.05
+Our pot starting this day: 913.05
+Our pot ending this day: 1141.07
+Our pot starting this day: 1141.07
+Our pot ending this day: 1262.51
+Our pot starting this day: 1262.51
+Our pot ending this day: 1513.62
+Our pot starting this day: 1513.62
+Our pot ending this day: 1718.5
+Our pot starting this day: 1718.5
+Our pot ending this day: 1022.23
+Our pot starting this day: 1022.23
+Our pot ending this day: 1542.39
+Our pot starting this day: 1542.39
+Our pot ending this day: 1475.62
+Our pot starting this day: 1475.62
+Our pot ending this day: 1092.28
+Our pot starting this day: 1092.28
+Our pot ending this day: 1447.83
+Our pot starting this day: 1447.83
+Our pot ending this day: 1843.25
+Our pot starting this day: 1843.25
+Our pot ending this day: 1859.59
+Our pot starting this day: 1859.59
+Our pot ending this day: 2422.9
+Our pot starting this day: 2422.9
+Our pot ending this day: 2305.32
+Our pot starting this day: 2305.32
+Our pot ending this day: 2485.7
+Our pot starting this day: 2485.7
+Our pot ending this day: 2184.1
+Our pot starting this day: 2184.1
+Our pot ending this day: 2724.75
+Our pot starting this day: 2724.75
+Our pot ending this day: 3053.9
+Our pot starting this day: 3053.9
+Our pot ending this day: 3800.6
+Our pot starting this day: 3800.6
+Our pot ending this day: 3331.37
+Our pot starting this day: 3331.37
+Our pot ending this day: 3859.35
+Our pot starting this day: 3859.35
+Our pot ending this day: 3408.09
+Our pot starting this day: 3408.09
+Our pot ending this day: 4000.36
+Our pot starting this day: 4000.36
+Our pot ending this day: 4038.05
+Our pot starting this day: 4038.05
+Our pot ending this day: 3056.98
+Simulated ROI: 3.05698
+28
+Unit bet ROI: 1.0370800244349418
+Betted on 1637 players out of 2306 total player bets
+
+LDA SVC using threshold 0.2 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1119.42
+Our pot starting this day: 1119.42
+Our pot ending this day: 1395.73
+Our pot starting this day: 1395.73
+Our pot ending this day: 1001.72
+Our pot starting this day: 1001.72
+Our pot ending this day: 987.09
+Our pot starting this day: 987.09
+Our pot ending this day: 1259.6
+Our pot starting this day: 1259.6
+Our pot ending this day: 1394.41
+Our pot starting this day: 1394.41
+Our pot ending this day: 743.87
+Our pot starting this day: 743.87
+Our pot ending this day: 1144.41
+Our pot starting this day: 1144.41
+Our pot ending this day: 1139.48
+Our pot starting this day: 1139.48
+Our pot ending this day: 821.03
+Our pot starting this day: 821.03
+Our pot ending this day: 1113.76
+Our pot starting this day: 1113.76
+Our pot ending this day: 1405.23
+Our pot starting this day: 1405.23
+Our pot ending this day: 1410.2
+Our pot starting this day: 1410.2
+Our pot ending this day: 1839.73
+Our pot starting this day: 1839.73
+Our pot ending this day: 1642.89
+Our pot starting this day: 1642.89
+Our pot ending this day: 1816.93
+Our pot starting this day: 1816.93
+Our pot ending this day: 1731.91
+Our pot starting this day: 1731.91
+Our pot ending this day: 2043.02
+Our pot starting this day: 2043.02
+Our pot ending this day: 1687.88
+Our pot starting this day: 1687.88
+Our pot ending this day: 1824.36
+Our pot starting this day: 1824.36
+Our pot ending this day: 2097.84
+Our pot starting this day: 2097.84
+Our pot ending this day: 1998.32
+Our pot starting this day: 1998.32
+Our pot ending this day: 2279.82
+Our pot starting this day: 2279.82
+Our pot ending this day: 2919.91
+Our pot starting this day: 2919.91
+Our pot ending this day: 3351.75
+Our pot starting this day: 3351.75
+Our pot ending this day: 4376.98
+Our pot starting this day: 4376.98
+Our pot ending this day: 3142.25
+Our pot starting this day: 3142.25
+Our pot ending this day: 3300.77
+Simulated ROI: 3.30077
+28
+Unit bet ROI: 1.0537425595238088
+Betted on 1344 players out of 2306 total player bets
+
+LDA SVC using threshold 0.3 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1156.6
+Our pot starting this day: 1156.6
+Our pot ending this day: 1382.57
+Our pot starting this day: 1382.57
+Our pot ending this day: 1028.69
+Our pot starting this day: 1028.69
+Our pot ending this day: 998.35
+Our pot starting this day: 998.35
+Our pot ending this day: 1243.18
+Our pot starting this day: 1243.18
+Our pot ending this day: 1311.2
+Our pot starting this day: 1311.2
+Our pot ending this day: 749.38
+Our pot starting this day: 749.38
+Our pot ending this day: 1098.4
+Our pot starting this day: 1098.4
+Our pot ending this day: 1127.66
+Our pot starting this day: 1127.66
+Our pot ending this day: 763.76
+Our pot starting this day: 763.76
+Our pot ending this day: 1046.7
+Our pot starting this day: 1046.7
+Our pot ending this day: 1380.14
+Our pot starting this day: 1380.14
+Our pot ending this day: 1433.03
+Our pot starting this day: 1433.03
+Our pot ending this day: 1960.28
+Our pot starting this day: 1960.28
+Our pot ending this day: 1727.95
+Our pot starting this day: 1727.95
+Our pot ending this day: 1963.25
+Our pot starting this day: 1963.25
+Our pot ending this day: 1964.44
+Our pot starting this day: 1964.44
+Our pot ending this day: 2410.76
+Our pot starting this day: 2410.76
+Our pot ending this day: 1946.07
+Our pot starting this day: 1946.07
+Our pot ending this day: 1988.78
+Our pot starting this day: 1988.78
+Our pot ending this day: 2334.31
+Our pot starting this day: 2334.31
+Our pot ending this day: 2148.72
+Our pot starting this day: 2148.72
+Our pot ending this day: 2367.86
+Our pot starting this day: 2367.86
+Our pot ending this day: 3229.45
+Our pot starting this day: 3229.45
+Our pot ending this day: 3869.46
+Our pot starting this day: 3869.46
+Our pot ending this day: 5138.13
+Our pot starting this day: 5138.13
+Our pot ending this day: 5500.36
+Our pot starting this day: 5500.36
+Our pot ending this day: 3454.15
+Simulated ROI: 3.4541500000000003
+28
+Unit bet ROI: 1.069132791327913
+Betted on 1107 players out of 2306 total player bets
+
+LDA SVC using threshold 0.4 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1226.13
+Our pot starting this day: 1226.13
+Our pot ending this day: 1445.96
+Our pot starting this day: 1445.96
+Our pot ending this day: 1061.16
+Our pot starting this day: 1061.16
+Our pot ending this day: 906.04
+Our pot starting this day: 906.04
+Our pot ending this day: 1165.66
+Our pot starting this day: 1165.66
+Our pot ending this day: 1213.33
+Our pot starting this day: 1213.33
+Our pot ending this day: 728.34
+Our pot starting this day: 728.34
+Our pot ending this day: 1111.38
+Our pot starting this day: 1111.38
+Our pot ending this day: 1137.08
+Our pot starting this day: 1137.08
+Our pot ending this day: 727.94
+Our pot starting this day: 727.94
+Our pot ending this day: 1023.93
+Our pot starting this day: 1023.93
+Our pot ending this day: 899.93
+Our pot starting this day: 899.93
+Our pot ending this day: 912.48
+Our pot starting this day: 912.48
+Our pot ending this day: 1302.16
+Our pot starting this day: 1302.16
+Our pot ending this day: 1362.8
+Our pot starting this day: 1362.8
+Our pot ending this day: 1764.43
+Our pot starting this day: 1764.43
+Our pot ending this day: 2448.56
+Our pot starting this day: 2448.56
+Our pot ending this day: 2598.08
+Our pot starting this day: 2598.08
+Our pot ending this day: 3006.21
+Our pot starting this day: 3006.21
+Our pot ending this day: 2464.11
+Our pot starting this day: 2464.11
+Our pot ending this day: 1840.73
+Our pot starting this day: 1840.73
+Our pot ending this day: 2109.0
+Our pot starting this day: 2109.0
+Our pot ending this day: 2713.68
+Our pot starting this day: 2713.68
+Our pot ending this day: 3206.62
+Our pot starting this day: 3206.62
+Our pot ending this day: 3505.62
+Our pot starting this day: 3505.62
+Our pot ending this day: 4639.44
+Our pot starting this day: 4639.44
+Our pot ending this day: 4770.48
+Our pot starting this day: 4770.48
+Our pot ending this day: 4988.16
+Simulated ROI: 4.98816
+28
+Unit bet ROI: 1.0795856662933927
+Betted on 893 players out of 2306 total player bets
+
+LDA SVC using threshold 0.5 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1224.89
+Our pot starting this day: 1224.89
+Our pot ending this day: 899.99
+Our pot starting this day: 899.99
+Our pot ending this day: 781.13
+Our pot starting this day: 781.13
+Our pot ending this day: 1051.01
+Our pot starting this day: 1051.01
+Our pot ending this day: 1124.85
+Our pot starting this day: 1124.85
+Our pot ending this day: 803.14
+Our pot starting this day: 803.14
+Our pot ending this day: 526.37
+Our pot starting this day: 526.37
+Our pot ending this day: 453.04
+Our pot starting this day: 453.04
+Our pot ending this day: 417.72
+Our pot starting this day: 417.72
+Our pot ending this day: 420.78
+Our pot starting this day: 420.78
+Our pot ending this day: 512.68
+Our pot starting this day: 512.68
+Our pot ending this day: 733.53
+Our pot starting this day: 733.53
+Our pot ending this day: 931.72
+Our pot starting this day: 931.72
+Our pot ending this day: 1187.0
+Our pot starting this day: 1187.0
+Our pot ending this day: 1333.29
+Our pot starting this day: 1333.29
+Our pot ending this day: 1578.64
+Our pot starting this day: 1578.64
+Our pot ending this day: 1949.88
+Our pot starting this day: 1949.88
+Our pot ending this day: 2361.88
+Our pot starting this day: 2361.88
+Our pot ending this day: 3351.97
+Our pot starting this day: 3351.97
+Our pot ending this day: 3574.76
+Our pot starting this day: 3574.76
+Our pot ending this day: 2581.07
+Our pot starting this day: 2581.07
+Our pot ending this day: 4153.92
+Our pot starting this day: 4153.92
+Our pot ending this day: 4991.27
+Our pot starting this day: 4991.27
+Our pot ending this day: 7279.98
+Our pot starting this day: 7279.98
+Our pot ending this day: 7757.39
+Our pot starting this day: 7757.39
+Our pot ending this day: 9576.71
+Our pot starting this day: 9576.71
+Our pot ending this day: 13763.42
+Our pot starting this day: 13763.42
+Our pot ending this day: 12432.96
+Simulated ROI: 12.43296
+28
+Unit bet ROI: 1.110889570552147
+Betted on 652 players out of 2306 total player bets
+
+LDA SVC using threshold 0.6 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 803.63
+Our pot starting this day: 803.63
+Our pot ending this day: 642.49
+Our pot starting this day: 642.49
+Our pot ending this day: 900.05
+Our pot starting this day: 900.05
+Our pot ending this day: 1091.83
+Our pot starting this day: 1091.83
+Our pot ending this day: 656.58
+Our pot starting this day: 656.58
+Our pot ending this day: 867.77
+Our pot starting this day: 867.77
+Our pot ending this day: 945.57
+Our pot starting this day: 945.57
+Our pot ending this day: 817.23
+Our pot starting this day: 817.23
+Our pot ending this day: 810.63
+Our pot starting this day: 810.63
+Our pot ending this day: 1046.46
+Our pot starting this day: 1046.46
+Our pot ending this day: 1763.26
+Our pot starting this day: 1763.26
+Our pot ending this day: 2297.31
+Our pot starting this day: 2297.31
+Our pot ending this day: 2965.3
+Our pot starting this day: 2965.3
+Our pot ending this day: 3833.33
+Our pot starting this day: 3833.33
+Our pot ending this day: 5381.87
+Our pot starting this day: 5381.87
+Our pot ending this day: 5153.09
+Our pot starting this day: 5153.09
+Our pot ending this day: 6170.53
+Our pot starting this day: 6170.53
+Our pot ending this day: 5253.02
+Our pot starting this day: 5253.02
+Our pot ending this day: 6790.24
+Our pot starting this day: 6790.24
+Our pot ending this day: 11934.1
+Our pot starting this day: 11934.1
+Our pot ending this day: 14185.93
+Our pot starting this day: 14185.93
+Our pot ending this day: 22172.03
+Our pot starting this day: 22172.03
+Our pot ending this day: 30290.5
+Our pot starting this day: 30290.5
+Our pot ending this day: 22112.9
+Our pot starting this day: 22112.9
+Our pot ending this day: 31780.13
+Our pot starting this day: 31780.13
+Our pot ending this day: 29051.52
+Our pot starting this day: 29051.52
+Our pot ending this day: 43489.6
+Our pot starting this day: 43489.6
+Our pot ending this day: 53782.14
+Simulated ROI: 53.78214
+28
+Unit bet ROI: 1.1930232558139537
+Betted on 473 players out of 2306 total player bets
+
+LDA SVC using threshold 0.7 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 790.8
+Our pot starting this day: 790.8
+Our pot ending this day: 722.63
+Our pot starting this day: 722.63
+Our pot ending this day: 1037.42
+Our pot starting this day: 1037.42
+Our pot ending this day: 1278.23
+Our pot starting this day: 1278.23
+Our pot ending this day: 801.5
+Our pot starting this day: 801.5
+Our pot ending this day: 1063.66
+Our pot starting this day: 1063.66
+Our pot ending this day: 488.49
+Our pot starting this day: 488.49
+Our pot ending this day: 595.38
+Our pot starting this day: 595.38
+Our pot ending this day: 976.65
+Our pot starting this day: 976.65
+Our pot ending this day: 1418.78
+Our pot starting this day: 1418.78
+Our pot ending this day: 2029.65
+Our pot starting this day: 2029.65
+Our pot ending this day: 2683.13
+Our pot starting this day: 2683.13
+Our pot ending this day: 4164.93
+Our pot starting this day: 4164.93
+Our pot ending this day: 4594.84
+Our pot starting this day: 4594.84
+Our pot ending this day: 3508.96
+Our pot starting this day: 3508.96
+Our pot ending this day: 6167.13
+Our pot starting this day: 6167.13
+Our pot ending this day: 4917.72
+Our pot starting this day: 4917.72
+Our pot ending this day: 6033.18
+Our pot starting this day: 6033.18
+Our pot ending this day: 6482.13
+Our pot starting this day: 6482.13
+Our pot ending this day: 8638.02
+Our pot starting this day: 8638.02
+Our pot ending this day: 8924.07
+Our pot starting this day: 8924.07
+Our pot ending this day: 11691.86
+Our pot starting this day: 11691.86
+Our pot ending this day: 14074.36
+Our pot starting this day: 14074.36
+Our pot ending this day: 4691.45
+Our pot starting this day: 4691.45
+Our pot ending this day: 5130.83
+Our pot starting this day: 5130.83
+Our pot ending this day: 5643.91
+Our pot starting this day: 5643.91
+Our pot ending this day: 8277.73
+Simulated ROI: 8.27773
+27
+Unit bet ROI: 1.2067889908256881
+Betted on 327 players out of 2306 total player bets
+
+LDA SVC using threshold 0.8 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 964.79
+Our pot starting this day: 964.79
+Our pot ending this day: 802.83
+Our pot starting this day: 802.83
+Our pot ending this day: 1196.94
+Our pot starting this day: 1196.94
+Our pot ending this day: 1444.69
+Our pot starting this day: 1444.69
+Our pot ending this day: 665.95
+Our pot starting this day: 665.95
+Our pot ending this day: 1100.68
+Our pot starting this day: 1100.68
+Our pot ending this day: 1574.58
+Our pot starting this day: 1574.58
+Our pot ending this day: 2303.76
+Our pot starting this day: 2303.76
+Our pot ending this day: 2604.49
+Our pot starting this day: 2604.49
+Our pot ending this day: 3065.17
+Our pot starting this day: 3065.17
+Our pot ending this day: 5132.49
+Our pot starting this day: 5132.49
+Our pot ending this day: 7078.1
+Our pot starting this day: 7078.1
+Our pot ending this day: 10706.82
+Our pot starting this day: 10706.82
+Our pot ending this day: 9292.58
+Our pot starting this day: 9292.58
+Our pot ending this day: 11763.68
+Our pot starting this day: 11763.68
+Our pot ending this day: 11411.65
+Our pot starting this day: 11411.65
+Our pot ending this day: 13317.18
+Our pot starting this day: 13317.18
+Our pot ending this day: 19703.06
+Our pot starting this day: 19703.06
+Our pot ending this day: 7255.73
+Our pot starting this day: 7255.73
+Our pot ending this day: 8835.04
+Our pot starting this day: 8835.04
+Our pot ending this day: 10593.3
+Our pot starting this day: 10593.3
+Our pot ending this day: 3531.1
+Our pot starting this day: 3531.1
+Our pot ending this day: 2369.56
+Our pot starting this day: 2369.56
+Our pot ending this day: 2567.02
+Our pot starting this day: 2567.02
+Our pot ending this day: 4706.2
+Our pot starting this day: 4706.2
+Our pot ending this day: 5176.82
+Our pot starting this day: 5176.82
+Our pot ending this day: 7592.67
+Simulated ROI: 7.59267
+27
+Unit bet ROI: 1.2364356435643569
+Betted on 202 players out of 2306 total player bets
+
+LDA SVC using threshold 0.9 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 860.0
+Our pot starting this day: 860.0
+Our pot ending this day: 537.24
+Our pot starting this day: 537.24
+Our pot ending this day: 829.96
+Our pot starting this day: 829.96
+Our pot ending this day: 1004.07
+Our pot starting this day: 1004.07
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Our pot starting this day: 0.0
+Our pot ending this day: 0.0
+Simulated ROI: 0.0
+26
+Unit bet ROI: 1.205714285714286
+Betted on 112 players out of 2306 total player bets
+
+LDA SVC using threshold 1 and procent pot 1:
+Our pot starting this day: 1000
+Our pot ending this day: 1183.33
+Our pot starting this day: 1183.33
+Our pot ending this day: 633.09
+Our pot starting this day: 633.09
+Our pot ending this day: 873.26
+Our pot starting this day: 873.26
+Our pot ending this day: 1056.44
+Our pot starting this day: 1056.44
+Our pot ending this day: 704.29
+Our pot starting this day: 704.29
+Our pot ending this day: 1070.63
+Our pot starting this day: 1070.63
+Our pot ending this day: 1772.7
+Our pot starting this day: 1772.7
+Our pot ending this day: 3840.85
+Our pot starting this day: 3840.85
+Our pot ending this day: 2560.57
+Our pot starting this day: 2560.57
+Our pot ending this day: 5378.4
+Our pot starting this day: 5378.4
+Our pot ending this day: 4634.74
+Our pot starting this day: 4634.74
+Our pot ending this day: 5825.59
+Our pot starting this day: 5825.59
+Our pot ending this day: 6408.15
+Our pot starting this day: 6408.15
+Our pot ending this day: 2136.05
+Our pot starting this day: 2136.05
+Our pot ending this day: 2314.05
+Our pot starting this day: 2314.05
+Our pot ending this day: 2679.36
+Our pot starting this day: 2679.36
+Our pot ending this day: 2947.3
+Our pot starting this day: 2947.3
+Our pot ending this day: 1964.87
+Our pot starting this day: 1964.87
+Our pot ending this day: 2775.48
+Our pot starting this day: 2775.48
+Our pot ending this day: 925.16
+Our pot starting this day: 925.16
+Our pot ending this day: 1356.9
+Our pot starting this day: 1356.9
+Our pot ending this day: 904.6
+Simulated ROI: 0.9046000000000001
+22
+Unit bet ROI: 1.2321428571428568
+Betted on 70 players out of 2306 total player bets
+

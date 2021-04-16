@@ -4,7 +4,7 @@ import models.pred_LDA_SVC as pred_LDA_SVC
 import models.pred_SVC as pred_SVC
 import models.pred_decision_tree as decision_tree
 import eval.calc_ROI as calc_ROI
-
+import matplotlib.pyplot as plt
 
 
 def calculate_bet(name, gamePk, pred, best_odds_U, best_odds_O, file):
@@ -21,7 +21,37 @@ def eval_bets(file):
         print("Verifying bets for model: {}".format(model))
         for i in [float(j) / 10 for j in range(0, 10, 1)]:    
             print("With threshold {}:".format(i))
-            calc_ROI.calc_bets_correct(data, model, i)
+            calc_ROI.calc_bets_correct(data, model, i, 0, 0)
+
+def simulate_bets(file):
+    with open(file, "r") as f:
+        data = f.read()
+    data = json.loads(data)
+    thresholds = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    procent_pots = [1]
+    #calc_ROI.calc_bets_correct(data, "LDA_SVC_V1.0", 0.6, 1000, 1)
+    plot_this_all = []
+    for threshold in thresholds:
+        for procent_pot in procent_pots:
+            print("LDA SVC using threshold {} and procent pot {}:".format(threshold, procent_pot))
+            plot_this_all.append(calc_ROI.calc_bets_correct(data, "LDA_SVC_V1.0", threshold, 1000, procent_pot))
+            print()
+    """
+    count = 0   
+    for i in thresholds:
+        for j in procent_pots:
+            x = range(0, len(plot_this_all[count]))
+            y = []
+            for k in plot_this_all[count]:
+                y.append(k/1000)
+            plt.plot(x, y, label="{}-{}".format(i,j))
+            count += 1
+
+    plt.ylabel("Money in account")
+    plt.xlabel("Day")
+    plt.legend()
+    plt.show()
+    """
 
 def bet_site_acc(file):
     with open(file, "r") as f:
@@ -31,7 +61,6 @@ def bet_site_acc(file):
     calc_ROI.bet_site_acc(data)
 
 
-
-#eval_bets("./data/to_alumnroot.txt")
 #eval_bets("./data/pred_bets.txt")
+simulate_bets("./data/pred_bets.txt")
 #bet_site_acc("./data/pred_bets.txt")

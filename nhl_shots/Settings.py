@@ -98,7 +98,10 @@ old_player_nicknames = {
                         "J. Morrissey": "Josh Morrissey",
                         "M. Sergachev": "Mikhail Sergachev",
                         "P. Zacha": "Pavel Zacha",
-                        "Mattias Janmark": "Mattias Janmark-Nylen"
+                        "Mattias Janmark": "Mattias Janmark-Nylen",
+                        "Y. Gourde" : "Yanni Gourde",
+                        "A. Wennberg": "Alex Wennberg",
+                        "K. Palmieri": "Kyle Palmieri"
                         }
 
 teams_translate = {}

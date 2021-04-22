@@ -6,6 +6,8 @@ import models.pred_decision_tree as decision_tree
 import eval.calc_ROI as calc_ROI
 import matplotlib.pyplot as plt
 
+import eval.pred_eval as pred_eval
+
 
 def calculate_bet(name, gamePk, pred, best_odds_U, best_odds_O, file):
     print("Pred using LDA SVC:")
@@ -53,6 +55,16 @@ def simulate_bets(file):
     plt.show()
     """
 
+def get_bets(file, date):
+    with open(file, "r") as f:
+        data = f.read()
+    data = json.loads(data)
+    bets = calc_ROI.get_bets(data, "LDA_SVC_V1.0", 0.6)
+    for bet in bets:
+        if bet["date"] == date:
+            calc_ROI.calc_Kelly_Critera(bet)
+            print(bet)    
+    
 def bet_site_acc(file):
     with open(file, "r") as f:
         data = f.read()
@@ -61,6 +73,15 @@ def bet_site_acc(file):
     calc_ROI.bet_site_acc(data)
 
 
-#eval_bets("./data/pred_bets.txt")
-simulate_bets("./data/pred_bets.txt")
-#bet_site_acc("./data/pred_bets.txt")
+def test(file):   
+    with open(file, "r") as f:
+        data = f.read()
+    data = json.loads(data)
+    for t in [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]:
+        bets = pred_eval.find_bets(data, "LDA_SVC_V1.0", threshold=t)
+        verified_bets = pred_eval.verify_bets(bets)
+        pred_eval.simulate_betting(verified_bets, 1000)
+
+
+test("./data/pred_2021-04-17.txt")
+#get_bets("./data/pred_2021-04-17.txt", "2021-04-17")

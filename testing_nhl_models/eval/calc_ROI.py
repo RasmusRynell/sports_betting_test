@@ -11,8 +11,6 @@ def check_odds(bets, pred, threshold):
     pred_odds = 0
     for bet_site in bets:
         if (float(bets[bet_site]["over"].replace(",",".")) > 1/float(pred["pred_over"]["prediction"]) + threshold):
-            #tmp = str(float(bets[bet_site]["over"].replace(",","."))) +  " > " + str(1/float(pred["pred_over"]["prediction"])) + " + " + str(threshold) + "(" + str(1/float(pred["pred_over"]["prediction"]) + threshold) + ")"
-            #print(tmp)
             if (float(bets[bet_site]["over"].replace(",",".")) > best_odds):
                 best_odds = float(bets[bet_site]["over"].replace(",","."))
                 bet = "over"
@@ -120,8 +118,8 @@ def calc_bets_correct(data, model_name, threshold, start_pot, procent_pot):
             #Check if we have a prediciton for that game
             if "predictions" in value["games"][game] and len(value["games"][game]["predictions"]) > 0:
                 bet_sites = value["games"][game]["bets"]
-                for over_under, prediciton in value["games"][game]["predictions"][model_name].items():
-                    bet, best_odds, best_site, pred_odds = check_odds(bet_sites, prediciton, threshold)
+                for over_under, prediction in value["games"][game]["predictions"][model_name].items():
+                    bet, best_odds, best_site, pred_odds = check_odds(bet_sites, prediction, threshold)
                     if bet != None:
                         if value["games"][game]["gamePk"] not in bets:
                             bets[value["games"][game]["gamePk"]] = []
@@ -136,3 +134,29 @@ def calc_bets_correct(data, model_name, threshold, start_pot, procent_pot):
     print("Unit bet ROI: {}".format(calc_unit_bet_ROI(bet_result, 2)))
     print("Betted on {} players out of {} total player bets".format(count_bets, count))
 
+def get_bets(data, model_name, threshold):
+    bets = {}
+    count = 0
+    count_bets = 0
+    for player_id, value in data.items():
+        for game in value["games"]:
+            #Check if we have a prediciton for that game
+            if "predictions" in value["games"][game] and len(value["games"][game]["predictions"]) > 0:
+                bet_sites = value["games"][game]["bets"]
+                for over_under, prediction in value["games"][game]["predictions"][model_name].items():
+                    bet, best_odds, best_site, pred_odds = check_odds(bet_sites, prediction, threshold)
+                    if bet != None:
+                        if value["games"][game]["gamePk"] not in bets:
+                            bets[value["games"][game]["gamePk"]] = []
+                        bets[value["games"][game]["gamePk"]].append({"bet": bet, "best_site": best_site, "best_odds": best_odds, "over_under": over_under, "pred_odds": pred_odds, "gamePk": value["games"][game]["gamePk"], \
+                        "date": value["games"][game]["date"], "playerID": player_id})
+                        count_bets += 1
+
+                    count += 1
+
+    bet_result = verify_bets(bets)
+    return bet_result
+
+def calc_Kelly_Critera(bet):
+    bet["Kelly Critera"] = ((1/bet["pred_odds"])-(1-1/bet["pred_odds"])/(bet["best_odds"]-1))
+    return bet

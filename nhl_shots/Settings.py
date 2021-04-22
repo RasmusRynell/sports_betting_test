@@ -101,7 +101,8 @@ old_player_nicknames = {
                         "Mattias Janmark": "Mattias Janmark-Nylen",
                         "Y. Gourde" : "Yanni Gourde",
                         "A. Wennberg": "Alex Wennberg",
-                        "K. Palmieri": "Kyle Palmieri"
+                        "K. Palmieri": "Kyle Palmieri",
+                        "R. Donato": "Ryan Donato"
                         }
 
 teams_translate = {}

@@ -46,6 +46,12 @@ def match_bet_with_pk(bet):
         for gamePk in Settings.db.games["seasons"][str(season)][p_no_p]:
             game = Settings.db.games["games_information"][str(gamePk)]
             game_date = Settings.string_to_standard_datetime(game["date"]) - timedelta(hours=12)
+            if str(gamePk) == "2020020666":
+                print(str(game_date.date()))
+                print(str(bet[0]))
+                print(game["teams"])
+                print(nhl_handler.get_team_id(str(bet[2])))
+                print(nhl_handler.get_team_id(str(bet[3])))
             if str(game_date.date()) == str(bet[0]):
                 if nhl_handler.get_team_id(str(bet[2])) == game["teams"]["home"] and \
                     nhl_handler.get_team_id(str(bet[3])) == game["teams"]["away"]:
@@ -82,6 +88,8 @@ def add_bet_to_db(bet, override):
         player_team_id = home_team_id
         opp_team_id = away_team_id
 
+    if str(gamePk) == "2020020666":
+        print(";D")
     if str(player_id) not in Settings.db.old_bets:
         Settings.db.old_bets[str(player_id)] = {
             "player_name": player_name,
@@ -107,6 +115,9 @@ def add_bet_to_db(bet, override):
             }}
         }
     else:
+        if str(gamePk) == "2020020195":
+            print("HERE!")
+            Settings.print_json( Settings.db.old_bets[str(player_id)])
         if str(gamePk) not in Settings.db.old_bets[str(player_id)]["games"]:
             Settings.db.old_bets[str(player_id)]["games"][str(gamePk)] = {
                 "gamePk": gamePk,

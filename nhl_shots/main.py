@@ -19,7 +19,7 @@ def playerDatabase(populate=False, update=False, printdb=False):
         have_to_save = True
 
     if printdb:
-        Settings.print_json(Settings.db.games["team_games"])
+        Settings.print_json(Settings.db.games)
 
     if have_to_save:
         Settings.db.save()

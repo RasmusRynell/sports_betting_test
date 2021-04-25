@@ -48,7 +48,7 @@ all_seasons = [str(j)+str(i) for i, j in
 
 banned_players = []
 old_banned_players = [
-    "sebastian aho", "sebastian (1997) aho", "sebastian antero aho", "Sebastian Aho", "nikita gusev", "n. gusev", "shayne gostisbehere"]
+    "sebastian aho", "sebastian (1997) aho", "sebastian antero aho", "Sebastian Aho", "nikita gusev", "n. gusev", "shayne gostisbehere", "F. Hamilton", "freddie hamilton"]
 
 
 # Go here get player name: https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster&site=en_nhlNR&season=20202021
@@ -102,7 +102,9 @@ old_player_nicknames = {
                         "Y. Gourde" : "Yanni Gourde",
                         "A. Wennberg": "Alex Wennberg",
                         "K. Palmieri": "Kyle Palmieri",
-                        "R. Donato": "RYAN DONATO"
+                        "R. Donato": "RYAN DONATO",
+                        "N. Hischier": "Nico Hischier",
+                        "F. Hamilton": "Freddie Hamilton"
                         }
 
 teams_translate = {}

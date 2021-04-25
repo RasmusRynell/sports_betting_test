@@ -7,7 +7,7 @@ from datetime import timedelta
 import argh
 
 
-def playerDatabase(populate=False, update=False, printdb=False):
+def playerDatabase(populate=False, update=False, printdb=False, printPlayerdb=False):
     Settings.init(True, True)
     
     have_to_save = False
@@ -20,6 +20,9 @@ def playerDatabase(populate=False, update=False, printdb=False):
 
     if printdb:
         Settings.print_json(Settings.db.games)
+    
+    if printPlayerdb:
+        Settings.print_json(Settings.db.player_ids)
 
     if have_to_save:
         Settings.db.save()

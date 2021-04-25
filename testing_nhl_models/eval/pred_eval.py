@@ -99,4 +99,4 @@ def simulate_betting(verified_bets, current_pot):
         pot_each_day.append(current_pot)
         win_each_day.append(won_this_day)
     print(current_pot)
-    print("Won {} bets out of {}".format(bets_won, bets))
+    print("Won {} bets out of {} which is an accuracy of {}".format(bets_won, bets, round(bets_won/bets, 3)))

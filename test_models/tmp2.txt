@@ -1,0 +1,12 @@
+------------------------------------------------------------------------
+Confidence: 0 | Accuracy: 0 | F1 Accuracy: 0 | Accuracy STD: 1 | F1 STD: 1 | Edge: 0
+Number of bets placed: 2104
+Average model accuracy: 0.962
+Average model F1 accuracy: 0.957
+Average odds: 2.112
+Total bet accuracy: 0.834
+Money with unit bet of 2: -260.5
+{'over_win': 506, 'over_loss': 714, 'under_win': 451, 'under_loss': 433, '2.5_won': 637, '2.5_loss': 742, '1.5_won': 244, '1.5_loss': 299, '3.5_loss': 98, '3.5_won': 69, '4.5_loss': 8, '4.5_won': 7}
+------------------------------------------------------------------------
+
+Time:  0.029947996139526367

@@ -19,6 +19,21 @@ TODO:
     - Show account balance after simulation
     - Show acc on "over" and "under"
 
+Orimliga svar:
+
+CLAYTON KELLER
+"8479343": {
+    "avr_acc": 1.0,
+    "loss": 14,
+    "won": 5
+}
+
+Artemi Panarin
+"8478550": {
+    "avr_acc": 0.997,
+    "loss": 7,
+    "won": 7
+}
 """
 
 
@@ -180,29 +195,40 @@ def verify_thresholds(bets, print_header):
         print("------------------------------------------------------------------------")
         print()
 
+def verify_acc_per_player(bets):
+    result_bets = {}
+
+    for player_id, games in bets.items():
+        if player_id not in result_bets:
+            result_bets[player_id] = {}
+            result_bets[player_id]["won"] = 0
+            result_bets[player_id]["loss"] = 0
+        tot_acc = 0
+        for game in games:
+            tot_acc += float(game["acc"])
+            if (game["bet"] == "over" and float(game["over/under"]) < get_num_shots(game["gamePk"], player_id)) \
+                or (game["bet"] == "under" and float(game["over/under"]) > get_num_shots(game["gamePk"], player_id)):
+                result_bets[player_id]["won"] += 1
+            else:
+                if player_id == "8479343":
+                    print(game)
+                    print(get_num_shots(game["gamePk"], player_id))
+                result_bets[player_id]["loss"] += 1
+        result_bets[player_id]["avr_acc"] = round(tot_acc/len(games), 3)  
+ 
+    #print(json.dumps(result_bets, indent=4, sort_keys=True))
 
 def optimize_predictions(confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold):
-    f = open('preds.json',)
+    f = open('preds2.json',)
     all_preds = json.load(f)
     bets_per_player, bets_per_date, tot_bets = find_bets(all_preds, confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold)
-    print("------------------------------------------------------------------------")
     print_header = ("Confidence: {} | Accuracy: {} | F1 Accuracy: {} | Accuracy STD: {} | F1 STD: {} | Edge: {}".format(confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold))
-    verify_thresholds(tot_bets, print_header)
+    #verify_thresholds(tot_bets, print_header)
+    verify_acc_per_player(bets_per_player)
 
 
+optimize_predictions(0.6,0,0,1,1,0)
 
-confidence_thresholds = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-accuracy_thresholds = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-f1_thresholds = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-edge_thresholds = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-
-acc_std_threshold = 1
-f1_std_threshold = 1
-
-for confidence_threshold in tqdm(confidence_thresholds):
-    for accuracy_threshold in accuracy_thresholds:
-        for f1_threshold in f1_thresholds:
-            for edge_threshold in edge_thresholds:
-                optimize_predictions(confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold)
-
+pred = pred_LDA_SVC.pred("./data/td/pp_clayton_keller.csv", 1.5, 2020020461)
+print(pred)
 

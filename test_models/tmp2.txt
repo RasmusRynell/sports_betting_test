@@ -1,64 +1,208 @@
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.782', 'num_games_train': 281, 'best_odds_over': '1.60', 'gamePk': '2020020209', 'player_id': '8479343', 'over/under': '1.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.681', 'num_games_train': 281, 'best_odds_over': '2.40', 'gamePk': '2020020209', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.783', 'num_games_train': 288, 'best_odds_over': '1.66', 'gamePk': '2020020225', 'player_id': '8479343', 'over/under': '1.5', 'bet': 'over'}
-0
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.679', 'num_games_train': 288, 'best_odds_over': '2.75', 'gamePk': '2020020225', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-0
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.678', 'num_games_train': 276, 'best_odds_over': '2.30', 'gamePk': '2020020461', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.678', 'num_games_train': 277, 'best_odds_over': '2.40', 'gamePk': '2020020502', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.681', 'num_games_train': 279, 'best_odds_over': '2.30', 'gamePk': '2020020528', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-2
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.684', 'num_games_train': 280, 'best_odds_over': '2.30', 'gamePk': '2020020540', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-2
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.665', 'num_games_train': 282, 'best_odds_over': '2.55', 'gamePk': '2020020583', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-0
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.76', 'num_games_train': 284, 'best_odds_over': '1.55', 'gamePk': '2020020610', 'player_id': '8479343', 'over/under': '1.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.667', 'num_games_train': 284, 'best_odds_over': '2.30', 'gamePk': '2020020610', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.638', 'num_games_train': 286, 'best_odds_over': '2.50', 'gamePk': '2020020639', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-2
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.785', 'num_games_train': 287, 'best_odds_over': '1.60', 'gamePk': '2020020655', 'player_id': '8479343', 'over/under': '1.5', 'bet': 'over'}
-1
-{'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.681', 'num_games_train': 287, 'best_odds_over': '2.29', 'gamePk': '2020020655', 'player_id': '8479343', 'over/under': '2.5', 'bet': 'over'}
-1
-shots_this_game_U1.5
-2020020461: 1
-2020020502: 1
-2020020508: 0
-2020020528: 0
-2020020540: 0
-2020020209: 1
-2020020583: 1
-2020020604: 0
-2020020610: 1
-2020020624: 0
-2020020639: 0
-2020020655: 1
-2020020225: 1
-2020020192: 0
-[0]
-[[0.76326163 0.23673837]]
-shots_this_game_O1.5
-2020020461: 0
-2020020502: 0
-2020020508: 1
-2020020528: 1
-2020020540: 1
-2020020209: 0
-2020020583: 0
-2020020604: 1
-2020020610: 0
-2020020624: 1
-2020020639: 1
-2020020655: 0
-2020020225: 0
-2020020192: 1
-[1]
-[[0.21168657 0.78831343]]
-{}
-{'pred_under': {'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.237', 'num_games_train': 290}, 'pred_over': {'F1_acc': 1.0, 'F1_std': 0.0, 'acc': 1.0, 'std': 0.0, 'prediction': '0.788', 'num_games_train': 290}}
+
+Num shots:  2
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+
+Num shots:  1
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  1
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+
+Num shots:  5
+shots_this_game_U3.5 [1]
+shots_this_game_O3.5 [0]
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  1
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  4
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  3
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+
+Num shots:  1
+shots_this_game_U1.5 [1]
+shots_this_game_O1.5 [0]
+
+Num shots:  5
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  0
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  3
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  0
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+
+Num shots:  0
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  0
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  0
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  1
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  3
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  3
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+
+Num shots:  1
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  3
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  2
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  1
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  5
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+shots_this_game_U3.5 [1]
+shots_this_game_O3.5 [0]
+
+Num shots:  5
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  3
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  1
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U1.5 [1]
+shots_this_game_O1.5 [0]
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  1
+shots_this_game_U1.5 [1]
+shots_this_game_O1.5 [0]
+
+Num shots:  4
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+
+Num shots:  0
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  0
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  1
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  4
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  1
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  3
+shots_this_game_U3.5 [0]
+shots_this_game_O3.5 [1]
+
+Num shots:  2
+shots_this_game_U2.5 [0]
+shots_this_game_O2.5 [1]
+
+Num shots:  3
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  7
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  5
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  0
+shots_this_game_U1.5 [1]
+shots_this_game_O1.5 [0]
+
+Num shots:  2
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U1.5 [0]
+shots_this_game_O1.5 [1]
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]
+
+Num shots:  2
+shots_this_game_U2.5 [1]
+shots_this_game_O2.5 [0]

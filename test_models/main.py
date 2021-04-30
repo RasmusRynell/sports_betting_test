@@ -1,6 +1,6 @@
 import json
 
-import models.pred_LDA_SVC as pred_LDA_SVC
+import models.pred_LDA_SVC_V2 as pred_LDA_SVC
 import models.pred_SVC as pred_SVC
 import models.pred_decision_tree as decision_tree
 from handler import api
@@ -19,21 +19,6 @@ TODO:
     - Show account balance after simulation
     - Show acc on "over" and "under"
 
-Orimliga svar:
-
-CLAYTON KELLER
-"8479343": {
-    "avr_acc": 1.0,
-    "loss": 14,
-    "won": 5
-}
-
-Artemi Panarin
-"8478550": {
-    "avr_acc": 0.997,
-    "loss": 7,
-    "won": 7
-}
 """
 
 
@@ -52,7 +37,7 @@ def generate_predictions():
             bet_preds = {}
             for bet_site in game["bets"]:
                 if game["bets"][bet_site]["over_under"] not in bet_preds:
-                    pred = pred_LDA_SVC.pred("./data/td/"+training_file, game["bets"][bet_site]["over_under"], int(gamePk))
+                    pred = decision_tree.pred("./data/td/"+training_file, game["bets"][bet_site]["over_under"], int(gamePk))
                     if "best_odds_under" not in pred["pred_under"]:
                         pred["pred_under"]["best_odds_under"] = game["bets"][bet_site]["under"].replace(",", ".")
                     if "best_odds_over" not in pred["pred_over"]:
@@ -181,7 +166,7 @@ def verify_thresholds(bets, print_header):
             print("Average odds: {}".format(round(tot_odds/num_bets, 3)))
 
         if (result_bets["over_loss"] + result_bets["under_loss"]) != 0:
-            print("Total bet accuracy: {}".format(round((result_bets["over_win"] + result_bets["under_win"]) / (result_bets["over_loss"] + result_bets["under_loss"]), 3)))
+            print("Total bet accuracy: {}".format(round((result_bets["over_win"] + result_bets["under_win"]) / (result_bets["over_win"] + result_bets["under_win"] + result_bets["over_loss"] + result_bets["under_loss"]), 3)))
 
         if "1.5_loss" in result_bets and "1.5_win" in result_bets and result_bets["1.5_loss"] != 0:
             print("Accuracy for 1.5 bets: {}".format(round(result_bets["1.5_won"]/result_bets["1.5_loss"], 3)))
@@ -190,7 +175,7 @@ def verify_thresholds(bets, print_header):
         if "3.5_loss" in result_bets and "3.5_win" in result_bets and result_bets["3.5_loss"] != 0:
             print("Accuracy for 3.5 bets: {}".format(round(result_bets["3.5_won"]/result_bets["3.5_loss"], 3)))
 
-        print("Money with unit bet of {}: {}".format(unit, round(unit_bet_won-unit_bet_spent, 3)))
+        print("ROI with unit bet of {}: {}".format(unit, round(unit_bet_won/unit_bet_spent, 3)))
         print(result_bets)
         print("------------------------------------------------------------------------")
         print()
@@ -209,26 +194,34 @@ def verify_acc_per_player(bets):
             if (game["bet"] == "over" and float(game["over/under"]) < get_num_shots(game["gamePk"], player_id)) \
                 or (game["bet"] == "under" and float(game["over/under"]) > get_num_shots(game["gamePk"], player_id)):
                 result_bets[player_id]["won"] += 1
+                # if player_id == "8475167":
+                #     print("Won")
             else:
-                if player_id == "8479343":
-                    print(game)
-                    print(get_num_shots(game["gamePk"], player_id))
+                # if player_id == "8479343":
+                #     print(game)
+                #     print(get_num_shots(game["gamePk"], player_id))
+                # if player_id == "8475167":
+                #     print("Lost")
                 result_bets[player_id]["loss"] += 1
+
+            # if player_id == "8475167":
+            #     print(game)
+            #     print(get_num_shots(game["gamePk"], player_id))
+
         result_bets[player_id]["avr_acc"] = round(tot_acc/len(games), 3)  
  
     #print(json.dumps(result_bets, indent=4, sort_keys=True))
 
-def optimize_predictions(confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold):
-    f = open('preds2.json',)
+def optimize_predictions(file,confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold):
+    #f = open('preds1.json',)
+    f = open(file,)
     all_preds = json.load(f)
     bets_per_player, bets_per_date, tot_bets = find_bets(all_preds, confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold)
     print_header = ("Confidence: {} | Accuracy: {} | F1 Accuracy: {} | Accuracy STD: {} | F1 STD: {} | Edge: {}".format(confidence_threshold, accuracy_threshold, f1_threshold, acc_std_threshold, f1_std_threshold, edge_threshold))
-    #verify_thresholds(tot_bets, print_header)
-    verify_acc_per_player(bets_per_player)
+    verify_thresholds(tot_bets, print_header)
+    #verify_acc_per_player(bets_per_player)
 
 
-optimize_predictions(0.6,0,0,1,1,0)
-
-pred = pred_LDA_SVC.pred("./data/td/pp_clayton_keller.csv", 1.5, 2020020461)
-print(pred)
-
+optimize_predictions('./pred_data/preds_SVC.json', 0.6,0,0,1,1,0)
+print()
+optimize_predictions('./pred_data/preds_decision_tree.json', 0.5,0,0,1,1,0)

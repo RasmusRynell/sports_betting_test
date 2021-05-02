@@ -78,9 +78,41 @@ def verify_bets(all_bets, conf_threshold, acc_threshold, bet_edge):
 
     print("Bet accuracy: {}".format(round(bets_won/(bets_won+bets_lost), 3)))
 
-def eval_models(SVC_OPT=False, SVC=False, log_reg=False, KNN=False, date=None, allDates=False):
-    f = open("./data/all_bets.json",)
-    all_bets = json.load(f)
+def verify_bet_model(all_bets, model, conf_threshold, acc_threshold, bet_edge):
+    bets_won = 0
+    bets_lost = 0
+    unit_bet_pot = 0
+
+    for player_id, games in (all_bets.items()):
+        player_name = games["player_name"]
+        for gamePk, game in games["games"].items():
+
+            prediction = game["predictions"][model]
+            for over_under in prediction:
+                num_goals = get_num_shots(gamePk, player_id)
+                if (float(prediction[over_under]["pred_under"]["acc"]) >= acc_threshold and float(prediction[over_under]["pred_under"]["prediction"]) >= conf_threshold):
+                    # Predict under
+                    if (float(over_under) < num_goals):
+                        bets_won += 1
+                    else:
+                        bets_lost += 1
+                
+                elif (float(prediction[over_under]["pred_over"]["acc"]) >= acc_threshold and float(prediction[over_under]["pred_over"]["prediction"]) >= conf_threshold):
+                    # Predict over
+                    if (float(over_under) > num_goals):
+                        bets_won += 1
+                    else:
+                        bets_lost += 1
+
+
+    api.save()
+    print("Number of bets: {}".format(bets_won + bets_lost))
+    print("Bet accuracy: {}".format(round(bets_won/(bets_won+bets_lost), 3)))
+
+
+def eval_models(SVC_OPT=False, SVC=False, log_reg=False, KNN=False, date=None, allDates=False, verifyModel=None):
+    #f = open("./data/all_bets.json",)
+    #all_bets = json.load(f)
 
     if (SVC):
         if (date):
@@ -114,7 +146,14 @@ def eval_models(SVC_OPT=False, SVC=False, log_reg=False, KNN=False, date=None, a
         all_bets = pred_for_date(all_bets, pred_KNN, date, "KNN")
         pass
     
-    print(all_bets)
+    if (allDates):
+        print(all_bets)
+
+    if (verifyModel):
+        f = open("./pred_data/preds.json")
+        verify_bet_model(json.load(f), verifyModel, 0.5,0.6,0)
+
+
 if __name__ == "__main__":
     parser=argh.ArghParser()
     parser.add_commands([eval_models])

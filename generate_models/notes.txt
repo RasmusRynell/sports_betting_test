@@ -1,0 +1,21 @@
+
+
+TODO:
+    - Definera strukturen för "programmet"
+
+
+https://stackoverflow.com/questions/63093773/loading-saved-model-using-pickle-getting-error-as-fit-transform-is-done-in-loa?rq=1
+
+Scoring vi skulle vilja använda:
+    - Accuracy, https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html#sklearn.metrics.accuracy_score
+    - Top-k accuracy (väldigt bra tror jag), https://scikit-learn.org/stable/modules/generated/sklearn.metrics.top_k_accuracy_score.html#sklearn.metrics.top_k_accuracy_score
+    - F-1 (binary, micro, macro), https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score  
+    - Precision score (väldigt bra tror jag), https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html#sklearn.metrics.precision_score
+    - Recall score, https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html#sklearn.metrics.recall_score
+    - ROC-AUC score, https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html#sklearn.metrics.roc_auc_score
+
+
+
+Program:
+
+    input ---> generate model ---> eval model ---> save model 

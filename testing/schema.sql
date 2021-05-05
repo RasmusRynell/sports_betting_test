@@ -3,8 +3,8 @@ DROP TABLE IF EXISTS myTable;
 
 
 DROP TABLE IF EXISTS team;
-CREATE TABLE team (id INTEGER, name VARCHAR(100), link VARCHAR(100), abbreviation VARCHAR(100), teamName VARCHAR(100), locationName VARCHAR(100), firstYearOfPlay VARCHAR(100),
-division VARCHAR(100), conference VARCHAR(100), franchise VARCHAR(100), shortName VARCHAR(100), officialSiteUrl VARCHAR(100), franchiseId INTEGER, active BOOLEAN,
+CREATE TABLE team (id INTEGER, name VARCHAR(100), link VARCHAR(100), teamName VARCHAR(100), locationName VARCHAR(100), firstYearOfPlay VARCHAR(100),
+franchise VARCHAR(100), shortName VARCHAR(100), active BOOLEAN,
 PRIMARY KEY(id));
 
 
@@ -14,7 +14,7 @@ PRIMARY KEY(id));
 
 
 DROP TABLE IF EXISTS game;
-CREATE TABLE game (pk INTEGER, gameType VARCHAR(1), season VARCHAR(8), dateTime DATETIME, homeTeamId INTEGER, awayTeamId INTEGER,
+CREATE TABLE game (pk INTEGER, gameType VARCHAR(1), season VARCHAR(8), dateTime DATETIME, statusCode INTEGER, homeTeamId INTEGER, awayTeamId INTEGER,
 FOREIGN KEY(homeTeamId) REFERENCES team(id),
 FOREIGN KEY(awayTeamId) REFERENCES team(id),
 PRIMARY KEY(pk));

@@ -1,0 +1,2313 @@
+--------------------------------------------------
+Player: ./data/td/pp_duncan_keith.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 34  58]
+ [ 60 103]]
+Accuracy: 0.523	Precision accuracy: 0.619
+Odds edge: 1.71 - 1.616 = 0.094
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_eric_staal.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 11  51]
+ [ 35 146]]
+Accuracy: 0.613	Precision accuracy: 0.739
+Odds edge: 1.63 - 1.353 = 0.277
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_suter.csv
+Target: 1.5_over
+Confusion matrix:
+ [[54 51]
+ [72 74]]
+Accuracy: 0.507	Precision accuracy: 0.547
+Odds edge: 1.89 - 1.828 = 0.062
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jeff_carter.csv
+Target: 2.5_over
+Confusion matrix:
+ [[ 90   7]
+ [123   5]]
+Accuracy: 0.504	Precision accuracy: 0.571
+Odds edge: 1.9 - 1.751 = 0.149
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dustin_brown.csv
+Target: 2.5_under
+Confusion matrix:
+ [[63 58]
+ [61 73]]
+Accuracy: 0.535	Precision accuracy: 0.566
+Odds edge: 1.99 - 1.767 = 0.223
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dustin_brown.csv
+Target: 3.5_under
+Confusion matrix:
+ [[ 14  60]
+ [ 25 156]]
+Accuracy: 0.665	Precision accuracy: 0.751
+Odds edge: 1.49 - 1.332 = 0.158
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_zach_parise.csv
+Target: 2.5_over
+Confusion matrix:
+ [[40 48]
+ [45 94]]
+Accuracy: 0.495	Precision accuracy: 0.573
+Odds edge: 2.4 - 1.745 = 0.655
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_getzlaf.csv
+Target: 1.5_over
+Confusion matrix:
+ [[43 49]
+ [87 57]]
+Accuracy: 0.502	Precision accuracy: 0.613
+Odds edge: 1.8 - 1.631 = 0.169
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_getzlaf.csv
+Target: 2.5_under
+Confusion matrix:
+ [[40 53]
+ [65 78]]
+Accuracy: 0.502	Precision accuracy: 0.598
+Odds edge: 1.92 - 1.672 = 0.248
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_brent_burns.csv
+Target: 2.5_over
+Confusion matrix:
+ [[ 35  47]
+ [ 65 107]]
+Accuracy: 0.519	Precision accuracy: 0.64
+Odds edge: 1.93 - 1.562 = 0.367
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_shea_weber.csv
+Target: 2.5_over
+Confusion matrix:
+ [[58 42]
+ [61 57]]
+Accuracy: 0.536	Precision accuracy: 0.521
+Odds edge: 2.36 - 1.919 = 0.441
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_shea_weber.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 24  22]
+ [ 59 113]]
+Accuracy: 0.556	Precision accuracy: 0.741
+Odds edge: 1.58 - 1.35 = 0.23
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_joe_pavelski.csv
+Target: 2.5_over
+Confusion matrix:
+ [[73 55]
+ [74 66]]
+Accuracy: 0.479	Precision accuracy: 0.481
+Odds edge: 2.34 - 2.079 = 0.261
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_joe_pavelski.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 13  53]
+ [ 34 168]]
+Accuracy: 0.667	Precision accuracy: 0.757
+Odds edge: 1.54 - 1.321 = 0.219
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_alexander_ovechkin.csv
+Target: 3.5_over
+Confusion matrix:
+ [[ 24  80]
+ [ 43 117]]
+Accuracy: 0.515	Precision accuracy: 0.609
+Odds edge: 1.7 - 1.642 = 0.058
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_evgeni_malkin.csv
+Target: 2.5_over
+Confusion matrix:
+ [[44 58]
+ [44 81]]
+Accuracy: 0.473	Precision accuracy: 0.543
+Odds edge: 1.9 - 1.842 = 0.058
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_blake_wheeler.csv
+Target: 2.5_over
+Confusion matrix:
+ [[55 56]
+ [47 89]]
+Accuracy: 0.567	Precision accuracy: 0.6
+Odds edge: 2.31 - 1.667 = 0.643
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_sidney_crosby.csv
+Target: 2.5_over
+Confusion matrix:
+ [[43 52]
+ [65 73]]
+Accuracy: 0.482	Precision accuracy: 0.624
+Odds edge: 1.69 - 1.603 = 0.087
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_anze_kopitar.csv
+Target: 1.5_under
+Confusion matrix:
+ [[79 82]
+ [43 54]]
+Accuracy: 0.557	Precision accuracy: 0.42
+Odds edge: 2.43 - 2.381 = 0.049
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_anze_kopitar.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 94   3]
+ [150  11]]
+Accuracy: 0.49	Precision accuracy: 0.737
+Odds edge: 1.5 - 1.357 = 0.143
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_t._j._oshie.csv
+Target: 2.5_over
+Confusion matrix:
+ [[157   6]
+ [ 77   4]]
+Accuracy: 0.634	Precision accuracy: 0.451
+Odds edge: 2.55 - 2.217 = 0.333
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kris_letang.csv
+Target: 2.5_over
+Confusion matrix:
+ [[53 44]
+ [48 58]]
+Accuracy: 0.546	Precision accuracy: 0.567
+Odds edge: 2.06 - 1.764 = 0.296
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_keith_yandle.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 37  43]
+ [ 64 110]]
+Accuracy: 0.486	Precision accuracy: 0.618
+Odds edge: 1.69 - 1.618 = 0.072
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_patric_hornqvist.csv
+Target: 2.5_over
+Confusion matrix:
+ [[29 55]
+ [47 96]]
+Accuracy: 0.541	Precision accuracy: 0.631
+Odds edge: 1.61 - 1.585 = 0.025
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jeff_petry.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 11  49]
+ [ 29 143]]
+Accuracy: 0.578	Precision accuracy: 0.728
+Odds edge: 1.62 - 1.374 = 0.246
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_claude_giroux.csv
+Target: 2.5_over
+Confusion matrix:
+ [[62 59]
+ [64 63]]
+Accuracy: 0.441	Precision accuracy: 0.512
+Odds edge: 2.16 - 1.953 = 0.207
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_phil_kessel.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 15  50]
+ [ 21 179]]
+Accuracy: 0.612	Precision accuracy: 0.771
+Odds edge: 1.66 - 1.297 = 0.363
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_phil_kessel.csv
+Target: 2.5_over
+Confusion matrix:
+ [[ 40  66]
+ [ 50 109]]
+Accuracy: 0.465	Precision accuracy: 0.533
+Odds edge: 2.63 - 1.876 = 0.754
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nicklas_backstrom.csv
+Target: 1.5_over
+Confusion matrix:
+ [[52 52]
+ [67 78]]
+Accuracy: 0.487	Precision accuracy: 0.578
+Odds edge: 1.74 - 1.73 = 0.01
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nicklas_backstrom.csv
+Target: 2.5_under
+Confusion matrix:
+ [[32 41]
+ [80 96]]
+Accuracy: 0.54	Precision accuracy: 0.677
+Odds edge: 1.52 - 1.477 = 0.043
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_a._killorn.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 31  48]
+ [ 52 102]]
+Accuracy: 0.552	Precision accuracy: 0.671
+Odds edge: 1.5 - 1.49 = 0.01
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jamie_benn.csv
+Target: 2.5_over
+Confusion matrix:
+ [[54 57]
+ [68 67]]
+Accuracy: 0.485	Precision accuracy: 0.501
+Odds edge: 2.07 - 1.996 = 0.074
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_k._shattenkirk.csv
+Target: 1.5_over
+Confusion matrix:
+ [[44 58]
+ [52 87]]
+Accuracy: 0.502	Precision accuracy: 0.589
+Odds edge: 1.79 - 1.698 = 0.092
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_james_van_riemsdyk.csv
+Target: 2.5_over
+Confusion matrix:
+ [[42 58]
+ [39 77]]
+Accuracy: 0.47	Precision accuracy: 0.531
+Odds edge: 2.23 - 1.883 = 0.347
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_logan_couture.csv
+Target: 2.5_over
+Confusion matrix:
+ [[57 54]
+ [53 74]]
+Accuracy: 0.483	Precision accuracy: 0.509
+Odds edge: 2.22 - 1.965 = 0.255
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_p.k._subban.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 17  68]
+ [ 37 121]]
+Accuracy: 0.544	Precision accuracy: 0.661
+Odds edge: 1.57 - 1.513 = 0.057
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_p.k._subban.csv
+Target: 2.5_over
+Confusion matrix:
+ [[72 62]
+ [58 51]]
+Accuracy: 0.511	Precision accuracy: 0.464
+Odds edge: 2.51 - 2.155 = 0.355
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_david_perron.csv
+Target: 2.5_under
+Confusion matrix:
+ [[23 62]
+ [58 99]]
+Accuracy: 0.51	Precision accuracy: 0.624
+Odds edge: 1.7 - 1.603 = 0.097
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_patrick_kane.csv
+Target: 2.5_over
+Confusion matrix:
+ [[ 25  59]
+ [ 42 131]]
+Accuracy: 0.537	Precision accuracy: 0.634
+Odds edge: 1.67 - 1.577 = 0.093
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_evgenii_dadonov.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 6 23]
+ [15 48]]
+Accuracy: 0.627	Precision accuracy: 0.693
+Odds edge: 1.71 - 1.443 = 0.267
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mikael_backlund.csv
+Target: 2.5_over
+Confusion matrix:
+ [[69 58]
+ [45 43]]
+Accuracy: 0.525	Precision accuracy: 0.457
+Odds edge: 2.28 - 2.188 = 0.092
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jakub_voracek.csv
+Target: 2.5_over
+Confusion matrix:
+ [[74 63]
+ [59 49]]
+Accuracy: 0.497	Precision accuracy: 0.481
+Odds edge: 2.5 - 2.079 = 0.421
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jakub_voracek.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 24  51]
+ [ 57 113]]
+Accuracy: 0.51	Precision accuracy: 0.733
+Odds edge: 1.61 - 1.364 = 0.246
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_drew_doughty.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 21  55]
+ [ 48 134]]
+Accuracy: 0.55	Precision accuracy: 0.657
+Odds edge: 1.68 - 1.522 = 0.158
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_steven_stamkos.csv
+Target: 2.5_over
+Confusion matrix:
+ [[40 44]
+ [49 78]]
+Accuracy: 0.459	Precision accuracy: 0.65
+Odds edge: 1.82 - 1.538 = 0.282
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_alex_pietrangelo.csv
+Target: 2.5_under
+Confusion matrix:
+ [[53 58]
+ [71 74]]
+Accuracy: 0.506	Precision accuracy: 0.559
+Odds edge: 1.89 - 1.789 = 0.101
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_erik_karlsson.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 14  30]
+ [ 47 135]]
+Accuracy: 0.605	Precision accuracy: 0.748
+Odds edge: 1.6 - 1.337 = 0.263
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_erik_karlsson.csv
+Target: 2.5_over
+Confusion matrix:
+ [[52 35]
+ [66 73]]
+Accuracy: 0.541	Precision accuracy: 0.593
+Odds edge: 2.6 - 1.686 = 0.914
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jordan_eberle.csv
+Target: 2.5_over
+Confusion matrix:
+ [[71 57]
+ [60 52]]
+Accuracy: 0.554	Precision accuracy: 0.516
+Odds edge: 2.24 - 1.938 = 0.302
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_john_carlson.csv
+Target: 2.5_over
+Confusion matrix:
+ [[78 70]
+ [55 54]]
+Accuracy: 0.515	Precision accuracy: 0.475
+Odds edge: 2.16 - 2.105 = 0.055
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_roman_josi.csv
+Target: 3.5_under
+Confusion matrix:
+ [[42 33]
+ [68 99]]
+Accuracy: 0.496	Precision accuracy: 0.662
+Odds edge: 1.58 - 1.511 = 0.069
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_adam_henrique.csv
+Target: 1.5_under
+Confusion matrix:
+ [[71 50]
+ [64 55]]
+Accuracy: 0.535	Precision accuracy: 0.513
+Odds edge: 2.1 - 1.949 = 0.151
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kyle_palmieri.csv
+Target: 2.5_over
+Confusion matrix:
+ [[68 34]
+ [56 44]]
+Accuracy: 0.503	Precision accuracy: 0.498
+Odds edge: 2.09 - 2.008 = 0.082
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jakob_silfverberg.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 16  56]
+ [ 35 110]]
+Accuracy: 0.575	Precision accuracy: 0.697
+Odds edge: 1.64 - 1.435 = 0.205
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_john_tavares.csv
+Target: 2.5_over
+Confusion matrix:
+ [[33 44]
+ [67 94]]
+Accuracy: 0.499	Precision accuracy: 0.643
+Odds edge: 1.69 - 1.555 = 0.135
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_victor_hedman.csv
+Target: 2.5_under
+Confusion matrix:
+ [[45 41]
+ [62 92]]
+Accuracy: 0.485	Precision accuracy: 0.619
+Odds edge: 1.74 - 1.616 = 0.124
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_evander_kane.csv
+Target: 3.5_over
+Confusion matrix:
+ [[49 51]
+ [47 61]]
+Accuracy: 0.479	Precision accuracy: 0.481
+Odds edge: 2.26 - 2.079 = 0.181
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_evander_kane.csv
+Target: 2.5_over
+Confusion matrix:
+ [[  8  54]
+ [ 32 114]]
+Accuracy: 0.609	Precision accuracy: 0.695
+Odds edge: 1.53 - 1.439 = 0.091
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_brayden_schenn.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 32  57]
+ [ 45 109]]
+Accuracy: 0.511	Precision accuracy: 0.678
+Odds edge: 1.52 - 1.475 = 0.045
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_oliver_ekman-larsson.csv
+Target: 1.5_over
+Confusion matrix:
+ [[52 30]
+ [91 66]]
+Accuracy: 0.485	Precision accuracy: 0.695
+Odds edge: 1.7 - 1.439 = 0.261
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nazem_kadri.csv
+Target: 2.5_under
+Confusion matrix:
+ [[48 58]
+ [43 63]]
+Accuracy: 0.511	Precision accuracy: 0.531
+Odds edge: 2.0 - 1.883 = 0.117
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tomas_tatar.csv
+Target: 1.5_over
+Confusion matrix:
+ [[29 49]
+ [59 72]]
+Accuracy: 0.536	Precision accuracy: 0.633
+Odds edge: 1.67 - 1.58 = 0.09
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tyson_barrie.csv
+Target: 2.5_under
+Confusion matrix:
+ [[45 33]
+ [80 45]]
+Accuracy: 0.509	Precision accuracy: 0.667
+Odds edge: 1.75 - 1.499 = 0.251
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mattias_ekholm.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 38   5]
+ [147  17]]
+Accuracy: 0.453	Precision accuracy: 0.789
+Odds edge: 1.66 - 1.267 = 0.393
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_sami_vatanen.csv
+Target: 1.5_over
+Confusion matrix:
+ [[54 36]
+ [50 29]]
+Accuracy: 0.538	Precision accuracy: 0.556
+Odds edge: 2.1 - 1.799 = 0.301
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_craig_smith.csv
+Target: 2.5_under
+Confusion matrix:
+ [[46 62]
+ [51 86]]
+Accuracy: 0.508	Precision accuracy: 0.693
+Odds edge: 1.64 - 1.443 = 0.197
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_craig_smith.csv
+Target: 2.5_over
+Confusion matrix:
+ [[87 50]
+ [61 47]]
+Accuracy: 0.507	Precision accuracy: 0.494
+Odds edge: 2.13 - 2.024 = 0.106
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_e._haula.csv
+Target: 1.5_over
+Confusion matrix:
+ [[42 46]
+ [38 34]]
+Accuracy: 0.501	Precision accuracy: 0.623
+Odds edge: 2.1 - 1.605 = 0.495
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mats_zuccarello.csv
+Target: 1.5_over
+Confusion matrix:
+ [[43 36]
+ [51 77]]
+Accuracy: 0.56	Precision accuracy: 0.619
+Odds edge: 1.64 - 1.616 = 0.024
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mats_zuccarello.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 64   3]
+ [130  10]]
+Accuracy: 0.405	Precision accuracy: 0.717
+Odds edge: 1.48 - 1.395 = 0.085
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_calle_jarnkrok.csv
+Target: 1.5_under
+Confusion matrix:
+ [[38 43]
+ [42 58]]
+Accuracy: 0.537	Precision accuracy: 0.595
+Odds edge: 2.08 - 1.681 = 0.399
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_calle_jarnkrok.csv
+Target: 2.5_under
+Confusion matrix:
+ [[22 21]
+ [54 84]]
+Accuracy: 0.601	Precision accuracy: 0.798
+Odds edge: 1.57 - 1.253 = 0.317
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jason_zucker.csv
+Target: 1.5_over
+Confusion matrix:
+ [[25 40]
+ [45 63]]
+Accuracy: 0.535	Precision accuracy: 0.632
+Odds edge: 1.65 - 1.582 = 0.068
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tyler_toffoli.csv
+Target: 2.5_under
+Confusion matrix:
+ [[56 42]
+ [50 53]]
+Accuracy: 0.453	Precision accuracy: 0.484
+Odds edge: 2.08 - 2.066 = 0.014
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_evgeny_kuznetsov.csv
+Target: 1.5_over
+Confusion matrix:
+ [[19 39]
+ [42 91]]
+Accuracy: 0.518	Precision accuracy: 0.63
+Odds edge: 1.6 - 1.587 = 0.013
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_justin_faulk.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 25  54]
+ [ 29 117]]
+Accuracy: 0.612	Precision accuracy: 0.685
+Odds edge: 1.62 - 1.46 = 0.16
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_brock_nelson.csv
+Target: 2.5_under
+Confusion matrix:
+ [[35 39]
+ [45 88]]
+Accuracy: 0.515	Precision accuracy: 0.631
+Odds edge: 1.62 - 1.585 = 0.035
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_vladimir_tarasenko.csv
+Target: 2.5_over
+Confusion matrix:
+ [[24 56]
+ [24 90]]
+Accuracy: 0.532	Precision accuracy: 0.632
+Odds edge: 1.74 - 1.582 = 0.158
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_vladimir_tarasenko.csv
+Target: 3.5_over
+Confusion matrix:
+ [[61 64]
+ [29 40]]
+Accuracy: 0.509	Precision accuracy: 0.466
+Odds edge: 2.3 - 2.146 = 0.154
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jaden_schwartz.csv
+Target: 1.5_over
+Confusion matrix:
+ [[28 37]
+ [50 90]]
+Accuracy: 0.541	Precision accuracy: 0.675
+Odds edge: 1.5 - 1.481 = 0.019
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jeff_skinner.csv
+Target: 2.5_over
+Confusion matrix:
+ [[  2  84]
+ [  3 131]]
+Accuracy: 0.502	Precision accuracy: 0.65
+Odds edge: 2.31 - 1.538 = 0.772
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_zach_hyman.csv
+Target: 2.5_under
+Confusion matrix:
+ [[17 19]
+ [32 50]]
+Accuracy: 0.606	Precision accuracy: 0.686
+Odds edge: 1.62 - 1.458 = 0.162
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_taylor_hall.csv
+Target: 2.5_over
+Confusion matrix:
+ [[25 46]
+ [49 79]]
+Accuracy: 0.542	Precision accuracy: 0.644
+Odds edge: 1.96 - 1.553 = 0.407
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_johansen.csv
+Target: 1.5_over
+Confusion matrix:
+ [[48 52]
+ [72 72]]
+Accuracy: 0.485	Precision accuracy: 0.58
+Odds edge: 1.83 - 1.724 = 0.106
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mikael_granlund.csv
+Target: 1.5_over
+Confusion matrix:
+ [[44 50]
+ [43 66]]
+Accuracy: 0.502	Precision accuracy: 0.572
+Odds edge: 1.85 - 1.748 = 0.102
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nino_niederreiter.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 28  38]
+ [ 60 100]]
+Accuracy: 0.501	Precision accuracy: 0.66
+Odds edge: 1.53 - 1.515 = 0.015
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nino_niederreiter.csv
+Target: 1.5_under
+Confusion matrix:
+ [[71 54]
+ [56 45]]
+Accuracy: 0.525	Precision accuracy: 0.448
+Odds edge: 2.4 - 2.232 = 0.168
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_bryan_rust.csv
+Target: 2.5_under
+Confusion matrix:
+ [[13 29]
+ [23 68]]
+Accuracy: 0.569	Precision accuracy: 0.685
+Odds edge: 2.1 - 1.46 = 0.64
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_brendan_gallagher.csv
+Target: 3.5_under
+Confusion matrix:
+ [[53 33]
+ [82 38]]
+Accuracy: 0.452	Precision accuracy: 0.639
+Odds edge: 1.71 - 1.565 = 0.145
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_john_klingberg.csv
+Target: 2.5_over
+Confusion matrix:
+ [[61 47]
+ [36 22]]
+Accuracy: 0.582	Precision accuracy: 0.468
+Odds edge: 2.44 - 2.137 = 0.303
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mark_stone.csv
+Target: 1.5_over
+Confusion matrix:
+ [[27 41]
+ [57 50]]
+Accuracy: 0.517	Precision accuracy: 0.616
+Odds edge: 1.69 - 1.623 = 0.067
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ondrej_palat.csv
+Target: 1.5_under
+Confusion matrix:
+ [[62 50]
+ [44 48]]
+Accuracy: 0.52	Precision accuracy: 0.472
+Odds edge: 2.29 - 2.119 = 0.171
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ondrej_palat.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 25  40]
+ [ 31 108]]
+Accuracy: 0.619	Precision accuracy: 0.699
+Odds edge: 1.49 - 1.431 = 0.059
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_johnny_gaudreau.csv
+Target: 2.5_over
+Confusion matrix:
+ [[91  0]
+ [82  0]]
+Accuracy: 0.466	Precision accuracy: 0.487
+Odds edge: 2.15 - 2.053 = 0.097
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_johnny_gaudreau.csv
+Target: 1.5_over
+Confusion matrix:
+ [[18 31]
+ [42 82]]
+Accuracy: 0.595	Precision accuracy: 0.737
+Odds edge: 1.6 - 1.357 = 0.243
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_blake_coleman.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 9 22]
+ [10 61]]
+Accuracy: 0.595	Precision accuracy: 0.722
+Odds edge: 1.7 - 1.385 = 0.315
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_boone_jenner.csv
+Target: 1.5_over
+Confusion matrix:
+ [[17 40]
+ [43 84]]
+Accuracy: 0.579	Precision accuracy: 0.684
+Odds edge: 1.65 - 1.462 = 0.188
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_william_karlsson.csv
+Target: 1.5_under
+Confusion matrix:
+ [[48 28]
+ [37 49]]
+Accuracy: 0.494	Precision accuracy: 0.492
+Odds edge: 2.1 - 2.033 = 0.067
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_william_karlsson.csv
+Target: 1.5_over
+Confusion matrix:
+ [[52 34]
+ [29 47]]
+Accuracy: 0.504	Precision accuracy: 0.62
+Odds edge: 1.66 - 1.613 = 0.047
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_nugent-hopkins.csv
+Target: 2.5_under
+Confusion matrix:
+ [[28 71]
+ [48 69]]
+Accuracy: 0.489	Precision accuracy: 0.571
+Odds edge: 1.87 - 1.751 = 0.119
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_strome.csv
+Target: 2.5_under
+Confusion matrix:
+ [[26 31]
+ [37 84]]
+Accuracy: 0.507	Precision accuracy: 0.72
+Odds edge: 1.57 - 1.389 = 0.181
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_strome.csv
+Target: 1.5_under
+Confusion matrix:
+ [[59 43]
+ [36 40]]
+Accuracy: 0.516	Precision accuracy: 0.462
+Odds edge: 2.32 - 2.165 = 0.155
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mika_zibanejad.csv
+Target: 2.5_under
+Confusion matrix:
+ [[45 50]
+ [36 69]]
+Accuracy: 0.507	Precision accuracy: 0.511
+Odds edge: 2.12 - 1.957 = 0.163
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mika_zibanejad.csv
+Target: 3.5_under
+Confusion matrix:
+ [[ 14  41]
+ [ 20 125]]
+Accuracy: 0.647	Precision accuracy: 0.759
+Odds edge: 1.57 - 1.318 = 0.252
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_sean_couturier.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 23  45]
+ [ 51 113]]
+Accuracy: 0.531	Precision accuracy: 0.678
+Odds edge: 1.65 - 1.475 = 0.175
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dougie_hamilton.csv
+Target: 2.5_under
+Confusion matrix:
+ [[52 47]
+ [49 58]]
+Accuracy: 0.466	Precision accuracy: 0.476
+Odds edge: 2.24 - 2.101 = 0.139
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dougie_hamilton.csv
+Target: 3.5_under
+Confusion matrix:
+ [[ 12  39]
+ [ 32 123]]
+Accuracy: 0.516	Precision accuracy: 0.667
+Odds edge: 1.62 - 1.499 = 0.121
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_j.t._miller.csv
+Target: 1.5_under
+Confusion matrix:
+ [[49 59]
+ [41 53]]
+Accuracy: 0.504	Precision accuracy: 0.503
+Odds edge: 2.3 - 1.988 = 0.312
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_j.t._miller.csv
+Target: 2.5_under
+Confusion matrix:
+ [[26 31]
+ [74 71]]
+Accuracy: 0.499	Precision accuracy: 0.76
+Odds edge: 1.52 - 1.316 = 0.204
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_vladislav_namestnikov.csv
+Target: 1.5_under
+Confusion matrix:
+ [[36 32]
+ [49 50]]
+Accuracy: 0.514	Precision accuracy: 0.601
+Odds edge: 2.0 - 1.664 = 0.336
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_rickard_rakell.csv
+Target: 2.5_under
+Confusion matrix:
+ [[58  6]
+ [71 38]]
+Accuracy: 0.536	Precision accuracy: 0.774
+Odds edge: 1.96 - 1.292 = 0.668
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jonathan_marchessault.csv
+Target: 2.5_over
+Confusion matrix:
+ [[32 32]
+ [29 49]]
+Accuracy: 0.496	Precision accuracy: 0.631
+Odds edge: 1.65 - 1.585 = 0.065
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_torey_krug.csv
+Target: 2.5_over
+Confusion matrix:
+ [[61 50]
+ [48 48]]
+Accuracy: 0.526	Precision accuracy: 0.513
+Odds edge: 2.24 - 1.949 = 0.291
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_torey_krug.csv
+Target: 1.5_over
+Confusion matrix:
+ [[22 41]
+ [59 85]]
+Accuracy: 0.556	Precision accuracy: 0.7
+Odds edge: 1.58 - 1.429 = 0.151
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_yanni_gourde.csv
+Target: 1.5_under
+Confusion matrix:
+ [[34 21]
+ [32 24]]
+Accuracy: 0.521	Precision accuracy: 0.521
+Odds edge: 2.1 - 1.919 = 0.181
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_matt_dumba.csv
+Target: 2.5_under
+Confusion matrix:
+ [[19 25]
+ [47 63]]
+Accuracy: 0.542	Precision accuracy: 0.742
+Odds edge: 1.54 - 1.348 = 0.192
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_matt_dumba.csv
+Target: 2.5_over
+Confusion matrix:
+ [[71 39]
+ [25 19]]
+Accuracy: 0.535	Precision accuracy: 0.442
+Odds edge: 2.34 - 2.262 = 0.078
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_matt_dumba.csv
+Target: 1.5_under
+Confusion matrix:
+ [[44 42]
+ [32 36]]
+Accuracy: 0.503	Precision accuracy: 0.481
+Odds edge: 2.18 - 2.079 = 0.101
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tanner_pearson.csv
+Target: 2.5_under
+Confusion matrix:
+ [[15 36]
+ [34 94]]
+Accuracy: 0.541	Precision accuracy: 0.66
+Odds edge: 1.71 - 1.515 = 0.195
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tom_wilson.csv
+Target: 1.5_under
+Confusion matrix:
+ [[42 37]
+ [41 86]]
+Accuracy: 0.495	Precision accuracy: 0.66
+Odds edge: 1.87 - 1.515 = 0.355
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tomas_hertl.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 56   4]
+ [104  13]]
+Accuracy: 0.454	Precision accuracy: 0.72
+Odds edge: 1.51 - 1.389 = 0.121
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jacob_trouba.csv
+Target: 1.5_over
+Confusion matrix:
+ [[25 39]
+ [40 72]]
+Accuracy: 0.501	Precision accuracy: 0.597
+Odds edge: 1.77 - 1.675 = 0.095
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_filip_forsberg.csv
+Target: 3.5_under
+Confusion matrix:
+ [[21 36]
+ [56 70]]
+Accuracy: 0.511	Precision accuracy: 0.637
+Odds edge: 1.6 - 1.57 = 0.03
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_matt_grzelcyk.csv
+Target: 1.5_under
+Confusion matrix:
+ [[21 18]
+ [20 26]]
+Accuracy: 0.498	Precision accuracy: 0.551
+Odds edge: 2.21 - 1.815 = 0.395
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_matt_grzelcyk.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 1 16]
+ [ 3 65]]
+Accuracy: 0.784	Precision accuracy: 0.818
+Odds edge: 1.56 - 1.222 = 0.338
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_colton_parayko.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 7 51]
+ [17 80]]
+Accuracy: 0.554	Precision accuracy: 0.665
+Odds edge: 1.68 - 1.504 = 0.176
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_colton_parayko.csv
+Target: 2.5_over
+Confusion matrix:
+ [[42 42]
+ [36 35]]
+Accuracy: 0.531	Precision accuracy: 0.464
+Odds edge: 2.23 - 2.155 = 0.075
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_esa_lindell.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 3 26]
+ [17 78]]
+Accuracy: 0.683	Precision accuracy: 0.775
+Odds edge: 1.43 - 1.29 = 0.14
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_damon_severson.csv
+Target: 1.5_under
+Confusion matrix:
+ [[47 30]
+ [44 35]]
+Accuracy: 0.5	Precision accuracy: 0.537
+Odds edge: 2.02 - 1.862 = 0.158
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jaccob_slavin.csv
+Target: 1.5_under
+Confusion matrix:
+ [[44 21]
+ [51 28]]
+Accuracy: 0.465	Precision accuracy: 0.487
+Odds edge: 2.2 - 2.053 = 0.147
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_connor_brown.csv
+Target: 2.5_under
+Confusion matrix:
+ [[10 20]
+ [16 80]]
+Accuracy: 0.653	Precision accuracy: 0.812
+Odds edge: 1.54 - 1.232 = 0.308
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_connor_brown.csv
+Target: 2.5_over
+Confusion matrix:
+ [[81 15]
+ [20 10]]
+Accuracy: 0.711	Precision accuracy: 0.723
+Odds edge: 2.34 - 1.383 = 0.957
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_connor_brown.csv
+Target: 1.5_under
+Confusion matrix:
+ [[35 32]
+ [30 29]]
+Accuracy: 0.497	Precision accuracy: 0.545
+Odds edge: 2.0 - 1.835 = 0.165
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_andreas_johnsson.csv
+Target: 1.5_over
+Confusion matrix:
+ [[13 18]
+ [13 14]]
+Accuracy: 0.514	Precision accuracy: 0.478
+Odds edge: 2.25 - 2.092 = 0.158
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_pavel_buchnevich.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 4 23]
+ [ 8 59]]
+Accuracy: 0.627	Precision accuracy: 0.743
+Odds edge: 1.56 - 1.346 = 0.214
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mattias_janmark.csv
+Target: 1.5_under
+Confusion matrix:
+ [[22 28]
+ [24 50]]
+Accuracy: 0.525	Precision accuracy: 0.593
+Odds edge: 2.3 - 1.686 = 0.614
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_anthony_duclair.csv
+Target: 2.5_under
+Confusion matrix:
+ [[12 25]
+ [21 68]]
+Accuracy: 0.525	Precision accuracy: 0.714
+Odds edge: 1.73 - 1.401 = 0.329
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_carter_verhaeghe.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 1  7]
+ [ 1 23]]
+Accuracy: 0.744	Precision accuracy: 0.804
+Odds edge: 1.65 - 1.244 = 0.406
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_carter_verhaeghe.csv
+Target: 2.5_over
+Confusion matrix:
+ [[23  1]
+ [ 7  1]]
+Accuracy: 0.744	Precision accuracy: 0.467
+Odds edge: 2.16 - 2.141 = 0.019
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_miles_wood.csv
+Target: 1.5_under
+Confusion matrix:
+ [[33 23]
+ [27 18]]
+Accuracy: 0.572	Precision accuracy: 0.521
+Odds edge: 2.28 - 1.919 = 0.361
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_andrew_copp.csv
+Target: 1.5_under
+Confusion matrix:
+ [[15 40]
+ [19 64]]
+Accuracy: 0.489	Precision accuracy: 0.643
+Odds edge: 1.97 - 1.555 = 0.415
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_shea_theodore.csv
+Target: 2.5_under
+Confusion matrix:
+ [[22 24]
+ [26 46]]
+Accuracy: 0.548	Precision accuracy: 0.583
+Odds edge: 1.89 - 1.715 = 0.175
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nathan_mackinnon.csv
+Target: 3.5_under
+Confusion matrix:
+ [[44 52]
+ [34 64]]
+Accuracy: 0.441	Precision accuracy: 0.522
+Odds edge: 2.12 - 1.916 = 0.204
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_aleksander_barkov.csv
+Target: 2.5_under
+Confusion matrix:
+ [[44 31]
+ [46 50]]
+Accuracy: 0.528	Precision accuracy: 0.562
+Odds edge: 2.19 - 1.779 = 0.411
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_aleksander_barkov.csv
+Target: 3.5_under
+Confusion matrix:
+ [[  9  36]
+ [ 20 106]]
+Accuracy: 0.611	Precision accuracy: 0.767
+Odds edge: 1.74 - 1.304 = 0.436
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_seth_jones.csv
+Target: 1.5_under
+Confusion matrix:
+ [[  1 107]
+ [  1  87]]
+Accuracy: 0.472	Precision accuracy: 0.413
+Odds edge: 2.52 - 2.421 = 0.099
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_sean_monahan.csv
+Target: 2.5_over
+Confusion matrix:
+ [[86 14]
+ [82 16]]
+Accuracy: 0.574	Precision accuracy: 0.536
+Odds edge: 2.33 - 1.866 = 0.464
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_sean_monahan.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 12  44]
+ [ 38 104]]
+Accuracy: 0.557	Precision accuracy: 0.682
+Odds edge: 1.55 - 1.466 = 0.084
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_darnell_nurse.csv
+Target: 2.5_under
+Confusion matrix:
+ [[19 35]
+ [29 49]]
+Accuracy: 0.495	Precision accuracy: 0.602
+Odds edge: 1.67 - 1.661 = 0.009
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_rasmus_ristolainen.csv
+Target: 1.5_over
+Confusion matrix:
+ [[28 41]
+ [40 61]]
+Accuracy: 0.546	Precision accuracy: 0.622
+Odds edge: 1.69 - 1.608 = 0.082
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_rasmus_ristolainen.csv
+Target: 2.5_over
+Confusion matrix:
+ [[73 37]
+ [32 28]]
+Accuracy: 0.53	Precision accuracy: 0.441
+Odds edge: 2.75 - 2.268 = 0.482
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_max_domi.csv
+Target: 1.5_under
+Confusion matrix:
+ [[57 25]
+ [36 21]]
+Accuracy: 0.525	Precision accuracy: 0.543
+Odds edge: 2.2 - 1.842 = 0.358
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_josh_morrissey.csv
+Target: 1.5_under
+Confusion matrix:
+ [[21 39]
+ [14 42]]
+Accuracy: 0.461	Precision accuracy: 0.494
+Odds edge: 2.15 - 2.024 = 0.126
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_josh_morrissey.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 4 22]
+ [ 9 81]]
+Accuracy: 0.71	Precision accuracy: 0.787
+Odds edge: 1.42 - 1.271 = 0.149
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_a._wennberg.csv
+Target: 1.5_under
+Confusion matrix:
+ [[22 39]
+ [23 75]]
+Accuracy: 0.577	Precision accuracy: 0.681
+Odds edge: 1.55 - 1.468 = 0.082
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ryan_pulock.csv
+Target: 1.5_under
+Confusion matrix:
+ [[36 24]
+ [25 14]]
+Accuracy: 0.548	Precision accuracy: 0.515
+Odds edge: 2.32 - 1.942 = 0.378
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jordan_oesterle.csv
+Target: 1.5_under
+Confusion matrix:
+ [[ 8 15]
+ [27 33]]
+Accuracy: 0.526	Precision accuracy: 0.603
+Odds edge: 2.1 - 1.658 = 0.442
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_aaron_ekblad.csv
+Target: 2.5_under
+Confusion matrix:
+ [[34 40]
+ [48 42]]
+Accuracy: 0.492	Precision accuracy: 0.584
+Odds edge: 1.83 - 1.712 = 0.118
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_leon_draisaitl.csv
+Target: 2.5_under
+Confusion matrix:
+ [[34 28]
+ [39 55]]
+Accuracy: 0.515	Precision accuracy: 0.577
+Odds edge: 2.11 - 1.733 = 0.377
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_william_nylander.csv
+Target: 2.5_over
+Confusion matrix:
+ [[60 12]
+ [35 13]]
+Accuracy: 0.561	Precision accuracy: 0.529
+Odds edge: 2.0 - 1.89 = 0.11
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nikolaj_ehlers.csv
+Target: 2.5_under
+Confusion matrix:
+ [[29 34]
+ [37 40]]
+Accuracy: 0.507	Precision accuracy: 0.519
+Odds edge: 2.11 - 1.927 = 0.183
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nick_ritchie.csv
+Target: 1.5_under
+Confusion matrix:
+ [[31 32]
+ [23 30]]
+Accuracy: 0.541	Precision accuracy: 0.541
+Odds edge: 2.43 - 1.848 = 0.582
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nick_ritchie.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 5 28]
+ [24 59]]
+Accuracy: 0.59	Precision accuracy: 0.753
+Odds edge: 1.58 - 1.328 = 0.252
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kevin_fiala.csv
+Target: 2.5_under
+Confusion matrix:
+ [[11 41]
+ [22 36]]
+Accuracy: 0.563	Precision accuracy: 0.617
+Odds edge: 1.97 - 1.621 = 0.349
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jakub_vrana.csv
+Target: 1.5_over
+Confusion matrix:
+ [[32 11]
+ [40 20]]
+Accuracy: 0.529	Precision accuracy: 0.601
+Odds edge: 1.7 - 1.664 = 0.036
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dylan_larkin.csv
+Target: 2.5_under
+Confusion matrix:
+ [[34 29]
+ [34 42]]
+Accuracy: 0.496	Precision accuracy: 0.477
+Odds edge: 2.13 - 2.096 = 0.034
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dylan_larkin.csv
+Target: 3.5_under
+Confusion matrix:
+ [[ 5 41]
+ [ 7 86]]
+Accuracy: 0.575	Precision accuracy: 0.673
+Odds edge: 1.53 - 1.486 = 0.044
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_alex_tuch.csv
+Target: 1.5_over
+Confusion matrix:
+ [[12 20]
+ [20 41]]
+Accuracy: 0.559	Precision accuracy: 0.651
+Odds edge: 1.56 - 1.536 = 0.024
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nick_schmaltz.csv
+Target: 1.5_under
+Confusion matrix:
+ [[21 17]
+ [27 28]]
+Accuracy: 0.423	Precision accuracy: 0.48
+Odds edge: 2.15 - 2.083 = 0.067
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nick_schmaltz.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 2  9]
+ [14 68]]
+Accuracy: 0.751	Precision accuracy: 0.809
+Odds edge: 1.53 - 1.236 = 0.294
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_robby_fabbri.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 2 20]
+ [ 7 60]]
+Accuracy: 0.605	Precision accuracy: 0.784
+Odds edge: 1.51 - 1.276 = 0.234
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kasperi_kapanen.csv
+Target: 1.5_under
+Confusion matrix:
+ [[23 19]
+ [26 16]]
+Accuracy: 0.516	Precision accuracy: 0.486
+Odds edge: 2.1 - 2.058 = 0.042
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jared_mccann.csv
+Target: 1.5_under
+Confusion matrix:
+ [[39 21]
+ [30 23]]
+Accuracy: 0.531	Precision accuracy: 0.481
+Odds edge: 2.28 - 2.079 = 0.201
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_david_pastrnak.csv
+Target: 3.5_under
+Confusion matrix:
+ [[27 26]
+ [41 59]]
+Accuracy: 0.447	Precision accuracy: 0.494
+Odds edge: 2.11 - 2.024 = 0.086
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_david_pastrnak.csv
+Target: 4.5_under
+Confusion matrix:
+ [[  7  22]
+ [ 18 106]]
+Accuracy: 0.603	Precision accuracy: 0.718
+Odds edge: 1.57 - 1.393 = 0.177
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_adrian_kempe.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 4 19]
+ [12 61]]
+Accuracy: 0.559	Precision accuracy: 0.728
+Odds edge: 1.52 - 1.374 = 0.146
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_adrian_kempe.csv
+Target: 1.5_under
+Confusion matrix:
+ [[21 21]
+ [19 35]]
+Accuracy: 0.472	Precision accuracy: 0.472
+Odds edge: 2.32 - 2.119 = 0.201
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_devon_toews.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 4  9]
+ [19 25]]
+Accuracy: 0.568	Precision accuracy: 0.711
+Odds edge: 1.61 - 1.406 = 0.204
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kevin_labanc.csv
+Target: 2.5_under
+Confusion matrix:
+ [[11 21]
+ [26 55]]
+Accuracy: 0.521	Precision accuracy: 0.656
+Odds edge: 1.66 - 1.524 = 0.136
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_victor_olofsson.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 4 11]
+ [ 5  9]]
+Accuracy: 0.6	Precision accuracy: 0.648
+Odds edge: 1.56 - 1.543 = 0.017
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_victor_olofsson.csv
+Target: 2.5_over
+Confusion matrix:
+ [[10  4]
+ [10  5]]
+Accuracy: 0.578	Precision accuracy: 0.512
+Odds edge: 2.29 - 1.953 = 0.337
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_victor_olofsson.csv
+Target: 1.5_under
+Confusion matrix:
+ [[19  2]
+ [ 7  1]]
+Accuracy: 0.667	Precision accuracy: 0.556
+Odds edge: 2.55 - 1.799 = 0.751
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_victor_olofsson.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 1  7]
+ [ 2 19]]
+Accuracy: 0.667	Precision accuracy: 0.723
+Odds edge: 1.47 - 1.383 = 0.087
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_rasmus_andersson.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 1 18]
+ [ 6 43]]
+Accuracy: 0.694	Precision accuracy: 0.773
+Odds edge: 1.85 - 1.294 = 0.556
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kyle_connor.csv
+Target: 3.5_under
+Confusion matrix:
+ [[11 21]
+ [19 50]]
+Accuracy: 0.546	Precision accuracy: 0.699
+Odds edge: 1.56 - 1.431 = 0.129
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_pavel_zacha.csv
+Target: 1.5_under
+Confusion matrix:
+ [[11 38]
+ [13 38]]
+Accuracy: 0.535	Precision accuracy: 0.579
+Odds edge: 2.11 - 1.727 = 0.383
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_pavel_zacha.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 4 23]
+ [ 3 70]]
+Accuracy: 0.743	Precision accuracy: 0.793
+Odds edge: 1.4 - 1.261 = 0.139
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_pavel_zacha.csv
+Target: 2.5_over
+Confusion matrix:
+ [[70  3]
+ [23  4]]
+Accuracy: 0.743	Precision accuracy: 0.373
+Odds edge: 2.75 - 2.681 = 0.069
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_connor_mcdavid.csv
+Target: 3.5_under
+Confusion matrix:
+ [[19 32]
+ [27 54]]
+Accuracy: 0.564	Precision accuracy: 0.638
+Odds edge: 1.81 - 1.567 = 0.243
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mikko_rantanen.csv
+Target: 2.5_under
+Confusion matrix:
+ [[23 24]
+ [24 42]]
+Accuracy: 0.468	Precision accuracy: 0.584
+Odds edge: 2.21 - 1.712 = 0.498
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mikko_rantanen.csv
+Target: 3.5_under
+Confusion matrix:
+ [[ 8 13]
+ [21 71]]
+Accuracy: 0.618	Precision accuracy: 0.809
+Odds edge: 1.67 - 1.236 = 0.434
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_travis_konecny.csv
+Target: 1.5_over
+Confusion matrix:
+ [[36  6]
+ [64  8]]
+Accuracy: 0.452	Precision accuracy: 0.618
+Odds edge: 1.66 - 1.618 = 0.042
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_brock_boeser.csv
+Target: 2.5_over
+Confusion matrix:
+ [[24 17]
+ [20 21]]
+Accuracy: 0.512	Precision accuracy: 0.527
+Odds edge: 1.97 - 1.898 = 0.072
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mathew_barzal.csv
+Target: 2.5_under
+Confusion matrix:
+ [[15 19]
+ [34 29]]
+Accuracy: 0.526	Precision accuracy: 0.639
+Odds edge: 1.61 - 1.565 = 0.045
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_roope_hintz.csv
+Target: 2.5_under
+Confusion matrix:
+ [[11  8]
+ [21 20]]
+Accuracy: 0.519	Precision accuracy: 0.638
+Odds edge: 1.64 - 1.567 = 0.073
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_anthony_beauvillier.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 6 17]
+ [18 71]]
+Accuracy: 0.563	Precision accuracy: 0.748
+Odds edge: 1.52 - 1.337 = 0.183
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_anthony_beauvillier.csv
+Target: 3.5_under
+Confusion matrix:
+ [[12  2]
+ [55 43]]
+Accuracy: 0.578	Precision accuracy: 0.905
+Odds edge: 1.55 - 1.105 = 0.445
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_anthony_beauvillier.csv
+Target: 1.5_under
+Confusion matrix:
+ [[35 22]
+ [29 26]]
+Accuracy: 0.531	Precision accuracy: 0.557
+Odds edge: 2.45 - 1.795 = 0.655
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_thomas_chabot.csv
+Target: 2.5_under
+Confusion matrix:
+ [[17  9]
+ [16 36]]
+Accuracy: 0.521	Precision accuracy: 0.613
+Odds edge: 1.69 - 1.631 = 0.059
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mitchell_marner.csv
+Target: 2.5_under
+Confusion matrix:
+ [[22 28]
+ [28 40]]
+Accuracy: 0.493	Precision accuracy: 0.521
+Odds edge: 1.99 - 1.919 = 0.071
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_joel_eriksson_ek.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 2 15]
+ [ 6 59]]
+Accuracy: 0.689	Precision accuracy: 0.765
+Odds edge: 1.51 - 1.307 = 0.203
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_joel_eriksson_ek.csv
+Target: 1.5_under
+Confusion matrix:
+ [[17 25]
+ [20 20]]
+Accuracy: 0.472	Precision accuracy: 0.474
+Odds edge: 2.14 - 2.11 = 0.03
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_denis_gurianov.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 1 11]
+ [10 24]]
+Accuracy: 0.503	Precision accuracy: 0.618
+Odds edge: 1.62 - 1.618 = 0.002
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_denis_gurianov.csv
+Target: 1.5_under
+Confusion matrix:
+ [[18  9]
+ [11  8]]
+Accuracy: 0.518	Precision accuracy: 0.458
+Odds edge: 2.4 - 2.183 = 0.217
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_ivan_provorov.csv
+Target: 2.5_under
+Confusion matrix:
+ [[11 35]
+ [19 57]]
+Accuracy: 0.529	Precision accuracy: 0.658
+Odds edge: 1.52 - 1.52 = 0.0
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_artemi_panarin.csv
+Target: 2.5_under
+Confusion matrix:
+ [[39 31]
+ [34 41]]
+Accuracy: 0.579	Precision accuracy: 0.61
+Odds edge: 1.91 - 1.639 = 0.271
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_conor_garland.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 9 10]
+ [14 17]]
+Accuracy: 0.573	Precision accuracy: 0.632
+Odds edge: 1.79 - 1.582 = 0.208
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_conor_garland.csv
+Target: 2.5_over
+Confusion matrix:
+ [[17 14]
+ [10  9]]
+Accuracy: 0.593	Precision accuracy: 0.535
+Odds edge: 1.94 - 1.869 = 0.071
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kirill_kaprizov.csv
+Target: 2.5_under
+Confusion matrix:
+ [[1 2]
+ [4 3]]
+Accuracy: 0.573	Precision accuracy: 0.607
+Odds edge: 1.74 - 1.647 = 0.093
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_rudolfs_balcers.csv
+Target: 1.5_under
+Confusion matrix:
+ [[5 5]
+ [5 9]]
+Accuracy: 0.563	Precision accuracy: 0.584
+Odds edge: 2.58 - 1.712 = 0.868
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_rudolfs_balcers.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 0  2]
+ [ 0 22]]
+Accuracy: 0.846	Precision accuracy: 0.846
+Odds edge: 1.4 - 1.182 = 0.218
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_auston_matthews.csv
+Target: 4.5_under
+Confusion matrix:
+ [[ 6 36]
+ [ 2 67]]
+Accuracy: 0.587	Precision accuracy: 0.688
+Odds edge: 1.61 - 1.453 = 0.157
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_charlie_mcavoy.csv
+Target: 1.5_under
+Confusion matrix:
+ [[12 22]
+ [16 38]]
+Accuracy: 0.462	Precision accuracy: 0.503
+Odds edge: 2.22 - 1.988 = 0.232
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_patrik_laine.csv
+Target: 2.5_over
+Confusion matrix:
+ [[19 30]
+ [33 34]]
+Accuracy: 0.497	Precision accuracy: 0.518
+Odds edge: 2.07 - 1.931 = 0.139
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_clayton_keller.csv
+Target: 2.5_over
+Confusion matrix:
+ [[28 25]
+ [12 26]]
+Accuracy: 0.577	Precision accuracy: 0.527
+Odds edge: 2.36 - 1.898 = 0.462
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_clayton_keller.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 7 24]
+ [ 5 55]]
+Accuracy: 0.576	Precision accuracy: 0.678
+Odds edge: 1.58 - 1.475 = 0.105
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jesse_puljujarvi.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 7  2]
+ [26 23]]
+Accuracy: 0.6	Precision accuracy: 0.803
+Odds edge: 1.52 - 1.245 = 0.275
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jakob_chychrun.csv
+Target: 2.5_under
+Confusion matrix:
+ [[37  0]
+ [53  0]]
+Accuracy: 0.55	Precision accuracy: 0.633
+Odds edge: 1.75 - 1.58 = 0.17
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_dillon_dube.csv
+Target: 1.5_under
+Confusion matrix:
+ [[ 3  9]
+ [ 6 17]]
+Accuracy: 0.49	Precision accuracy: 0.503
+Odds edge: 2.2 - 1.988 = 0.212
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_pierre-luc_dubois.csv
+Target: 1.5_over
+Confusion matrix:
+ [[16 24]
+ [23 29]]
+Accuracy: 0.561	Precision accuracy: 0.663
+Odds edge: 1.69 - 1.508 = 0.182
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jesper_bratt.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 8 11]
+ [ 4 46]]
+Accuracy: 0.647	Precision accuracy: 0.742
+Odds edge: 1.51 - 1.348 = 0.162
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jesper_bratt.csv
+Target: 1.5_under
+Confusion matrix:
+ [[20 13]
+ [10 26]]
+Accuracy: 0.497	Precision accuracy: 0.561
+Odds edge: 2.11 - 1.783 = 0.327
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mikhail_sergachev.csv
+Target: 1.5_under
+Confusion matrix:
+ [[17 25]
+ [22 38]]
+Accuracy: 0.542	Precision accuracy: 0.535
+Odds edge: 2.28 - 1.869 = 0.411
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_mikhail_sergachev.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 5 13]
+ [22 62]]
+Accuracy: 0.698	Precision accuracy: 0.742
+Odds edge: 1.5 - 1.348 = 0.152
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tage_thompson.csv
+Target: 1.5_under
+Confusion matrix:
+ [[16  7]
+ [ 9 12]]
+Accuracy: 0.485	Precision accuracy: 0.51
+Odds edge: 2.25 - 1.961 = 0.289
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_filip_hronek.csv
+Target: 1.5_under
+Confusion matrix:
+ [[10 16]
+ [ 6 15]]
+Accuracy: 0.468	Precision accuracy: 0.478
+Odds edge: 2.25 - 2.092 = 0.158
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_filip_hronek.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 5 13]
+ [ 6 23]]
+Accuracy: 0.546	Precision accuracy: 0.681
+Odds edge: 1.48 - 1.468 = 0.012
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nico_hischier.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 6 21]
+ [18 28]]
+Accuracy: 0.559	Precision accuracy: 0.672
+Odds edge: 1.66 - 1.488 = 0.172
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nicholas_suzuki.csv
+Target: 1.5_under
+Confusion matrix:
+ [[12 12]
+ [ 4  8]]
+Accuracy: 0.606	Precision accuracy: 0.656
+Odds edge: 2.1 - 1.524 = 0.576
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_nicholas_suzuki.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 8  4]
+ [12 12]]
+Accuracy: 0.606	Precision accuracy: 0.79
+Odds edge: 1.66 - 1.266 = 0.394
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jason_robertson.csv
+Target: 2.5_under
+Confusion matrix:
+ [[1 1]
+ [5 3]]
+Accuracy: 0.64	Precision accuracy: 0.737
+Odds edge: 1.64 - 1.357 = 0.283
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_martin_necas.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 0  3]
+ [ 1 31]]
+Accuracy: 0.792	Precision accuracy: 0.815
+Odds edge: 1.53 - 1.227 = 0.303
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_martin_necas.csv
+Target: 1.5_under
+Confusion matrix:
+ [[ 8  7]
+ [10 10]]
+Accuracy: 0.387	Precision accuracy: 0.492
+Odds edge: 2.5 - 2.033 = 0.467
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_cale_makar.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 4 11]
+ [ 2 16]]
+Accuracy: 0.58	Precision accuracy: 0.674
+Odds edge: 1.54 - 1.484 = 0.056
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_cale_makar.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 0 11]
+ [ 3 19]]
+Accuracy: 0.55	Precision accuracy: 0.664
+Odds edge: 1.56 - 1.506 = 0.054
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_alex_iafallo.csv
+Target: 2.5_under
+Confusion matrix:
+ [[10 19]
+ [22 35]]
+Accuracy: 0.562	Precision accuracy: 0.669
+Odds edge: 1.51 - 1.495 = 0.015
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_neal_pionk.csv
+Target: 2.5_under
+Confusion matrix:
+ [[18  0]
+ [48  2]]
+Accuracy: 0.534	Precision accuracy: 0.714
+Odds edge: 1.45 - 1.401 = 0.049
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_drake_batherson.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 0  5]
+ [ 2 19]]
+Accuracy: 0.71	Precision accuracy: 0.786
+Odds edge: 1.49 - 1.272 = 0.218
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_drake_batherson.csv
+Target: 1.5_under
+Confusion matrix:
+ [[3 8]
+ [7 8]]
+Accuracy: 0.538	Precision accuracy: 0.54
+Odds edge: 2.24 - 1.852 = 0.388
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_pius_suter.csv
+Target: 1.5_over
+Confusion matrix:
+ [[3 2]
+ [3 3]]
+Accuracy: 0.614	Precision accuracy: 0.733
+Odds edge: 1.7 - 1.364 = 0.336
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_joel_farabee.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 2  9]
+ [ 1 18]]
+Accuracy: 0.527	Precision accuracy: 0.668
+Odds edge: 1.54 - 1.497 = 0.043
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_joel_farabee.csv
+Target: 1.5_under
+Confusion matrix:
+ [[14  5]
+ [ 7  4]]
+Accuracy: 0.508	Precision accuracy: 0.509
+Odds edge: 2.4 - 1.965 = 0.435
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_quinn_hughes.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 3 12]
+ [ 3 23]]
+Accuracy: 0.601	Precision accuracy: 0.728
+Odds edge: 1.45 - 1.374 = 0.076
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_quinn_hughes.csv
+Target: 2.5_over
+Confusion matrix:
+ [[21  5]
+ [12  3]]
+Accuracy: 0.649	Precision accuracy: 0.4
+Odds edge: 2.55 - 2.5 = 0.05
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_filip_zadina.csv
+Target: 1.5_under
+Confusion matrix:
+ [[12  0]
+ [ 7  3]]
+Accuracy: 0.56	Precision accuracy: 0.455
+Odds edge: 2.27 - 2.198 = 0.072
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_filip_zadina.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 1  7]
+ [ 2 12]]
+Accuracy: 0.667	Precision accuracy: 0.696
+Odds edge: 1.55 - 1.437 = 0.113
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jesperi_kotkaniemi.csv
+Target: 1.5_under
+Confusion matrix:
+ [[11 15]
+ [12 15]]
+Accuracy: 0.494	Precision accuracy: 0.504
+Odds edge: 2.05 - 1.984 = 0.066
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_yegor_sharangovich.csv
+Target: 2.5_under
+Confusion matrix:
+ [[2 4]
+ [2 3]]
+Accuracy: 0.548	Precision accuracy: 0.614
+Odds edge: 1.67 - 1.629 = 0.041
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_yegor_sharangovich.csv
+Target: 2.5_over
+Confusion matrix:
+ [[3 2]
+ [5 1]]
+Accuracy: 0.543	Precision accuracy: 0.58
+Odds edge: 2.1 - 1.724 = 0.376
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_yegor_sharangovich.csv
+Target: 1.5_over
+Confusion matrix:
+ [[2 0]
+ [3 6]]
+Accuracy: 0.648	Precision accuracy: 0.7
+Odds edge: 1.57 - 1.429 = 0.141
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kirby_dach.csv
+Target: 1.5_under
+Confusion matrix:
+ [[ 2 11]
+ [ 3 10]]
+Accuracy: 0.638	Precision accuracy: 0.667
+Odds edge: 2.2 - 1.499 = 0.701
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_kaapo_kakko.csv
+Target: 1.5_under
+Confusion matrix:
+ [[ 7  8]
+ [ 7 10]]
+Accuracy: 0.499	Precision accuracy: 0.531
+Odds edge: 2.02 - 1.883 = 0.137
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jack_hughes.csv
+Target: 2.5_under
+Confusion matrix:
+ [[ 5  6]
+ [ 7 11]]
+Accuracy: 0.594	Precision accuracy: 0.72
+Odds edge: 1.59 - 1.389 = 0.201
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jack_hughes.csv
+Target: 2.5_over
+Confusion matrix:
+ [[12  6]
+ [ 2  9]]
+Accuracy: 0.595	Precision accuracy: 0.597
+Odds edge: 2.24 - 1.675 = 0.565
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_jack_hughes.csv
+Target: 1.5_over
+Confusion matrix:
+ [[ 1 13]
+ [ 1 14]]
+Accuracy: 0.522	Precision accuracy: 0.729
+Odds edge: 1.59 - 1.372 = 0.218
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tim_stuetzle.csv
+Target: 1.5_under
+Confusion matrix:
+ [[7 1]
+ [2 0]]
+Accuracy: 0.733	Precision accuracy: 0.453
+Odds edge: 2.27 - 2.208 = 0.062
+--------------------------------------------------
+--------------------------------------------------
+Player: ./data/td/pp_tim_stuetzle.csv
+Target: 1.5_over
+Confusion matrix:
+ [[0 2]
+ [1 7]]
+Accuracy: 0.733	Precision accuracy: 0.853
+Odds edge: 1.58 - 1.172 = 0.408
+--------------------------------------------------

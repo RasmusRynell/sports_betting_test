@@ -20,13 +20,22 @@ def get_num_shots(gamePk, player_id):
     return num_shots
 
 
+def split_average_odds(average_odds):
+    average_odds = average_odds.split(",")
+    res = {}
+    for odds in average_odds:
+        tmp = odds.split(":")
+        if(len(tmp) > 1):
+            res[tmp[0]] = float(tmp[1])
+    return res
 
 def generate_models(allModels=False, SVC=False):
-    f = open("./data/input.txt")
+    f = open("./data/input_tmp.txt")
     files = f.readlines()
     res = {}
-    for tmp in (files):
-        file, earliest_gamePk_index, over_unders = tmp.split(" ")
+    for tmp in tqdm(files):
+        file, earliest_gamePk_index, over_unders, average_odds = tmp.split(" ")
+        average_odds = split_average_odds(average_odds)
         for over_under in over_unders.split(","):
             over_under = over_under.replace("\n", "")
             if(allModels):
@@ -40,8 +49,31 @@ def generate_models(allModels=False, SVC=False):
                 res[file]["shots_this_game_U"+str(over_under)] = res_under
                 res[file]["shots_this_game_O"+str(over_under)] = res_over
 
+                if(average_odds[over_under + "_under"] > (1/float(res_under["precision accuracy"]))):
+                    print("--------------------------------------------------")
+                    print("Player: {}".format(file))
+                    print("Target: {}".format(over_under + "_under"))
+                    print("Confusion matrix:\n {}".format(res_under["confusion matrix"]))
+                    print("Accuracy: {}\tPrecision accuracy: {}"\
+                        .format(res_under["accuracy"], res_under["precision accuracy"]))
+                    print("Odds edge: {} - {} = {}".format(average_odds[over_under + "_under"], round(1/float(res_under["precision accuracy"]), 3), \
+                        round(average_odds[over_under + "_under"] - 1/float(res_under["precision accuracy"]), 3)))
+                    print("--------------------------------------------------")
+                if(average_odds[over_under + "_over"] > (1/float(res_over["precision accuracy"]))):
+                    print("--------------------------------------------------")
+                    print("Player: {}".format(file))
+                    print("Target: {}".format(over_under + "_over"))
+                    print("Confusion matrix:\n {}".format(res_over["confusion matrix"]))
+                    print("Accuracy: {}\tPrecision accuracy: {}"\
+                        .format(res_over["accuracy"], res_over["precision accuracy"]))
+                    print("Odds edge: {} - {} = {}".format(average_odds[over_under + "_over"], round(1/float(res_over["precision accuracy"]), 3), \
+                        round(average_odds[over_under + "_over"] - 1/float(res_over["precision accuracy"]), 3)))
+                    print("--------------------------------------------------")
+                #print(res_over["confusion matrix"])
+            #break
+        #break
     api.save()
-    print(json.dumps(res, indent=4, sort_keys=True))
+    #print(json.dumps(res, indent=4, sort_keys=True))
 if __name__ == "__main__":
     parser=argh.ArghParser()
     parser.add_commands([generate_models])

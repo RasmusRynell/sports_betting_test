@@ -15,3 +15,5 @@ print(df.columns)
 
 df.to_sql("team", cur, if_exists='replace')
 #print(json.dumps(keep, indent=4))
+
+

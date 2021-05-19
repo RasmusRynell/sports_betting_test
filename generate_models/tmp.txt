@@ -1,326 +1,148 @@
-1 = 0.23491031 (correct)
-0 = -0.31207203 (correct)
-0 = -1.60827598 (correct)
-1 = -0.73486496 (wrong)
-1 = -0.18618383 (wrong)
-0 = 0.08751935 (wrong)
-0 = -0.29444893 (correct)
-0 = -0.14518483 (correct)
-0 = -0.73289315 (correct)
-1 = -1.41100212 (wrong)
-1 = -1.09367707 (wrong)
-1 = -0.8150718 (wrong)
-1 = -1.30703268 (wrong)
-0 = -0.51697902 (correct)
-0 = -0.58430574 (correct)
-0 = -1.05123133 (correct)
-0 = 0.44796725 (wrong)
-[[8 2]
- [6 1]]
-0 = 0.06512182 (wrong)
-1 = 0.11868956 (correct)
-1 = 0.77060452 (correct)
-0 = 0.28742589 (wrong)
-0 = 0.48693022 (wrong)
-1 = -0.39749463 (wrong)
-1 = 0.2252144 (correct)
-1 = -0.00244884 (wrong)
-1 = 0.46844057 (correct)
-0 = 0.82357935 (wrong)
-0 = 0.69218458 (wrong)
-0 = 0.34222671 (wrong)
-0 = 0.61805636 (wrong)
-1 = 0.47794639 (correct)
-1 = 0.28378203 (correct)
-1 = 0.66524459 (correct)
-1 = 0.05715188 (correct)
-[[0 7]
- [2 8]]
 --------------------------------------------------
-Player: ./data/td/pp_erik_karlsson.csv
-Target: 1.5_over
-Confusion matrix:
- [[ 14  30]
- [ 47 135]]
-Accuracy: 0.605	Precision accuracy: 0.748
-Odds edge: 1.6 - 1.337 = 0.263
+./data/td/pp_carter_verhaeghe.csv
+2.5_under
+0.804
+GamePk: 2020020547, prediction = under with decision function 0.282 and proba 0.774. Num shots this game: 1
+GamePk: 2020020560, prediction = under with decision function 0.244 and proba 0.771. Num shots this game: 6
+GamePk: 2020020575, prediction = under with decision function 0.133 and proba 0.762. Num shots this game: 2
+GamePk: 2020020590, prediction = under with decision function 0.229 and proba 0.77. Num shots this game: 2
+GamePk: 2020020600, prediction = under with decision function 0.269 and proba 0.773. Num shots this game: 2
+GamePk: 2020020615, prediction = under with decision function 0.218 and proba 0.769. Num shots this game: 2
+GamePk: 2020020629, prediction = under with decision function 0.167 and proba 0.765. Num shots this game: 6
+GamePk: 2020020648, prediction = under with decision function 0.143 and proba 0.763. Num shots this game: 4
+2.5_over
+0.467
+GamePk: 2020020547, prediction = under with decision function -0.282 and proba 0.216. Num shots this game: 1
+GamePk: 2020020560, prediction = under with decision function -0.244 and proba 0.217. Num shots this game: 6
+GamePk: 2020020575, prediction = under with decision function -0.133 and proba 0.219. Num shots this game: 2
+GamePk: 2020020590, prediction = under with decision function -0.229 and proba 0.217. Num shots this game: 2
+GamePk: 2020020600, prediction = under with decision function -0.269 and proba 0.216. Num shots this game: 2
+GamePk: 2020020615, prediction = under with decision function -0.218 and proba 0.217. Num shots this game: 2
+GamePk: 2020020629, prediction = under with decision function -0.167 and proba 0.218. Num shots this game: 6
+GamePk: 2020020648, prediction = under with decision function -0.143 and proba 0.219. Num shots this game: 4
 --------------------------------------------------
-1 = 0.4244786 (correct)
-1 = 0.65209998 (correct)
-0 = -0.64646227 (correct)
-1 = -0.27490215 (wrong)
-1 = 0.7588702 (correct)
-1 = 0.61416079 (correct)
-0 = 0.25200972 (wrong)
-0 = 0.84646859 (wrong)
-0 = -0.2518371 (correct)
-1 = -1.23113223 (wrong)
-1 = -0.2951453 (wrong)
-1 = 0.22161397 (correct)
-1 = 0.08938572 (correct)
-0 = 0.14571319 (wrong)
-0 = -0.16646471 (correct)
-0 = -0.92363024 (correct)
-0 = 0.11310527 (wrong)
-[[4 4]
- [3 6]]
-0 = -0.42456119 (correct)
-0 = -0.6520421 (correct)
-1 = 0.6464932 (correct)
-0 = 0.27488572 (wrong)
-0 = -0.75881599 (correct)
-0 = -0.61397323 (correct)
-1 = -0.25204586 (wrong)
-1 = -0.84638074 (wrong)
-1 = 0.25222522 (correct)
-0 = 1.23115958 (wrong)
-0 = 0.29532868 (wrong)
-0 = -0.22136727 (correct)
-0 = -0.08937728 (correct)
-1 = -0.14555466 (wrong)
-1 = 0.16656748 (correct)
-1 = 0.9236744 (correct)
-1 = -0.11320437 (wrong)
-[[6 3]
- [4 4]]
+./data/td/pp_erik_karlsson.csv
+1.5_over
+0.748
+GamePk: 2020020466, prediction = over with decision function 0.065 and proba 0.713. Num shots this game: 1
+GamePk: 2020020482, prediction = over with decision function 0.119 and proba 0.718. Num shots this game: 2
+GamePk: 2020020493, prediction = over with decision function 0.771 and proba 0.78. Num shots this game: 4
+GamePk: 2020020503, prediction = over with decision function 0.287 and proba 0.735. Num shots this game: 1
+GamePk: 2020020514, prediction = over with decision function 0.487 and proba 0.755. Num shots this game: 1
+GamePk: 2020020528, prediction = under with decision function -0.397 and proba 0.662. Num shots this game: 2
+GamePk: 2020020540, prediction = over with decision function 0.225 and proba 0.729. Num shots this game: 4
+GamePk: 2020020555, prediction = under with decision function -0.002 and proba 0.706. Num shots this game: 3
+GamePk: 2020020570, prediction = over with decision function 0.468 and proba 0.753. Num shots this game: 5
+GamePk: 2020020584, prediction = over with decision function 0.824 and proba 0.785. Num shots this game: 1
+GamePk: 2020020596, prediction = over with decision function 0.692 and proba 0.773. Num shots this game: 0
+GamePk: 2020020241, prediction = over with decision function 0.342 and proba 0.741. Num shots this game: 1
+GamePk: 2020020641, prediction = over with decision function 0.618 and proba 0.767. Num shots this game: 1
+GamePk: 2020020649, prediction = over with decision function 0.478 and proba 0.754. Num shots this game: 3
+GamePk: 2020020664, prediction = over with decision function 0.284 and proba 0.735. Num shots this game: 3
+GamePk: 2020020675, prediction = over with decision function 0.665 and proba 0.771. Num shots this game: 5
+GamePk: 2020020687, prediction = over with decision function 0.057 and proba 0.712. Num shots this game: 3
+2.5_over
+0.593
+GamePk: 2020020466, prediction = under with decision function -0.425 and proba 0.5. Num shots this game: 1
+GamePk: 2020020482, prediction = under with decision function -0.652 and proba 0.479. Num shots this game: 2
+GamePk: 2020020493, prediction = over with decision function 0.646 and proba 0.595. Num shots this game: 4
+GamePk: 2020020503, prediction = over with decision function 0.275 and proba 0.562. Num shots this game: 1
+GamePk: 2020020514, prediction = under with decision function -0.759 and proba 0.469. Num shots this game: 1
+GamePk: 2020020528, prediction = under with decision function -0.614 and proba 0.482. Num shots this game: 2
+GamePk: 2020020540, prediction = under with decision function -0.252 and proba 0.515. Num shots this game: 4
+GamePk: 2020020555, prediction = under with decision function -0.846 and proba 0.461. Num shots this game: 3
+GamePk: 2020020570, prediction = over with decision function 0.252 and proba 0.56. Num shots this game: 5
+GamePk: 2020020584, prediction = over with decision function 1.231 and proba 0.648. Num shots this game: 1
+GamePk: 2020020596, prediction = over with decision function 0.295 and proba 0.564. Num shots this game: 0
+GamePk: 2020020241, prediction = under with decision function -0.221 and proba 0.517. Num shots this game: 1
+GamePk: 2020020641, prediction = under with decision function -0.089 and proba 0.529. Num shots this game: 1
+GamePk: 2020020649, prediction = under with decision function -0.146 and proba 0.524. Num shots this game: 3
+GamePk: 2020020664, prediction = over with decision function 0.167 and proba 0.552. Num shots this game: 3
+GamePk: 2020020675, prediction = over with decision function 0.924 and proba 0.62. Num shots this game: 5
+GamePk: 2020020687, prediction = under with decision function -0.113 and proba 0.527. Num shots this game: 3
 --------------------------------------------------
-Player: ./data/td/pp_erik_karlsson.csv
-Target: 2.5_over
-Confusion matrix:
- [[52 35]
- [66 73]]
-Accuracy: 0.541	Precision accuracy: 0.593
-Odds edge: 2.6 - 1.686 = 0.914
+./data/td/pp_connor_brown.csv
+2.5_under
+0.812
+GamePk: 2020020578, prediction = over with decision function -0.051 and proba 0.648. Num shots this game: 2
+GamePk: 2020020592, prediction = under with decision function 0.521 and proba 0.766. Num shots this game: 2
+GamePk: 2020020848, prediction = under with decision function 0.158 and proba 0.694. Num shots this game: 5
+GamePk: 2020020621, prediction = under with decision function 0.594 and proba 0.779. Num shots this game: 4
+GamePk: 2020020638, prediction = under with decision function 0.475 and proba 0.758. Num shots this game: 6
+GamePk: 2020020646, prediction = under with decision function 0.337 and proba 0.731. Num shots this game: 3
+GamePk: 2020020661, prediction = under with decision function 0.089 and proba 0.679. Num shots this game: 1
+GamePk: 2020020672, prediction = under with decision function 0.199 and proba 0.703. Num shots this game: 1
+GamePk: 2020020546, prediction = under with decision function 0.244 and proba 0.712. Num shots this game: 1
+2.5_over
+0.723
+GamePk: 2020020578, prediction = over with decision function 0.171 and proba 0.396. Num shots this game: 2
+GamePk: 2020020592, prediction = under with decision function -0.274 and proba 0.259. Num shots this game: 2
+GamePk: 2020020848, prediction = under with decision function -0.022 and proba 0.335. Num shots this game: 5
+GamePk: 2020020621, prediction = under with decision function -0.353 and proba 0.238. Num shots this game: 4
+GamePk: 2020020638, prediction = under with decision function -0.261 and proba 0.262. Num shots this game: 6
+GamePk: 2020020646, prediction = under with decision function -0.15 and proba 0.293. Num shots this game: 3
+GamePk: 2020020661, prediction = under with decision function -0.068 and proba 0.318. Num shots this game: 1
+GamePk: 2020020672, prediction = over with decision function 0.01 and proba 0.345. Num shots this game: 1
+GamePk: 2020020546, prediction = under with decision function -0.151 and proba 0.293. Num shots this game: 1
+1.5_under
+0.545
+GamePk: 2020020578, prediction = over with decision function -0.918 and proba 0.383. Num shots this game: 2
+GamePk: 2020020592, prediction = under with decision function 0.032 and proba 0.537. Num shots this game: 2
+GamePk: 2020020848, prediction = over with decision function -1.329 and proba 0.32. Num shots this game: 5
+GamePk: 2020020621, prediction = over with decision function -1.004 and proba 0.37. Num shots this game: 4
+GamePk: 2020020638, prediction = over with decision function -0.546 and proba 0.442. Num shots this game: 6
+GamePk: 2020020646, prediction = over with decision function -1.219 and proba 0.339. Num shots this game: 3
+GamePk: 2020020661, prediction = over with decision function -0.488 and proba 0.451. Num shots this game: 1
+GamePk: 2020020672, prediction = over with decision function -0.89 and proba 0.387. Num shots this game: 1
+GamePk: 2020020546, prediction = over with decision function -1.472 and proba 0.3. Num shots this game: 1
 --------------------------------------------------
-1 = -0.05145174 (wrong)
-1 = 0.52114091 (correct)
-0 = 0.1582649 (wrong)
-0 = 0.59388905 (wrong)
-0 = 0.47515129 (wrong)
-0 = 0.3374176 (wrong)
-1 = 0.08939629 (correct)
-1 = 0.19857105 (correct)
-1 = 0.24424694 (correct)
-[[0 4]
- [1 4]]
-0 = 0.17138758 (wrong)
-0 = -0.27374957 (correct)
-1 = -0.02205358 (wrong)
-1 = -0.35269694 (wrong)
-1 = -0.26051657 (wrong)
-1 = -0.15036069 (wrong)
-0 = -0.06846584 (correct)
-0 = 0.00956799 (wrong)
-0 = -0.15119906 (correct)
-[[3 2]
- [4 0]]
---------------------------------------------------
-Player: ./data/td/pp_connor_brown.csv
-Target: 2.5_under
-Confusion matrix:
- [[10 20]
- [16 80]]
-Accuracy: 0.653	Precision accuracy: 0.812
-Odds edge: 1.54 - 1.232 = 0.308
---------------------------------------------------
---------------------------------------------------
-Player: ./data/td/pp_connor_brown.csv
-Target: 2.5_over
-Confusion matrix:
- [[81 15]
- [20 10]]
-Accuracy: 0.711	Precision accuracy: 0.723
-Odds edge: 2.34 - 1.383 = 0.957
---------------------------------------------------
-0 = -0.91811447 (correct)
-0 = 0.03158637 (wrong)
-0 = -1.3290499 (correct)
-0 = -1.0040502 (correct)
-0 = -0.54566098 (correct)
-0 = -1.21939833 (correct)
-1 = -0.48778343 (wrong)
-1 = -0.88990405 (wrong)
-1 = -1.47178272 (wrong)
-[[5 1]
- [3 0]]
-1 = 0.91860479 (correct)
-1 = -0.03093883 (wrong)
-1 = 1.32911481 (correct)
-1 = 1.00391053 (correct)
-1 = 0.54583123 (correct)
-1 = 1.21958545 (correct)
-0 = 0.48830838 (wrong)
-0 = 0.89008516 (wrong)
-0 = 1.47210491 (wrong)
-[[0 3]
- [1 5]]
---------------------------------------------------
-Player: ./data/td/pp_connor_brown.csv
-Target: 1.5_under
-Confusion matrix:
- [[35 32]
- [30 29]]
-Accuracy: 0.497	Precision accuracy: 0.545
-Odds edge: 2.0 - 1.835 = 0.165
---------------------------------------------------
-1 = 0.28192556 (correct)
-0 = 0.24409575 (wrong)
-1 = 0.13279327 (correct)
-1 = 0.22919803 (correct)
-1 = 0.26852176 (correct)
-1 = 0.21800856 (correct)
-0 = 0.16739762 (wrong)
-0 = 0.14323888 (wrong)
-[[0 3]
- [0 5]]
-0 = -0.28195889 (correct)
-1 = -0.24408214 (wrong)
-0 = -0.1328076 (correct)
-0 = -0.22920702 (correct)
-0 = -0.26853561 (correct)
-0 = -0.21800679 (correct)
-1 = -0.16739303 (wrong)
-1 = -0.14325655 (wrong)
-[[5 0]
- [3 0]]
---------------------------------------------------
-Player: ./data/td/pp_carter_verhaeghe.csv
-Target: 2.5_under
-Confusion matrix:
- [[ 1  7]
- [ 1 23]]
-Accuracy: 0.744	Precision accuracy: 0.804
-Odds edge: 1.65 - 1.244 = 0.406
---------------------------------------------------
---------------------------------------------------
-Player: ./data/td/pp_carter_verhaeghe.csv
-Target: 2.5_over
-Confusion matrix:
- [[23  1]
- [ 7  1]]
-Accuracy: 0.744	Precision accuracy: 0.467
-Odds edge: 2.16 - 2.141 = 0.019
---------------------------------------------------
-1 = 0.07496457 (correct)
-1 = 0.04988545 (correct)
-0 = 0.26042561 (wrong)
-1 = 0.53492708 (correct)
-1 = 0.25186316 (correct)
-1 = 0.52460556 (correct)
-1 = 0.16955786 (correct)
-0 = 0.53453833 (wrong)
-1 = -0.17218104 (wrong)
-1 = 0.40687735 (correct)
-1 = 0.53021008 (correct)
-1 = 0.86467124 (correct)
-1 = -0.2263324 (wrong)
-0 = 0.94297716 (wrong)
-[[0 3]
- [2 9]]
-0 = 0.02328677 (wrong)
-0 = 0.1152835 (wrong)
-1 = 0.0931245 (correct)
-0 = -0.31946235 (correct)
-0 = 0.01766808 (wrong)
-0 = -0.11846184 (correct)
-0 = 0.0294717 (wrong)
-1 = -0.16097601 (wrong)
-0 = 0.42400778 (wrong)
-0 = -0.03683075 (correct)
-0 = -0.07396878 (correct)
-0 = -0.24835599 (correct)
-0 = 0.2254509 (wrong)
-1 = -0.34639275 (wrong)
-[[5 6]
- [2 1]]
---------------------------------------------------
-Player: ./data/td/pp_anthony_beauvillier.csv
-Target: 2.5_under
-Confusion matrix:
- [[ 6 17]
- [18 71]]
-Accuracy: 0.563	Precision accuracy: 0.748
-Odds edge: 1.52 - 1.337 = 0.183
---------------------------------------------------
-1 = -0.33441424 (wrong)
-1 = -0.39980692 (wrong)
-0 = -0.43545001 (correct)
-1 = -0.21430462 (wrong)
-1 = -0.52730545 (wrong)
-1 = -0.47751229 (wrong)
-1 = -0.31249119 (wrong)
-1 = -0.48927627 (wrong)
-1 = -0.69681789 (wrong)
-1 = -0.42354486 (wrong)
-1 = -0.19937081 (wrong)
-1 = -0.46997918 (wrong)
-1 = -0.60551248 (wrong)
-0 = -0.53708835 (correct)
-[[ 2  0]
- [12  0]]
-0 = -0.84981202 (correct)
-0 = -0.52044126 (correct)
-1 = -1.39634648 (wrong)
-0 = -0.93516765 (correct)
-0 = -0.52696515 (correct)
-0 = -1.58548838 (correct)
-0 = -1.70776447 (correct)
-0 = -1.18127359 (correct)
-0 = 0.19790176 (wrong)
-0 = -1.12054761 (correct)
-0 = -0.94174218 (correct)
-0 = -1.93365114 (correct)
-0 = 0.66400604 (wrong)
-1 = -0.64562109 (wrong)
-[[10  2]
- [ 2  0]]
---------------------------------------------------
-Player: ./data/td/pp_anthony_beauvillier.csv
-Target: 3.5_under
-Confusion matrix:
- [[12  2]
- [55 43]]
-Accuracy: 0.578	Precision accuracy: 0.905
-Odds edge: 1.55 - 1.105 = 0.445
---------------------------------------------------
-1 = -0.02558504 (wrong)
-0 = -0.22394104 (correct)
-0 = -0.29038724 (correct)
-1 = -0.32638199 (wrong)
-0 = -0.20289311 (correct)
-1 = 0.28983528 (correct)
-1 = -0.12027962 (wrong)
-0 = -0.00965751 (correct)
-0 = -0.89417672 (correct)
-1 = -0.3261112 (wrong)
-0 = -0.13487926 (correct)
-0 = -0.69379533 (correct)
-1 = -0.24301221 (wrong)
-0 = -0.75707908 (correct)
-[[8 0]
- [5 1]]
-0 = 0.43194069 (wrong)
-1 = 0.44921056 (correct)
-1 = 0.50412796 (correct)
-0 = 0.32363372 (wrong)
-1 = 0.47137099 (correct)
-0 = 0.43453547 (wrong)
-0 = 0.44178034 (wrong)
-1 = 0.46128285 (correct)
-1 = 0.60360082 (correct)
-0 = 0.53688452 (wrong)
-1 = 0.40310664 (correct)
-1 = 0.56275265 (correct)
-0 = 0.54165447 (wrong)
-1 = 0.61996946 (correct)
-[[0 6]
- [0 8]]
---------------------------------------------------
-Player: ./data/td/pp_anthony_beauvillier.csv
-Target: 1.5_under
-Confusion matrix:
- [[35 22]
- [29 26]]
-Accuracy: 0.531	Precision accuracy: 0.557
-Odds edge: 2.45 - 1.795 = 0.655
+./data/td/pp_anthony_beauvillier.csv
+2.5_under
+0.748
+GamePk: 2020020469, prediction = under with decision function 0.075 and proba 0.65. Num shots this game: 1
+GamePk: 2020020484, prediction = under with decision function 0.05 and proba 0.647. Num shots this game: 2
+GamePk: 2020020755, prediction = under with decision function 0.26 and proba 0.669. Num shots this game: 4
+GamePk: 2020020515, prediction = under with decision function 0.535 and proba 0.697. Num shots this game: 1
+GamePk: 2020020561, prediction = under with decision function 0.252 and proba 0.668. Num shots this game: 2
+GamePk: 2020020549, prediction = under with decision function 0.525 and proba 0.696. Num shots this game: 1
+GamePk: 2020020573, prediction = under with decision function 0.17 and proba 0.66. Num shots this game: 0
+GamePk: 2020020587, prediction = under with decision function 0.535 and proba 0.697. Num shots this game: 3
+GamePk: 2020020612, prediction = over with decision function -0.172 and proba 0.625. Num shots this game: 2
+GamePk: 2020020626, prediction = under with decision function 0.407 and proba 0.684. Num shots this game: 1
+GamePk: 2020020636, prediction = under with decision function 0.53 and proba 0.696. Num shots this game: 2
+GamePk: 2020020651, prediction = under with decision function 0.865 and proba 0.728. Num shots this game: 2
+GamePk: 2020020665, prediction = over with decision function -0.226 and proba 0.619. Num shots this game: 1
+GamePk: 2020020685, prediction = under with decision function 0.943 and proba 0.736. Num shots this game: 5
+3.5_under
+0.905
+GamePk: 2020020469, prediction = over with decision function -0.334 and proba 0.849. Num shots this game: 1
+GamePk: 2020020484, prediction = over with decision function -0.4 and proba 0.847. Num shots this game: 2
+GamePk: 2020020755, prediction = over with decision function -0.435 and proba 0.847. Num shots this game: 4
+GamePk: 2020020515, prediction = over with decision function -0.214 and proba 0.852. Num shots this game: 1
+GamePk: 2020020561, prediction = over with decision function -0.527 and proba 0.844. Num shots this game: 2
+GamePk: 2020020549, prediction = over with decision function -0.478 and proba 0.846. Num shots this game: 1
+GamePk: 2020020573, prediction = over with decision function -0.312 and proba 0.849. Num shots this game: 0
+GamePk: 2020020587, prediction = over with decision function -0.489 and proba 0.845. Num shots this game: 3
+GamePk: 2020020612, prediction = over with decision function -0.697 and proba 0.84. Num shots this game: 2
+GamePk: 2020020626, prediction = over with decision function -0.424 and proba 0.847. Num shots this game: 1
+GamePk: 2020020636, prediction = over with decision function -0.199 and proba 0.852. Num shots this game: 2
+GamePk: 2020020651, prediction = over with decision function -0.47 and proba 0.846. Num shots this game: 2
+GamePk: 2020020665, prediction = over with decision function -0.606 and proba 0.843. Num shots this game: 1
+GamePk: 2020020685, prediction = over with decision function -0.537 and proba 0.844. Num shots this game: 5
+1.5_under
+0.557
+GamePk: 2020020469, prediction = over with decision function -0.026 and proba 0.433. Num shots this game: 1
+GamePk: 2020020484, prediction = over with decision function -0.224 and proba 0.414. Num shots this game: 2
+GamePk: 2020020755, prediction = over with decision function -0.29 and proba 0.407. Num shots this game: 4
+GamePk: 2020020515, prediction = over with decision function -0.326 and proba 0.404. Num shots this game: 1
+GamePk: 2020020561, prediction = over with decision function -0.203 and proba 0.416. Num shots this game: 2
+GamePk: 2020020549, prediction = under with decision function 0.29 and proba 0.465. Num shots this game: 1
+GamePk: 2020020573, prediction = over with decision function -0.12 and proba 0.424. Num shots this game: 0
+GamePk: 2020020587, prediction = over with decision function -0.01 and proba 0.435. Num shots this game: 3
+GamePk: 2020020612, prediction = over with decision function -0.894 and proba 0.351. Num shots this game: 2
+GamePk: 2020020626, prediction = over with decision function -0.326 and proba 0.404. Num shots this game: 1
+GamePk: 2020020636, prediction = over with decision function -0.135 and proba 0.422. Num shots this game: 2
+GamePk: 2020020651, prediction = over with decision function -0.694 and proba 0.369. Num shots this game: 2
+GamePk: 2020020665, prediction = over with decision function -0.243 and proba 0.412. Num shots this game: 1
+GamePk: 2020020685, prediction = over with decision function -0.757 and proba 0.364. Num shots this game: 5
 --------------------------------------------------

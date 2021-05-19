@@ -36,6 +36,6 @@ for player_id, player_data in all_bets.items():
     for odds in average_odds:
         tmp += str(odds) + ":" + str(round(sum(average_odds[odds])/len(average_odds[odds]), 2)) + ","
     
-    output_line = file_path + " " + str(earliest_gamePk) + " " + str(over_unders).replace(" ", "").replace("[", "").replace("]", "").replace("'","") +  " " + tmp + "\n"
+    output_line = file_path + " " + player_id + " " + str(earliest_gamePk) + " " + str(over_unders).replace(" ", "").replace("[", "").replace("]", "").replace("'","") +  " " + tmp + "\n"
     f1.write(output_line)
 f1.close()

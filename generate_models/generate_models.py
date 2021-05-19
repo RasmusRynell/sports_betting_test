@@ -6,6 +6,8 @@ from tqdm import tqdm
 from handler import api
 
 import models.model_SVC as model_SVC 
+from models.eval_model import print_eval
+from models.eval_model import unit_bet
 
 api = api("https://statsapi.web.nhl.com/api/v1/", True, True)
 
@@ -32,9 +34,17 @@ def split_average_odds(average_odds):
 def generate_models(allModels=False, SVC=False):
     f = open("./data/input.txt")
     files = f.readlines()
+    #Read bet info
+    f = open('./data/player_ids.json',)
+    player_ids = json.load(f)
+    f = open('./data/all_bets.json',)
+    all_bets = json.load(f)
+    # Variables
+    model_edge = 0.3
+    
     res = {}
     for tmp in tqdm(files):
-        file, earliest_gamePk_index, over_unders, average_odds = tmp.split(" ")
+        file, player_id, earliest_gamePk_index, over_unders, average_odds = tmp.split(" ")
         average_odds = split_average_odds(average_odds)
         for over_under in over_unders.split(","):
             over_under = over_under.replace("\n", "")
@@ -42,37 +52,27 @@ def generate_models(allModels=False, SVC=False):
                 SVC = True
             
             if(SVC):
-                res_under = model_SVC.generate_model(file, "shots_this_game_U"+str(over_under), int(earliest_gamePk_index))
-                res_over = model_SVC.generate_model(file, "shots_this_game_O"+str(over_under), int(earliest_gamePk_index))
-                if file not in res:
-                    res[file] = {}
-                res[file]["shots_this_game_U"+str(over_under)] = res_under
-                res[file]["shots_this_game_O"+str(over_under)] = res_over
+                res_under = model_SVC.generate_model(file, "shots_this_game_U"+str(over_under), int(earliest_gamePk_index), average_odds[over_under + "_under"], model_edge)
+                res_over = model_SVC.generate_model(file, "shots_this_game_O"+str(over_under), int(earliest_gamePk_index), average_odds[over_under + "_over"], model_edge)
 
-                if(average_odds[over_under + "_under"] > (1/float(res_under["precision accuracy"]))):
-                    print("--------------------------------------------------")
-                    print("Player: {}".format(file))
-                    print("Target: {}".format(over_under + "_under"))
-                    print("Confusion matrix:\n {}".format(res_under["confusion matrix"]))
-                    print("Accuracy: {}\tPrecision accuracy: {}"\
-                        .format(res_under["accuracy"], res_under["precision accuracy"]))
-                    print("Odds edge: {} - {} = {}".format(average_odds[over_under + "_under"], round(1/float(res_under["precision accuracy"]), 3), \
-                        round(average_odds[over_under + "_under"] - 1/float(res_under["precision accuracy"]), 3)))
-                    print("--------------------------------------------------")
-                if(average_odds[over_under + "_over"] > (1/float(res_over["precision accuracy"]))):
-                    print("--------------------------------------------------")
-                    print("Player: {}".format(file))
-                    print("Target: {}".format(over_under + "_over"))
-                    print("Confusion matrix:\n {}".format(res_over["confusion matrix"]))
-                    print("Accuracy: {}\tPrecision accuracy: {}"\
-                        .format(res_over["accuracy"], res_over["precision accuracy"]))
-                    print("Odds edge: {} - {} = {}".format(average_odds[over_under + "_over"], round(1/float(res_over["precision accuracy"]), 3), \
-                        round(average_odds[over_under + "_over"] - 1/float(res_over["precision accuracy"]), 3)))
-                    print("--------------------------------------------------")
+                if((average_odds[over_under + "_under"] - (1/float(res_under["precision accuracy"]))) > model_edge):
+                    if file not in res:
+                        res[file] = {}
+                        res[file]["player_id"] = player_id
+                        res[file]["preds"] = {}
+                    res[file]["preds"][str(over_under)+"_under"] = res_under
+
+                if((average_odds[over_under + "_over"] - (1/float(res_over["precision accuracy"]))) > model_edge):
+                    if file not in res:
+                        res[file] = {}
+                        res[file]["player_id"] = player_id
+                        res[file]["preds"] = {}
+                    res[file]["preds"][str(over_under)+"_over"] = res_over
             #break
         #break
-    api.save()
-    #print(json.dumps(res, indent=4, sort_keys=True))
+    #print_eval(res)
+    print("Result from unit bet: {}".format(unit_bet(2, res, all_bets)))
+
 if __name__ == "__main__":
     parser=argh.ArghParser()
     parser.add_commands([generate_models])

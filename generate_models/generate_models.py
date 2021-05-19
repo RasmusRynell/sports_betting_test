@@ -30,7 +30,7 @@ def split_average_odds(average_odds):
     return res
 
 def generate_models(allModels=False, SVC=False):
-    f = open("./data/input_tmp.txt")
+    f = open("./data/input.txt")
     files = f.readlines()
     res = {}
     for tmp in tqdm(files):
@@ -69,7 +69,6 @@ def generate_models(allModels=False, SVC=False):
                     print("Odds edge: {} - {} = {}".format(average_odds[over_under + "_over"], round(1/float(res_over["precision accuracy"]), 3), \
                         round(average_odds[over_under + "_over"] - 1/float(res_over["precision accuracy"]), 3)))
                     print("--------------------------------------------------")
-                #print(res_over["confusion matrix"])
             #break
         #break
     api.save()

@@ -19,10 +19,6 @@ def eval_model(pipeline, X_all, Y_all, earliest_gamePk_index, pred_this):
 
     return {"confusion matrix": matrix, "accuracy": score_acc, "precision accuracy": score_precision}
 
-def print_eval(eval_model, model_name):
-    print("--------------------------------------------------")
-    print("Model used: {}".format(model_name))
-    print("Confusion matrix:\n {}".format(eval_model["confusion matrix"]))
-    print("Accuracy: {}\tPrecision accuracy: {}"\
-        .format(eval_model["accuracy"], eval_model["precision accuracy"]))
-    print("--------------------------------------------------")
+def print_eval():
+    pass
+

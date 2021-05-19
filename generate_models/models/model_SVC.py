@@ -21,7 +21,7 @@ from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
 
-def generate_model(file_name, pred_this, earliest_gamePk_index):
+def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, model_edge):
     data = pd.read_csv(file_name)
     data = data.replace(np.nan, 0)
     #pred_this = "shots_this_game_O2.5"
@@ -48,7 +48,7 @@ def generate_model(file_name, pred_this, earliest_gamePk_index):
         for eval in evals:
             if(opt == "normal"):
                 pipeline = make_pipeline(StandardScaler(), SVC(class_weight="balanced", probability=True))
-                res = eval_model(pipeline, X_all, Y_all, earliest_gamePk_index, pred_this)
+                res = eval_model(pipeline, X_all, Y_all)
 
                 if(float(res["precision accuracy"]) > best_precision):
                     best_precision = float(res["precision accuracy"])
@@ -67,7 +67,7 @@ def generate_model(file_name, pred_this, earliest_gamePk_index):
                     scorer = make_scorer(precision_score, zero_division=0.0)
                 rand_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, n_jobs=None, scoring=scorer)
                 pipeline = make_pipeline(StandardScaler(), rand_search)   
-                res = eval_model(pipeline, X_all, Y_all, earliest_gamePk_index, pred_this)
+                res = eval_model(pipeline, X_all, Y_all)
 
                 if(float(res["precision accuracy"]) > best_precision):
                     best_precision = float(res["precision accuracy"])
@@ -88,11 +88,25 @@ def generate_model(file_name, pred_this, earliest_gamePk_index):
 
                 rand_search = RandomizedSearchCV(model, param_distributions=rand_list, n_iter=20, n_jobs=None, cv=5, scoring=eval, refit=True)
                 pipeline = make_pipeline(StandardScaler(), rand_search)   
-                res = eval_model(pipeline, X_all, Y_all, earliest_gamePk_index, pred_this)
+                res = eval_model(pipeline, X_all, Y_all)
 
                 if(float(res["precision accuracy"]) > best_precision):
                     best_precision = float(res["precision accuracy"])
                     best_model = pipeline
                     best_res = res 
+                    
+    if (average_odds - 1/best_precision) - model_edge:
+        y_pred = best_model.predict(pred_data)
+        y_pred_decision_function = best_model.decision_function(pred_data)
+        y_pred_proba = best_model.predict_proba(pred_data)
+        model_pred = {}
+        gamePks = pred_data[["gamePk"]].values
+        for i in range(len(gamePks)):
+            model_pred[gamePks[i][0]] = {}
+            model_pred[gamePks[i][0]]["prediction"] = y_pred[i]
+            model_pred[gamePks[i][0]]["decision_function"] = round(y_pred_decision_function[i], 3)
+            model_pred[gamePks[i][0]]["proba"] = round(y_pred_proba[i][1], 3)
+    else:
+        model_pred = {}
 
-    return {"pipeline" : best_model, "precision accuracy" : best_precision, "model accuracy" : best_res}
+    return {"pipeline" : best_model, "precision accuracy" : best_precision, "model accuracy" : best_res, "model predictions" : model_pred}

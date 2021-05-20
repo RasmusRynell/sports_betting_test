@@ -1,0 +1,4 @@
+After player: ./data/td/pp_zach_parise.csv we have ROI of 0.0
+After player: ./data/td/pp_brent_burns.csv we have ROI of 0.37
+After player: ./data/td/pp_shea_weber.csv we have ROI of 0.0
+After player: ./data/td/pp_blake_wheeler.csv we have ROI of 2.045

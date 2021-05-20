@@ -79,7 +79,12 @@ def unit_bet(unit_size, res, all_bets):
                     if(float(games[gamePk]["bets"][bet]["over_under"]) < get_num_shots(gamePk, res[player_file]["player_id"])):
                         money_won += float(games[gamePk]["bets"][bet]["over"].replace(",", ".")) * unit_size
                         tot_money_won += float(games[gamePk]["bets"][bet]["over"].replace(",", ".")) * unit_size
-
-        print("After player: {} we have ROI of {}".format(player_file, round(money_won/money_betted, 3)))         
-
-    return round(tot_money_won/tot_money_betted, 3)
+        if money_betted != 0:
+            print("After player: {} we have ROI of {}".format(player_file, round(money_won/money_betted, 3))) 
+        else:
+            print("no games betted")  
+                  
+    if tot_money_betted != 0:   
+        return round(tot_money_won/tot_money_betted, 3)
+    else:
+        return 0

@@ -87,4 +87,4 @@ def unit_bet(unit_size, res, all_bets):
     if tot_money_betted != 0:   
         return round(tot_money_won/tot_money_betted, 3)
     else:
-        return 0
+        return -1

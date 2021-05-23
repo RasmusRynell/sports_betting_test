@@ -20,7 +20,7 @@ def split_average_odds(average_odds):
     return res
 
 def generate_models(allModels=False, SVC=False):
-    f = open("./data/input_tmp.txt")
+    f = open("./data/input.txt")
     files = f.readlines()
     f.close()
     #Read bet info

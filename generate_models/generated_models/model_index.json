@@ -1,0 +1,3020 @@
+{
+    "./data/td/pp_duncan_keith.csv": {
+        "average_odds": {
+            "2.5_over": 2.65,
+            "2.5_under": 1.43,
+            "1.5_over": 1.71,
+            "1.5_under": 2.01
+        },
+        "player_id": "8470281",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/duncan_keith/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/duncan_keith/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/duncan_keith/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/duncan_keith/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_eric_staal.csv": {
+        "average_odds": {
+            "1.5_over": 1.63,
+            "1.5_under": 2.16
+        },
+        "player_id": "8470595",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/eric_staal/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/eric_staal/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_suter.csv": {
+        "average_odds": {
+            "1.5_over": 1.89,
+            "1.5_under": 1.81
+        },
+        "player_id": "8470600",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_suter/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_suter/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jeff_carter.csv": {
+        "average_odds": {
+            "2.5_over": 1.9,
+            "2.5_under": 1.81
+        },
+        "player_id": "8470604",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jeff_carter/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jeff_carter/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_dustin_brown.csv": {
+        "average_odds": {
+            "2.5_over": 1.73,
+            "2.5_under": 1.99,
+            "3.5_over": 2.45,
+            "3.5_under": 1.49
+        },
+        "player_id": "8470606",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/dustin_brown/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/dustin_brown/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/dustin_brown/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/dustin_brown/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_zach_parise.csv": {
+        "average_odds": {
+            "2.5_over": 2.4,
+            "2.5_under": 1.5
+        },
+        "player_id": "8470610",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/zach_parise/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/zach_parise/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_getzlaf.csv": {
+        "average_odds": {
+            "1.5_over": 1.8,
+            "1.5_under": 1.9,
+            "2.5_over": 1.79,
+            "2.5_under": 1.92
+        },
+        "player_id": "8470612",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_getzlaf/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_getzlaf/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/ryan_getzlaf/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ryan_getzlaf/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_brent_burns.csv": {
+        "average_odds": {
+            "2.5_over": 1.93,
+            "2.5_under": 1.79,
+            "3.5_over": 2.44,
+            "3.5_under": 1.5
+        },
+        "player_id": "8470613",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/brent_burns/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brent_burns/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/brent_burns/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/brent_burns/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_patrice_bergeron.csv": {
+        "average_odds": {
+            "2.5_over": 1.62,
+            "2.5_under": 2.16,
+            "3.5_over": 2.3,
+            "3.5_under": 1.55
+        },
+        "player_id": "8470638",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/patrice_bergeron/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/patrice_bergeron/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/patrice_bergeron/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/patrice_bergeron/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_shea_weber.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.53,
+            "1.5_over": 1.58,
+            "1.5_under": 2.24
+        },
+        "player_id": "8470642",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/shea_weber/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/shea_weber/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/shea_weber/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/shea_weber/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_joe_pavelski.csv": {
+        "average_odds": {
+            "2.5_over": 2.34,
+            "2.5_under": 1.53,
+            "1.5_over": 1.54,
+            "1.5_under": 2.35
+        },
+        "player_id": "8470794",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/joe_pavelski/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/joe_pavelski/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/joe_pavelski/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/joe_pavelski/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mark_giordano.csv": {
+        "average_odds": {
+            "1.5_over": 1.51,
+            "1.5_under": 2.41,
+            "2.5_over": 2.3,
+            "2.5_under": 1.56
+        },
+        "player_id": "8470966",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/mark_giordano/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mark_giordano/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/mark_giordano/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mark_giordano/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_alexander_ovechkin.csv": {
+        "average_odds": {
+            "3.5_over": 1.7,
+            "3.5_under": 2.04,
+            "4.5_over": 2.22,
+            "4.5_under": 1.59
+        },
+        "player_id": "8471214",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/alexander_ovechkin/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/alexander_ovechkin/SVC_over_3.5joblib",
+            "shots_this_game_U4.5": "./generated_models/alexander_ovechkin/SVC_under_4.5.joblib",
+            "shots_this_game_O4.5": "./generated_models/alexander_ovechkin/SVC_over_4.5joblib"
+        }
+    },
+    "./data/td/pp_evgeni_malkin.csv": {
+        "average_odds": {
+            "2.5_over": 1.9,
+            "2.5_under": 1.76
+        },
+        "player_id": "8471215",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/evgeni_malkin/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/evgeni_malkin/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_blake_wheeler.csv": {
+        "average_odds": {
+            "2.5_over": 2.31,
+            "2.5_under": 1.55
+        },
+        "player_id": "8471218",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/blake_wheeler/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/blake_wheeler/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_paul_stastny.csv": {
+        "average_odds": {
+            "1.5_over": 1.75,
+            "1.5_under": 1.97
+        },
+        "player_id": "8471669",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/paul_stastny/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/paul_stastny/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_sidney_crosby.csv": {
+        "average_odds": {
+            "2.5_over": 1.69,
+            "2.5_under": 2.04
+        },
+        "player_id": "8471675",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/sidney_crosby/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/sidney_crosby/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_anze_kopitar.csv": {
+        "average_odds": {
+            "1.5_over": 1.5,
+            "1.5_under": 2.43,
+            "2.5_over": 2.31,
+            "2.5_under": 1.55
+        },
+        "player_id": "8471685",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/anze_kopitar/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/anze_kopitar/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/anze_kopitar/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/anze_kopitar/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_t._j._oshie.csv": {
+        "average_odds": {
+            "1.5_over": 1.6,
+            "1.5_under": 2.22,
+            "2.5_over": 2.55,
+            "2.5_under": 1.45
+        },
+        "player_id": "8471698",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/t._j._oshie/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/t._j._oshie/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/t._j._oshie/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/t._j._oshie/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kris_letang.csv": {
+        "average_odds": {
+            "2.5_over": 2.06,
+            "2.5_under": 1.68
+        },
+        "player_id": "8471724",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kris_letang/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kris_letang/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_keith_yandle.csv": {
+        "average_odds": {
+            "1.5_over": 1.69,
+            "1.5_under": 2.09
+        },
+        "player_id": "8471735",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/keith_yandle/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/keith_yandle/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_patric_hornqvist.csv": {
+        "average_odds": {
+            "2.5_over": 1.61,
+            "2.5_under": 2.19,
+            "3.5_over": 2.25,
+            "3.5_under": 1.57
+        },
+        "player_id": "8471887",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/patric_hornqvist/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/patric_hornqvist/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/patric_hornqvist/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/patric_hornqvist/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_brad_marchand.csv": {
+        "average_odds": {
+            "2.5_over": 2.01,
+            "2.5_under": 1.72
+        },
+        "player_id": "8473419",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/brad_marchand/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brad_marchand/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jeff_petry.csv": {
+        "average_odds": {
+            "2.5_over": 2.18,
+            "2.5_under": 1.62
+        },
+        "player_id": "8473507",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jeff_petry/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jeff_petry/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_claude_giroux.csv": {
+        "average_odds": {
+            "2.5_over": 2.16,
+            "2.5_under": 1.63
+        },
+        "player_id": "8473512",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/claude_giroux/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/claude_giroux/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_phil_kessel.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1,
+            "2.5_over": 2.63,
+            "2.5_under": 1.43
+        },
+        "player_id": "8473548",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/phil_kessel/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/phil_kessel/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/phil_kessel/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/phil_kessel/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_nicklas_backstrom.csv": {
+        "average_odds": {
+            "1.5_over": 1.74,
+            "1.5_under": 1.99,
+            "2.5_over": 2.36,
+            "2.5_under": 1.52
+        },
+        "player_id": "8473563",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/nicklas_backstrom/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/nicklas_backstrom/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/nicklas_backstrom/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nicklas_backstrom/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_a._killorn.csv": {
+        "average_odds": {
+            "2.5_over": 2.44,
+            "2.5_under": 1.5,
+            "1.5_over": 1.62,
+            "1.5_under": 2.17
+        },
+        "player_id": "8473986",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/a._killorn/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/a._killorn/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/a._killorn/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/a._killorn/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jamie_benn.csv": {
+        "average_odds": {
+            "2.5_over": 2.07,
+            "2.5_under": 1.68
+        },
+        "player_id": "8473994",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jamie_benn/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jamie_benn/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_k._shattenkirk.csv": {
+        "average_odds": {
+            "1.5_over": 1.79,
+            "1.5_under": 1.93
+        },
+        "player_id": "8474031",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/k._shattenkirk/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/k._shattenkirk/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_james_van_riemsdyk.csv": {
+        "average_odds": {
+            "2.5_over": 2.23,
+            "2.5_under": 1.59
+        },
+        "player_id": "8474037",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/james_van_riemsdyk/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/james_van_riemsdyk/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_logan_couture.csv": {
+        "average_odds": {
+            "2.5_over": 2.22,
+            "2.5_under": 1.6
+        },
+        "player_id": "8474053",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/logan_couture/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/logan_couture/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_p.k._subban.csv": {
+        "average_odds": {
+            "1.5_over": 1.57,
+            "1.5_under": 2.27,
+            "2.5_over": 2.51,
+            "2.5_under": 1.46
+        },
+        "player_id": "8474056",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/p.k._subban/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/p.k._subban/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/p.k._subban/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/p.k._subban/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_david_perron.csv": {
+        "average_odds": {
+            "2.5_over": 2.05,
+            "2.5_under": 1.7
+        },
+        "player_id": "8474102",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/david_perron/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/david_perron/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_patrick_kane.csv": {
+        "average_odds": {
+            "3.5_over": 2.15,
+            "3.5_under": 1.63,
+            "2.5_over": 1.67,
+            "2.5_under": 2.16
+        },
+        "player_id": "8474141",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/patrick_kane/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/patrick_kane/SVC_over_3.5joblib",
+            "shots_this_game_U2.5": "./generated_models/patrick_kane/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/patrick_kane/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_evgenii_dadonov.csv": {
+        "average_odds": {
+            "2.5_over": 2.32,
+            "2.5_under": 1.55,
+            "1.5_over": 1.71,
+            "1.5_under": 2.03
+        },
+        "player_id": "8474149",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/evgenii_dadonov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/evgenii_dadonov/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/evgenii_dadonov/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/evgenii_dadonov/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mikael_backlund.csv": {
+        "average_odds": {
+            "2.5_over": 2.28,
+            "2.5_under": 1.57
+        },
+        "player_id": "8474150",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mikael_backlund/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mikael_backlund/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_max_pacioretty.csv": {
+        "average_odds": {
+            "3.5_over": 1.84,
+            "3.5_under": 1.86
+        },
+        "player_id": "8474157",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/max_pacioretty/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/max_pacioretty/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_jakub_voracek.csv": {
+        "average_odds": {
+            "2.5_over": 2.5,
+            "2.5_under": 1.5,
+            "1.5_over": 1.61,
+            "1.5_under": 2.2
+        },
+        "player_id": "8474161",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jakub_voracek/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jakub_voracek/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/jakub_voracek/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jakub_voracek/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_drew_doughty.csv": {
+        "average_odds": {
+            "1.5_over": 1.68,
+            "1.5_under": 2.07
+        },
+        "player_id": "8474563",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/drew_doughty/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/drew_doughty/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_steven_stamkos.csv": {
+        "average_odds": {
+            "2.5_over": 1.82,
+            "2.5_under": 1.88
+        },
+        "player_id": "8474564",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/steven_stamkos/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/steven_stamkos/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_alex_pietrangelo.csv": {
+        "average_odds": {
+            "2.5_over": 1.81,
+            "2.5_under": 1.89
+        },
+        "player_id": "8474565",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/alex_pietrangelo/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/alex_pietrangelo/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_erik_karlsson.csv": {
+        "average_odds": {
+            "1.5_over": 1.6,
+            "1.5_under": 2.22,
+            "2.5_over": 2.6,
+            "2.5_under": 1.45
+        },
+        "player_id": "8474578",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/erik_karlsson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/erik_karlsson/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/erik_karlsson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/erik_karlsson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jordan_eberle.csv": {
+        "average_odds": {
+            "2.5_over": 2.24,
+            "2.5_under": 1.58
+        },
+        "player_id": "8474586",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jordan_eberle/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jordan_eberle/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_john_carlson.csv": {
+        "average_odds": {
+            "2.5_over": 2.16,
+            "2.5_under": 1.63
+        },
+        "player_id": "8474590",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/john_carlson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/john_carlson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_roman_josi.csv": {
+        "average_odds": {
+            "3.5_over": 2.24,
+            "3.5_under": 1.58,
+            "2.5_over": 1.64,
+            "2.5_under": 2.13
+        },
+        "player_id": "8474600",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/roman_josi/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/roman_josi/SVC_over_3.5joblib",
+            "shots_this_game_U2.5": "./generated_models/roman_josi/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/roman_josi/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_adam_henrique.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1
+        },
+        "player_id": "8474641",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/adam_henrique/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/adam_henrique/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_cam_atkinson.csv": {
+        "average_odds": {
+            "2.5_over": 1.81,
+            "2.5_under": 1.91
+        },
+        "player_id": "8474715",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/cam_atkinson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/cam_atkinson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kyle_palmieri.csv": {
+        "average_odds": {
+            "2.5_over": 2.09,
+            "2.5_under": 1.67
+        },
+        "player_id": "8475151",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kyle_palmieri/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kyle_palmieri/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_o'reilly.csv": {
+        "average_odds": {
+            "1.5_over": 1.53,
+            "1.5_under": 2.36,
+            "2.5_over": 2.33,
+            "2.5_under": 1.54
+        },
+        "player_id": "8475158",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_o'reilly/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_o'reilly/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/ryan_o'reilly/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ryan_o'reilly/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jakob_silfverberg.csv": {
+        "average_odds": {
+            "2.5_over": 2.6,
+            "2.5_under": 1.44,
+            "1.5_over": 1.64,
+            "1.5_under": 2.13
+        },
+        "player_id": "8475164",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jakob_silfverberg/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jakob_silfverberg/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/jakob_silfverberg/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jakob_silfverberg/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_john_tavares.csv": {
+        "average_odds": {
+            "2.5_over": 1.69,
+            "2.5_under": 2.05
+        },
+        "player_id": "8475166",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/john_tavares/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/john_tavares/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_victor_hedman.csv": {
+        "average_odds": {
+            "2.5_over": 1.98,
+            "2.5_under": 1.74
+        },
+        "player_id": "8475167",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/victor_hedman/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/victor_hedman/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_evander_kane.csv": {
+        "average_odds": {
+            "3.5_over": 2.26,
+            "3.5_under": 1.57,
+            "2.5_over": 1.53,
+            "2.5_under": 2.35
+        },
+        "player_id": "8475169",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/evander_kane/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/evander_kane/SVC_over_3.5joblib",
+            "shots_this_game_U2.5": "./generated_models/evander_kane/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/evander_kane/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_brayden_schenn.csv": {
+        "average_odds": {
+            "1.5_over": 1.56,
+            "1.5_under": 2.29,
+            "2.5_over": 2.39,
+            "2.5_under": 1.52
+        },
+        "player_id": "8475170",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/brayden_schenn/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/brayden_schenn/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/brayden_schenn/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brayden_schenn/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_oliver_ekman-larsson.csv": {
+        "average_odds": {
+            "1.5_over": 1.7,
+            "1.5_under": 2.04
+        },
+        "player_id": "8475171",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/oliver_ekman-larsson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/oliver_ekman-larsson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_nazem_kadri.csv": {
+        "average_odds": {
+            "2.5_over": 1.73,
+            "2.5_under": 2.0
+        },
+        "player_id": "8475172",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/nazem_kadri/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nazem_kadri/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_ellis.csv": {
+        "average_odds": {
+            "1.5_over": 1.58,
+            "1.5_under": 2.23
+        },
+        "player_id": "8475176",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_ellis/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_ellis/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_chris_kreider.csv": {
+        "average_odds": {
+            "2.5_over": 2.25,
+            "2.5_under": 1.58,
+            "1.5_over": 1.61,
+            "1.5_under": 2.2
+        },
+        "player_id": "8475184",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/chris_kreider/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/chris_kreider/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/chris_kreider/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/chris_kreider/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_reilly_smith.csv": {
+        "average_odds": {
+            "2.5_over": 2.28,
+            "2.5_under": 1.56,
+            "1.5_over": 1.61,
+            "1.5_under": 2.2
+        },
+        "player_id": "8475191",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/reilly_smith/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/reilly_smith/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/reilly_smith/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/reilly_smith/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_tomas_tatar.csv": {
+        "average_odds": {
+            "1.5_over": 1.67,
+            "1.5_under": 2.08
+        },
+        "player_id": "8475193",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/tomas_tatar/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/tomas_tatar/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_tyson_barrie.csv": {
+        "average_odds": {
+            "2.5_over": 1.98,
+            "2.5_under": 1.75
+        },
+        "player_id": "8475197",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/tyson_barrie/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/tyson_barrie/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_mattias_ekholm.csv": {
+        "average_odds": {
+            "2.5_over": 2.11,
+            "2.5_under": 1.66
+        },
+        "player_id": "8475218",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mattias_ekholm/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mattias_ekholm/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_sami_vatanen.csv": {
+        "average_odds": {
+            "1.5_over": 2.1,
+            "1.5_under": 1.66
+        },
+        "player_id": "8475222",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/sami_vatanen/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/sami_vatanen/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_craig_smith.csv": {
+        "average_odds": {
+            "2.5_over": 2.13,
+            "2.5_under": 1.64
+        },
+        "player_id": "8475225",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/craig_smith/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/craig_smith/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_e._haula.csv": {
+        "average_odds": {
+            "1.5_over": 2.1,
+            "1.5_under": 1.66
+        },
+        "player_id": "8475287",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/e._haula/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/e._haula/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mats_zuccarello.csv": {
+        "average_odds": {
+            "1.5_over": 1.64,
+            "1.5_under": 2.13,
+            "2.5_over": 2.47,
+            "2.5_under": 1.48
+        },
+        "player_id": "8475692",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/mats_zuccarello/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mats_zuccarello/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/mats_zuccarello/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mats_zuccarello/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_calle_jarnkrok.csv": {
+        "average_odds": {
+            "1.5_over": 1.68,
+            "1.5_under": 2.08,
+            "2.5_over": 2.25,
+            "2.5_under": 1.57
+        },
+        "player_id": "8475714",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/calle_jarnkrok/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/calle_jarnkrok/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/calle_jarnkrok/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/calle_jarnkrok/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jason_zucker.csv": {
+        "average_odds": {
+            "1.5_over": 1.65,
+            "1.5_under": 2.13
+        },
+        "player_id": "8475722",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jason_zucker/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jason_zucker/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_tyler_toffoli.csv": {
+        "average_odds": {
+            "2.5_over": 1.67,
+            "2.5_under": 2.08
+        },
+        "player_id": "8475726",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/tyler_toffoli/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/tyler_toffoli/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_evgeny_kuznetsov.csv": {
+        "average_odds": {
+            "1.5_over": 1.6,
+            "1.5_under": 2.21,
+            "2.5_over": 2.43,
+            "2.5_under": 1.5
+        },
+        "player_id": "8475744",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/evgeny_kuznetsov/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/evgeny_kuznetsov/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/evgeny_kuznetsov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/evgeny_kuznetsov/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_charlie_coyle.csv": {
+        "average_odds": {
+            "1.5_over": 1.71,
+            "1.5_under": 2.0
+        },
+        "player_id": "8475745",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/charlie_coyle/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/charlie_coyle/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_justin_faulk.csv": {
+        "average_odds": {
+            "1.5_over": 1.62,
+            "1.5_under": 2.18
+        },
+        "player_id": "8475753",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/justin_faulk/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/justin_faulk/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_brock_nelson.csv": {
+        "average_odds": {
+            "2.5_over": 2.16,
+            "2.5_under": 1.62
+        },
+        "player_id": "8475754",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/brock_nelson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brock_nelson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kevin_hayes.csv": {
+        "average_odds": {
+            "2.5_over": 2.26,
+            "2.5_under": 1.57
+        },
+        "player_id": "8475763",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kevin_hayes/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kevin_hayes/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_cam_fowler.csv": {
+        "average_odds": {
+            "1.5_over": 1.84,
+            "1.5_under": 1.85
+        },
+        "player_id": "8475764",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/cam_fowler/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/cam_fowler/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_vladimir_tarasenko.csv": {
+        "average_odds": {
+            "2.5_over": 1.74,
+            "2.5_under": 1.98,
+            "3.5_over": 2.3,
+            "3.5_under": 1.55
+        },
+        "player_id": "8475765",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/vladimir_tarasenko/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/vladimir_tarasenko/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/vladimir_tarasenko/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/vladimir_tarasenko/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_jaden_schwartz.csv": {
+        "average_odds": {
+            "1.5_over": 1.5,
+            "1.5_under": 2.44,
+            "2.5_over": 2.29,
+            "2.5_under": 1.57
+        },
+        "player_id": "8475768",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jaden_schwartz/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jaden_schwartz/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/jaden_schwartz/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jaden_schwartz/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jeff_skinner.csv": {
+        "average_odds": {
+            "2.5_over": 2.31,
+            "2.5_under": 1.55
+        },
+        "player_id": "8475784",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jeff_skinner/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jeff_skinner/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_zach_hyman.csv": {
+        "average_odds": {
+            "2.5_over": 2.17,
+            "2.5_under": 1.62
+        },
+        "player_id": "8475786",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/zach_hyman/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/zach_hyman/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_taylor_hall.csv": {
+        "average_odds": {
+            "2.5_over": 1.96,
+            "2.5_under": 1.75
+        },
+        "player_id": "8475791",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/taylor_hall/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/taylor_hall/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_johansen.csv": {
+        "average_odds": {
+            "1.5_over": 1.83,
+            "1.5_under": 1.86
+        },
+        "player_id": "8475793",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_johansen/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_johansen/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mikael_granlund.csv": {
+        "average_odds": {
+            "1.5_over": 1.85,
+            "1.5_under": 1.85
+        },
+        "player_id": "8475798",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/mikael_granlund/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mikael_granlund/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_nino_niederreiter.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.53,
+            "1.5_over": 1.52,
+            "1.5_under": 2.4
+        },
+        "player_id": "8475799",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/nino_niederreiter/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nino_niederreiter/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/nino_niederreiter/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/nino_niederreiter/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_bryan_rust.csv": {
+        "average_odds": {
+            "2.5_over": 1.67,
+            "2.5_under": 2.1
+        },
+        "player_id": "8475810",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/bryan_rust/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/bryan_rust/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_brendan_gallagher.csv": {
+        "average_odds": {
+            "3.5_over": 2.03,
+            "3.5_under": 1.71,
+            "2.5_over": 1.54,
+            "2.5_under": 2.31
+        },
+        "player_id": "8475848",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/brendan_gallagher/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/brendan_gallagher/SVC_over_3.5joblib",
+            "shots_this_game_U2.5": "./generated_models/brendan_gallagher/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brendan_gallagher/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_john_klingberg.csv": {
+        "average_odds": {
+            "2.5_over": 2.44,
+            "2.5_under": 1.49,
+            "1.5_over": 1.56,
+            "1.5_under": 2.29
+        },
+        "player_id": "8475906",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/john_klingberg/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/john_klingberg/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/john_klingberg/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/john_klingberg/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mark_stone.csv": {
+        "average_odds": {
+            "2.5_over": 2.54,
+            "2.5_under": 1.46,
+            "1.5_over": 1.69,
+            "1.5_under": 2.06
+        },
+        "player_id": "8475913",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mark_stone/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mark_stone/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/mark_stone/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mark_stone/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_ondrej_palat.csv": {
+        "average_odds": {
+            "1.5_over": 1.56,
+            "1.5_under": 2.29,
+            "2.5_over": 2.49,
+            "2.5_under": 1.49
+        },
+        "player_id": "8476292",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ondrej_palat/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ondrej_palat/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/ondrej_palat/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ondrej_palat/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_johnny_gaudreau.csv": {
+        "average_odds": {
+            "2.5_over": 2.15,
+            "2.5_under": 1.63,
+            "1.5_over": 1.6,
+            "1.5_under": 2.2
+        },
+        "player_id": "8476346",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/johnny_gaudreau/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/johnny_gaudreau/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/johnny_gaudreau/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/johnny_gaudreau/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_vincent_trocheck.csv": {
+        "average_odds": {
+            "2.5_over": 1.86,
+            "2.5_under": 1.84
+        },
+        "player_id": "8476389",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/vincent_trocheck/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/vincent_trocheck/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_blake_coleman.csv": {
+        "average_odds": {
+            "1.5_over": 1.7,
+            "1.5_under": 2.04
+        },
+        "player_id": "8476399",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/blake_coleman/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/blake_coleman/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jean-gabriel_pageau.csv": {
+        "average_odds": {
+            "1.5_over": 1.78,
+            "1.5_under": 1.92
+        },
+        "player_id": "8476419",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jean-gabriel_pageau/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jean-gabriel_pageau/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_boone_jenner.csv": {
+        "average_odds": {
+            "1.5_over": 1.65,
+            "1.5_under": 2.12
+        },
+        "player_id": "8476432",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/boone_jenner/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/boone_jenner/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_william_karlsson.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1,
+            "2.5_over": 2.63,
+            "2.5_under": 1.43
+        },
+        "player_id": "8476448",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/william_karlsson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/william_karlsson/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/william_karlsson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/william_karlsson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_nugent-hopkins.csv": {
+        "average_odds": {
+            "2.5_over": 1.82,
+            "2.5_under": 1.87
+        },
+        "player_id": "8476454",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/ryan_nugent-hopkins/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ryan_nugent-hopkins/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_gabriel_landeskog.csv": {
+        "average_odds": {
+            "2.5_over": 1.78,
+            "2.5_under": 1.92
+        },
+        "player_id": "8476455",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/gabriel_landeskog/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/gabriel_landeskog/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jonathan_huberdeau.csv": {
+        "average_odds": {
+            "1.5_over": 1.53,
+            "1.5_under": 2.35,
+            "2.5_over": 2.28,
+            "2.5_under": 1.56
+        },
+        "player_id": "8476456",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jonathan_huberdeau/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jonathan_huberdeau/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/jonathan_huberdeau/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jonathan_huberdeau/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_strome.csv": {
+        "average_odds": {
+            "2.5_over": 2.29,
+            "2.5_under": 1.57,
+            "1.5_over": 1.54,
+            "1.5_under": 2.32
+        },
+        "player_id": "8476458",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/ryan_strome/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ryan_strome/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/ryan_strome/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_strome/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mika_zibanejad.csv": {
+        "average_odds": {
+            "2.5_over": 1.65,
+            "2.5_under": 2.12,
+            "3.5_over": 2.27,
+            "3.5_under": 1.57
+        },
+        "player_id": "8476459",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mika_zibanejad/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mika_zibanejad/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/mika_zibanejad/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/mika_zibanejad/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_mark_scheifele.csv": {
+        "average_odds": {
+            "2.5_over": 2.37,
+            "2.5_under": 1.52,
+            "1.5_over": 1.52,
+            "1.5_under": 2.4
+        },
+        "player_id": "8476460",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mark_scheifele/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mark_scheifele/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/mark_scheifele/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mark_scheifele/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_sean_couturier.csv": {
+        "average_odds": {
+            "2.5_over": 2.11,
+            "2.5_under": 1.65
+        },
+        "player_id": "8476461",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/sean_couturier/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/sean_couturier/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_dougie_hamilton.csv": {
+        "average_odds": {
+            "2.5_over": 1.58,
+            "2.5_under": 2.24,
+            "3.5_over": 2.17,
+            "3.5_under": 1.62
+        },
+        "player_id": "8476462",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/dougie_hamilton/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/dougie_hamilton/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/dougie_hamilton/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/dougie_hamilton/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_j.t._miller.csv": {
+        "average_odds": {
+            "1.5_over": 1.55,
+            "1.5_under": 2.3,
+            "2.5_over": 2.38,
+            "2.5_under": 1.52
+        },
+        "player_id": "8476468",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/j.t._miller/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/j.t._miller/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/j.t._miller/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/j.t._miller/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_vladislav_namestnikov.csv": {
+        "average_odds": {
+            "1.5_over": 1.72,
+            "1.5_under": 2.0
+        },
+        "player_id": "8476480",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/vladislav_namestnikov/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/vladislav_namestnikov/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_rickard_rakell.csv": {
+        "average_odds": {
+            "2.5_over": 1.75,
+            "2.5_under": 1.96
+        },
+        "player_id": "8476483",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/rickard_rakell/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/rickard_rakell/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jonathan_marchessault.csv": {
+        "average_odds": {
+            "2.5_over": 1.65,
+            "2.5_under": 2.11
+        },
+        "player_id": "8476539",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jonathan_marchessault/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jonathan_marchessault/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_torey_krug.csv": {
+        "average_odds": {
+            "2.5_over": 2.24,
+            "2.5_under": 1.58,
+            "1.5_over": 1.58,
+            "1.5_under": 2.25
+        },
+        "player_id": "8476792",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/torey_krug/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/torey_krug/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/torey_krug/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/torey_krug/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_yanni_gourde.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1
+        },
+        "player_id": "8476826",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/yanni_gourde/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/yanni_gourde/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_morgan_rielly.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.56,
+            "1.5_over": 1.62,
+            "1.5_under": 2.18
+        },
+        "player_id": "8476853",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/morgan_rielly/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/morgan_rielly/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/morgan_rielly/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/morgan_rielly/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_matt_dumba.csv": {
+        "average_odds": {
+            "2.5_over": 2.34,
+            "2.5_under": 1.54,
+            "1.5_over": 1.61,
+            "1.5_under": 2.18
+        },
+        "player_id": "8476856",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/matt_dumba/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/matt_dumba/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/matt_dumba/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/matt_dumba/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_tanner_pearson.csv": {
+        "average_odds": {
+            "2.5_over": 2.0,
+            "2.5_under": 1.71
+        },
+        "player_id": "8476871",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/tanner_pearson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/tanner_pearson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_tom_wilson.csv": {
+        "average_odds": {
+            "1.5_over": 1.81,
+            "1.5_under": 1.87
+        },
+        "player_id": "8476880",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/tom_wilson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/tom_wilson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_tomas_hertl.csv": {
+        "average_odds": {
+            "2.5_over": 2.38,
+            "2.5_under": 1.53,
+            "1.5_over": 1.51,
+            "1.5_under": 2.42
+        },
+        "player_id": "8476881",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/tomas_hertl/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/tomas_hertl/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/tomas_hertl/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/tomas_hertl/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jacob_trouba.csv": {
+        "average_odds": {
+            "1.5_over": 1.77,
+            "1.5_under": 1.92
+        },
+        "player_id": "8476885",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jacob_trouba/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jacob_trouba/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_filip_forsberg.csv": {
+        "average_odds": {
+            "2.5_over": 1.51,
+            "2.5_under": 2.4,
+            "3.5_over": 2.21,
+            "3.5_under": 1.6
+        },
+        "player_id": "8476887",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/filip_forsberg/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/filip_forsberg/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/filip_forsberg/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/filip_forsberg/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_matt_grzelcyk.csv": {
+        "average_odds": {
+            "1.5_over": 1.6,
+            "1.5_under": 2.21,
+            "2.5_over": 2.27,
+            "2.5_under": 1.56
+        },
+        "player_id": "8476891",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/matt_grzelcyk/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/matt_grzelcyk/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/matt_grzelcyk/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/matt_grzelcyk/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_colton_parayko.csv": {
+        "average_odds": {
+            "1.5_over": 1.68,
+            "1.5_under": 2.08,
+            "2.5_over": 2.23,
+            "2.5_under": 1.58
+        },
+        "player_id": "8476892",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/colton_parayko/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/colton_parayko/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/colton_parayko/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/colton_parayko/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_esa_lindell.csv": {
+        "average_odds": {
+            "2.5_over": 2.63,
+            "2.5_under": 1.43
+        },
+        "player_id": "8476902",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/esa_lindell/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/esa_lindell/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_damon_severson.csv": {
+        "average_odds": {
+            "1.5_over": 1.71,
+            "1.5_under": 2.02
+        },
+        "player_id": "8476923",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/damon_severson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/damon_severson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jaccob_slavin.csv": {
+        "average_odds": {
+            "1.5_over": 1.61,
+            "1.5_under": 2.2
+        },
+        "player_id": "8476958",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jaccob_slavin/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jaccob_slavin/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_josh_anderson.csv": {
+        "average_odds": {
+            "2.5_over": 1.91,
+            "2.5_under": 1.78
+        },
+        "player_id": "8476981",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/josh_anderson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/josh_anderson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_connor_brown.csv": {
+        "average_odds": {
+            "2.5_over": 2.34,
+            "2.5_under": 1.54,
+            "1.5_over": 1.72,
+            "1.5_under": 2.0
+        },
+        "player_id": "8477015",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/connor_brown/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/connor_brown/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/connor_brown/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/connor_brown/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_dominik_kubalik.csv": {
+        "average_odds": {
+            "2.5_over": 1.92,
+            "2.5_under": 1.79
+        },
+        "player_id": "8477330",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/dominik_kubalik/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/dominik_kubalik/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_andreas_johnsson.csv": {
+        "average_odds": {
+            "1.5_over": 2.25,
+            "1.5_under": 1.57
+        },
+        "player_id": "8477341",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/andreas_johnsson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/andreas_johnsson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_pavel_buchnevich.csv": {
+        "average_odds": {
+            "2.5_over": 2.29,
+            "2.5_under": 1.56,
+            "1.5_over": 1.54,
+            "1.5_under": 2.35
+        },
+        "player_id": "8477402",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/pavel_buchnevich/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/pavel_buchnevich/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/pavel_buchnevich/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/pavel_buchnevich/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jake_guentzel.csv": {
+        "average_odds": {
+            "2.5_over": 1.73,
+            "2.5_under": 1.99
+        },
+        "player_id": "8477404",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jake_guentzel/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jake_guentzel/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_mattias_janmark.csv": {
+        "average_odds": {
+            "1.5_over": 1.55,
+            "1.5_under": 2.3
+        },
+        "player_id": "8477406",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/mattias_janmark/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mattias_janmark/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_anthony_duclair.csv": {
+        "average_odds": {
+            "2.5_over": 2.03,
+            "2.5_under": 1.73
+        },
+        "player_id": "8477407",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/anthony_duclair/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/anthony_duclair/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_carter_verhaeghe.csv": {
+        "average_odds": {
+            "2.5_over": 2.16,
+            "2.5_under": 1.65
+        },
+        "player_id": "8477409",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/carter_verhaeghe/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/carter_verhaeghe/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_oliver_bjorkstrand.csv": {
+        "average_odds": {
+            "2.5_over": 2.01,
+            "2.5_under": 1.72
+        },
+        "player_id": "8477416",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/oliver_bjorkstrand/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/oliver_bjorkstrand/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_miles_wood.csv": {
+        "average_odds": {
+            "2.5_over": 2.33,
+            "2.5_under": 1.55,
+            "1.5_over": 1.58,
+            "1.5_under": 2.28
+        },
+        "player_id": "8477425",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/miles_wood/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/miles_wood/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/miles_wood/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/miles_wood/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_nicholas_paul.csv": {
+        "average_odds": {
+            "1.5_over": 1.61,
+            "1.5_under": 2.18
+        },
+        "player_id": "8477426",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/nicholas_paul/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/nicholas_paul/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_andrew_copp.csv": {
+        "average_odds": {
+            "1.5_over": 1.73,
+            "1.5_under": 1.97
+        },
+        "player_id": "8477429",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/andrew_copp/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/andrew_copp/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_shea_theodore.csv": {
+        "average_odds": {
+            "2.5_over": 1.81,
+            "2.5_under": 1.89
+        },
+        "player_id": "8477447",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/shea_theodore/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/shea_theodore/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_nathan_mackinnon.csv": {
+        "average_odds": {
+            "3.5_over": 1.65,
+            "3.5_under": 2.12
+        },
+        "player_id": "8477492",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/nathan_mackinnon/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/nathan_mackinnon/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_aleksander_barkov.csv": {
+        "average_odds": {
+            "2.5_over": 1.61,
+            "2.5_under": 2.19,
+            "3.5_over": 1.98,
+            "3.5_under": 1.74
+        },
+        "player_id": "8477493",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/aleksander_barkov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/aleksander_barkov/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/aleksander_barkov/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/aleksander_barkov/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_jonathan_drouin.csv": {
+        "average_odds": {
+            "1.5_over": 1.59,
+            "1.5_under": 2.22
+        },
+        "player_id": "8477494",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jonathan_drouin/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jonathan_drouin/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_seth_jones.csv": {
+        "average_odds": {
+            "1.5_over": 1.47,
+            "1.5_under": 2.52,
+            "2.5_over": 2.25,
+            "2.5_under": 1.58
+        },
+        "player_id": "8477495",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/seth_jones/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/seth_jones/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/seth_jones/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/seth_jones/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_elias_lindholm.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.53
+        },
+        "player_id": "8477496",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/elias_lindholm/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/elias_lindholm/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_sean_monahan.csv": {
+        "average_odds": {
+            "2.5_over": 2.33,
+            "2.5_under": 1.54,
+            "1.5_over": 1.55,
+            "1.5_under": 2.3
+        },
+        "player_id": "8477497",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/sean_monahan/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/sean_monahan/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/sean_monahan/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/sean_monahan/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_darnell_nurse.csv": {
+        "average_odds": {
+            "2.5_over": 2.09,
+            "2.5_under": 1.67
+        },
+        "player_id": "8477498",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/darnell_nurse/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/darnell_nurse/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_rasmus_ristolainen.csv": {
+        "average_odds": {
+            "1.5_over": 1.69,
+            "1.5_under": 2.05,
+            "2.5_over": 2.75,
+            "2.5_under": 1.4
+        },
+        "player_id": "8477499",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/rasmus_ristolainen/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/rasmus_ristolainen/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/rasmus_ristolainen/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/rasmus_ristolainen/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_bo_horvat.csv": {
+        "average_odds": {
+            "2.5_over": 2.13,
+            "2.5_under": 1.64
+        },
+        "player_id": "8477500",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/bo_horvat/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/bo_horvat/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_max_domi.csv": {
+        "average_odds": {
+            "1.5_over": 1.62,
+            "1.5_under": 2.2
+        },
+        "player_id": "8477503",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/max_domi/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/max_domi/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_josh_morrissey.csv": {
+        "average_odds": {
+            "1.5_over": 1.64,
+            "1.5_under": 2.15,
+            "2.5_over": 2.67,
+            "2.5_under": 1.42
+        },
+        "player_id": "8477504",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/josh_morrissey/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/josh_morrissey/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/josh_morrissey/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/josh_morrissey/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_a._wennberg.csv": {
+        "average_odds": {
+            "1.5_over": 2.3,
+            "1.5_under": 1.55
+        },
+        "player_id": "8477505",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/a._wennberg/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/a._wennberg/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_pulock.csv": {
+        "average_odds": {
+            "1.5_over": 1.54,
+            "1.5_under": 2.32,
+            "2.5_over": 2.34,
+            "2.5_under": 1.54
+        },
+        "player_id": "8477506",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_pulock/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_pulock/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/ryan_pulock/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ryan_pulock/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_anthony_mantha.csv": {
+        "average_odds": {
+            "2.5_over": 2.03,
+            "2.5_under": 1.71
+        },
+        "player_id": "8477511",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/anthony_mantha/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/anthony_mantha/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jordan_oesterle.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1
+        },
+        "player_id": "8477851",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jordan_oesterle/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jordan_oesterle/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_aaron_ekblad.csv": {
+        "average_odds": {
+            "2.5_over": 1.9,
+            "2.5_under": 1.83
+        },
+        "player_id": "8477932",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/aaron_ekblad/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/aaron_ekblad/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_sam_reinhart.csv": {
+        "average_odds": {
+            "2.5_over": 2.29,
+            "2.5_under": 1.56
+        },
+        "player_id": "8477933",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/sam_reinhart/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/sam_reinhart/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_leon_draisaitl.csv": {
+        "average_odds": {
+            "2.5_over": 1.66,
+            "2.5_under": 2.11
+        },
+        "player_id": "8477934",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/leon_draisaitl/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/leon_draisaitl/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_william_nylander.csv": {
+        "average_odds": {
+            "2.5_over": 2.0,
+            "2.5_under": 1.72,
+            "1.5_over": 1.4,
+            "1.5_under": 2.7
+        },
+        "player_id": "8477939",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/william_nylander/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/william_nylander/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/william_nylander/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/william_nylander/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_nikolaj_ehlers.csv": {
+        "average_odds": {
+            "2.5_over": 1.66,
+            "2.5_under": 2.11
+        },
+        "player_id": "8477940",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/nikolaj_ehlers/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nikolaj_ehlers/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_nick_ritchie.csv": {
+        "average_odds": {
+            "1.5_over": 1.52,
+            "1.5_under": 2.43,
+            "2.5_over": 2.25,
+            "2.5_under": 1.58
+        },
+        "player_id": "8477941",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/nick_ritchie/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/nick_ritchie/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/nick_ritchie/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nick_ritchie/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kevin_fiala.csv": {
+        "average_odds": {
+            "2.5_over": 1.74,
+            "2.5_under": 1.97
+        },
+        "player_id": "8477942",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kevin_fiala/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kevin_fiala/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jakub_vrana.csv": {
+        "average_odds": {
+            "1.5_over": 1.7,
+            "1.5_under": 2.03,
+            "2.5_over": 2.55,
+            "2.5_under": 1.45
+        },
+        "player_id": "8477944",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jakub_vrana/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jakub_vrana/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/jakub_vrana/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jakub_vrana/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_dylan_larkin.csv": {
+        "average_odds": {
+            "2.5_over": 1.65,
+            "2.5_under": 2.13,
+            "3.5_over": 2.33,
+            "3.5_under": 1.53
+        },
+        "player_id": "8477946",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/dylan_larkin/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/dylan_larkin/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/dylan_larkin/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/dylan_larkin/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_alex_tuch.csv": {
+        "average_odds": {
+            "2.5_over": 2.31,
+            "2.5_under": 1.55,
+            "1.5_over": 1.56,
+            "1.5_under": 2.3
+        },
+        "player_id": "8477949",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/alex_tuch/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/alex_tuch/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/alex_tuch/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/alex_tuch/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_nick_schmaltz.csv": {
+        "average_odds": {
+            "1.5_over": 1.64,
+            "1.5_under": 2.15,
+            "2.5_over": 2.35,
+            "2.5_under": 1.53
+        },
+        "player_id": "8477951",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/nick_schmaltz/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/nick_schmaltz/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/nick_schmaltz/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nick_schmaltz/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_robby_fabbri.csv": {
+        "average_odds": {
+            "1.5_over": 1.58,
+            "1.5_under": 2.1,
+            "2.5_over": 2.41,
+            "2.5_under": 1.51
+        },
+        "player_id": "8477952",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/robby_fabbri/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/robby_fabbri/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/robby_fabbri/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/robby_fabbri/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kasperi_kapanen.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1
+        },
+        "player_id": "8477953",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/kasperi_kapanen/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/kasperi_kapanen/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jared_mccann.csv": {
+        "average_odds": {
+            "1.5_over": 1.57,
+            "1.5_under": 2.28,
+            "2.5_over": 2.55,
+            "2.5_under": 1.45
+        },
+        "player_id": "8477955",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jared_mccann/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jared_mccann/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/jared_mccann/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jared_mccann/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_david_pastrnak.csv": {
+        "average_odds": {
+            "3.5_over": 1.66,
+            "3.5_under": 2.11,
+            "4.5_over": 2.25,
+            "4.5_under": 1.57
+        },
+        "player_id": "8477956",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/david_pastrnak/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/david_pastrnak/SVC_over_3.5joblib",
+            "shots_this_game_U4.5": "./generated_models/david_pastrnak/SVC_under_4.5.joblib",
+            "shots_this_game_O4.5": "./generated_models/david_pastrnak/SVC_over_4.5joblib"
+        }
+    },
+    "./data/td/pp_adrian_kempe.csv": {
+        "average_odds": {
+            "2.5_over": 2.39,
+            "2.5_under": 1.52,
+            "1.5_over": 1.55,
+            "1.5_under": 2.32
+        },
+        "player_id": "8477960",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/adrian_kempe/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/adrian_kempe/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/adrian_kempe/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/adrian_kempe/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_ryan_donato.csv": {
+        "average_odds": {
+            "1.5_over": 1.52,
+            "1.5_under": 2.37
+        },
+        "player_id": "8477987",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ryan_donato/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ryan_donato/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_christian_dvorak.csv": {
+        "average_odds": {
+            "1.5_over": 1.78,
+            "1.5_under": 1.92
+        },
+        "player_id": "8477989",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/christian_dvorak/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/christian_dvorak/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_brayden_point.csv": {
+        "average_odds": {
+            "2.5_over": 2.11,
+            "2.5_under": 1.66
+        },
+        "player_id": "8478010",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/brayden_point/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brayden_point/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_devon_toews.csv": {
+        "average_odds": {
+            "2.5_over": 2.19,
+            "2.5_under": 1.61
+        },
+        "player_id": "8478038",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/devon_toews/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/devon_toews/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_viktor_arvidsson.csv": {
+        "average_odds": {
+            "2.5_over": 1.68,
+            "2.5_under": 2.06
+        },
+        "player_id": "8478042",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/viktor_arvidsson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/viktor_arvidsson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kevin_labanc.csv": {
+        "average_odds": {
+            "2.5_over": 2.1,
+            "2.5_under": 1.66
+        },
+        "player_id": "8478099",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kevin_labanc/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kevin_labanc/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_victor_olofsson.csv": {
+        "average_odds": {
+            "2.5_over": 2.29,
+            "2.5_under": 1.56,
+            "1.5_over": 1.47,
+            "1.5_under": 2.55
+        },
+        "player_id": "8478109",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/victor_olofsson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/victor_olofsson/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/victor_olofsson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/victor_olofsson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_frank_vatrano.csv": {
+        "average_odds": {
+            "2.5_over": 1.98,
+            "2.5_under": 1.78
+        },
+        "player_id": "8478366",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/frank_vatrano/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/frank_vatrano/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_rasmus_andersson.csv": {
+        "average_odds": {
+            "2.5_over": 1.85,
+            "2.5_under": 1.85,
+            "1.5_over": 1.95,
+            "1.5_under": 1.77
+        },
+        "player_id": "8478397",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/rasmus_andersson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/rasmus_andersson/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/rasmus_andersson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/rasmus_andersson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_kyle_connor.csv": {
+        "average_odds": {
+            "2.5_over": 1.59,
+            "2.5_under": 2.22,
+            "3.5_over": 2.28,
+            "3.5_under": 1.56
+        },
+        "player_id": "8478398",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kyle_connor/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kyle_connor/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/kyle_connor/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/kyle_connor/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_pavel_zacha.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.11,
+            "2.5_over": 2.75,
+            "2.5_under": 1.4
+        },
+        "player_id": "8478401",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/pavel_zacha/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/pavel_zacha/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/pavel_zacha/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/pavel_zacha/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_connor_mcdavid.csv": {
+        "average_odds": {
+            "3.5_over": 1.89,
+            "3.5_under": 1.81
+        },
+        "player_id": "8478402",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/connor_mcdavid/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/connor_mcdavid/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_timo_meier.csv": {
+        "average_odds": {
+            "2.5_over": 1.73,
+            "2.5_under": 2.0
+        },
+        "player_id": "8478414",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/timo_meier/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/timo_meier/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_mikko_rantanen.csv": {
+        "average_odds": {
+            "2.5_over": 1.6,
+            "2.5_under": 2.21,
+            "3.5_over": 2.08,
+            "3.5_under": 1.67
+        },
+        "player_id": "8478420",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mikko_rantanen/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mikko_rantanen/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/mikko_rantanen/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/mikko_rantanen/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_travis_konecny.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.11
+        },
+        "player_id": "8478439",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/travis_konecny/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/travis_konecny/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_dylan_strome.csv": {
+        "average_odds": {
+            "1.5_over": 1.73,
+            "1.5_under": 1.98
+        },
+        "player_id": "8478440",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/dylan_strome/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/dylan_strome/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_brock_boeser.csv": {
+        "average_odds": {
+            "2.5_over": 1.97,
+            "2.5_under": 1.74
+        },
+        "player_id": "8478444",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/brock_boeser/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/brock_boeser/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_mathew_barzal.csv": {
+        "average_odds": {
+            "2.5_over": 2.18,
+            "2.5_under": 1.61
+        },
+        "player_id": "8478445",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mathew_barzal/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mathew_barzal/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_roope_hintz.csv": {
+        "average_odds": {
+            "2.5_over": 2.13,
+            "2.5_under": 1.64
+        },
+        "player_id": "8478449",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/roope_hintz/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/roope_hintz/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_zach_werenski.csv": {
+        "average_odds": {
+            "2.5_over": 2.26,
+            "2.5_under": 1.57
+        },
+        "player_id": "8478460",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/zach_werenski/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/zach_werenski/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_anthony_beauvillier.csv": {
+        "average_odds": {
+            "2.5_over": 2.39,
+            "2.5_under": 1.52,
+            "3.5_over": 2.29,
+            "3.5_under": 1.55,
+            "1.5_over": 1.5,
+            "1.5_under": 2.45
+        },
+        "player_id": "8478463",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/anthony_beauvillier/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/anthony_beauvillier/SVC_over_2.5joblib",
+            "shots_this_game_U3.5": "./generated_models/anthony_beauvillier/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/anthony_beauvillier/SVC_over_3.5joblib",
+            "shots_this_game_U1.5": "./generated_models/anthony_beauvillier/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/anthony_beauvillier/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_thomas_chabot.csv": {
+        "average_odds": {
+            "2.5_over": 2.06,
+            "2.5_under": 1.69
+        },
+        "player_id": "8478469",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/thomas_chabot/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/thomas_chabot/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_mitchell_marner.csv": {
+        "average_odds": {
+            "2.5_over": 1.73,
+            "2.5_under": 1.99
+        },
+        "player_id": "8478483",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/mitchell_marner/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mitchell_marner/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_joel_eriksson_ek.csv": {
+        "average_odds": {
+            "2.5_over": 2.4,
+            "2.5_under": 1.51,
+            "1.5_over": 1.64,
+            "1.5_under": 2.14
+        },
+        "player_id": "8478493",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/joel_eriksson_ek/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/joel_eriksson_ek/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/joel_eriksson_ek/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/joel_eriksson_ek/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_denis_gurianov.csv": {
+        "average_odds": {
+            "2.5_over": 2.19,
+            "2.5_under": 1.62,
+            "1.5_over": 1.52,
+            "1.5_under": 2.4
+        },
+        "player_id": "8478495",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/denis_gurianov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/denis_gurianov/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/denis_gurianov/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/denis_gurianov/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jake_debrusk.csv": {
+        "average_odds": {
+            "1.5_over": 1.58,
+            "1.5_under": 2.25
+        },
+        "player_id": "8478498",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jake_debrusk/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jake_debrusk/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_ivan_provorov.csv": {
+        "average_odds": {
+            "1.5_over": 1.62,
+            "1.5_under": 2.17,
+            "2.5_over": 2.42,
+            "2.5_under": 1.52
+        },
+        "player_id": "8478500",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/ivan_provorov/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/ivan_provorov/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/ivan_provorov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/ivan_provorov/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_artemi_panarin.csv": {
+        "average_odds": {
+            "2.5_over": 1.79,
+            "2.5_under": 1.91
+        },
+        "player_id": "8478550",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/artemi_panarin/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/artemi_panarin/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_conor_garland.csv": {
+        "average_odds": {
+            "2.5_over": 1.94,
+            "2.5_under": 1.79
+        },
+        "player_id": "8478856",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/conor_garland/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/conor_garland/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kirill_kaprizov.csv": {
+        "average_odds": {
+            "2.5_over": 1.97,
+            "2.5_under": 1.74
+        },
+        "player_id": "8478864",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/kirill_kaprizov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/kirill_kaprizov/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_rudolfs_balcers.csv": {
+        "average_odds": {
+            "1.5_over": 1.45,
+            "1.5_under": 2.58,
+            "2.5_over": 2.75,
+            "2.5_under": 1.4
+        },
+        "player_id": "8478870",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/rudolfs_balcers/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/rudolfs_balcers/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/rudolfs_balcers/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/rudolfs_balcers/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_matthew_tkachuk.csv": {
+        "average_odds": {
+            "2.5_over": 1.88,
+            "2.5_under": 1.85
+        },
+        "player_id": "8479314",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/matthew_tkachuk/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/matthew_tkachuk/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_auston_matthews.csv": {
+        "average_odds": {
+            "3.5_over": 1.64,
+            "3.5_under": 2.14,
+            "4.5_over": 2.2,
+            "4.5_under": 1.61
+        },
+        "player_id": "8479318",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/auston_matthews/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/auston_matthews/SVC_over_3.5joblib",
+            "shots_this_game_U4.5": "./generated_models/auston_matthews/SVC_under_4.5.joblib",
+            "shots_this_game_O4.5": "./generated_models/auston_matthews/SVC_over_4.5joblib"
+        }
+    },
+    "./data/td/pp_adam_fox.csv": {
+        "average_odds": {
+            "1.5_over": 1.64,
+            "1.5_under": 2.13
+        },
+        "player_id": "8479323",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/adam_fox/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/adam_fox/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_charlie_mcavoy.csv": {
+        "average_odds": {
+            "1.5_over": 1.6,
+            "1.5_under": 2.22
+        },
+        "player_id": "8479325",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/charlie_mcavoy/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/charlie_mcavoy/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_alex_debrincat.csv": {
+        "average_odds": {
+            "2.5_over": 1.63,
+            "2.5_under": 2.14
+        },
+        "player_id": "8479337",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/alex_debrincat/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/alex_debrincat/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_patrik_laine.csv": {
+        "average_odds": {
+            "2.5_over": 2.07,
+            "2.5_under": 1.68
+        },
+        "player_id": "8479339",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/patrik_laine/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/patrik_laine/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_clayton_keller.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.53,
+            "1.5_over": 1.58,
+            "1.5_under": 2.25
+        },
+        "player_id": "8479343",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/clayton_keller/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/clayton_keller/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/clayton_keller/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/clayton_keller/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jesse_puljujarvi.csv": {
+        "average_odds": {
+            "2.5_over": 2.35,
+            "2.5_under": 1.52
+        },
+        "player_id": "8479344",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jesse_puljujarvi/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jesse_puljujarvi/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jakob_chychrun.csv": {
+        "average_odds": {
+            "2.5_over": 1.99,
+            "2.5_under": 1.75
+        },
+        "player_id": "8479345",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jakob_chychrun/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jakob_chychrun/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_dillon_dube.csv": {
+        "average_odds": {
+            "1.5_over": 1.62,
+            "1.5_under": 2.2
+        },
+        "player_id": "8479346",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/dillon_dube/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/dillon_dube/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_pierre-luc_dubois.csv": {
+        "average_odds": {
+            "1.5_over": 1.69,
+            "1.5_under": 2.06
+        },
+        "player_id": "8479400",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/pierre-luc_dubois/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/pierre-luc_dubois/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jesper_bratt.csv": {
+        "average_odds": {
+            "2.5_over": 2.43,
+            "2.5_under": 1.51,
+            "1.5_over": 1.66,
+            "1.5_under": 2.11
+        },
+        "player_id": "8479407",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jesper_bratt/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jesper_bratt/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/jesper_bratt/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jesper_bratt/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_mikhail_sergachev.csv": {
+        "average_odds": {
+            "1.5_over": 1.56,
+            "1.5_under": 2.28,
+            "2.5_over": 2.4,
+            "2.5_under": 1.5
+        },
+        "player_id": "8479410",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/mikhail_sergachev/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/mikhail_sergachev/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/mikhail_sergachev/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/mikhail_sergachev/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_tage_thompson.csv": {
+        "average_odds": {
+            "1.5_over": 1.57,
+            "1.5_under": 2.25
+        },
+        "player_id": "8479420",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/tage_thompson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/tage_thompson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_filip_hronek.csv": {
+        "average_odds": {
+            "1.5_over": 1.57,
+            "1.5_under": 2.25,
+            "2.5_over": 2.48,
+            "2.5_under": 1.48
+        },
+        "player_id": "8479425",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/filip_hronek/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/filip_hronek/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/filip_hronek/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/filip_hronek/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_nico_hischier.csv": {
+        "average_odds": {
+            "2.5_over": 2.09,
+            "2.5_under": 1.66
+        },
+        "player_id": "8480002",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/nico_hischier/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/nico_hischier/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_e._tolvanen.csv": {
+        "average_odds": {
+            "1.5_over": 1.86,
+            "1.5_under": 1.86
+        },
+        "player_id": "8480009",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/e._tolvanen/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/e._tolvanen/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_nicholas_suzuki.csv": {
+        "average_odds": {
+            "1.5_over": 1.66,
+            "1.5_under": 2.1
+        },
+        "player_id": "8480018",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/nicholas_suzuki/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/nicholas_suzuki/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jason_robertson.csv": {
+        "average_odds": {
+            "2.5_over": 2.14,
+            "2.5_under": 1.64
+        },
+        "player_id": "8480027",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jason_robertson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jason_robertson/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_maxime_comtois.csv": {
+        "average_odds": {
+            "1.5_over": 1.83,
+            "1.5_under": 1.87
+        },
+        "player_id": "8480031",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/maxime_comtois/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/maxime_comtois/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_miro_heiskanen.csv": {
+        "average_odds": {
+            "2.5_over": 2.32,
+            "2.5_under": 1.56,
+            "1.5_over": 1.49,
+            "1.5_under": 2.48
+        },
+        "player_id": "8480036",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/miro_heiskanen/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/miro_heiskanen/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/miro_heiskanen/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/miro_heiskanen/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_martin_necas.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.53,
+            "1.5_over": 1.5,
+            "1.5_under": 2.5
+        },
+        "player_id": "8480039",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/martin_necas/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/martin_necas/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/martin_necas/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/martin_necas/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_josh_norris.csv": {
+        "average_odds": {
+            "1.5_over": 1.69,
+            "1.5_under": 2.06
+        },
+        "player_id": "8480064",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/josh_norris/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/josh_norris/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_cale_makar.csv": {
+        "average_odds": {
+            "1.5_over": 1.54,
+            "1.5_under": 2.32,
+            "2.5_over": 2.3,
+            "2.5_under": 1.56
+        },
+        "player_id": "8480069",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/cale_makar/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/cale_makar/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/cale_makar/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/cale_makar/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_alex_iafallo.csv": {
+        "average_odds": {
+            "2.5_over": 2.42,
+            "2.5_under": 1.51,
+            "1.5_over": 1.48,
+            "1.5_under": 2.47
+        },
+        "player_id": "8480113",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/alex_iafallo/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/alex_iafallo/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/alex_iafallo/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/alex_iafallo/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_neal_pionk.csv": {
+        "average_odds": {
+            "1.5_over": 1.67,
+            "1.5_under": 2.09,
+            "2.5_over": 2.55,
+            "2.5_under": 1.45
+        },
+        "player_id": "8480145",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/neal_pionk/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/neal_pionk/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/neal_pionk/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/neal_pionk/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_drake_batherson.csv": {
+        "average_odds": {
+            "2.5_over": 2.5,
+            "2.5_under": 1.49,
+            "1.5_over": 1.59,
+            "1.5_under": 2.24
+        },
+        "player_id": "8480208",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/drake_batherson/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/drake_batherson/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/drake_batherson/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/drake_batherson/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_pius_suter.csv": {
+        "average_odds": {
+            "1.5_over": 1.7,
+            "1.5_under": 2.02
+        },
+        "player_id": "8480459",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/pius_suter/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/pius_suter/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_joel_farabee.csv": {
+        "average_odds": {
+            "2.5_over": 2.36,
+            "2.5_under": 1.54,
+            "1.5_over": 1.5,
+            "1.5_under": 2.4
+        },
+        "player_id": "8480797",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/joel_farabee/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/joel_farabee/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/joel_farabee/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/joel_farabee/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_quinn_hughes.csv": {
+        "average_odds": {
+            "1.5_over": 1.51,
+            "1.5_under": 2.4,
+            "2.5_over": 2.55,
+            "2.5_under": 1.45
+        },
+        "player_id": "8480800",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/quinn_hughes/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/quinn_hughes/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/quinn_hughes/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/quinn_hughes/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_brady_tkachuk.csv": {
+        "average_odds": {
+            "3.5_over": 1.88,
+            "3.5_under": 1.82
+        },
+        "player_id": "8480801",
+        "SVC": {
+            "shots_this_game_U3.5": "./generated_models/brady_tkachuk/SVC_under_3.5.joblib",
+            "shots_this_game_O3.5": "./generated_models/brady_tkachuk/SVC_over_3.5joblib"
+        }
+    },
+    "./data/td/pp_filip_zadina.csv": {
+        "average_odds": {
+            "1.5_over": 1.61,
+            "1.5_under": 2.27,
+            "2.5_over": 2.32,
+            "2.5_under": 1.55
+        },
+        "player_id": "8480821",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/filip_zadina/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/filip_zadina/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/filip_zadina/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/filip_zadina/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_jesperi_kotkaniemi.csv": {
+        "average_odds": {
+            "1.5_over": 1.69,
+            "1.5_under": 2.05
+        },
+        "player_id": "8480829",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/jesperi_kotkaniemi/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jesperi_kotkaniemi/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_andrei_svechnikov.csv": {
+        "average_odds": {
+            "2.5_over": 1.7,
+            "2.5_under": 2.03
+        },
+        "player_id": "8480830",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/andrei_svechnikov/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/andrei_svechnikov/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_rasmus_dahlin.csv": {
+        "average_odds": {
+            "1.5_over": 1.64,
+            "1.5_under": 2.15,
+            "2.5_over": 2.5,
+            "2.5_under": 1.47
+        },
+        "player_id": "8480839",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/rasmus_dahlin/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/rasmus_dahlin/SVC_over_1.5joblib",
+            "shots_this_game_U2.5": "./generated_models/rasmus_dahlin/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/rasmus_dahlin/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_yegor_sharangovich.csv": {
+        "average_odds": {
+            "2.5_over": 2.1,
+            "2.5_under": 1.67,
+            "1.5_over": 1.57,
+            "1.5_under": 2.3
+        },
+        "player_id": "8481068",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/yegor_sharangovich/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/yegor_sharangovich/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/yegor_sharangovich/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/yegor_sharangovich/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_kirby_dach.csv": {
+        "average_odds": {
+            "1.5_over": 1.61,
+            "1.5_under": 2.2
+        },
+        "player_id": "8481523",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/kirby_dach/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/kirby_dach/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_n._hoglander.csv": {
+        "average_odds": {
+            "2.5_over": 2.55,
+            "2.5_under": 1.45
+        },
+        "player_id": "8481535",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/n._hoglander/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/n._hoglander/SVC_over_2.5joblib"
+        }
+    },
+    "./data/td/pp_kaapo_kakko.csv": {
+        "average_odds": {
+            "1.5_over": 1.71,
+            "1.5_under": 2.02
+        },
+        "player_id": "8481554",
+        "SVC": {
+            "shots_this_game_U1.5": "./generated_models/kaapo_kakko/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/kaapo_kakko/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_jack_hughes.csv": {
+        "average_odds": {
+            "2.5_over": 2.24,
+            "2.5_under": 1.59,
+            "1.5_over": 1.59,
+            "1.5_under": 2.24
+        },
+        "player_id": "8481559",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/jack_hughes/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/jack_hughes/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/jack_hughes/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/jack_hughes/SVC_over_1.5joblib"
+        }
+    },
+    "./data/td/pp_tim_stuetzle.csv": {
+        "average_odds": {
+            "2.5_over": 2.34,
+            "2.5_under": 1.54,
+            "1.5_over": 1.58,
+            "1.5_under": 2.27
+        },
+        "player_id": "8482116",
+        "SVC": {
+            "shots_this_game_U2.5": "./generated_models/tim_stuetzle/SVC_under_2.5.joblib",
+            "shots_this_game_O2.5": "./generated_models/tim_stuetzle/SVC_over_2.5joblib",
+            "shots_this_game_U1.5": "./generated_models/tim_stuetzle/SVC_under_1.5.joblib",
+            "shots_this_game_O1.5": "./generated_models/tim_stuetzle/SVC_over_1.5joblib"
+        }
+    }
+}

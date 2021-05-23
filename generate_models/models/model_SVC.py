@@ -24,7 +24,6 @@ from sklearn.neighbors import KNeighborsClassifier
 def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, model_edge):
     data = pd.read_csv(file_name)
     data = data.replace(np.nan, 0)
-    #pred_this = "shots_this_game_O2.5"
     
     drop_this = ["shots_this_game_total", "shots_this_game_O1.5", "shots_this_game_U1.5", "shots_this_game_O2.5", "shots_this_game_U2.5", "shots_this_game_O3.5", "shots_this_game_U3.5", "shots_this_game_O4.5", "shots_this_game_U4.5","date"]
     
@@ -94,7 +93,10 @@ def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, mo
                     best_precision = float(res["precision accuracy"])
                     best_model = pipeline
                     best_res = res 
-                    
+    
+    return { "model" : best_model, "precision" : best_precision }
+
+    """                
     if (average_odds - 1/best_precision) - model_edge:
         y_pred = best_model.predict(pred_data)
         y_pred_decision_function = best_model.decision_function(pred_data)
@@ -110,3 +112,5 @@ def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, mo
         model_pred = {}
 
     return {"pipeline" : best_model, "precision accuracy" : best_precision, "model accuracy" : best_res, "model predictions" : model_pred}
+    """
+

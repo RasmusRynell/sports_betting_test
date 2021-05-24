@@ -14,7 +14,7 @@ PRIMARY KEY(id));
 
 
 DROP TABLE IF EXISTS game;
-CREATE TABLE game (pk INTEGER, gameType VARCHAR(1), season VARCHAR(8), dateTime DATETIME, statusCode INTEGER, homeTeamId INTEGER, awayTeamId INTEGER,
+CREATE TABLE game (pk INTEGER, gameType VARCHAR(1), season VARCHAR(8), gameDate DATETIME, statusCode INTEGER, homeTeamId INTEGER, awayTeamId INTEGER,
 FOREIGN KEY(homeTeamId) REFERENCES team(id),
 FOREIGN KEY(awayTeamId) REFERENCES team(id),
 PRIMARY KEY(pk));

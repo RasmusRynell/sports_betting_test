@@ -1,3 +1,4 @@
+import datetime
 from sqlalchemy import create_engine, Column, Integer, String, Boolean, DateTime, ForeignKey, Time, Float
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -11,9 +12,10 @@ class Person(Base):
     fullName = Column('fullName', String(50))
     firstName = Column('firstName', String(50))
     lastName = Column('lastName', String(50))
-    currentTeamId = Column('currentTeamId', Integer, ForeignKey('team.id'))
-    primaryPositionCode = Column('primaryPositionCode', Integer)
     positionCode = Column('positionCode', Integer)
+
+    added = Column('added', DateTime, default=datetime.datetime.utcnow)
+    updated = Column('updated', DateTime)
 
 
 class Team(Base):
@@ -21,6 +23,10 @@ class Team(Base):
 
     id = Column('id', Integer, primary_key=True)
     name = Column('name', String(50))
+    teamName = Column('teamName', String(50))
+
+    added = Column('added', DateTime, default=datetime.datetime.utcnow)
+    updated = Column('updated', DateTime)
 
 
 class Game(Base):
@@ -40,12 +46,16 @@ class Game(Base):
     homeTeamId = Column('homeTeamId', Integer, ForeignKey('team.id'))
     awayTeamId = Column('awayTeamId', Integer, ForeignKey('team.id'))
 
+    added = Column('added', DateTime, default=datetime.datetime.utcnow)
+    updated = Column('updated', DateTime)
 
-class teamStats(Base):
+
+class TeamStats(Base):
     __tablename__ = "teamStats"
 
     gamePk = Column('gamePk', Integer, ForeignKey('game.gamePk'), primary_key=True)
     teamId = Column('teamId', Integer, ForeignKey('team.id'), primary_key=True)
+    isHome = Column('isHome', Integer)
 
     goals = Column('goals', Integer)
     pim = Column('pim', Integer)
@@ -65,15 +75,18 @@ class teamStats(Base):
     leagueRecordType = Column('leagueRecordType', String(50))
     score = Column('score', Integer)
 
+    added = Column('added', DateTime, default=datetime.datetime.utcnow)
+    updated = Column('updated', DateTime)
 
 
-class skaterStats(Base):
+
+class SkaterStats(Base):
     __tablename__ = "skaterStats"
 
     playerId = Column('playerId', Integer, ForeignKey('person.id'), primary_key=True)
     gamePk = Column('gamePk', Integer, ForeignKey('game.gamePk'), primary_key=True)
-    currentTeamId = Column('currentTeamId', Integer)
     position = Column('position', Integer)
+    team = Column('team', Integer)
 
     timeOnIce = Column('timeOnIce', Time)
     assists = Column('assists', Integer)
@@ -95,14 +108,17 @@ class skaterStats(Base):
     powerPlayTimeOnIce = Column('powerPlayTimeOnIce', Time)
     shortHandedTimeOnIce = Column('shortHandedTimeOnIce', Time)
 
+    added = Column('added', DateTime, default=datetime.datetime.utcnow)
+    updated = Column('updated', DateTime)
 
-class goalieStats(Base):
+
+class GoalieStats(Base):
     __tablename__ = "goalieStats"
 
     playerId = Column('playerId', Integer, ForeignKey('person.id'), primary_key=True)
     gamePk = Column('gamePk', Integer, ForeignKey('game.gamePk'), primary_key=True)
-    currentTeamId = Column('currentTeamId', Integer)
     position = Column('position', Integer)
+    team = Column('team', Integer)
 
     timeOnIce = Column('timeOnIce', Time)
     assists = Column('assists', Integer)
@@ -120,3 +136,6 @@ class goalieStats(Base):
     savePercentage = Column('savePercentage', Float)
     powerPlaySavePercentage = Column('powerPlaySavePercentage', Float)
     evenStrengthSavePercentage = Column('evenStrengthSavePercentage', Float)
+
+    added = Column('added', DateTime, default=datetime.datetime.utcnow)
+    updated = Column('updated', DateTime)

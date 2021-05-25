@@ -1,0 +1,16 @@
+Player model: ./generated_models/reilly_smith/SVC_under_2.5.joblib
+Precision of model: 0.602 with a edge of -0.101
+With no games betted.
+
+Player model: ./generated_models/reilly_smith/SVC_over_2.5joblib
+Precision of model: 0.355 with a edge of -0.537
+With no games betted.
+
+Player model: ./generated_models/reilly_smith/SVC_under_1.5.joblib
+Precision of model: 0.379 with a edge of -0.439
+With no games betted.
+
+Player model: ./generated_models/reilly_smith/SVC_over_1.5joblib
+Precision of model: 0.573 with a edge of -0.135
+With no games betted.
+

@@ -1,0 +1,8 @@
+Player model: ./generated_models/anthony_duclair/SVC_under_2.5.joblib
+Precision of model: 0.714 with a edge of 0.329
+With no games betted.
+
+Player model: ./generated_models/anthony_duclair/SVC_over_2.5joblib
+Precision of model: 0.227 with a edge of -2.375
+With no games betted.
+

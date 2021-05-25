@@ -1,0 +1,8 @@
+Player model: ./generated_models/steven_stamkos/SVC_under_2.5.joblib
+Precision of model: 0.453 with a edge of -0.328
+With no games betted.
+
+Player model: ./generated_models/steven_stamkos/SVC_over_2.5joblib
+Precision of model: 0.65 with a edge of 0.282
+With no games betted.
+

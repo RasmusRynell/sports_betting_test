@@ -1,0 +1,16 @@
+Player model: ./generated_models/evander_kane/SVC_under_3.5.joblib
+Precision of model: 0.479 with a edge of -0.518
+With no games betted.
+
+Player model: ./generated_models/evander_kane/SVC_over_3.5joblib
+Precision of model: 0.481 with a edge of 0.181
+With no games betted.
+
+Player model: ./generated_models/evander_kane/SVC_under_2.5.joblib
+Precision of model: 0.274 with a edge of -1.3
+With no games betted.
+
+Player model: ./generated_models/evander_kane/SVC_over_2.5joblib
+Precision of model: 0.695 with a edge of 0.091
+With no games betted.
+

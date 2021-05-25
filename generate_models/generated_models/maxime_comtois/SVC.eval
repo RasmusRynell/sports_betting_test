@@ -1,0 +1,8 @@
+Player model: ./generated_models/maxime_comtois/SVC_under_1.5.joblib
+Precision of model: 0.387 with a edge of -0.714
+With no games betted.
+
+Player model: ./generated_models/maxime_comtois/SVC_over_1.5joblib
+Precision of model: 0.339 with a edge of -1.12
+With no games betted.
+

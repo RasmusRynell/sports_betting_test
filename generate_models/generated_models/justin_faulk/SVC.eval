@@ -1,0 +1,8 @@
+Player model: ./generated_models/justin_faulk/SVC_under_1.5.joblib
+Precision of model: 0.403 with a edge of -0.301
+With no games betted.
+
+Player model: ./generated_models/justin_faulk/SVC_over_1.5joblib
+Precision of model: 0.685 with a edge of 0.16
+With no games betted.
+

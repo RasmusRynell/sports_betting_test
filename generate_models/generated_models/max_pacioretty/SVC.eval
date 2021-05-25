@@ -1,0 +1,8 @@
+Player model: ./generated_models/max_pacioretty/SVC_under_3.5.joblib
+Precision of model: 0.534 with a edge of -0.013
+With no games betted.
+
+Player model: ./generated_models/max_pacioretty/SVC_over_3.5joblib
+Precision of model: 0.499 with a edge of -0.164
+With no games betted.
+

@@ -1,0 +1,8 @@
+Player model: ./generated_models/sam_reinhart/SVC_under_2.5.joblib
+Precision of model: 0.63 with a edge of -0.027
+With no games betted.
+
+Player model: ./generated_models/sam_reinhart/SVC_over_2.5joblib
+Precision of model: 0.393 with a edge of -0.255
+With no games betted.
+

@@ -1,0 +1,15 @@
+Player model: ./generated_models/phil_kessel/SVC_under_1.5.joblib
+Precision of model: 0.272 with a edge of -1.576
+With no games betted.
+
+Player model: ./generated_models/phil_kessel/SVC_over_1.5joblib
+Precision of model: 0.771 with a edge of 0.363
+With no games betted.
+
+Player model: ./generated_models/phil_kessel/SVC_under_2.5.joblib
+Precision of model: 0.369 with a edge of -1.28
+With no games betted.
+
+Player model: ./generated_models/phil_kessel/SVC_over_2.5joblib
+Precision of model: 0.533 with a edge of 0.754
+Betted: 14 and won 21.7 which is a ROI of 1.55

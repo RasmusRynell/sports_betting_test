@@ -1,0 +1,16 @@
+Player model: ./generated_models/ryan_pulock/SVC_under_1.5.joblib
+Precision of model: 0.515 with a edge of 0.378
+With no games betted.
+
+Player model: ./generated_models/ryan_pulock/SVC_over_1.5joblib
+Precision of model: 0.597 with a edge of -0.135
+With no games betted.
+
+Player model: ./generated_models/ryan_pulock/SVC_under_2.5.joblib
+Precision of model: 0.634 with a edge of -0.037
+With no games betted.
+
+Player model: ./generated_models/ryan_pulock/SVC_over_2.5joblib
+Precision of model: 0.396 with a edge of -0.185
+With no games betted.
+

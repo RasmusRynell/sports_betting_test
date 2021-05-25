@@ -1,0 +1,8 @@
+Player model: ./generated_models/jake_debrusk/SVC_under_1.5.joblib
+Precision of model: 0.322 with a edge of -0.856
+With no games betted.
+
+Player model: ./generated_models/jake_debrusk/SVC_over_1.5joblib
+Precision of model: 0.616 with a edge of -0.043
+With no games betted.
+

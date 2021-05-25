@@ -1,0 +1,7 @@
+Player model: ./generated_models/nicholas_suzuki/SVC_under_1.5.joblib
+Precision of model: 0.656 with a edge of 0.576
+Betted: 14 and won 9.2 which is a ROI of 0.657
+Player model: ./generated_models/nicholas_suzuki/SVC_over_1.5joblib
+Precision of model: 0.79 with a edge of 0.394
+With no games betted.
+

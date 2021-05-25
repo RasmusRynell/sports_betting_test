@@ -1,0 +1,16 @@
+Player model: ./generated_models/johnny_gaudreau/SVC_under_2.5.joblib
+Precision of model: 0.479 with a edge of -0.458
+With no games betted.
+
+Player model: ./generated_models/johnny_gaudreau/SVC_over_2.5joblib
+Precision of model: 0.487 with a edge of 0.097
+With no games betted.
+
+Player model: ./generated_models/johnny_gaudreau/SVC_under_1.5.joblib
+Precision of model: 0.313 with a edge of -0.995
+With no games betted.
+
+Player model: ./generated_models/johnny_gaudreau/SVC_over_1.5joblib
+Precision of model: 0.737 with a edge of 0.243
+With no games betted.
+

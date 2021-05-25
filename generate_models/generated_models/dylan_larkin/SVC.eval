@@ -1,0 +1,16 @@
+Player model: ./generated_models/dylan_larkin/SVC_under_2.5.joblib
+Precision of model: 0.477 with a edge of 0.034
+With no games betted.
+
+Player model: ./generated_models/dylan_larkin/SVC_over_2.5joblib
+Precision of model: 0.588 with a edge of -0.051
+With no games betted.
+
+Player model: ./generated_models/dylan_larkin/SVC_under_3.5.joblib
+Precision of model: 0.673 with a edge of 0.044
+With no games betted.
+
+Player model: ./generated_models/dylan_larkin/SVC_over_3.5joblib
+Precision of model: 0.389 with a edge of -0.241
+With no games betted.
+

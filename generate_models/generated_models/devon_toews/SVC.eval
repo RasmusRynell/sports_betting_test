@@ -1,0 +1,8 @@
+Player model: ./generated_models/devon_toews/SVC_under_2.5.joblib
+Precision of model: 0.711 with a edge of 0.204
+With no games betted.
+
+Player model: ./generated_models/devon_toews/SVC_over_2.5joblib
+Precision of model: 0.273 with a edge of -1.473
+With no games betted.
+

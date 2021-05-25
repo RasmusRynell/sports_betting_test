@@ -120,6 +120,7 @@ def hook_factory(*factory_args, **factory_kwargs):
                                 newSkaterStats.playerId = playerInfo["person"]["id"]
                                 newSkaterStats.gamePk = info["gamePk"]
                                 newSkaterStats.position = playerInfo["position"]["code"]
+                                newSkaterStats.team = teamInfo["team"]["id"]
 
                                 newSkaterStats.timeOnIce = convert_string_to_time(resSkaterStats["timeOnIce"])
                                 newSkaterStats.assists = resSkaterStats["assists"]

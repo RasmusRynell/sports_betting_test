@@ -1,0 +1,15 @@
+Player model: ./generated_models/jack_hughes/SVC_under_2.5.joblib
+Precision of model: 0.72 with a edge of 0.201
+With no games betted.
+
+Player model: ./generated_models/jack_hughes/SVC_over_2.5joblib
+Precision of model: 0.597 with a edge of 0.565
+Betted: 2 and won 0 which is a ROI of 0.0
+Player model: ./generated_models/jack_hughes/SVC_under_1.5.joblib
+Precision of model: 0.389 with a edge of -0.331
+With no games betted.
+
+Player model: ./generated_models/jack_hughes/SVC_over_1.5joblib
+Precision of model: 0.729 with a edge of 0.218
+With no games betted.
+

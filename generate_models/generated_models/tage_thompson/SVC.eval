@@ -1,0 +1,8 @@
+Player model: ./generated_models/tage_thompson/SVC_under_1.5.joblib
+Precision of model: 0.51 with a edge of 0.289
+With no games betted.
+
+Player model: ./generated_models/tage_thompson/SVC_over_1.5joblib
+Precision of model: 0.522 with a edge of -0.346
+With no games betted.
+

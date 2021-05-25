@@ -1,0 +1,8 @@
+Player model: ./generated_models/n._hoglander/SVC_under_2.5.joblib
+Precision of model: 0.684 with a edge of -0.012
+With no games betted.
+
+Player model: ./generated_models/n._hoglander/SVC_over_2.5joblib
+Precision of model: 0.3 with a edge of -0.783
+With no games betted.
+

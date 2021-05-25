@@ -1,0 +1,8 @@
+Player model: ./generated_models/evgeni_malkin/SVC_under_2.5.joblib
+Precision of model: 0.371 with a edge of -0.935
+With no games betted.
+
+Player model: ./generated_models/evgeni_malkin/SVC_over_2.5joblib
+Precision of model: 0.543 with a edge of 0.058
+With no games betted.
+

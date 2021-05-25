@@ -1,0 +1,15 @@
+Player model: ./generated_models/connor_brown/SVC_under_2.5.joblib
+Precision of model: 0.812 with a edge of 0.308
+With no games betted.
+
+Player model: ./generated_models/connor_brown/SVC_over_2.5joblib
+Precision of model: 0.723 with a edge of 0.957
+Betted: 8 and won 4.8 which is a ROI of 0.6
+Player model: ./generated_models/connor_brown/SVC_under_1.5.joblib
+Precision of model: 0.545 with a edge of 0.165
+With no games betted.
+
+Player model: ./generated_models/connor_brown/SVC_over_1.5joblib
+Precision of model: 0.43 with a edge of -0.606
+With no games betted.
+

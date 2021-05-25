@@ -1,0 +1,16 @@
+Player model: ./generated_models/chris_kreider/SVC_under_2.5.joblib
+Precision of model: 0.6 with a edge of -0.087
+With no games betted.
+
+Player model: ./generated_models/chris_kreider/SVC_over_2.5joblib
+Precision of model: 0.344 with a edge of -0.657
+With no games betted.
+
+Player model: ./generated_models/chris_kreider/SVC_under_1.5.joblib
+Precision of model: 0.378 with a edge of -0.446
+With no games betted.
+
+Player model: ./generated_models/chris_kreider/SVC_over_1.5joblib
+Precision of model: 0.61 with a edge of -0.029
+With no games betted.
+

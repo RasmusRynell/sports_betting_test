@@ -1,0 +1,16 @@
+Player model: ./generated_models/joel_farabee/SVC_under_2.5.joblib
+Precision of model: 0.668 with a edge of 0.043
+With no games betted.
+
+Player model: ./generated_models/joel_farabee/SVC_over_2.5joblib
+Precision of model: 0.207 with a edge of -2.471
+With no games betted.
+
+Player model: ./generated_models/joel_farabee/SVC_under_1.5.joblib
+Precision of model: 0.509 with a edge of 0.435
+With no games betted.
+
+Player model: ./generated_models/joel_farabee/SVC_over_1.5joblib
+Precision of model: 0.603 with a edge of -0.158
+With no games betted.
+

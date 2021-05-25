@@ -40,3 +40,4 @@ def read_file(file):
                 player_info = [date, player_name, home_team, away_team, betting_site, player_odds_O, player_odds_U, player_target]
                 res.append(player_info)
     return res
+

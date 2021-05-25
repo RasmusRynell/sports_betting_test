@@ -1,0 +1,15 @@
+Player model: ./generated_models/erik_karlsson/SVC_under_1.5.joblib
+Precision of model: 0.245 with a edge of -1.862
+With no games betted.
+
+Player model: ./generated_models/erik_karlsson/SVC_over_1.5joblib
+Precision of model: 0.748 with a edge of 0.263
+With no games betted.
+
+Player model: ./generated_models/erik_karlsson/SVC_under_2.5.joblib
+Precision of model: 0.468 with a edge of -0.687
+With no games betted.
+
+Player model: ./generated_models/erik_karlsson/SVC_over_2.5joblib
+Precision of model: 0.593 with a edge of 0.914
+Betted: 18 and won 27.3 which is a ROI of 1.517

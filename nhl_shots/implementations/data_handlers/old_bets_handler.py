@@ -46,12 +46,13 @@ def match_bet_with_pk(bet):
         for gamePk in Settings.db.games["seasons"][str(season)][p_no_p]:
             game = Settings.db.games["games_information"][str(gamePk)]
             game_date = Settings.string_to_standard_datetime(game["date"]) - timedelta(hours=12)
-            if str(gamePk) == "2020020666":
-                print(str(game_date.date()))
-                print(str(bet[0]))
-                print(game["teams"])
-                print(nhl_handler.get_team_id(str(bet[2])))
-                print(nhl_handler.get_team_id(str(bet[3])))
+            # if str(gamePk) == "2020020666":
+            #     print("AAAAA")
+            #     print(str(game_date.date()))
+            #     print(str(bet[0]))
+            #     print(game["teams"])
+            #     print(nhl_handler.get_team_id(str(bet[2])))
+            #     print(nhl_handler.get_team_id(str(bet[3])))
             if str(game_date.date()) == str(bet[0]):
                 if nhl_handler.get_team_id(str(bet[2])) == game["teams"]["home"] and \
                     nhl_handler.get_team_id(str(bet[3])) == game["teams"]["away"]:

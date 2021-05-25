@@ -1,0 +1,8 @@
+Player model: ./generated_models/tyson_barrie/SVC_under_2.5.joblib
+Precision of model: 0.667 with a edge of 0.251
+With no games betted.
+
+Player model: ./generated_models/tyson_barrie/SVC_over_2.5joblib
+Precision of model: 0.37 with a edge of -0.723
+With no games betted.
+

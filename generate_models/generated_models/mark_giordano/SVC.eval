@@ -1,0 +1,16 @@
+Player model: ./generated_models/mark_giordano/SVC_under_1.5.joblib
+Precision of model: 0.318 with a edge of -0.735
+With no games betted.
+
+Player model: ./generated_models/mark_giordano/SVC_over_1.5joblib
+Precision of model: 0.656 with a edge of -0.014
+With no games betted.
+
+Player model: ./generated_models/mark_giordano/SVC_under_2.5.joblib
+Precision of model: 0.585 with a edge of -0.149
+With no games betted.
+
+Player model: ./generated_models/mark_giordano/SVC_over_2.5joblib
+Precision of model: 0.415 with a edge of -0.11
+With no games betted.
+

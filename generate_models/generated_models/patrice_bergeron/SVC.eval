@@ -1,0 +1,16 @@
+Player model: ./generated_models/patrice_bergeron/SVC_under_2.5.joblib
+Precision of model: 0.406 with a edge of -0.303
+With no games betted.
+
+Player model: ./generated_models/patrice_bergeron/SVC_over_2.5joblib
+Precision of model: 0.593 with a edge of -0.066
+With no games betted.
+
+Player model: ./generated_models/patrice_bergeron/SVC_under_3.5.joblib
+Precision of model: 0.63 with a edge of -0.037
+With no games betted.
+
+Player model: ./generated_models/patrice_bergeron/SVC_over_3.5joblib
+Precision of model: 0.412 with a edge of -0.127
+With no games betted.
+

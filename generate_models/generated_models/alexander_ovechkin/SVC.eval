@@ -1,0 +1,16 @@
+Player model: ./generated_models/alexander_ovechkin/SVC_under_3.5.joblib
+Precision of model: 0.337 with a edge of -0.927
+With no games betted.
+
+Player model: ./generated_models/alexander_ovechkin/SVC_over_3.5joblib
+Precision of model: 0.609 with a edge of 0.058
+With no games betted.
+
+Player model: ./generated_models/alexander_ovechkin/SVC_under_4.5.joblib
+Precision of model: 0.548 with a edge of -0.235
+With no games betted.
+
+Player model: ./generated_models/alexander_ovechkin/SVC_over_4.5joblib
+Precision of model: 0.441 with a edge of -0.048
+With no games betted.
+

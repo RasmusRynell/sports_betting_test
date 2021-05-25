@@ -1,0 +1,16 @@
+Player model: ./generated_models/william_karlsson/SVC_under_1.5.joblib
+Precision of model: 0.492 with a edge of 0.067
+With no games betted.
+
+Player model: ./generated_models/william_karlsson/SVC_over_1.5joblib
+Precision of model: 0.62 with a edge of 0.047
+With no games betted.
+
+Player model: ./generated_models/william_karlsson/SVC_under_2.5.joblib
+Precision of model: 0.699 with a edge of -0.001
+With no games betted.
+
+Player model: ./generated_models/william_karlsson/SVC_over_2.5joblib
+Precision of model: 0.319 with a edge of -0.505
+With no games betted.
+

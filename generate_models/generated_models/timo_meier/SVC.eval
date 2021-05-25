@@ -1,0 +1,8 @@
+Player model: ./generated_models/timo_meier/SVC_under_2.5.joblib
+Precision of model: 0.437 with a edge of -0.288
+With no games betted.
+
+Player model: ./generated_models/timo_meier/SVC_over_2.5joblib
+Precision of model: 0.492 with a edge of -0.303
+With no games betted.
+

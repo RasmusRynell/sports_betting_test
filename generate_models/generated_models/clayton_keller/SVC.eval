@@ -1,0 +1,16 @@
+Player model: ./generated_models/clayton_keller/SVC_under_2.5.joblib
+Precision of model: 0.644 with a edge of -0.023
+With no games betted.
+
+Player model: ./generated_models/clayton_keller/SVC_over_2.5joblib
+Precision of model: 0.527 with a edge of 0.462
+With no games betted.
+
+Player model: ./generated_models/clayton_keller/SVC_under_1.5.joblib
+Precision of model: 0.333 with a edge of -0.753
+With no games betted.
+
+Player model: ./generated_models/clayton_keller/SVC_over_1.5joblib
+Precision of model: 0.678 with a edge of 0.105
+With no games betted.
+

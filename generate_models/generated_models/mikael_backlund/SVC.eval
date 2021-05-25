@@ -1,0 +1,8 @@
+Player model: ./generated_models/mikael_backlund/SVC_under_2.5.joblib
+Precision of model: 0.612 with a edge of -0.064
+With no games betted.
+
+Player model: ./generated_models/mikael_backlund/SVC_over_2.5joblib
+Precision of model: 0.457 with a edge of 0.092
+With no games betted.
+

@@ -1,0 +1,16 @@
+Player model: ./generated_models/joel_eriksson_ek/SVC_under_2.5.joblib
+Precision of model: 0.765 with a edge of 0.203
+With no games betted.
+
+Player model: ./generated_models/joel_eriksson_ek/SVC_over_2.5joblib
+Precision of model: 0.179 with a edge of -3.187
+With no games betted.
+
+Player model: ./generated_models/joel_eriksson_ek/SVC_under_1.5.joblib
+Precision of model: 0.474 with a edge of 0.03
+With no games betted.
+
+Player model: ./generated_models/joel_eriksson_ek/SVC_over_1.5joblib
+Precision of model: 0.479 with a edge of -0.448
+With no games betted.
+

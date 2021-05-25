@@ -1,0 +1,16 @@
+Player model: ./generated_models/a._killorn/SVC_under_2.5.joblib
+Precision of model: 0.671 with a edge of 0.01
+With no games betted.
+
+Player model: ./generated_models/a._killorn/SVC_over_2.5joblib
+Precision of model: 0.325 with a edge of -0.637
+With no games betted.
+
+Player model: ./generated_models/a._killorn/SVC_under_1.5.joblib
+Precision of model: 0.45 with a edge of -0.052
+With no games betted.
+
+Player model: ./generated_models/a._killorn/SVC_over_1.5joblib
+Precision of model: 0.563 with a edge of -0.156
+With no games betted.
+

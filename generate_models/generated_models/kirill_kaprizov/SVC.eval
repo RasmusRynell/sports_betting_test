@@ -1,0 +1,8 @@
+Player model: ./generated_models/kirill_kaprizov/SVC_under_2.5.joblib
+Precision of model: 0.607 with a edge of 0.093
+With no games betted.
+
+Player model: ./generated_models/kirill_kaprizov/SVC_over_2.5joblib
+Precision of model: 0.217 with a edge of -2.638
+With no games betted.
+

@@ -1,0 +1,8 @@
+Player model: ./generated_models/roope_hintz/SVC_under_2.5.joblib
+Precision of model: 0.638 with a edge of 0.073
+With no games betted.
+
+Player model: ./generated_models/roope_hintz/SVC_over_2.5joblib
+Precision of model: 0.22 with a edge of -2.415
+With no games betted.
+

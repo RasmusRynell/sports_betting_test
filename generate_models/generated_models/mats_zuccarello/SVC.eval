@@ -1,0 +1,16 @@
+Player model: ./generated_models/mats_zuccarello/SVC_under_1.5.joblib
+Precision of model: 0.423 with a edge of -0.234
+With no games betted.
+
+Player model: ./generated_models/mats_zuccarello/SVC_over_1.5joblib
+Precision of model: 0.619 with a edge of 0.024
+With no games betted.
+
+Player model: ./generated_models/mats_zuccarello/SVC_under_2.5.joblib
+Precision of model: 0.717 with a edge of 0.085
+With no games betted.
+
+Player model: ./generated_models/mats_zuccarello/SVC_over_2.5joblib
+Precision of model: 0.355 with a edge of -0.347
+With no games betted.
+

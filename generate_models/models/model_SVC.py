@@ -46,7 +46,7 @@ def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, mo
     for opt in (opts):
         for eval in evals:
             if(opt == "normal"):
-                pipeline = make_pipeline(StandardScaler(), SVC(class_weight="balanced"))#, probability=True))
+                pipeline = make_pipeline(StandardScaler(), SVC(class_weight="balanced", probability=True))
                 res = eval_model(pipeline, X_all, Y_all)
 
                 if(float(res["precision accuracy"]) > best_precision):
@@ -55,7 +55,7 @@ def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, mo
                     best_res = res
 
             elif(opt == "GridSearchCV"):
-                model = SVC(class_weight="balanced")#, probability=True)
+                model = SVC(class_weight="balanced", probability=True)
                 param_grid = [
                     {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
                     {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
@@ -75,7 +75,7 @@ def generate_model(file_name, pred_this, earliest_gamePk_index, average_odds, mo
    
 
             elif(opt == "RandomizedSearchCV"):
-                model = SVC(class_weight="balanced")#, probability=True)
+                model = SVC(class_weight="balanced", probability=True)
                 rand_list = {"C": stats.uniform(0.1, 1000), 
                     "kernel": ["rbf", "poly"],
                     "gamma": stats.uniform(0.01, 100)}

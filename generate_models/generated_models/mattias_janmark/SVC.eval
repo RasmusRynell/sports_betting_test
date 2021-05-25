@@ -1,0 +1,7 @@
+Player model: ./generated_models/mattias_janmark/SVC_under_1.5.joblib
+Precision of model: 0.593 with a edge of 0.614
+Betted: 2 and won 0 which is a ROI of 0.0
+Player model: ./generated_models/mattias_janmark/SVC_over_1.5joblib
+Precision of model: 0.418 with a edge of -0.842
+With no games betted.
+

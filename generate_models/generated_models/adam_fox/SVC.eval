@@ -1,0 +1,8 @@
+Player model: ./generated_models/adam_fox/SVC_under_1.5.joblib
+Precision of model: 0.352 with a edge of -0.711
+With no games betted.
+
+Player model: ./generated_models/adam_fox/SVC_over_1.5joblib
+Precision of model: 0.516 with a edge of -0.298
+With no games betted.
+

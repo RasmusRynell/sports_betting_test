@@ -1,0 +1,8 @@
+Player model: ./generated_models/esa_lindell/SVC_under_2.5.joblib
+Precision of model: 0.775 with a edge of 0.14
+With no games betted.
+
+Player model: ./generated_models/esa_lindell/SVC_over_2.5joblib
+Precision of model: 0.254 with a edge of -1.307
+With no games betted.
+

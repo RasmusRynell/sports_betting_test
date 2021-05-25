@@ -1,0 +1,15 @@
+Player model: ./generated_models/rasmus_andersson/SVC_under_2.5.joblib
+Precision of model: 0.773 with a edge of 0.556
+Betted: 2 and won 0 which is a ROI of 0.0
+Player model: ./generated_models/rasmus_andersson/SVC_over_2.5joblib
+Precision of model: 0.271 with a edge of -1.84
+With no games betted.
+
+Player model: ./generated_models/rasmus_andersson/SVC_under_1.5.joblib
+Precision of model: 0.519 with a edge of -0.157
+With no games betted.
+
+Player model: ./generated_models/rasmus_andersson/SVC_over_1.5joblib
+Precision of model: 0.479 with a edge of -0.138
+With no games betted.
+

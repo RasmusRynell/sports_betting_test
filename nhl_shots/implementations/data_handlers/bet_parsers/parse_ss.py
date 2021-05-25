@@ -41,6 +41,6 @@ def read_file(file):
     return res
 
 
-print(read_file("../../../saved_bets/2021-03-23.ss"))
+#print(read_file("../../../saved_bets/2021-03-23.ss"))
 
 

@@ -1,0 +1,16 @@
+Player model: ./generated_models/torey_krug/SVC_under_2.5.joblib
+Precision of model: 0.551 with a edge of -0.235
+With no games betted.
+
+Player model: ./generated_models/torey_krug/SVC_over_2.5joblib
+Precision of model: 0.513 with a edge of 0.291
+With no games betted.
+
+Player model: ./generated_models/torey_krug/SVC_under_1.5.joblib
+Precision of model: 0.332 with a edge of -0.762
+With no games betted.
+
+Player model: ./generated_models/torey_krug/SVC_over_1.5joblib
+Precision of model: 0.7 with a edge of 0.151
+With no games betted.
+

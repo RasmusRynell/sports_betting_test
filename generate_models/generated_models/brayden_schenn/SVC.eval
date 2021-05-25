@@ -1,0 +1,16 @@
+Player model: ./generated_models/brayden_schenn/SVC_under_1.5.joblib
+Precision of model: 0.374 with a edge of -0.384
+With no games betted.
+
+Player model: ./generated_models/brayden_schenn/SVC_over_1.5joblib
+Precision of model: 0.579 with a edge of -0.167
+With no games betted.
+
+Player model: ./generated_models/brayden_schenn/SVC_under_2.5.joblib
+Precision of model: 0.678 with a edge of 0.045
+With no games betted.
+
+Player model: ./generated_models/brayden_schenn/SVC_over_2.5joblib
+Precision of model: 0.336 with a edge of -0.586
+With no games betted.
+

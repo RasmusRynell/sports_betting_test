@@ -1,0 +1,8 @@
+Player model: ./generated_models/dominik_kubalik/SVC_under_2.5.joblib
+Precision of model: 0.372 with a edge of -0.898
+With no games betted.
+
+Player model: ./generated_models/dominik_kubalik/SVC_over_2.5joblib
+Precision of model: 0.341 with a edge of -1.013
+With no games betted.
+

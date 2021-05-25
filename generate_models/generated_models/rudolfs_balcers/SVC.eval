@@ -1,0 +1,15 @@
+Player model: ./generated_models/rudolfs_balcers/SVC_under_1.5.joblib
+Precision of model: 0.584 with a edge of 0.868
+Betted: 2 and won 0 which is a ROI of 0.0
+Player model: ./generated_models/rudolfs_balcers/SVC_over_1.5joblib
+Precision of model: 0.622 with a edge of -0.158
+With no games betted.
+
+Player model: ./generated_models/rudolfs_balcers/SVC_under_2.5.joblib
+Precision of model: 0.846 with a edge of 0.218
+With no games betted.
+
+Player model: ./generated_models/rudolfs_balcers/SVC_over_2.5joblib
+Precision of model: 0.029 with a edge of -31.733
+With no games betted.
+

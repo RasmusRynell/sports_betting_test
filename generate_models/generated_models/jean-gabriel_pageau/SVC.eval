@@ -1,0 +1,8 @@
+Player model: ./generated_models/jean-gabriel_pageau/SVC_under_1.5.joblib
+Precision of model: 0.462 with a edge of -0.245
+With no games betted.
+
+Player model: ./generated_models/jean-gabriel_pageau/SVC_over_1.5joblib
+Precision of model: 0.517 with a edge of -0.154
+With no games betted.
+

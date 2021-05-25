@@ -1,0 +1,16 @@
+Player model: ./generated_models/evgeny_kuznetsov/SVC_under_1.5.joblib
+Precision of model: 0.381 with a edge of -0.415
+With no games betted.
+
+Player model: ./generated_models/evgeny_kuznetsov/SVC_over_1.5joblib
+Precision of model: 0.63 with a edge of 0.013
+With no games betted.
+
+Player model: ./generated_models/evgeny_kuznetsov/SVC_under_2.5.joblib
+Precision of model: 0.619 with a edge of -0.116
+With no games betted.
+
+Player model: ./generated_models/evgeny_kuznetsov/SVC_over_2.5joblib
+Precision of model: 0.374 with a edge of -0.244
+With no games betted.
+

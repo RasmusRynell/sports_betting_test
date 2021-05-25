@@ -1,0 +1,16 @@
+Player model: ./generated_models/matt_dumba/SVC_under_2.5.joblib
+Precision of model: 0.742 with a edge of 0.192
+With no games betted.
+
+Player model: ./generated_models/matt_dumba/SVC_over_2.5joblib
+Precision of model: 0.442 with a edge of 0.078
+With no games betted.
+
+Player model: ./generated_models/matt_dumba/SVC_under_1.5.joblib
+Precision of model: 0.481 with a edge of 0.101
+With no games betted.
+
+Player model: ./generated_models/matt_dumba/SVC_over_1.5joblib
+Precision of model: 0.618 with a edge of -0.008
+With no games betted.
+

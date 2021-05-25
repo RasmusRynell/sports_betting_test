@@ -1,0 +1,16 @@
+Player model: ./generated_models/jaden_schwartz/SVC_under_1.5.joblib
+Precision of model: 0.3 with a edge of -0.893
+With no games betted.
+
+Player model: ./generated_models/jaden_schwartz/SVC_over_1.5joblib
+Precision of model: 0.675 with a edge of 0.019
+With no games betted.
+
+Player model: ./generated_models/jaden_schwartz/SVC_under_2.5.joblib
+Precision of model: 0.541 with a edge of -0.278
+With no games betted.
+
+Player model: ./generated_models/jaden_schwartz/SVC_over_2.5joblib
+Precision of model: 0.361 with a edge of -0.48
+With no games betted.
+

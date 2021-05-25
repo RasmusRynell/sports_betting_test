@@ -1,0 +1,16 @@
+Player model: ./generated_models/sean_monahan/SVC_under_2.5.joblib
+Precision of model: 0.61 with a edge of -0.099
+With no games betted.
+
+Player model: ./generated_models/sean_monahan/SVC_over_2.5joblib
+Precision of model: 0.536 with a edge of 0.464
+With no games betted.
+
+Player model: ./generated_models/sean_monahan/SVC_under_1.5.joblib
+Precision of model: 0.313 with a edge of -0.895
+With no games betted.
+
+Player model: ./generated_models/sean_monahan/SVC_over_1.5joblib
+Precision of model: 0.682 with a edge of 0.084
+With no games betted.
+

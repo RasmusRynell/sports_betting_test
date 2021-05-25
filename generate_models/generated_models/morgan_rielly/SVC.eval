@@ -1,0 +1,16 @@
+Player model: ./generated_models/morgan_rielly/SVC_under_2.5.joblib
+Precision of model: 0.609 with a edge of -0.082
+With no games betted.
+
+Player model: ./generated_models/morgan_rielly/SVC_over_2.5joblib
+Precision of model: 0.398 with a edge of -0.153
+With no games betted.
+
+Player model: ./generated_models/morgan_rielly/SVC_under_1.5.joblib
+Precision of model: 0.346 with a edge of -0.71
+With no games betted.
+
+Player model: ./generated_models/morgan_rielly/SVC_over_1.5joblib
+Precision of model: 0.584 with a edge of -0.092
+With no games betted.
+

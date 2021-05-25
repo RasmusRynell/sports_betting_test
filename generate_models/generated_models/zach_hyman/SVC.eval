@@ -1,0 +1,8 @@
+Player model: ./generated_models/zach_hyman/SVC_under_2.5.joblib
+Precision of model: 0.686 with a edge of 0.162
+With no games betted.
+
+Player model: ./generated_models/zach_hyman/SVC_over_2.5joblib
+Precision of model: 0.39 with a edge of -0.394
+With no games betted.
+

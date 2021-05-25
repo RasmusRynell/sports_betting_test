@@ -1,0 +1,16 @@
+Player model: ./generated_models/calle_jarnkrok/SVC_under_1.5.joblib
+Precision of model: 0.595 with a edge of 0.399
+With no games betted.
+
+Player model: ./generated_models/calle_jarnkrok/SVC_over_1.5joblib
+Precision of model: 0.482 with a edge of -0.395
+With no games betted.
+
+Player model: ./generated_models/calle_jarnkrok/SVC_under_2.5.joblib
+Precision of model: 0.798 with a edge of 0.317
+With no games betted.
+
+Player model: ./generated_models/calle_jarnkrok/SVC_over_2.5joblib
+Precision of model: 0.236 with a edge of -1.987
+With no games betted.
+

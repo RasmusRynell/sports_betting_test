@@ -1,0 +1,8 @@
+Player model: ./generated_models/frank_vatrano/SVC_under_2.5.joblib
+Precision of model: 0.528 with a edge of -0.114
+With no games betted.
+
+Player model: ./generated_models/frank_vatrano/SVC_over_2.5joblib
+Precision of model: 0.459 with a edge of -0.199
+With no games betted.
+

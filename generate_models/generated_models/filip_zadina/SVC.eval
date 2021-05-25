@@ -1,0 +1,16 @@
+Player model: ./generated_models/filip_zadina/SVC_under_1.5.joblib
+Precision of model: 0.455 with a edge of 0.072
+With no games betted.
+
+Player model: ./generated_models/filip_zadina/SVC_over_1.5joblib
+Precision of model: 0.56 with a edge of -0.176
+With no games betted.
+
+Player model: ./generated_models/filip_zadina/SVC_under_2.5.joblib
+Precision of model: 0.696 with a edge of 0.113
+With no games betted.
+
+Player model: ./generated_models/filip_zadina/SVC_over_2.5joblib
+Precision of model: 0.38 with a edge of -0.312
+With no games betted.
+

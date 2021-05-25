@@ -1,0 +1,16 @@
+Player model: ./generated_models/drake_batherson/SVC_under_2.5.joblib
+Precision of model: 0.786 with a edge of 0.218
+With no games betted.
+
+Player model: ./generated_models/drake_batherson/SVC_over_2.5joblib
+Precision of model: 0.129 with a edge of -5.252
+With no games betted.
+
+Player model: ./generated_models/drake_batherson/SVC_under_1.5.joblib
+Precision of model: 0.54 with a edge of 0.388
+With no games betted.
+
+Player model: ./generated_models/drake_batherson/SVC_over_1.5joblib
+Precision of model: 0.412 with a edge of -0.837
+With no games betted.
+

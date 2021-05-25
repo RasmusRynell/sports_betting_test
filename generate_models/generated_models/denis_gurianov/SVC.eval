@@ -1,0 +1,16 @@
+Player model: ./generated_models/denis_gurianov/SVC_under_2.5.joblib
+Precision of model: 0.618 with a edge of 0.002
+With no games betted.
+
+Player model: ./generated_models/denis_gurianov/SVC_over_2.5joblib
+Precision of model: 0.296 with a edge of -1.188
+With no games betted.
+
+Player model: ./generated_models/denis_gurianov/SVC_under_1.5.joblib
+Precision of model: 0.458 with a edge of 0.217
+With no games betted.
+
+Player model: ./generated_models/denis_gurianov/SVC_over_1.5joblib
+Precision of model: 0.609 with a edge of -0.122
+With no games betted.
+

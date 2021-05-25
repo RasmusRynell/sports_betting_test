@@ -1,0 +1,8 @@
+Player model: ./generated_models/anthony_mantha/SVC_under_2.5.joblib
+Precision of model: 0.558 with a edge of -0.082
+With no games betted.
+
+Player model: ./generated_models/anthony_mantha/SVC_over_2.5joblib
+Precision of model: 0.487 with a edge of -0.023
+With no games betted.
+

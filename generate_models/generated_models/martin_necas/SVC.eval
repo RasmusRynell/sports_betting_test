@@ -1,0 +1,16 @@
+Player model: ./generated_models/martin_necas/SVC_under_2.5.joblib
+Precision of model: 0.815 with a edge of 0.303
+With no games betted.
+
+Player model: ./generated_models/martin_necas/SVC_over_2.5joblib
+Precision of model: 0.117 with a edge of -6.187
+With no games betted.
+
+Player model: ./generated_models/martin_necas/SVC_under_1.5.joblib
+Precision of model: 0.492 with a edge of 0.467
+With no games betted.
+
+Player model: ./generated_models/martin_necas/SVC_over_1.5joblib
+Precision of model: 0.263 with a edge of -2.302
+With no games betted.
+

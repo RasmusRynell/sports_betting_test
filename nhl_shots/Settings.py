@@ -104,7 +104,16 @@ old_player_nicknames = {
                         "K. Palmieri": "Kyle Palmieri",
                         "R. Donato": "RYAN DONATO",
                         "N. Hischier": "Nico Hischier",
-                        "F. Hamilton": "Freddie Hamilton"
+                        "F. Hamilton": "Freddie Hamilton",
+                        "R. Ellis": "Ryan Ellis",
+                        "T. Meier": "TIMO MEIER",
+                        "A. Mantha": "ANTHONY MANTHA",
+                        "J. Robertson": "Jason Robertson",
+                        "J. Carter": "Jeff Carter",
+                        "Y. Sharangovich": "Yegor Sharangovich",
+                        "O. Wahlstrom": "Oliver Wahlstrom",
+                        "yevgeni malkin": "Evgeni Malkin",
+                        "alexander wennberg": "Alex Wennberg"
                         }
 
 teams_translate = {}
@@ -145,7 +154,8 @@ old_teams_translate = {"arz coyotes": "arizona coyotes",
                        "St Louis Blues":"St. Louis Blues",
                        "Montreal Canadiens": "Montréal Canadiens",
                        "St.Louis Blues":"St. Louis Blues",
-                       "Columbus Blue": "Columbus Blue Jackets"
+                       "Columbus Blue": "Columbus Blue Jackets",
+                       "Columbus Blue Jacke": "Columbus Blue Jackets"
                        }
 
 

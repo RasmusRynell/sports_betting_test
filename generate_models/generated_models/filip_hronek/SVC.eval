@@ -1,0 +1,16 @@
+Player model: ./generated_models/filip_hronek/SVC_under_1.5.joblib
+Precision of model: 0.478 with a edge of 0.158
+With no games betted.
+
+Player model: ./generated_models/filip_hronek/SVC_over_1.5joblib
+Precision of model: 0.493 with a edge of -0.458
+With no games betted.
+
+Player model: ./generated_models/filip_hronek/SVC_under_2.5.joblib
+Precision of model: 0.681 with a edge of 0.012
+With no games betted.
+
+Player model: ./generated_models/filip_hronek/SVC_over_2.5joblib
+Precision of model: 0.221 with a edge of -2.045
+With no games betted.
+

@@ -1,0 +1,16 @@
+Player model: ./generated_models/matt_grzelcyk/SVC_under_1.5.joblib
+Precision of model: 0.551 with a edge of 0.395
+With no games betted.
+
+Player model: ./generated_models/matt_grzelcyk/SVC_over_1.5joblib
+Precision of model: 0.434 with a edge of -0.704
+With no games betted.
+
+Player model: ./generated_models/matt_grzelcyk/SVC_under_2.5.joblib
+Precision of model: 0.818 with a edge of 0.338
+With no games betted.
+
+Player model: ./generated_models/matt_grzelcyk/SVC_over_2.5joblib
+Precision of model: 0.112 with a edge of -6.659
+With no games betted.
+

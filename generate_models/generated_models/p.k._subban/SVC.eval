@@ -1,0 +1,16 @@
+Player model: ./generated_models/p.k._subban/SVC_under_1.5.joblib
+Precision of model: 0.326 with a edge of -0.797
+With no games betted.
+
+Player model: ./generated_models/p.k._subban/SVC_over_1.5joblib
+Precision of model: 0.661 with a edge of 0.057
+With no games betted.
+
+Player model: ./generated_models/p.k._subban/SVC_under_2.5.joblib
+Precision of model: 0.548 with a edge of -0.365
+With no games betted.
+
+Player model: ./generated_models/p.k._subban/SVC_over_2.5joblib
+Precision of model: 0.464 with a edge of 0.355
+With no games betted.
+

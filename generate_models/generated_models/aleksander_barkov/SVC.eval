@@ -1,0 +1,16 @@
+Player model: ./generated_models/aleksander_barkov/SVC_under_2.5.joblib
+Precision of model: 0.562 with a edge of 0.411
+With no games betted.
+
+Player model: ./generated_models/aleksander_barkov/SVC_over_2.5joblib
+Precision of model: 0.6 with a edge of -0.057
+With no games betted.
+
+Player model: ./generated_models/aleksander_barkov/SVC_under_3.5.joblib
+Precision of model: 0.767 with a edge of 0.436
+With no games betted.
+
+Player model: ./generated_models/aleksander_barkov/SVC_over_3.5joblib
+Precision of model: 0.291 with a edge of -1.456
+With no games betted.
+

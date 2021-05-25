@@ -1,0 +1,8 @@
+Player model: ./generated_models/christian_dvorak/SVC_under_1.5.joblib
+Precision of model: 0.509 with a edge of -0.045
+With no games betted.
+
+Player model: ./generated_models/christian_dvorak/SVC_over_1.5joblib
+Precision of model: 0.509 with a edge of -0.185
+With no games betted.
+

@@ -1,0 +1,8 @@
+Player model: ./generated_models/keith_yandle/SVC_under_1.5.joblib
+Precision of model: 0.277 with a edge of -1.52
+With no games betted.
+
+Player model: ./generated_models/keith_yandle/SVC_over_1.5joblib
+Precision of model: 0.618 with a edge of 0.072
+With no games betted.
+

@@ -1,0 +1,8 @@
+Player model: ./generated_models/vladislav_namestnikov/SVC_under_1.5.joblib
+Precision of model: 0.601 with a edge of 0.336
+With no games betted.
+
+Player model: ./generated_models/vladislav_namestnikov/SVC_over_1.5joblib
+Precision of model: 0.432 with a edge of -0.595
+With no games betted.
+

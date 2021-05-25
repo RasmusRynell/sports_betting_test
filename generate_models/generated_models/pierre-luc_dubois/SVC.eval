@@ -1,0 +1,8 @@
+Player model: ./generated_models/pierre-luc_dubois/SVC_under_1.5.joblib
+Precision of model: 0.41 with a edge of -0.379
+With no games betted.
+
+Player model: ./generated_models/pierre-luc_dubois/SVC_over_1.5joblib
+Precision of model: 0.663 with a edge of 0.182
+With no games betted.
+

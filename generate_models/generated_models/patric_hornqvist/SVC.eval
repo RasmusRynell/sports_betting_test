@@ -1,0 +1,16 @@
+Player model: ./generated_models/patric_hornqvist/SVC_under_2.5.joblib
+Precision of model: 0.387 with a edge of -0.394
+With no games betted.
+
+Player model: ./generated_models/patric_hornqvist/SVC_over_2.5joblib
+Precision of model: 0.631 with a edge of 0.025
+With no games betted.
+
+Player model: ./generated_models/patric_hornqvist/SVC_under_3.5.joblib
+Precision of model: 0.633 with a edge of -0.01
+With no games betted.
+
+Player model: ./generated_models/patric_hornqvist/SVC_over_3.5joblib
+Precision of model: 0.417 with a edge of -0.148
+With no games betted.
+

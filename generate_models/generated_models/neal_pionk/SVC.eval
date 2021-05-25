@@ -1,0 +1,16 @@
+Player model: ./generated_models/neal_pionk/SVC_under_1.5.joblib
+Precision of model: 0.308 with a edge of -1.157
+With no games betted.
+
+Player model: ./generated_models/neal_pionk/SVC_over_1.5joblib
+Precision of model: 0.583 with a edge of -0.045
+With no games betted.
+
+Player model: ./generated_models/neal_pionk/SVC_under_2.5.joblib
+Precision of model: 0.714 with a edge of 0.049
+With no games betted.
+
+Player model: ./generated_models/neal_pionk/SVC_over_2.5joblib
+Precision of model: 0.364 with a edge of -0.197
+With no games betted.
+

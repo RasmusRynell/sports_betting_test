@@ -1,0 +1,8 @@
+Player model: ./generated_models/jamie_benn/SVC_under_2.5.joblib
+Precision of model: 0.495 with a edge of -0.34
+With no games betted.
+
+Player model: ./generated_models/jamie_benn/SVC_over_2.5joblib
+Precision of model: 0.501 with a edge of 0.074
+With no games betted.
+

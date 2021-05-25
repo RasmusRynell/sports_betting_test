@@ -9,6 +9,8 @@ from models.eval_model import print_eval
 from models.eval_model import unit_bet
 from joblib import dump, load
 
+from evaluations.eval_model import eval_model
+
 
 def split_average_odds(average_odds):
     average_odds = average_odds.split(",")
@@ -20,7 +22,7 @@ def split_average_odds(average_odds):
     return res
 
 def generate_models(allModels=False, SVC=False):
-    f = open("./data/input.txt")
+    f = open("./data/input_tmp.txt")
     files = f.readlines()
     f.close()
     #Read bet info
@@ -54,7 +56,7 @@ def generate_models(allModels=False, SVC=False):
                 SVC = True
             
             if(SVC):
-                model_name = "SVC"
+                model_name = "SVC_proba"
                 model_under = model_SVC.generate_model(file, "shots_this_game_U"+str(over_under), int(earliest_gamePk_index), average_odds[over_under + "_under"], model_edge)
                 model_over = model_SVC.generate_model(file, "shots_this_game_O"+str(over_under), int(earliest_gamePk_index), average_odds[over_under + "_over"], model_edge)
                 if model_name not in res[file]:
@@ -77,9 +79,25 @@ def generate_models(allModels=False, SVC=False):
         outfile.write(json_object)
 
 
+def eval_models(allModels=False, SVC=False):
+    f = open('./data/all_bets.json',)
+    all_bets = json.load(f)
+    f.close()
+    f = open('./generated_models/model_index.json',)
+    model_index = json.load(f)
+    f.close()
+    if(SVC):
+        # model_edge = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+        # decision_boundary = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+        # for edge in tqdm(model_edge):
+        #     for decision in decision_boundary:
+        #         eval_model(all_bets, model_index, "SVC", edge, decision)
+
+        eval_model(all_bets, model_index, "SVC", 0.5, 0.0)
+
 if __name__ == "__main__":
     parser=argh.ArghParser()
-    parser.add_commands([generate_models])
+    parser.add_commands([generate_models, eval_models])
     parser.dispatch()
 
 

@@ -1,0 +1,7 @@
+Player model: ./generated_models/bryan_rust/SVC_under_2.5.joblib
+Precision of model: 0.685 with a edge of 0.64
+Betted: 38 and won 37.2 which is a ROI of 0.979
+Player model: ./generated_models/bryan_rust/SVC_over_2.5joblib
+Precision of model: 0.233 with a edge of -2.622
+With no games betted.
+

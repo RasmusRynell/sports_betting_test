@@ -1,0 +1,16 @@
+Player model: ./generated_models/brendan_gallagher/SVC_under_3.5.joblib
+Precision of model: 0.639 with a edge of 0.145
+With no games betted.
+
+Player model: ./generated_models/brendan_gallagher/SVC_over_3.5joblib
+Precision of model: 0.352 with a edge of -0.811
+With no games betted.
+
+Player model: ./generated_models/brendan_gallagher/SVC_under_2.5.joblib
+Precision of model: 0.385 with a edge of -0.287
+With no games betted.
+
+Player model: ./generated_models/brendan_gallagher/SVC_over_2.5joblib
+Precision of model: 0.632 with a edge of -0.042
+With no games betted.
+

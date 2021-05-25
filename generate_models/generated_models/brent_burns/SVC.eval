@@ -1,0 +1,16 @@
+Player model: ./generated_models/brent_burns/SVC_under_2.5.joblib
+Precision of model: 0.324 with a edge of -1.296
+With no games betted.
+
+Player model: ./generated_models/brent_burns/SVC_over_2.5joblib
+Precision of model: 0.64 with a edge of 0.368
+With no games betted.
+
+Player model: ./generated_models/brent_burns/SVC_under_3.5.joblib
+Precision of model: 0.534 with a edge of -0.373
+With no games betted.
+
+Player model: ./generated_models/brent_burns/SVC_over_3.5joblib
+Precision of model: 0.386 with a edge of -0.151
+With no games betted.
+

@@ -39,9 +39,7 @@ def add_game_to_db(session, game):
         print(e)
         traceback.print_exc()
 
-
-def fill_all_games_from_season(session, season):
-    def hook_factory(*factory_args, **factory_kwargs):
+def hook_factory(*factory_args, **factory_kwargs):
         def add_game_stats_to_db(res, *args, **kwargs):
             try:
                 info = factory_kwargs["info"]
@@ -54,10 +52,11 @@ def fill_all_games_from_season(session, season):
                     teamInfo = res["teams"][home_or_away]
                     resTeamStats = teamInfo["teamStats"]["teamSkaterStats"]
 
-                    newTeamStats = teamStats()
+                    newTeamStats = TeamStats()
 
                     newTeamStats.gamePk = info["gamePk"]
                     newTeamStats.teamId = teamInfo["team"]["id"]
+                    newTeamStats.isHome = (home_or_away == "home")
                     newTeamStats.goals = resTeamStats["goals"]
                     newTeamStats.pim = resTeamStats["pim"]
                     newTeamStats.shots = resTeamStats["shots"]
@@ -86,12 +85,12 @@ def fill_all_games_from_season(session, season):
                             if "goalieStats" in playerInfo["stats"]:
                                 resGoalieStats = playerInfo["stats"]["goalieStats"]
 
-                                newGoalieStats = goalieStats()
+                                newGoalieStats = GoalieStats()
 
                                 newGoalieStats.playerId = playerInfo["person"]["id"]
                                 newGoalieStats.gamePk = info["gamePk"]
-                                newGoalieStats.currentTeamId = playerInfo["person"]["currentTeam"]["id"]
                                 newGoalieStats.position = playerInfo["position"]["code"]
+                                newGoalieStats.team = teamInfo["team"]["id"]
 
                                 newGoalieStats.timeOnIce = convert_string_to_time(resGoalieStats["timeOnIce"])
                                 newGoalieStats.assists = resGoalieStats["assists"]
@@ -105,7 +104,7 @@ def fill_all_games_from_season(session, season):
                                 newGoalieStats.shortHandedShotsAgainst = resGoalieStats["shortHandedShotsAgainst"]
                                 newGoalieStats.evenShotsAgainst = resGoalieStats["evenShotsAgainst"]
                                 newGoalieStats.powerPlayShotsAgainst = resGoalieStats["powerPlayShotsAgainst"]
-                                newGoalieStats.decision = resGoalieStats["decision"]
+                                newGoalieStats.decision = resGoalieStats["decision"] if "decision" in resGoalieStats else None
                                 newGoalieStats.savePercentage = resGoalieStats["savePercentage"] if "savePercentage" in resGoalieStats else None
                                 newGoalieStats.powerPlaySavePercentage = resGoalieStats["powerPlaySavePercentage"] if "powerPlaySavePercentage" in resGoalieStats else None
                                 newGoalieStats.evenStrengthSavePercentage = resGoalieStats["evenStrengthSavePercentage"] if "evenStrengthSavePercentage" in resGoalieStats else None
@@ -116,11 +115,10 @@ def fill_all_games_from_season(session, season):
                             if "skaterStats" in playerInfo["stats"]:
                                 resSkaterStats = playerInfo["stats"]["skaterStats"]
 
-                                newSkaterStats = skaterStats()
+                                newSkaterStats = SkaterStats()
                                 
                                 newSkaterStats.playerId = playerInfo["person"]["id"]
                                 newSkaterStats.gamePk = info["gamePk"]
-                                newSkaterStats.currentTeamId = playerInfo["person"]["currentTeam"]["id"]
                                 newSkaterStats.position = playerInfo["position"]["code"]
 
                                 newSkaterStats.timeOnIce = convert_string_to_time(resSkaterStats["timeOnIce"])
@@ -153,7 +151,7 @@ def fill_all_games_from_season(session, season):
 
         return add_game_stats_to_db
 
-
+def fill_all_games_from_season(session, season):
 
     res = requests.get('https://statsapi.web.nhl.com/api/v1/schedule?season={}'.format(season))
     res = res.json()
@@ -161,34 +159,95 @@ def fill_all_games_from_season(session, season):
     base = "https://statsapi.web.nhl.com/api/v1/game/"
     urls = []
 
+    games_that_dont_have_to_be_updated = {}
+    games = session.query(Game).filter(Game.statusCode == 7)
+    for game in games:
+        games_that_dont_have_to_be_updated[game.gamePk] = game
+
     if "dates" in res:
         for date in res["dates"]:
             for game in date["games"]:
-                add_game_to_db(session, game)
-                gamePk = game["gamePk"]
-                urls.append((base + str(gamePk) + "/boxscore", { "session": session, "gamePk": str(gamePk), "stats" : {game["teams"]["home"]["team"]["id"]: {"wins": game["teams"]["home"]["leagueRecord"]["wins"],
-                                                                                                                "losses": game["teams"]["home"]["leagueRecord"]["losses"],
-                                                                                                                "ot": game["teams"]["home"]["leagueRecord"]["ot"] if "ot" in game["teams"]["home"]["leagueRecord"] else "",
-                                                                                                                "type": game["teams"]["home"]["leagueRecord"]["type"],
-                                                                                                                "score": game["teams"]["home"]["score"]},
-                                                                            game["teams"]["away"]["team"]["id"]: {"wins": game["teams"]["away"]["leagueRecord"]["wins"],
-                                                                                                                "losses": game["teams"]["away"]["leagueRecord"]["losses"],
-                                                                                                                "ot": game["teams"]["away"]["leagueRecord"]["ot"] if "ot" in game["teams"]["away"]["leagueRecord"] else "",
-                                                                                                                "type": game["teams"]["away"]["leagueRecord"]["type"],
-                                                                                                                "score": game["teams"]["away"]["score"]}}}))
+                if game["gameType"] == "R" or game["gameType"] == "P":
+                    if game["gamePk"] not in games_that_dont_have_to_be_updated.keys():
+                        if session.query(Game).filter(Game.gamePk == game["gamePk"]).first():
+                            remove_gamePk(session, game["gamePk"])
 
-    #rs = (grequests.get(u[0], hooks={'response': [hook_factory(info=u[1])]}) for u in urls[:2])
+                        add_game_to_db(session, game)
+                        gamePk = game["gamePk"]
+                        urls.append((base + str(gamePk) + "/boxscore", { "session": session, "gamePk": str(gamePk), "stats" : {game["teams"]["home"]["team"]["id"]: {"wins": game["teams"]["home"]["leagueRecord"]["wins"],
+                                                                                                                        "losses": game["teams"]["home"]["leagueRecord"]["losses"],
+                                                                                                                        "ot": game["teams"]["home"]["leagueRecord"]["ot"] if "ot" in game["teams"]["home"]["leagueRecord"] else "",
+                                                                                                                        "type": game["teams"]["home"]["leagueRecord"]["type"],
+                                                                                                                        "score": game["teams"]["home"]["score"]},
+                                                                                    game["teams"]["away"]["team"]["id"]: {"wins": game["teams"]["away"]["leagueRecord"]["wins"],
+                                                                                                                        "losses": game["teams"]["away"]["leagueRecord"]["losses"],
+                                                                                                                        "ot": game["teams"]["away"]["leagueRecord"]["ot"] if "ot" in game["teams"]["away"]["leagueRecord"] else "",
+                                                                                                                        "type": game["teams"]["away"]["leagueRecord"]["type"],
+                                                                                                                        "score": game["teams"]["away"]["score"]}}}))
+
     rs = (grequests.get(u[0], hooks={'response': [hook_factory(info=u[1])]}) for u in urls)
     responses = grequests.map(rs)
 
 
-def fill_teams():
-    pass
+def fill_teams_and_persons(session):
+    res = requests.get('https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster')
+    res = res.json()
 
-def fill_persons():
-    pass
+    all_players_in_db = [player.id for player in session.query(Person).all()]
+
+    for team in res["teams"]:
+        if not session.query(Team).filter(Team.id == team["id"]).first():
+            newTeam = Team()
+
+            newTeam.id = team["id"]
+            newTeam.name = team["name"]
+            newTeam.teamName = team["teamName"]
+
+            session.add(newTeam)
+
+        if "roster" in team:
+            for player in team["roster"]["roster"]:
+
+                # end me :()
+                if session.query(Person).filter(Person.id == player["person"]["id"]).first():
+                    session.query(Person).filter(Person.id == player["person"]["id"]).update({
+                        "fullName": player["person"]["fullName"],
+                        "positionCode": player["position"]["code"],
+                        "updated":datetime.datetime.utcnow()
+                    })
+
+                else:
+                    newPerson = Person()
+
+                    newPerson.id = player["person"]["id"]
+                    newPerson.fullName = player["person"]["fullName"]
+                    newPerson.positionCode = player["position"]["code"]
+
+                    session.add(newPerson)
+
+
+def remove_gamePk(session, gamePk):
+    currGame = session.query(Game).filter(Game.gamePk == gamePk).first()
+
+    allGoalieStats = session.query(GoalieStats).filter(GoalieStats.gamePk == currGame.gamePk)
+    for stats in allGoalieStats:
+        session.delete(stats)
+
+    allSkaterStats = session.query(SkaterStats).filter(SkaterStats.gamePk == currGame.gamePk)
+    for stats in allSkaterStats:
+        session.delete(stats)
+
+    allTeamStats = session.query(TeamStats).filter(TeamStats.gamePk == currGame.gamePk)
+    for stats in allTeamStats:
+        session.delete(stats)
+
+    session.delete(currGame)
+
+    # commit session because we need this to happend before we try to add again
+    session.commit()
+
 
 def print_test(session):
-    games = session.query(skaterStats).all()
+    games = session.query(Person).all()
     for game in games:
         print(game)

@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship
 from models import *
 from gameHandler import *
+from tqdm import tqdm
 
 
 
@@ -21,10 +22,9 @@ if __name__ == "__main__":
     # Create specific session
     session = Session()
 
-    if sys.argv[1] == 'a':
-        fill_all_games_from_season(session, "20202021")
-    #elif sys.argv[1] == 'b':
-    print_test(session)
+    fill_teams_and_persons(session)
+    for season in tqdm(range(2010, 2021)):
+        fill_all_games_from_season(session, str(season) + str(season+1))
 
     session.commit()
     session.close()

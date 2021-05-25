@@ -59,6 +59,12 @@ class teamStats(Base):
     giveaways = Column('giveaways', Integer)
     hits = Column('hits', Integer)
 
+    wins = Column('wins', Integer)
+    losses = Column('losses', Integer)
+    ot = Column('ot', Integer)
+    leagueRecordType = Column('leagueRecordType', String(50))
+    score = Column('score', Integer)
+
 
 
 class skaterStats(Base):

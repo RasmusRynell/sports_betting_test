@@ -144,14 +144,14 @@ class GoalieStats(Base_nhl):
 class PersonNicknames(Base_nhl):
     __tablename__ = "personnicknames"
 
-    id = Column('id', Integer, primary_key=True)
-    personId = Column('playerId', Integer, ForeignKey('person.id'))
+    innerId = Column('innerId', Integer, primary_key=True)
+    id = Column('id', Integer, ForeignKey('person.id'))
     nickname = Column('nickname', String(50))
 
 
 class TeamNicknames(Base_nhl):
     __tablename__ = "teamnicknames"
 
-    id = Column('id', Integer, primary_key=True)
-    teamId = Column('playerId', Integer, ForeignKey('team.id'))
+    innerId = Column('innerId', Integer, primary_key=True)
+    id = Column('id', Integer, ForeignKey('team.id'))
     nickname = Column('nickname', String(50))

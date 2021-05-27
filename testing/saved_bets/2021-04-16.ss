@@ -76,27 +76,6 @@ Logan Couture Total Shots on Goal
 Over (2.5)2.40
 Under (2.5)1.49
 
-Colorado Avalanche - Los Angeles Kings
-
-Drew Doughty Total Shots on Goal
-Over (1.5)1.76
-Under (1.5)1.92
-Anze Kopitar Total Shots on Goal
-Over (1.5)1.53
-Under (1.5)2.30
-Nathan MacKinnon Total Shots on Goal
-Over (3.5)1.60
-Under (3.5)2.16
-Gabriel Landeskog Total Shots on Goal
-Over (2.5)1.76
-Under (2.5)1.92
-Mikko Rantanen Total Shots on Goal
-Over (2.5)1.50
-Under (2.5)2.38
-Dustin Brown Total Shots on Goal
-Over (2.5)1.83
-Under (2.5)1.85
-
 Anaheim Ducks - Vegas Golden Knights
 
 Max Pacioretty Total Shots on Goal

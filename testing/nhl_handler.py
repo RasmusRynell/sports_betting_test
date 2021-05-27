@@ -1,3 +1,4 @@
+from sqlalchemy import func, and_, or_, not_
 from models.nhl_models import *
 import traceback
 import gevent.monkey
@@ -247,7 +248,65 @@ def remove_gamePk(session, gamePk):
     session.commit()
 
 
-def print_test(session):
-    games = session.query(Person).all()
-    for game in games:
-        print(game)
+def add_person_nickname(nickname, name, nhl_session):
+    name = name.replace("\"", "")
+
+    ids = []
+
+    if name.isnumeric():
+        ids = nhl_session.query(Person).filter(Person.id == int(name)).all()
+    else:
+        ids = nhl_session.query(Person).filter(func.lower(
+            Person.fullName).contains(func.lower(name))).all()
+
+    if len(ids) > 1:
+        print("More than one id for:")
+        print(name)
+        return
+        print(nhl_session.query(Person).filter(
+            func.lower(Person.fullName).contains(func.lower(name))))
+        raise "More than one id..."
+
+    if len(ids) == 0:
+        print("Cant find a player with that name for:")
+        print(name)
+        return
+        print(nhl_session.query(Person).filter(
+            func.lower(Person.fullName).contains(func.lower(name))))
+        raise "Cant find a player with that name..."
+
+    if not nhl_session.query(PersonNicknames).filter(and_(PersonNicknames.id == ids[0].id, func.lower(PersonNicknames.nickname) == func.lower(nickname))).first():
+        new_nickname = PersonNicknames()
+
+        new_nickname.id = ids[0].id
+        new_nickname.nickname = nickname
+
+        nhl_session.add(new_nickname)
+
+
+def add_team_nickname(nickname, name, nhl_session):
+    name = name.replace("\"", "")
+    ids = nhl_session.query(Team).filter(func.lower(
+        Team.name).contains(func.lower(name))).all()
+
+    if len(ids) > 1:
+        print("More than one id for:")
+        print(name)
+        return
+        raise "More than one id..."
+
+    if len(ids) == 0:
+        print("Cant find a team with that name for:")
+        print(name)
+        print(nhl_session.query(Team).filter(
+            func.lower(Team.name).contains(func.lower(name))))
+        return
+        raise "Cant find a team with that name..."
+
+    if not nhl_session.query(TeamNicknames).filter(and_(TeamNicknames.id == ids[0].id, func.lower(TeamNicknames.nickname) == func.lower(nickname))).first():
+        new_nickname = TeamNicknames()
+
+        new_nickname.id = ids[0].id
+        new_nickname.nickname = nickname
+
+        nhl_session.add(new_nickname)

@@ -37,7 +37,7 @@ def add_games_back(df, games_to_go_back, path=None):
     df_total = pd.DataFrame()
     for i in range(games_to_go_back):
         dfc = df.copy()
-        dfc = dfc.shift(periods=1)
+        dfc = dfc.shift(periods=i+1)
         dfc.columns = [u + "_{}_games_back".format(i) for u in dfc.head()]
         df_total = pd.concat([df_total, dfc], axis=1)
 

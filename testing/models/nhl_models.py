@@ -69,6 +69,19 @@ class TeamStats(Base_nhl):
     giveaways = Column('giveaways', Integer)
     hits = Column('hits', Integer)
 
+    goalsAgainst = Column('goalsAgainst', Integer)
+    pimAgainst = Column('pimAgainst', Integer)
+    shotsAgainst = Column('shotsAgainst', Integer)
+    powerPlayPercentageAgainst = Column('powerPlayPercentageAgainst', Float)
+    powerPlayGoalsAgainst = Column('powerPlayGoalsAgainst', Float)
+    powerPlayOpportunitiesAgainst = Column('powerPlayOpportunitiesAgainst', Float)
+    faceOffWinPercentageAgainst = Column('faceOffWinPercentageAgainst', Float)
+    blockedAgainst = Column('blockedAgainst', Integer)
+    takeawaysAgainst = Column('takeawaysAgainst', Integer)
+    giveawaysAgainst = Column('giveawaysAgainst', Integer)
+    hitsAgainst = Column('hitsAgainst', Integer)
+
+
     wins = Column('wins', Integer)
     losses = Column('losses', Integer)
     ot = Column('ot', Integer)

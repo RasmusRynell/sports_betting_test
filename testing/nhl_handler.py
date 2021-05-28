@@ -50,8 +50,11 @@ def hook_factory(*factory_args, **factory_kwargs):
 
                 for home_or_away in ("home", "away"):
                     # Add team stats
+                    rev_home_away = "home" if home_or_away == "away" else "away"
                     team_info = res["teams"][home_or_away]
+                    rev_team_info = res["teams"][rev_home_away]
                     res_team_stats = team_info["teamStats"]["teamSkaterStats"]
+                    rev_res_team_stats = rev_team_info["teamStats"]["teamSkaterStats"]
 
                     new_team_stats = TeamStats()
 
@@ -69,6 +72,18 @@ def hook_factory(*factory_args, **factory_kwargs):
                     new_team_stats.takeaways = res_team_stats["takeaways"]
                     new_team_stats.giveaways = res_team_stats["giveaways"]
                     new_team_stats.hits = res_team_stats["hits"]
+
+                    new_team_stats.goalsAgainst = rev_res_team_stats["goals"]
+                    new_team_stats.pimAgainst = rev_res_team_stats["pim"]
+                    new_team_stats.shotsAgainst = rev_res_team_stats["shots"]
+                    new_team_stats.powerPlayPercentageAgainst = rev_res_team_stats["powerPlayPercentage"]
+                    new_team_stats.powerPlayGoalsAgainst = rev_res_team_stats["powerPlayGoals"]
+                    new_team_stats.powerPlayOpportunitiesAgainst = rev_res_team_stats["powerPlayOpportunities"]
+                    new_team_stats.faceOffWinPercentageAgainst = rev_res_team_stats["faceOffWinPercentage"]
+                    new_team_stats.blockedAgainst = rev_res_team_stats["blocked"]
+                    new_team_stats.takeawaysAgainst = rev_res_team_stats["takeaways"]
+                    new_team_stats.giveawaysAgainst = rev_res_team_stats["giveaways"]
+                    new_team_stats.hitsAgainst = rev_res_team_stats["hits"]
 
                     new_team_stats.wins = info["stats"][team_info["team"]["id"]]["wins"]
                     new_team_stats.losses = info["stats"][team_info["team"]["id"]]["losses"]
@@ -298,8 +313,7 @@ def add_team_nickname(nickname, name, nhl_session):
     if len(ids) == 0:
         print("Cant find a team with that name for:")
         print(name)
-        print(nhl_session.query(Team).filter(
-            func.lower(Team.name).contains(func.lower(name))))
+        print(nhl_session.query(Team).filter(func.lower(Team.name).contains(func.lower(name))))
         return
         raise "Cant find a team with that name..."
 

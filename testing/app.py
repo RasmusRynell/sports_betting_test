@@ -7,7 +7,9 @@ from models.bets_models import *
 from models.nhl_models import *
 from bets_handler import *
 from nhl_handler import *
+from nhl_gen import *
 from tqdm import tqdm
+from datetime import date, datetime, timedelta
 import csv
 
 
@@ -45,8 +47,8 @@ def add_bets(nhl_session, bet_session):
 
 if __name__ == "__main__":
    # Create engines
-   engine_bets = create_engine('sqlite:///databases/bets.db', echo=False, future=True)
-   engine_nhl = create_engine('sqlite:///databases/testing.db', echo=False, future=True)
+   engine_bets = create_engine('sqlite:///databases/bets.db', echo=False, future=False)
+   engine_nhl = create_engine('sqlite:///databases/testing.db', echo=False, future=False)
 
    # Create all tables
    Base_bets.metadata.create_all(bind=engine_bets)
@@ -61,15 +63,23 @@ if __name__ == "__main__":
    nhl_session = Session_nhl()
 
 
+   if len(sys.argv) > 1:
+      if sys.argv[1] == "add":
+         # Add seasons
+         fill_or_update_nhl_db(nhl_session)
 
-   # Add seasons
-   #fill_or_update_nhl_db(nhl_session)
+         # Add nicknames
+         add_nicknames(nhl_session)
 
-   # Add nicknames
-   #add_nicknames(nhl_session)
+         # Add all bets
+         add_bets(nhl_session, bet_session)
 
-   # Add all bets
-   add_bets(nhl_session, bet_session)
+      elif sys.argv[1] == "gen":
+         start_time = datetime(2017, 9, 15)
+         end_time = datetime.now()
+         player_id = 8475167
+         add_games_back(generate_data_for(
+             player_id, nhl_session), 5, "./csvs/{}".format(player_id))
 
 
 

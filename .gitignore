@@ -131,6 +131,7 @@ dmypy.json
 */temp
 */saved_cache.json
 */data
+.history
 
 saved_cache.json
 

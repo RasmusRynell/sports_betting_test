@@ -137,3 +137,14 @@ saved_cache.json
 
 */generated_files
 *.vscode
+
+*.csv
+*.db
+*.json
+*.bet365
+*.betsson
+*.betway
+*.unibet
+*.wh
+*.ss
+*.bethard

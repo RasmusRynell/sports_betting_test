@@ -1,8 +1,0 @@
-Player model: ./generated_models/oliver_ekman-larsson/SVC_under_1.5.joblib
-Precision of model: 0.424 with a edge of -0.318
-With no games betted.
-
-Player model: ./generated_models/oliver_ekman-larsson/SVC_over_1.5joblib
-Precision of model: 0.695 with a edge of 0.261
-With no games betted.
-

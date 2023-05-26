@@ -1,8 +1,0 @@
-Player model: ./generated_models/charlie_mcavoy/SVC_under_1.5.joblib
-Precision of model: 0.503 with a edge of 0.232
-With no games betted.
-
-Player model: ./generated_models/charlie_mcavoy/SVC_over_1.5joblib
-Precision of model: 0.414 with a edge of -0.815
-With no games betted.
-

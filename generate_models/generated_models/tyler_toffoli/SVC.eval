@@ -1,8 +1,0 @@
-Player model: ./generated_models/tyler_toffoli/SVC_under_2.5.joblib
-Precision of model: 0.484 with a edge of 0.014
-With no games betted.
-
-Player model: ./generated_models/tyler_toffoli/SVC_over_2.5joblib
-Precision of model: 0.468 with a edge of -0.467
-With no games betted.
-

@@ -1,8 +1,0 @@
-Player model: ./generated_models/mitchell_marner/SVC_under_2.5.joblib
-Precision of model: 0.521 with a edge of 0.071
-With no games betted.
-
-Player model: ./generated_models/mitchell_marner/SVC_over_2.5joblib
-Precision of model: 0.553 with a edge of -0.078
-With no games betted.
-

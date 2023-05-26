@@ -1,6 +1,0 @@
-
-
-
-
-class eval_daily():
-    

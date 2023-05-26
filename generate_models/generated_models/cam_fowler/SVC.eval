@@ -1,8 +1,0 @@
-Player model: ./generated_models/cam_fowler/SVC_under_1.5.joblib
-Precision of model: 0.533 with a edge of -0.026
-With no games betted.
-
-Player model: ./generated_models/cam_fowler/SVC_over_1.5joblib
-Precision of model: 0.473 with a edge of -0.274
-With no games betted.
-

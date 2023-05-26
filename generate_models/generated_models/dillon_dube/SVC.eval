@@ -1,8 +1,0 @@
-Player model: ./generated_models/dillon_dube/SVC_under_1.5.joblib
-Precision of model: 0.503 with a edge of 0.212
-With no games betted.
-
-Player model: ./generated_models/dillon_dube/SVC_over_1.5joblib
-Precision of model: 0.448 with a edge of -0.612
-With no games betted.
-

@@ -1,8 +1,0 @@
-Player model: ./generated_models/jakob_chychrun/SVC_under_2.5.joblib
-Precision of model: 0.633 with a edge of 0.17
-With no games betted.
-
-Player model: ./generated_models/jakob_chychrun/SVC_over_2.5joblib
-Precision of model: 0.335 with a edge of -0.995
-With no games betted.
-

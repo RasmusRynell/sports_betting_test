@@ -1,8 +1,0 @@
-Player model: ./generated_models/andrew_copp/SVC_under_1.5.joblib
-Precision of model: 0.643 with a edge of 0.415
-With no games betted.
-
-Player model: ./generated_models/andrew_copp/SVC_over_1.5joblib
-Precision of model: 0.424 with a edge of -0.628
-With no games betted.
-

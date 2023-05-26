@@ -1,7 +1,0 @@
-Player model: ./generated_models/jeff_skinner/SVC_under_2.5.joblib
-Precision of model: 0.367 with a edge of -1.175
-With no games betted.
-
-Player model: ./generated_models/jeff_skinner/SVC_over_2.5joblib
-Precision of model: 0.65 with a edge of 0.772
-Betted: 30 and won 13.799999999999999 which is a ROI of 0.46

@@ -1,5 +1,0 @@
-
-
-
-
-class evel_daily

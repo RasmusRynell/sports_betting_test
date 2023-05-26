@@ -1,8 +1,0 @@
-Player model: ./generated_models/kaapo_kakko/SVC_under_1.5.joblib
-Precision of model: 0.531 with a edge of 0.137
-With no games betted.
-
-Player model: ./generated_models/kaapo_kakko/SVC_over_1.5joblib
-Precision of model: 0.518 with a edge of -0.221
-With no games betted.
-

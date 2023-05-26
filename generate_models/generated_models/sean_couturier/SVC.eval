@@ -1,8 +1,0 @@
-Player model: ./generated_models/sean_couturier/SVC_under_2.5.joblib
-Precision of model: 0.678 with a edge of 0.175
-With no games betted.
-
-Player model: ./generated_models/sean_couturier/SVC_over_2.5joblib
-Precision of model: 0.27 with a edge of -1.594
-With no games betted.
-

@@ -1,8 +1,0 @@
-Player model: ./generated_models/jesse_puljujarvi/SVC_under_2.5.joblib
-Precision of model: 0.803 with a edge of 0.275
-With no games betted.
-
-Player model: ./generated_models/jesse_puljujarvi/SVC_over_2.5joblib
-Precision of model: 0.2 with a edge of -2.65
-With no games betted.
-

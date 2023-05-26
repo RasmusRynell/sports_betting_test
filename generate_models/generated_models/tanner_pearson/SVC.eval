@@ -1,8 +1,0 @@
-Player model: ./generated_models/tanner_pearson/SVC_under_2.5.joblib
-Precision of model: 0.66 with a edge of 0.195
-With no games betted.
-
-Player model: ./generated_models/tanner_pearson/SVC_over_2.5joblib
-Precision of model: 0.292 with a edge of -1.425
-With no games betted.
-

@@ -1,8 +1,0 @@
-Player model: ./generated_models/connor_mcdavid/SVC_under_3.5.joblib
-Precision of model: 0.638 with a edge of 0.243
-With no games betted.
-
-Player model: ./generated_models/connor_mcdavid/SVC_over_3.5joblib
-Precision of model: 0.519 with a edge of -0.037
-With no games betted.
-

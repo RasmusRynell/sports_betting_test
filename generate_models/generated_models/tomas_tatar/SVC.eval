@@ -1,8 +1,0 @@
-Player model: ./generated_models/tomas_tatar/SVC_under_1.5.joblib
-Precision of model: 0.354 with a edge of -0.745
-With no games betted.
-
-Player model: ./generated_models/tomas_tatar/SVC_over_1.5joblib
-Precision of model: 0.633 with a edge of 0.09
-With no games betted.
-

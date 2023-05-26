@@ -1,8 +1,0 @@
-Player model: ./generated_models/max_domi/SVC_under_1.5.joblib
-Precision of model: 0.543 with a edge of 0.358
-With no games betted.
-
-Player model: ./generated_models/max_domi/SVC_over_1.5joblib
-Precision of model: 0.583 with a edge of -0.095
-With no games betted.
-

@@ -1,7 +1,0 @@
-Player model: ./generated_models/blake_wheeler/SVC_under_2.5.joblib
-Precision of model: 0.545 with a edge of -0.285
-With no games betted.
-
-Player model: ./generated_models/blake_wheeler/SVC_over_2.5joblib
-Precision of model: 0.6 with a edge of 0.643
-Betted: 12 and won 18.700000000000003 which is a ROI of 1.558

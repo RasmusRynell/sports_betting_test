@@ -1,8 +1,0 @@
-Player model: ./generated_models/claude_giroux/SVC_under_2.5.joblib
-Precision of model: 0.448 with a edge of -0.602
-With no games betted.
-
-Player model: ./generated_models/claude_giroux/SVC_over_2.5joblib
-Precision of model: 0.512 with a edge of 0.207
-With no games betted.
-

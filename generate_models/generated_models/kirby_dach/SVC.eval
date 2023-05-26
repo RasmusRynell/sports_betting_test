@@ -1,7 +1,0 @@
-Player model: ./generated_models/kirby_dach/SVC_under_1.5.joblib
-Precision of model: 0.667 with a edge of 0.701
-Betted: 8 and won 7.720000000000001 which is a ROI of 0.965
-Player model: ./generated_models/kirby_dach/SVC_over_1.5joblib
-Precision of model: 0.601 with a edge of -0.054
-With no games betted.
-

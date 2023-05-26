@@ -1,8 +1,0 @@
-Player model: ./generated_models/kasperi_kapanen/SVC_under_1.5.joblib
-Precision of model: 0.486 with a edge of 0.042
-With no games betted.
-
-Player model: ./generated_models/kasperi_kapanen/SVC_over_1.5joblib
-Precision of model: 0.484 with a edge of -0.406
-With no games betted.
-

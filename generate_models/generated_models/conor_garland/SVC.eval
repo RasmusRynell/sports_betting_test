@@ -1,8 +1,0 @@
-Player model: ./generated_models/conor_garland/SVC_under_2.5.joblib
-Precision of model: 0.632 with a edge of 0.208
-With no games betted.
-
-Player model: ./generated_models/conor_garland/SVC_over_2.5joblib
-Precision of model: 0.535 with a edge of 0.071
-With no games betted.
-

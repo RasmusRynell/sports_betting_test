@@ -1,8 +1,0 @@
-Player model: ./generated_models/e._haula/SVC_under_1.5.joblib
-Precision of model: 0.554 with a edge of -0.145
-With no games betted.
-
-Player model: ./generated_models/e._haula/SVC_over_1.5joblib
-Precision of model: 0.623 with a edge of 0.495
-With no games betted.
-

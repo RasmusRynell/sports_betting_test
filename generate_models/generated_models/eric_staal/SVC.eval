@@ -1,8 +1,0 @@
-Player model: ./generated_models/eric_staal/SVC_under_1.5.joblib
-Precision of model: 0.193 with a edge of -3.021
-With no games betted.
-
-Player model: ./generated_models/eric_staal/SVC_over_1.5joblib
-Precision of model: 0.739 with a edge of 0.277
-With no games betted.
-
